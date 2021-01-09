@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Main.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{EE4126D6-772A-47D7-9682-3A12B8FA435B}</UniqueIdentifier>
+      <UniqueIdentifier>{13698D46-157F-464A-A6C0-484B0B381EA6}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Main.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{04462BCB-19ED-49CA-9B09-12F562F4B585}</UniqueIdentifier>
+      <UniqueIdentifier>{7011CD98-80B3-4D03-8AB3-F64DE143F6F3}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -24,8 +24,26 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\Main">
-      <UniqueIdentifier>{6EA3A91D-B665-4952-A6CB-4CFCADFB416D}</UniqueIdentifier>
+      <UniqueIdentifier>{31FAC409-D57E-4751-91D5-D998F4B90302}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\Main\Item.cpp">
+      <Filter>Source\Main</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Main\Item.h">
+      <Filter>Source\Main</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Main\ItemBody.cpp">
+      <Filter>Source\Main</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Main\ItemBody.h">
+      <Filter>Source\Main</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Main\ItemWeapon.cpp">
+      <Filter>Source\Main</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Main\ItemWeapon.h">
+      <Filter>Source\Main</Filter>
+    </ClInclude>
     <None Include="..\..\Source\Main\Main.Build.cs">
       <Filter>Source\Main</Filter>
     </None>
@@ -39,6 +57,18 @@
       <Filter>Source\Main</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\Main\MainGameModeBase.h">
+      <Filter>Source\Main</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Main\RPGEnum.cpp">
+      <Filter>Source\Main</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Main\RPGEnum.h">
+      <Filter>Source\Main</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Main\RPGStruct.cpp">
+      <Filter>Source\Main</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Main\RPGStruct.h">
       <Filter>Source\Main</Filter>
     </ClInclude>
   </ItemGroup>
