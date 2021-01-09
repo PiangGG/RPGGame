@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "Main",
+			"Path": "D:\\Code\\UE4\\RPGGame\\Main\\Source\\Main.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "MainEditor",
+			"Path": "D:\\Code\\UE4\\RPGGame\\Main\\Source\\MainEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}

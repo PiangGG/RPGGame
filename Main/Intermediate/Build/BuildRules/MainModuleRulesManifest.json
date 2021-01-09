@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"D:\\Code\\UE4\\RPGGame\\Main\\Source\\Main\\Main.Build.cs",
+		"D:\\Code\\UE4\\RPGGame\\Main\\Source\\Main.Target.cs",
+		"D:\\Code\\UE4\\RPGGame\\Main\\Source\\MainEditor.Target.cs"
+	],
+	"EngineVersion": "4.26.0"
+}
