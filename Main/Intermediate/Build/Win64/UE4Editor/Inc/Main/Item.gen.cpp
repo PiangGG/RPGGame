@@ -16,11 +16,14 @@ void EmptyLinkFunctionForGeneratedCodeItem() {}
 	MAIN_API UEnum* Z_Construct_UEnum_Main_EItemType();
 	UPackage* Z_Construct_UPackage__Script_Main();
 	MAIN_API UEnum* Z_Construct_UEnum_Main_EItemState();
+	MAIN_API UScriptStruct* Z_Construct_UScriptStruct_FItemStruct();
+	ENGINE_API UClass* Z_Construct_UClass_UTexture2D_NoRegister();
 	MAIN_API UClass* Z_Construct_UClass_AItem_NoRegister();
 	MAIN_API UClass* Z_Construct_UClass_AItem();
 	ENGINE_API UClass* Z_Construct_UClass_AActor();
-	ENGINE_API UClass* Z_Construct_UClass_USkeletalMesh_NoRegister();
-	ENGINE_API UClass* Z_Construct_UClass_UTexture2D_NoRegister();
+	ENGINE_API UClass* Z_Construct_UClass_APawn_NoRegister();
+	ENGINE_API UClass* Z_Construct_UClass_USkeletalMeshComponent_NoRegister();
+	ENGINE_API UClass* Z_Construct_UClass_USphereComponent_NoRegister();
 // End Cross Module References
 	static UEnum* EItemType_StaticEnum()
 	{
@@ -98,7 +101,7 @@ void EmptyLinkFunctionForGeneratedCodeItem() {}
 		return EItemState_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_EItemState(EItemState_StaticEnum, TEXT("/Script/Main"), TEXT("EItemState"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_Main_EItemState_Hash() { return 2272280627U; }
+	uint32 Get_Z_Construct_UEnum_Main_EItemState_Hash() { return 1106735349U; }
 	UEnum* Z_Construct_UEnum_Main_EItemState()
 	{
 #if WITH_HOT_RELOAD
@@ -113,6 +116,7 @@ void EmptyLinkFunctionForGeneratedCodeItem() {}
 				{ "EItemState::InWorld", (int64)EItemState::InWorld },
 				{ "EItemState::InPack", (int64)EItemState::InPack },
 				{ "EItemState::InPlayering", (int64)EItemState::InPlayering },
+				{ "EItemState::Other", (int64)EItemState::Other },
 			};
 #if WITH_METADATA
 			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
@@ -125,6 +129,8 @@ void EmptyLinkFunctionForGeneratedCodeItem() {}
 				{ "InWorld.DisplayName", "\xe5\x9c\xa8\xe5\x9c\xba\xe6\x99\xaf\xe4\xb8\xad" },
 				{ "InWorld.Name", "EItemState::InWorld" },
 				{ "ModuleRelativePath", "Item.h" },
+				{ "Other.DisplayName", "\xe5\x85\xb6\xe4\xbb\x96" },
+				{ "Other.Name", "EItemState::Other" },
 				{ "ToolTip", "\xe8\xae\xbe\xe7\xbd\xae\xe7\x89\xa9\xe5\x93\x81\xe7\x8a\xb6\xe6\x80\x81" },
 			};
 #endif
@@ -144,6 +150,137 @@ void EmptyLinkFunctionForGeneratedCodeItem() {}
 			UE4CodeGen_Private::ConstructUEnum(ReturnEnum, EnumParams);
 		}
 		return ReturnEnum;
+	}
+class UScriptStruct* FItemStruct::StaticStruct()
+{
+	static class UScriptStruct* Singleton = NULL;
+	if (!Singleton)
+	{
+		extern MAIN_API uint32 Get_Z_Construct_UScriptStruct_FItemStruct_Hash();
+		Singleton = GetStaticStruct(Z_Construct_UScriptStruct_FItemStruct, Z_Construct_UPackage__Script_Main(), TEXT("ItemStruct"), sizeof(FItemStruct), Get_Z_Construct_UScriptStruct_FItemStruct_Hash());
+	}
+	return Singleton;
+}
+template<> MAIN_API UScriptStruct* StaticStruct<FItemStruct>()
+{
+	return FItemStruct::StaticStruct();
+}
+static FCompiledInDeferStruct Z_CompiledInDeferStruct_UScriptStruct_FItemStruct(FItemStruct::StaticStruct, TEXT("/Script/Main"), TEXT("ItemStruct"), false, nullptr, nullptr);
+static struct FScriptStruct_Main_StaticRegisterNativesFItemStruct
+{
+	FScriptStruct_Main_StaticRegisterNativesFItemStruct()
+	{
+		UScriptStruct::DeferCppStructOps(FName(TEXT("ItemStruct")),new UScriptStruct::TCppStructOps<FItemStruct>);
+	}
+} ScriptStruct_Main_StaticRegisterNativesFItemStruct;
+	struct Z_Construct_UScriptStruct_FItemStruct_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[];
+#endif
+		static void* NewStructOps();
+		static const UE4CodeGen_Private::FBytePropertyParams NewProp_ItemType_Underlying;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ItemType_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_ItemType;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ItemName_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStrPropertyParams NewProp_ItemName;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ItemIcon_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_ItemIcon;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_AttachSocket_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStrPropertyParams NewProp_AttachSocket;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FItemStruct_Statics::Struct_MetaDataParams[] = {
+		{ "BlueprintType", "true" },
+		{ "ModuleRelativePath", "Item.h" },
+	};
+#endif
+	void* Z_Construct_UScriptStruct_FItemStruct_Statics::NewStructOps()
+	{
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FItemStruct>();
+	}
+	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UScriptStruct_FItemStruct_Statics::NewProp_ItemType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FItemStruct_Statics::NewProp_ItemType_MetaData[] = {
+		{ "Category", "ItemSetting" },
+		{ "ModuleRelativePath", "Item.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FItemStruct_Statics::NewProp_ItemType = { "ItemType", nullptr, (EPropertyFlags)0x0010000000010005, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FItemStruct, ItemType), Z_Construct_UEnum_Main_EItemType, METADATA_PARAMS(Z_Construct_UScriptStruct_FItemStruct_Statics::NewProp_ItemType_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FItemStruct_Statics::NewProp_ItemType_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FItemStruct_Statics::NewProp_ItemName_MetaData[] = {
+		{ "Category", "ItemSetting" },
+		{ "ModuleRelativePath", "Item.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UScriptStruct_FItemStruct_Statics::NewProp_ItemName = { "ItemName", nullptr, (EPropertyFlags)0x0010000000010005, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FItemStruct, ItemName), METADATA_PARAMS(Z_Construct_UScriptStruct_FItemStruct_Statics::NewProp_ItemName_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FItemStruct_Statics::NewProp_ItemName_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FItemStruct_Statics::NewProp_ItemIcon_MetaData[] = {
+		{ "Category", "ItemSetting" },
+		{ "ModuleRelativePath", "Item.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UScriptStruct_FItemStruct_Statics::NewProp_ItemIcon = { "ItemIcon", nullptr, (EPropertyFlags)0x0010000000010005, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FItemStruct, ItemIcon), Z_Construct_UClass_UTexture2D_NoRegister, METADATA_PARAMS(Z_Construct_UScriptStruct_FItemStruct_Statics::NewProp_ItemIcon_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FItemStruct_Statics::NewProp_ItemIcon_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FItemStruct_Statics::NewProp_AttachSocket_MetaData[] = {
+		{ "Category", "ItemSetting" },
+		{ "ModuleRelativePath", "Item.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UScriptStruct_FItemStruct_Statics::NewProp_AttachSocket = { "AttachSocket", nullptr, (EPropertyFlags)0x0010000000010005, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FItemStruct, AttachSocket), METADATA_PARAMS(Z_Construct_UScriptStruct_FItemStruct_Statics::NewProp_AttachSocket_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FItemStruct_Statics::NewProp_AttachSocket_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FItemStruct_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FItemStruct_Statics::NewProp_ItemType_Underlying,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FItemStruct_Statics::NewProp_ItemType,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FItemStruct_Statics::NewProp_ItemName,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FItemStruct_Statics::NewProp_ItemIcon,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FItemStruct_Statics::NewProp_AttachSocket,
+	};
+	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FItemStruct_Statics::ReturnStructParams = {
+		(UObject* (*)())Z_Construct_UPackage__Script_Main,
+		nullptr,
+		&NewStructOps,
+		"ItemStruct",
+		sizeof(FItemStruct),
+		alignof(FItemStruct),
+		Z_Construct_UScriptStruct_FItemStruct_Statics::PropPointers,
+		UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FItemStruct_Statics::PropPointers),
+		RF_Public|RF_Transient|RF_MarkAsNative,
+		EStructFlags(0x00000001),
+		METADATA_PARAMS(Z_Construct_UScriptStruct_FItemStruct_Statics::Struct_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FItemStruct_Statics::Struct_MetaDataParams))
+	};
+	UScriptStruct* Z_Construct_UScriptStruct_FItemStruct()
+	{
+#if WITH_HOT_RELOAD
+		extern uint32 Get_Z_Construct_UScriptStruct_FItemStruct_Hash();
+		UPackage* Outer = Z_Construct_UPackage__Script_Main();
+		static UScriptStruct* ReturnStruct = FindExistingStructIfHotReloadOrDynamic(Outer, TEXT("ItemStruct"), sizeof(FItemStruct), Get_Z_Construct_UScriptStruct_FItemStruct_Hash(), false);
+#else
+		static UScriptStruct* ReturnStruct = nullptr;
+#endif
+		if (!ReturnStruct)
+		{
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FItemStruct_Statics::ReturnStructParams);
+		}
+		return ReturnStruct;
+	}
+	uint32 Get_Z_Construct_UScriptStruct_FItemStruct_Hash() { return 2649818057U; }
+	DEFINE_FUNCTION(AItem::execPickUpItem)
+	{
+		P_GET_OBJECT(APawn,Z_Param_Pawn);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->PickUpItem(Z_Param_Pawn);
+		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(AItem::execOnRep_SetItemState)
 	{
@@ -174,6 +311,7 @@ void EmptyLinkFunctionForGeneratedCodeItem() {}
 		static const FNameNativePtrPair Funcs[] = {
 			{ "GetItemState", &AItem::execGetItemState },
 			{ "OnRep_SetItemState", &AItem::execOnRep_SetItemState },
+			{ "PickUpItem", &AItem::execPickUpItem },
 			{ "SetItemState", &AItem::execSetItemState },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
@@ -250,6 +388,40 @@ void EmptyLinkFunctionForGeneratedCodeItem() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_AItem_PickUpItem_Statics
+	{
+		struct Item_eventPickUpItem_Parms
+		{
+			APawn* Pawn;
+		};
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Pawn;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_AItem_PickUpItem_Statics::NewProp_Pawn = { "Pawn", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(Item_eventPickUpItem_Parms, Pawn), Z_Construct_UClass_APawn_NoRegister, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AItem_PickUpItem_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AItem_PickUpItem_Statics::NewProp_Pawn,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AItem_PickUpItem_Statics::Function_MetaDataParams[] = {
+		{ "Comment", "/*\n\x09 * \xe6\x8b\xbe\xe5\x8f\x96\xe8\xbf\x99\xe4\xb8\xaaItem\xe8\xbf\x9b\xe8\x83\x8c\xe5\x8c\x85\n\x09 */" },
+		{ "ModuleRelativePath", "Item.h" },
+		{ "ToolTip", "* \xe6\x8b\xbe\xe5\x8f\x96\xe8\xbf\x99\xe4\xb8\xaaItem\xe8\xbf\x9b\xe8\x83\x8c\xe5\x8c\x85" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AItem_PickUpItem_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AItem, nullptr, "PickUpItem", nullptr, nullptr, sizeof(Item_eventPickUpItem_Parms), Z_Construct_UFunction_AItem_PickUpItem_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AItem_PickUpItem_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020400, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AItem_PickUpItem_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AItem_PickUpItem_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AItem_PickUpItem()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AItem_PickUpItem_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	struct Z_Construct_UFunction_AItem_SetItemState_Statics
 	{
 		struct Item_eventSetItemState_Parms
@@ -307,19 +479,14 @@ void EmptyLinkFunctionForGeneratedCodeItem() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ThisSkeletalMesh_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_ThisSkeletalMesh;
-		static const UE4CodeGen_Private::FBytePropertyParams NewProp_ItemType_Underlying;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ItemType_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_SphereComponent_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_ItemType;
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_SphereComponent;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ItemName_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ItemStruct_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FStrPropertyParams NewProp_ItemName;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ItemIcon_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_ItemIcon;
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_ItemStruct;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -331,6 +498,7 @@ void EmptyLinkFunctionForGeneratedCodeItem() {}
 	const FClassFunctionLinkInfo Z_Construct_UClass_AItem_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_AItem_GetItemState, "GetItemState" }, // 728133192
 		{ &Z_Construct_UFunction_AItem_OnRep_SetItemState, "OnRep_SetItemState" }, // 4097365341
+		{ &Z_Construct_UFunction_AItem_PickUpItem, "PickUpItem" }, // 3945649946
 		{ &Z_Construct_UFunction_AItem_SetItemState, "SetItemState" }, // 3849407321
 	};
 #if WITH_METADATA
@@ -353,43 +521,33 @@ void EmptyLinkFunctionForGeneratedCodeItem() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AItem_Statics::NewProp_ThisSkeletalMesh_MetaData[] = {
 		{ "Category", "ItemSetting" },
 		{ "Comment", "/*\n\x09 * \xe7\x89\xa9\xe5\x93\x81\xe9\xaa\xa8\xe9\xaa\xbc\xe7\xbd\x91\xe6\xa0\xbc\xe4\xbd\x93\n\x09 */" },
+		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Item.h" },
 		{ "ToolTip", "* \xe7\x89\xa9\xe5\x93\x81\xe9\xaa\xa8\xe9\xaa\xbc\xe7\xbd\x91\xe6\xa0\xbc\xe4\xbd\x93" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AItem_Statics::NewProp_ThisSkeletalMesh = { "ThisSkeletalMesh", nullptr, (EPropertyFlags)0x0010000000010005, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AItem, ThisSkeletalMesh), Z_Construct_UClass_USkeletalMesh_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AItem_Statics::NewProp_ThisSkeletalMesh_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AItem_Statics::NewProp_ThisSkeletalMesh_MetaData)) };
-	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UClass_AItem_Statics::NewProp_ItemType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AItem_Statics::NewProp_ThisSkeletalMesh = { "ThisSkeletalMesh", nullptr, (EPropertyFlags)0x001000000009000d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AItem, ThisSkeletalMesh), Z_Construct_UClass_USkeletalMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AItem_Statics::NewProp_ThisSkeletalMesh_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AItem_Statics::NewProp_ThisSkeletalMesh_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AItem_Statics::NewProp_ItemType_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AItem_Statics::NewProp_SphereComponent_MetaData[] = {
 		{ "Category", "ItemSetting" },
-		{ "Comment", "/*\n\x09 * \xe7\x89\xa9\xe4\xbd\x93\xe7\xb1\xbb\xe5\x9e\x8b\n\x09 * \xe9\xbb\x98\xe8\xae\xa4\xe5\x85\xb6\xe4\xbb\x96\n\x09 */" },
+		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Item.h" },
-		{ "ToolTip", "* \xe7\x89\xa9\xe4\xbd\x93\xe7\xb1\xbb\xe5\x9e\x8b\n* \xe9\xbb\x98\xe8\xae\xa4\xe5\x85\xb6\xe4\xbb\x96" },
 	};
 #endif
-	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UClass_AItem_Statics::NewProp_ItemType = { "ItemType", nullptr, (EPropertyFlags)0x0010000000010005, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AItem, ItemType), Z_Construct_UEnum_Main_EItemType, METADATA_PARAMS(Z_Construct_UClass_AItem_Statics::NewProp_ItemType_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AItem_Statics::NewProp_ItemType_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AItem_Statics::NewProp_SphereComponent = { "SphereComponent", nullptr, (EPropertyFlags)0x001000000009000d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AItem, SphereComponent), Z_Construct_UClass_USphereComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AItem_Statics::NewProp_SphereComponent_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AItem_Statics::NewProp_SphereComponent_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AItem_Statics::NewProp_ItemName_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AItem_Statics::NewProp_ItemStruct_MetaData[] = {
 		{ "Category", "ItemSetting" },
 		{ "ModuleRelativePath", "Item.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UClass_AItem_Statics::NewProp_ItemName = { "ItemName", nullptr, (EPropertyFlags)0x0010000000010005, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AItem, ItemName), METADATA_PARAMS(Z_Construct_UClass_AItem_Statics::NewProp_ItemName_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AItem_Statics::NewProp_ItemName_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AItem_Statics::NewProp_ItemIcon_MetaData[] = {
-		{ "Category", "ItemSetting" },
-		{ "ModuleRelativePath", "Item.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AItem_Statics::NewProp_ItemIcon = { "ItemIcon", nullptr, (EPropertyFlags)0x0010000000010005, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AItem, ItemIcon), Z_Construct_UClass_UTexture2D_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AItem_Statics::NewProp_ItemIcon_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AItem_Statics::NewProp_ItemIcon_MetaData)) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_AItem_Statics::NewProp_ItemStruct = { "ItemStruct", nullptr, (EPropertyFlags)0x0010000000010005, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AItem, ItemStruct), Z_Construct_UScriptStruct_FItemStruct, METADATA_PARAMS(Z_Construct_UClass_AItem_Statics::NewProp_ItemStruct_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AItem_Statics::NewProp_ItemStruct_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AItem_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AItem_Statics::NewProp_CurrentItemState_Underlying,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AItem_Statics::NewProp_CurrentItemState,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AItem_Statics::NewProp_ThisSkeletalMesh,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AItem_Statics::NewProp_ItemType_Underlying,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AItem_Statics::NewProp_ItemType,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AItem_Statics::NewProp_ItemName,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AItem_Statics::NewProp_ItemIcon,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AItem_Statics::NewProp_SphereComponent,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AItem_Statics::NewProp_ItemStruct,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AItem_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AItem>::IsAbstract,
@@ -418,7 +576,7 @@ void EmptyLinkFunctionForGeneratedCodeItem() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AItem, 3541605476);
+	IMPLEMENT_CLASS(AItem, 491381991);
 	template<> MAIN_API UClass* StaticClass<AItem>()
 	{
 		return AItem::StaticClass();

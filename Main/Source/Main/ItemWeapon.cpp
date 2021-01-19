@@ -6,3 +6,11 @@
 AItemWeapon::AItemWeapon()
 {
 }
+
+void AItemWeapon::Equipment(APawn* Pawn)
+{
+}
+
+void AItemWeapon::SwapWeapon(AItemWeapon* ItemWeapon)
+{
+}

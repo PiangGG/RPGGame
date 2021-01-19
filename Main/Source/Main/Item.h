@@ -13,6 +13,7 @@ enum class EItemState:uint8
 	InWorld		UMETA(DisplayName = "在场景中"),
     InPack		UMETA(DisplayName = "在背包中"),
 	InPlayering	UMETA(DisplayName = "玩家使用中"),
+	Other		UMETA(DisplayName = "其他"),
 };
 
 UENUM(BlueprintType)
@@ -24,6 +25,45 @@ enum class EItemType:uint8
     Other	UMETA(DisplayName = "其他"),
 };
 
+USTRUCT(BlueprintType)
+struct FItemStruct
+{
+	GENERATED_BODY()
+	/*
+	* 物体类型
+	* 默认其他
+	*/
+public:
+	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Category="ItemSetting")
+	EItemType ItemType;
+	
+	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Category="ItemSetting")
+	FString ItemName;
+
+	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Category="ItemSetting")
+	UTexture2D* ItemIcon;
+
+	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Category="ItemSetting")
+	FString AttachSocket;
+	FItemStruct()
+	{
+		ItemType=EItemType::Other;
+
+		ItemName="NullName";
+		
+		ItemIcon=nullptr;
+
+		AttachSocket="";
+	}
+
+	FItemStruct(EItemType NewItemType,FString NewItemName,UTexture2D* NewItemIcon,FString NewAttachSocket)
+	{
+		ItemType=NewItemType;
+		ItemName=NewItemName;
+		ItemIcon=NewItemIcon;
+		AttachSocket=NewAttachSocket;
+	}
+};
 UCLASS()
 
 class MAIN_API AItem : public AActor
@@ -42,12 +82,13 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+	virtual void InitItem(); 
 	/*
 	 * 物品状态
 	 */
 	//物品状态变量
 	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,ReplicatedUsing=OnRep_SetItemState,Category="ItemSetting")
-	EItemState CurrentItemState=EItemState::InWorld;
+	EItemState CurrentItemState=EItemState::Other;
 	//获得物品状态变量函数
 	UFUNCTION(BlueprintCallable)
 	virtual EItemState GetItemState();
@@ -61,20 +102,17 @@ public:
 	 * 物品骨骼网格体
 	 */
 	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Category="ItemSetting")
-	USkeletalMesh *ThisSkeletalMesh;
+	class USkeletalMeshComponent *ThisSkeletalMesh;
 
+	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Category="ItemSetting")
+	class USphereComponent *SphereComponent;
+	
+	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Category="ItemSetting")
+	FItemStruct ItemStruct;
+	
 	/*
-	 * 物体类型
-	 * 默认其他
+	 * 拾取这个Item进背包
 	 */
-	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Category="ItemSetting")
-	EItemType ItemType=EItemType::Other;
-	
-	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Category="ItemSetting")
-	FString ItemName="NullName";
-
-	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Category="ItemSetting")
-	UTexture2D* ItemIcon;
-
-	
+	UFUNCTION(BlueprintCallable)
+	virtual void PickUpItem(APawn* Pawn);
 };

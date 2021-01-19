@@ -1,6 +1,11 @@
 {
 	"SourceFiles": [
 		"D:\\Code\\UE4\\RPGGame\\Main\\Source\\Main\\Main.Build.cs",
+		"D:\\Code\\UE4\\RPGGame\\Main\\Plugins\\Developer\\RiderLink\\Source\\RD\\RD.Build.cs",
+		"D:\\Code\\UE4\\RPGGame\\Main\\Plugins\\Developer\\RiderLink\\Source\\RiderBlueprintExtension\\RiderBlueprintExtension.Build.cs",
+		"D:\\Code\\UE4\\RPGGame\\Main\\Plugins\\Developer\\RiderLink\\Source\\RiderGameControlExtension\\RiderGameControlExtension.Build.cs",
+		"D:\\Code\\UE4\\RPGGame\\Main\\Plugins\\Developer\\RiderLink\\Source\\RiderLink\\RiderLink.Build.cs",
+		"D:\\Code\\UE4\\RPGGame\\Main\\Plugins\\Developer\\RiderLink\\Source\\RiderLoggingExtension\\RiderLoggingExtension.Build.cs",
 		"D:\\Code\\UE4\\RPGGame\\Main\\Source\\Main.Target.cs",
 		"D:\\Code\\UE4\\RPGGame\\Main\\Source\\MainEditor.Target.cs"
 	],
