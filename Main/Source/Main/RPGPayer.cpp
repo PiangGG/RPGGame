@@ -1,0 +1,271 @@
+// Fill out your copyright notice in the Description page of Project Settings.
+
+
+#include "RPGPayer.h"
+
+
+
+#include "ItemBody.h"
+#include "Camera/CameraComponent.h"
+#include "Components/ArrowComponent.h"
+#include "GameFramework/CharacterMovementComponent.h"
+#include "GameFramework/SpringArmComponent.h"
+#include "Net/UnrealNetwork.h"
+
+// Sets default values
+ARPGPayer::ARPGPayer()
+{
+ 	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
+	PrimaryActorTick.bCanEverTick = true;
+
+	//Set up our springarm to hold our camera
+	SpringArm = CreateDefaultSubobject<USpringArmComponent>(FName("Camera Boom"));
+	//Do not allow spring arm to rotate with character
+	SpringArm->bUsePawnControlRotation = false;
+	//Do not allow it to be affected by relative rotation of character
+	//SpringArm->bAbsoluteRotation = true;
+	SpringArm->SetUsingAbsoluteRotation(true);
+	//Length of arm
+	SpringArm->TargetArmLength = 700.f;
+	//Attach to root
+	SpringArm->SetupAttachment(RootComponent);
+
+	//Set up the camera
+	Camera = CreateDefaultSubobject<UCameraComponent>(FName("Camera"));
+	//Give it a wider FOV
+	Camera->FieldOfView = 110.f;
+	//attach to SpringArm
+	Camera->SetupAttachment(SpringArm);
+
+	//Set up our forward direction
+	TraceDirection = CreateDefaultSubobject<UArrowComponent>(FName("Trace Direction"));
+	//attach to root
+	TraceDirection->SetupAttachment(RootComponent);
+
+	//set up basic network replication
+	bReplicates = true;
+	bAlwaysRelevant = true;
+	//bReplicateMovement = true;
+	this->ACharacter::SetReplicateMovement(true);
+	//Set up character movement properties
+
+	//rotate the character in the direction its moving
+	GetCharacterMovement()->bOrientRotationToMovement = true;
+	//don't rotate based on controller input
+	bUseControllerRotationPitch = false;
+	bUseControllerRotationRoll = false;
+	bUseControllerRotationYaw = false;
+
+	//Set up some movement properties for improving input feel
+	//jump higher
+	GetCharacterMovement()->JumpZVelocity = 1000.f;
+	//fall faster
+	GetCharacterMovement()->GravityScale = 2.f;
+	//Allow some control of character while airborne
+	GetCharacterMovement()->AirControl = 0.8f;
+
+	/*
+	 * init Body
+	 */
+	ItemBodyCloth=CreateDefaultSubobject<USkeletalMeshComponent>("ItemBodyCloth");
+	ItemBodyCloth->SetupAttachment(RootComponent);
+	
+	ItemBodyFace=CreateDefaultSubobject<USkeletalMeshComponent>("ItemBodyFace");
+	ItemBodyFace->SetupAttachment(ItemBodyCloth);
+
+	ItemBodyHair=CreateDefaultSubobject<USkeletalMeshComponent>("ItemBodyHair");
+	ItemBodyHair->SetupAttachment(ItemBodyCloth);
+
+	ItemBodyGlove=CreateDefaultSubobject<USkeletalMeshComponent>("ItemBodyGlove");
+	ItemBodyGlove->SetupAttachment(ItemBodyCloth);
+
+	ItemBodyShoe=CreateDefaultSubobject<USkeletalMeshComponent>("ItemBodyShoe");
+	ItemBodyShoe->SetupAttachment(ItemBodyCloth);
+
+	ItemBodyHeadGears=CreateDefaultSubobject<USkeletalMeshComponent>("ItemBodyHeadGears");
+	ItemBodyHeadGears->SetupAttachment(ItemBodyCloth);
+
+	ItemBodyShoulderPad=CreateDefaultSubobject<USkeletalMeshComponent>("ItemBodyShoulderPad");
+	ItemBodyShoulderPad->SetupAttachment(ItemBodyCloth);
+
+	ItemBodyBelt=CreateDefaultSubobject<USkeletalMeshComponent>("ItemBodyBelt");
+	ItemBodyBelt->SetupAttachment(ItemBodyCloth);
+}
+
+// Called when the game starts or when spawned
+void ARPGPayer::BeginPlay()
+{
+	Super::BeginPlay();
+
+	SpringArm->SetRelativeRotation(FQuat::MakeFromEuler(FVector(0, -25, 180)));
+}
+
+// Called every frame
+void ARPGPayer::Tick(float DeltaTime)
+{
+	Super::Tick(DeltaTime);
+
+}
+
+// Called to bind functionality to input
+void ARPGPayer::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
+{
+	Super::SetupPlayerInputComponent(PlayerInputComponent);
+
+	InputComponent->BindAction("Jump", EInputEvent::IE_Pressed, this, &ACharacter::Jump);
+
+	InputComponent->BindAxis("ChangeCameraHeight", this, &ARPGPayer::ChangeCameraHeight);
+	InputComponent->BindAxis("RotateCamera", this, &ARPGPayer::RotateCamera);
+	InputComponent->BindAxis("MoveForward", this, &ARPGPayer::MoveForward);
+	InputComponent->BindAxis("MoveRight", this, &ARPGPayer::MoveRight);
+}
+
+void ARPGPayer::SetPlayerStance(EPlayerStance NewPlayerStance)
+{
+	CurrentPlayerStance=NewPlayerStance;
+	switch (CurrentPlayerStance)
+	{
+		case EPlayerStance::ENoWeaponStance:
+			{
+				break;
+			}
+		case EPlayerStance::EBowStance:
+			{
+				break;
+			}
+		case EPlayerStance::EDoubleSwordStance:
+			{
+				break;
+			}
+		case EPlayerStance::EMagicWandStance:
+			{
+				break;
+			}
+		case EPlayerStance::ESwordAndShieldStance:
+			{
+				break;
+			}
+		case EPlayerStance::ETwoHandSwordStance:
+			{
+				break;
+			}
+		default:
+			{
+				break;
+			}
+	}
+}
+
+EPlayerStance ARPGPayer::GetPlayerStance()
+{
+	return  CurrentPlayerStance;
+}
+
+void ARPGPayer::OnRep_PlayerStanceChange()
+{
+}
+
+void ARPGPayer::SetPlayerState(EPlayerState NewPlayerState)
+{
+	CurrentPlayerState=NewPlayerState;
+	switch (CurrentPlayerState)
+	{
+		case EPlayerState::ENormal:
+			{
+				break;
+			}
+	case EPlayerState::EBattleing:
+			{
+				break;
+			}
+	case EPlayerState::EClimbing:
+			{
+				break;
+			}
+	case EPlayerState::EDead:
+			{
+				break;
+			}
+	case EPlayerState::ESwimming:
+			{
+				break;
+			}
+	case EPlayerState::EGetHiting:
+			{
+				break;
+			}
+	default:
+			{
+				break;
+			}
+	}
+}
+
+EPlayerState ARPGPayer::GetPlayerState()
+{
+	return CurrentPlayerState;
+}
+
+void ARPGPayer::OnRep_PlayerStateChange()
+{
+}
+
+void ARPGPayer::MoveForward(float amount)
+{
+	//APlatformerPlayerController *PC = Cast<APlatformerPlayerController>(GetWorld()->GetFirstPlayerController());
+
+	//if (PC && PC->bPauseMenuDisplayed) return;
+	//add movement input in the direction the camera is facing
+	if (Controller && amount) {
+		AddMovementInput(SpringArm->GetForwardVector(), amount);
+	}
+}
+
+void ARPGPayer::MoveRight(float amount)
+{
+	//APlatformerPlayerController *PC = Cast<APlatformerPlayerController>(GetWorld()->GetFirstPlayerController());
+
+	//if (PC && PC->bPauseMenuDisplayed) return;
+	//add input in the camera's right direction
+	if (Controller && amount) {
+		AddMovementInput(SpringArm->GetRightVector(), amount);
+	}
+}
+
+void ARPGPayer::RotateCamera(float amount)
+{
+	//APlatformerPlayerController *PC = Cast<APlatformerPlayerController>(GetWorld()->GetFirstPlayerController());
+
+	//if (PC && PC->bPauseMenuDisplayed) return;
+	//add rotation on the spring arm's z axis
+	if (Controller && amount) {
+		FVector rot = SpringArm->GetComponentRotation().Euler();
+		rot += FVector(0, 0, amount);
+		SpringArm->SetWorldRotation(FQuat::MakeFromEuler(rot));
+	}
+}
+void ARPGPayer::GetLifetimeReplicatedProps(TArray<FLifetimeProperty> &OutLifetimeProps) const
+{
+	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+
+	//replicates to everyone
+	DOREPLIFETIME(ARPGPayer, CurrentPlayerStance);
+	DOREPLIFETIME(ARPGPayer, CurrentPlayerState);
+}
+void ARPGPayer::ChangeCameraHeight(float amount)
+{
+	//APlatformerPlayerController *PC = Cast<APlatformerPlayerController>(GetWorld()->GetFirstPlayerController());
+
+	//if (PC && PC->bPauseMenuDisplayed) return;
+	//add rotation on spring arm's y axis. Clamp between -45 and -5
+	if (Controller && amount) {
+		FVector rot = SpringArm->GetComponentRotation().Euler();
+
+		float originalHeight = rot.Y;
+		originalHeight += amount;
+		originalHeight = FMath::Clamp(originalHeight, -45.f, -5.f);
+
+		rot = FVector(0, originalHeight, rot.Z);
+		SpringArm->SetWorldRotation(FQuat::MakeFromEuler(rot));
+	}
+}
