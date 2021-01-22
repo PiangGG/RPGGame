@@ -204,6 +204,30 @@ void EmptyLinkFunctionForGeneratedCodeRPGPayer() {}
 		P_THIS->SetPlayerStance(EPlayerStance(Z_Param_NewPlayerStance));
 		P_NATIVE_END;
 	}
+	DEFINE_FUNCTION(ARPGPayer::execRunServer)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		if (!P_THIS->RunServer_Validate())
+		{
+			RPC_ValidateFailed(TEXT("RunServer_Validate"));
+			return;
+		}
+		P_THIS->RunServer_Implementation();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(ARPGPayer::execRun)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->Run();
+		P_NATIVE_END;
+	}
+	static FName NAME_ARPGPayer_RunServer = FName(TEXT("RunServer"));
+	void ARPGPayer::RunServer()
+	{
+		ProcessEvent(FindFunctionChecked(NAME_ARPGPayer_RunServer),NULL);
+	}
 	void ARPGPayer::StaticRegisterNativesARPGPayer()
 	{
 		UClass* Class = ARPGPayer::StaticClass();
@@ -212,6 +236,8 @@ void EmptyLinkFunctionForGeneratedCodeRPGPayer() {}
 			{ "GetPlayerState", &ARPGPayer::execGetPlayerState },
 			{ "OnRep_PlayerStanceChange", &ARPGPayer::execOnRep_PlayerStanceChange },
 			{ "OnRep_PlayerStateChange", &ARPGPayer::execOnRep_PlayerStateChange },
+			{ "Run", &ARPGPayer::execRun },
+			{ "RunServer", &ARPGPayer::execRunServer },
 			{ "SetPlayerStance", &ARPGPayer::execSetPlayerStance },
 			{ "SetPlayerState", &ARPGPayer::execSetPlayerState },
 		};
@@ -331,6 +357,50 @@ void EmptyLinkFunctionForGeneratedCodeRPGPayer() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_ARPGPayer_Run_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ARPGPayer_Run_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "RPGPayer.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ARPGPayer_Run_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ARPGPayer, nullptr, "Run", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ARPGPayer_Run_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ARPGPayer_Run_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_ARPGPayer_Run()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ARPGPayer_Run_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_ARPGPayer_RunServer_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ARPGPayer_RunServer_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "RPGPayer.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ARPGPayer_RunServer_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ARPGPayer, nullptr, "RunServer", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x80220CC0, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ARPGPayer_RunServer_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ARPGPayer_RunServer_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_ARPGPayer_RunServer()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ARPGPayer_RunServer_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	struct Z_Construct_UFunction_ARPGPayer_SetPlayerStance_Statics
 	{
 		struct RPGPayer_eventSetPlayerStance_Parms
@@ -425,6 +495,19 @@ void EmptyLinkFunctionForGeneratedCodeRPGPayer() {}
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_TraceDirection;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bIsRun_MetaData[];
+#endif
+		static void NewProp_bIsRun_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bIsRun;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_BaseSpeed_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_BaseSpeed;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_RunSpeed_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_RunSpeed;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ItemBodyCloth_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_ItemBodyCloth;
@@ -479,6 +562,8 @@ void EmptyLinkFunctionForGeneratedCodeRPGPayer() {}
 		{ &Z_Construct_UFunction_ARPGPayer_GetPlayerState, "GetPlayerState" }, // 260354292
 		{ &Z_Construct_UFunction_ARPGPayer_OnRep_PlayerStanceChange, "OnRep_PlayerStanceChange" }, // 700143310
 		{ &Z_Construct_UFunction_ARPGPayer_OnRep_PlayerStateChange, "OnRep_PlayerStateChange" }, // 2160827217
+		{ &Z_Construct_UFunction_ARPGPayer_Run, "Run" }, // 3137549620
+		{ &Z_Construct_UFunction_ARPGPayer_RunServer, "RunServer" }, // 3294072834
 		{ &Z_Construct_UFunction_ARPGPayer_SetPlayerStance, "SetPlayerStance" }, // 385428532
 		{ &Z_Construct_UFunction_ARPGPayer_SetPlayerState, "SetPlayerState" }, // 2467757679
 	};
@@ -519,6 +604,31 @@ void EmptyLinkFunctionForGeneratedCodeRPGPayer() {}
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ARPGPayer_Statics::NewProp_TraceDirection = { "TraceDirection", nullptr, (EPropertyFlags)0x0010000000090009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ARPGPayer, TraceDirection), Z_Construct_UClass_UArrowComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ARPGPayer_Statics::NewProp_TraceDirection_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ARPGPayer_Statics::NewProp_TraceDirection_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ARPGPayer_Statics::NewProp_bIsRun_MetaData[] = {
+		{ "Category", "Base Character" },
+		{ "ModuleRelativePath", "RPGPayer.h" },
+	};
+#endif
+	void Z_Construct_UClass_ARPGPayer_Statics::NewProp_bIsRun_SetBit(void* Obj)
+	{
+		((ARPGPayer*)Obj)->bIsRun = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_ARPGPayer_Statics::NewProp_bIsRun = { "bIsRun", nullptr, (EPropertyFlags)0x0010000000010005, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(ARPGPayer), &Z_Construct_UClass_ARPGPayer_Statics::NewProp_bIsRun_SetBit, METADATA_PARAMS(Z_Construct_UClass_ARPGPayer_Statics::NewProp_bIsRun_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ARPGPayer_Statics::NewProp_bIsRun_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ARPGPayer_Statics::NewProp_BaseSpeed_MetaData[] = {
+		{ "Category", "Base Character" },
+		{ "ModuleRelativePath", "RPGPayer.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ARPGPayer_Statics::NewProp_BaseSpeed = { "BaseSpeed", nullptr, (EPropertyFlags)0x0010000000010005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ARPGPayer, BaseSpeed), METADATA_PARAMS(Z_Construct_UClass_ARPGPayer_Statics::NewProp_BaseSpeed_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ARPGPayer_Statics::NewProp_BaseSpeed_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ARPGPayer_Statics::NewProp_RunSpeed_MetaData[] = {
+		{ "Category", "Base Character" },
+		{ "ModuleRelativePath", "RPGPayer.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ARPGPayer_Statics::NewProp_RunSpeed = { "RunSpeed", nullptr, (EPropertyFlags)0x0010000000010005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ARPGPayer, RunSpeed), METADATA_PARAMS(Z_Construct_UClass_ARPGPayer_Statics::NewProp_RunSpeed_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ARPGPayer_Statics::NewProp_RunSpeed_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyCloth_MetaData[] = {
 		{ "Category", "PlayerBody" },
@@ -609,6 +719,9 @@ void EmptyLinkFunctionForGeneratedCodeRPGPayer() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARPGPayer_Statics::NewProp_SpringArm,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARPGPayer_Statics::NewProp_Camera,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARPGPayer_Statics::NewProp_TraceDirection,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARPGPayer_Statics::NewProp_bIsRun,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARPGPayer_Statics::NewProp_BaseSpeed,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARPGPayer_Statics::NewProp_RunSpeed,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyCloth,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyFace,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyHair,
@@ -649,7 +762,7 @@ void EmptyLinkFunctionForGeneratedCodeRPGPayer() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ARPGPayer, 1457608701);
+	IMPLEMENT_CLASS(ARPGPayer, 4073609400);
 	template<> MAIN_API UClass* StaticClass<ARPGPayer>()
 	{
 		return ARPGPayer::StaticClass();

@@ -58,6 +58,18 @@ public:
 	void RotateCamera(float amount);
 
 	void ChangeCameraHeight(float amount);
+
+	UFUNCTION(BlueprintCallable)
+	void Run();
+	UFUNCTION(Server,Reliable,WithValidation)
+	void RunServer();
+	UPROPERTY(BlueprintReadWrite,EditDefaultsOnly,Category="Base Character")
+	bool bIsRun=false;
+	UPROPERTY(BlueprintReadWrite,EditDefaultsOnly,Category="Base Character")
+	float BaseSpeed=300.0f;
+	UPROPERTY(BlueprintReadWrite,EditDefaultsOnly,Category="Base Character")
+	float RunSpeed =600.0f;
+	
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;

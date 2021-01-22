@@ -90,6 +90,8 @@ ARPGPayer::ARPGPayer()
 
 	ItemBodyBelt=CreateDefaultSubobject<USkeletalMeshComponent>("ItemBodyBelt");
 	ItemBodyBelt->SetupAttachment(ItemBodyCloth);
+
+	GetCharacterMovement()->MaxWalkSpeed=BaseSpeed;
 }
 
 // Called when the game starts or when spawned
@@ -118,6 +120,9 @@ void ARPGPayer::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 	InputComponent->BindAxis("RotateCamera", this, &ARPGPayer::RotateCamera);
 	InputComponent->BindAxis("MoveForward", this, &ARPGPayer::MoveForward);
 	InputComponent->BindAxis("MoveRight", this, &ARPGPayer::MoveRight);
+	
+	InputComponent->BindAction("Run",EInputEvent::IE_Pressed,this, &ARPGPayer::Run);
+	InputComponent->BindAction("Run",EInputEvent::IE_Released,this, &ARPGPayer::Run);
 }
 
 void ARPGPayer::SetPlayerStance(EPlayerStance NewPlayerStance)
@@ -163,6 +168,7 @@ EPlayerStance ARPGPayer::GetPlayerStance()
 
 void ARPGPayer::OnRep_PlayerStanceChange()
 {
+	//CurrentPlayerState=NewPlayerState;
 }
 
 void ARPGPayer::SetPlayerState(EPlayerState NewPlayerState)
@@ -172,10 +178,14 @@ void ARPGPayer::SetPlayerState(EPlayerState NewPlayerState)
 	{
 		case EPlayerState::ENormal:
 			{
+				BaseSpeed=300.0f;
+				RunSpeed=600.0f;
 				break;
 			}
 	case EPlayerState::EBattleing:
 			{
+				BaseSpeed=200.0f;
+				RunSpeed=400.0f;
 				break;
 			}
 	case EPlayerState::EClimbing:
@@ -268,4 +278,31 @@ void ARPGPayer::ChangeCameraHeight(float amount)
 		rot = FVector(0, originalHeight, rot.Z);
 		SpringArm->SetWorldRotation(FQuat::MakeFromEuler(rot));
 	}
+}
+
+void ARPGPayer::Run()
+{
+	if (GetLocalRole()<ROLE_Authority)
+	{
+		RunServer();
+	}
+	if (bIsRun)
+	{
+		bIsRun=false;
+		GetCharacterMovement()->MaxWalkSpeed=BaseSpeed;
+	}else
+	{
+		bIsRun=true;
+		GetCharacterMovement()->MaxWalkSpeed=RunSpeed;
+	}
+}
+
+void ARPGPayer::RunServer_Implementation()
+{
+	Run();	
+}
+
+bool ARPGPayer::RunServer_Validate()
+{
+	return true;
 }

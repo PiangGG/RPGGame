@@ -17,25 +17,35 @@ enum class EPlayerStance : uint8;
 
 #define Main_Source_Main_RPGPayer_h_33_SPARSE_DATA
 #define Main_Source_Main_RPGPayer_h_33_RPC_WRAPPERS \
+	virtual bool RunServer_Validate(); \
+	virtual void RunServer_Implementation(); \
  \
 	DECLARE_FUNCTION(execOnRep_PlayerStateChange); \
 	DECLARE_FUNCTION(execGetPlayerState); \
 	DECLARE_FUNCTION(execSetPlayerState); \
 	DECLARE_FUNCTION(execOnRep_PlayerStanceChange); \
 	DECLARE_FUNCTION(execGetPlayerStance); \
-	DECLARE_FUNCTION(execSetPlayerStance);
+	DECLARE_FUNCTION(execSetPlayerStance); \
+	DECLARE_FUNCTION(execRunServer); \
+	DECLARE_FUNCTION(execRun);
 
 
 #define Main_Source_Main_RPGPayer_h_33_RPC_WRAPPERS_NO_PURE_DECLS \
+	virtual bool RunServer_Validate(); \
+	virtual void RunServer_Implementation(); \
  \
 	DECLARE_FUNCTION(execOnRep_PlayerStateChange); \
 	DECLARE_FUNCTION(execGetPlayerState); \
 	DECLARE_FUNCTION(execSetPlayerState); \
 	DECLARE_FUNCTION(execOnRep_PlayerStanceChange); \
 	DECLARE_FUNCTION(execGetPlayerStance); \
-	DECLARE_FUNCTION(execSetPlayerStance);
+	DECLARE_FUNCTION(execSetPlayerStance); \
+	DECLARE_FUNCTION(execRunServer); \
+	DECLARE_FUNCTION(execRun);
 
 
+#define Main_Source_Main_RPGPayer_h_33_EVENT_PARMS
+#define Main_Source_Main_RPGPayer_h_33_CALLBACK_WRAPPERS
 #define Main_Source_Main_RPGPayer_h_33_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesARPGPayer(); \
@@ -93,13 +103,17 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ARPGPayer); \
 
 
 #define Main_Source_Main_RPGPayer_h_33_PRIVATE_PROPERTY_OFFSET
-#define Main_Source_Main_RPGPayer_h_30_PROLOG
+#define Main_Source_Main_RPGPayer_h_30_PROLOG \
+	Main_Source_Main_RPGPayer_h_33_EVENT_PARMS
+
+
 #define Main_Source_Main_RPGPayer_h_33_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	Main_Source_Main_RPGPayer_h_33_PRIVATE_PROPERTY_OFFSET \
 	Main_Source_Main_RPGPayer_h_33_SPARSE_DATA \
 	Main_Source_Main_RPGPayer_h_33_RPC_WRAPPERS \
+	Main_Source_Main_RPGPayer_h_33_CALLBACK_WRAPPERS \
 	Main_Source_Main_RPGPayer_h_33_INCLASS \
 	Main_Source_Main_RPGPayer_h_33_STANDARD_CONSTRUCTORS \
 public: \
@@ -112,6 +126,7 @@ public: \
 	Main_Source_Main_RPGPayer_h_33_PRIVATE_PROPERTY_OFFSET \
 	Main_Source_Main_RPGPayer_h_33_SPARSE_DATA \
 	Main_Source_Main_RPGPayer_h_33_RPC_WRAPPERS_NO_PURE_DECLS \
+	Main_Source_Main_RPGPayer_h_33_CALLBACK_WRAPPERS \
 	Main_Source_Main_RPGPayer_h_33_INCLASS_NO_PURE_DECLS \
 	Main_Source_Main_RPGPayer_h_33_ENHANCED_CONSTRUCTORS \
 private: \
