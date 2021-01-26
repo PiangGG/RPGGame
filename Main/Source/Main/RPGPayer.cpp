@@ -116,6 +116,8 @@ void ARPGPayer::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 
 	InputComponent->BindAction("Jump", EInputEvent::IE_Pressed, this, &ACharacter::Jump);
 
+	InputComponent->BindAction("Attack", EInputEvent::IE_Pressed, this, &ACharacter::Jump);
+
 	InputComponent->BindAxis("ChangeCameraHeight", this, &ARPGPayer::ChangeCameraHeight);
 	InputComponent->BindAxis("RotateCamera", this, &ARPGPayer::RotateCamera);
 	InputComponent->BindAxis("MoveForward", this, &ARPGPayer::MoveForward);
@@ -220,6 +222,65 @@ void ARPGPayer::OnRep_PlayerStateChange()
 {
 }
 
+void ARPGPayer::Attack()
+{
+	if (GetLocalRole()<ROLE_Authority)
+	{
+		AttackServer();
+	}
+
+	if(bIsAttacking)
+	{
+		AttackNumber++;
+		switch (AttackNumber%3)
+		{
+			case 1:
+				{
+					break;
+				}
+			case 2:
+				{
+					break;
+				}
+			case 3:
+				{
+					break;
+				}
+		default:
+			break;
+		}
+		if (GetWorld())
+		{
+			GetWorld()->GetTimerManager().SetTimer
+            (TimerHandle_Attack, this, &ARPGPayer::AttackCallBack,AttackTime, false);
+		}
+		}
+	else
+	{
+		bIsAttacking=true;
+		GetWorld()->GetTimerManager().SetTimer
+        (TimerHandle_Attack, this, &ARPGPayer::AttackCallBack,AttackTime, false);
+	
+	}
+}
+
+void ARPGPayer::AttackCallBack()
+{
+	GetWorld()->GetTimerManager().ClearTimer(TimerHandle_Attack);
+	bIsAttacking=false;
+}
+
+bool ARPGPayer::AttackServer_Validate()
+{
+	return true;
+}
+
+void ARPGPayer::AttackServer_Implementation()
+{
+	Attack();
+}
+
+
 void ARPGPayer::MoveForward(float amount)
 {
 	//APlatformerPlayerController *PC = Cast<APlatformerPlayerController>(GetWorld()->GetFirstPlayerController());
@@ -261,6 +322,7 @@ void ARPGPayer::GetLifetimeReplicatedProps(TArray<FLifetimeProperty> &OutLifetim
 	//replicates to everyone
 	DOREPLIFETIME(ARPGPayer, CurrentPlayerStance);
 	DOREPLIFETIME(ARPGPayer, CurrentPlayerState);
+	DOREPLIFETIME(ARPGPayer, bIsAttacking);
 }
 void ARPGPayer::ChangeCameraHeight(float amount)
 {

@@ -281,6 +281,7 @@ void EmptyLinkFunctionForGeneratedCodeItemBody() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AItemBody_SwitchBody_Statics::Function_MetaDataParams[] = {
+		{ "Category", "ItemBody" },
 		{ "Comment", "/*\n\x09 * \xe5\x88\x87\xe6\x8d\xa2\xe8\xba\xab\xe4\xbd\x93\xe9\x83\xa8\xe4\xbd\x8d\n\x09 */" },
 		{ "ModuleRelativePath", "ItemBody.h" },
 		{ "ToolTip", "* \xe5\x88\x87\xe6\x8d\xa2\xe8\xba\xab\xe4\xbd\x93\xe9\x83\xa8\xe4\xbd\x8d" },
@@ -325,7 +326,7 @@ void EmptyLinkFunctionForGeneratedCodeItemBody() {}
 		{ &Z_Construct_UFunction_AItemBody_GetEPawnBodyType, "GetEPawnBodyType" }, // 2776063966
 		{ &Z_Construct_UFunction_AItemBody_InitItem, "InitItem" }, // 1469664223
 		{ &Z_Construct_UFunction_AItemBody_SetEPawnBody, "SetEPawnBody" }, // 491148868
-		{ &Z_Construct_UFunction_AItemBody_SwitchBody, "SwitchBody" }, // 1767002584
+		{ &Z_Construct_UFunction_AItemBody_SwitchBody, "SwitchBody" }, // 1624458178
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AItemBody_Statics::Class_MetaDataParams[] = {
@@ -373,7 +374,7 @@ void EmptyLinkFunctionForGeneratedCodeItemBody() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AItemBody, 2458913504);
+	IMPLEMENT_CLASS(AItemBody, 1015744480);
 	template<> MAIN_API UClass* StaticClass<AItemBody>()
 	{
 		return AItemBody::StaticClass();

@@ -30,12 +30,19 @@ class MAIN_API AItemWeapon : public AItem
 public:
 	AItemWeapon();
 
+	/*
+	 * Component
+	 */
+	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Category="Weapon")
+	class  UStaticMeshComponent* StaticMeshComponent;
 	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Category="Weapon")
 	EWeaponType WeaponType;
 
+	/*装备武器*/
 	UFUNCTION(BlueprintCallable)
-	void Equipment(APawn*Pawn);
+	void Equipment(APawn *Pawn);
 
+	/*切换武器*/
 	UFUNCTION(BlueprintCallable)
 	void SwapWeapon(AItemWeapon *ItemWeapon);
 };

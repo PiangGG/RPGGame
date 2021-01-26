@@ -160,6 +160,25 @@ void EmptyLinkFunctionForGeneratedCodeRPGPayer() {}
 		}
 		return ReturnEnum;
 	}
+	DEFINE_FUNCTION(ARPGPayer::execAttackServer)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		if (!P_THIS->AttackServer_Validate())
+		{
+			RPC_ValidateFailed(TEXT("AttackServer_Validate"));
+			return;
+		}
+		P_THIS->AttackServer_Implementation();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(ARPGPayer::execAttack)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->Attack();
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(ARPGPayer::execOnRep_PlayerStateChange)
 	{
 		P_FINISH;
@@ -223,6 +242,11 @@ void EmptyLinkFunctionForGeneratedCodeRPGPayer() {}
 		P_THIS->Run();
 		P_NATIVE_END;
 	}
+	static FName NAME_ARPGPayer_AttackServer = FName(TEXT("AttackServer"));
+	void ARPGPayer::AttackServer()
+	{
+		ProcessEvent(FindFunctionChecked(NAME_ARPGPayer_AttackServer),NULL);
+	}
 	static FName NAME_ARPGPayer_RunServer = FName(TEXT("RunServer"));
 	void ARPGPayer::RunServer()
 	{
@@ -232,6 +256,8 @@ void EmptyLinkFunctionForGeneratedCodeRPGPayer() {}
 	{
 		UClass* Class = ARPGPayer::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
+			{ "Attack", &ARPGPayer::execAttack },
+			{ "AttackServer", &ARPGPayer::execAttackServer },
 			{ "GetPlayerStance", &ARPGPayer::execGetPlayerStance },
 			{ "GetPlayerState", &ARPGPayer::execGetPlayerState },
 			{ "OnRep_PlayerStanceChange", &ARPGPayer::execOnRep_PlayerStanceChange },
@@ -242,6 +268,50 @@ void EmptyLinkFunctionForGeneratedCodeRPGPayer() {}
 			{ "SetPlayerState", &ARPGPayer::execSetPlayerState },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_ARPGPayer_Attack_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ARPGPayer_Attack_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "RPGPayer.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ARPGPayer_Attack_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ARPGPayer, nullptr, "Attack", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ARPGPayer_Attack_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ARPGPayer_Attack_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_ARPGPayer_Attack()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ARPGPayer_Attack_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_ARPGPayer_AttackServer_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ARPGPayer_AttackServer_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "RPGPayer.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ARPGPayer_AttackServer_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ARPGPayer, nullptr, "AttackServer", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x84220CC0, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ARPGPayer_AttackServer_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ARPGPayer_AttackServer_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_ARPGPayer_AttackServer()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ARPGPayer_AttackServer_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	struct Z_Construct_UFunction_ARPGPayer_GetPlayerStance_Statics
 	{
@@ -549,6 +619,15 @@ void EmptyLinkFunctionForGeneratedCodeRPGPayer() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CurrentPlayerState_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_CurrentPlayerState;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bIsAttacking_MetaData[];
+#endif
+		static void NewProp_bIsAttacking_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bIsAttacking;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_AttackTime_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_AttackTime;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -558,6 +637,8 @@ void EmptyLinkFunctionForGeneratedCodeRPGPayer() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_Main,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_ARPGPayer_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_ARPGPayer_Attack, "Attack" }, // 2857563352
+		{ &Z_Construct_UFunction_ARPGPayer_AttackServer, "AttackServer" }, // 1630754502
 		{ &Z_Construct_UFunction_ARPGPayer_GetPlayerStance, "GetPlayerStance" }, // 1831470904
 		{ &Z_Construct_UFunction_ARPGPayer_GetPlayerState, "GetPlayerState" }, // 260354292
 		{ &Z_Construct_UFunction_ARPGPayer_OnRep_PlayerStanceChange, "OnRep_PlayerStanceChange" }, // 700143310
@@ -715,6 +796,26 @@ void EmptyLinkFunctionForGeneratedCodeRPGPayer() {}
 	};
 #endif
 	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UClass_ARPGPayer_Statics::NewProp_CurrentPlayerState = { "CurrentPlayerState", "OnRep_PlayerStateChange", (EPropertyFlags)0x0010000100010025, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ARPGPayer, CurrentPlayerState), Z_Construct_UEnum_Main_EPlayerState, METADATA_PARAMS(Z_Construct_UClass_ARPGPayer_Statics::NewProp_CurrentPlayerState_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ARPGPayer_Statics::NewProp_CurrentPlayerState_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ARPGPayer_Statics::NewProp_bIsAttacking_MetaData[] = {
+		{ "Category", "Player" },
+		{ "Comment", "/*\n\x09 * \xe8\xa7\x92\xe8\x89\xb2\xe6\x94\xbb\xe5\x87\xbb\xe5\x87\xbd\xe6\x95\xb0\n\x09 */" },
+		{ "ModuleRelativePath", "RPGPayer.h" },
+		{ "ToolTip", "* \xe8\xa7\x92\xe8\x89\xb2\xe6\x94\xbb\xe5\x87\xbb\xe5\x87\xbd\xe6\x95\xb0" },
+	};
+#endif
+	void Z_Construct_UClass_ARPGPayer_Statics::NewProp_bIsAttacking_SetBit(void* Obj)
+	{
+		((ARPGPayer*)Obj)->bIsAttacking = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_ARPGPayer_Statics::NewProp_bIsAttacking = { "bIsAttacking", nullptr, (EPropertyFlags)0x0010000000010025, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(ARPGPayer), &Z_Construct_UClass_ARPGPayer_Statics::NewProp_bIsAttacking_SetBit, METADATA_PARAMS(Z_Construct_UClass_ARPGPayer_Statics::NewProp_bIsAttacking_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ARPGPayer_Statics::NewProp_bIsAttacking_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ARPGPayer_Statics::NewProp_AttackTime_MetaData[] = {
+		{ "Category", "Player" },
+		{ "ModuleRelativePath", "RPGPayer.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ARPGPayer_Statics::NewProp_AttackTime = { "AttackTime", nullptr, (EPropertyFlags)0x0010000000010005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ARPGPayer, AttackTime), METADATA_PARAMS(Z_Construct_UClass_ARPGPayer_Statics::NewProp_AttackTime_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ARPGPayer_Statics::NewProp_AttackTime_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ARPGPayer_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARPGPayer_Statics::NewProp_SpringArm,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARPGPayer_Statics::NewProp_Camera,
@@ -734,6 +835,8 @@ void EmptyLinkFunctionForGeneratedCodeRPGPayer() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARPGPayer_Statics::NewProp_CurrentPlayerStance,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARPGPayer_Statics::NewProp_CurrentPlayerState_Underlying,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARPGPayer_Statics::NewProp_CurrentPlayerState,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARPGPayer_Statics::NewProp_bIsAttacking,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARPGPayer_Statics::NewProp_AttackTime,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ARPGPayer_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<ARPGPayer>::IsAbstract,
@@ -762,7 +865,7 @@ void EmptyLinkFunctionForGeneratedCodeRPGPayer() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ARPGPayer, 4073609400);
+	IMPLEMENT_CLASS(ARPGPayer, 3180790370);
 	template<> MAIN_API UClass* StaticClass<ARPGPayer>()
 	{
 		return ARPGPayer::StaticClass();
@@ -773,10 +876,12 @@ void EmptyLinkFunctionForGeneratedCodeRPGPayer() {}
 	{
 		static const FName Name_CurrentPlayerStance(TEXT("CurrentPlayerStance"));
 		static const FName Name_CurrentPlayerState(TEXT("CurrentPlayerState"));
+		static const FName Name_bIsAttacking(TEXT("bIsAttacking"));
 
 		const bool bIsValid = true
 			&& Name_CurrentPlayerStance == ClassReps[(int32)ENetFields_Private::CurrentPlayerStance].Property->GetFName()
-			&& Name_CurrentPlayerState == ClassReps[(int32)ENetFields_Private::CurrentPlayerState].Property->GetFName();
+			&& Name_CurrentPlayerState == ClassReps[(int32)ENetFields_Private::CurrentPlayerState].Property->GetFName()
+			&& Name_bIsAttacking == ClassReps[(int32)ENetFields_Private::bIsAttacking].Property->GetFName();
 
 		checkf(bIsValid, TEXT("UHT Generated Rep Indices do not match runtime populated Rep Indices for properties in ARPGPayer"));
 	}

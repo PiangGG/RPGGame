@@ -17,9 +17,13 @@ enum class EPlayerStance : uint8;
 
 #define Main_Source_Main_RPGPayer_h_33_SPARSE_DATA
 #define Main_Source_Main_RPGPayer_h_33_RPC_WRAPPERS \
+	virtual bool AttackServer_Validate(); \
+	virtual void AttackServer_Implementation(); \
 	virtual bool RunServer_Validate(); \
 	virtual void RunServer_Implementation(); \
  \
+	DECLARE_FUNCTION(execAttackServer); \
+	DECLARE_FUNCTION(execAttack); \
 	DECLARE_FUNCTION(execOnRep_PlayerStateChange); \
 	DECLARE_FUNCTION(execGetPlayerState); \
 	DECLARE_FUNCTION(execSetPlayerState); \
@@ -31,9 +35,13 @@ enum class EPlayerStance : uint8;
 
 
 #define Main_Source_Main_RPGPayer_h_33_RPC_WRAPPERS_NO_PURE_DECLS \
+	virtual bool AttackServer_Validate(); \
+	virtual void AttackServer_Implementation(); \
 	virtual bool RunServer_Validate(); \
 	virtual void RunServer_Implementation(); \
  \
+	DECLARE_FUNCTION(execAttackServer); \
+	DECLARE_FUNCTION(execAttack); \
 	DECLARE_FUNCTION(execOnRep_PlayerStateChange); \
 	DECLARE_FUNCTION(execGetPlayerState); \
 	DECLARE_FUNCTION(execSetPlayerState); \
@@ -58,7 +66,8 @@ public: \
 		NETFIELD_REP_START=(uint16)((int32)Super::ENetFields_Private::NETFIELD_REP_END + (int32)1), \
 		CurrentPlayerStance=NETFIELD_REP_START, \
 		CurrentPlayerState, \
-		NETFIELD_REP_END=CurrentPlayerState	}; \
+		bIsAttacking, \
+		NETFIELD_REP_END=bIsAttacking	}; \
 	NO_API virtual void ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const override;
 
 
@@ -74,7 +83,8 @@ public: \
 		NETFIELD_REP_START=(uint16)((int32)Super::ENetFields_Private::NETFIELD_REP_END + (int32)1), \
 		CurrentPlayerStance=NETFIELD_REP_START, \
 		CurrentPlayerState, \
-		NETFIELD_REP_END=CurrentPlayerState	}; \
+		bIsAttacking, \
+		NETFIELD_REP_END=bIsAttacking	}; \
 	NO_API virtual void ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const override;
 
 

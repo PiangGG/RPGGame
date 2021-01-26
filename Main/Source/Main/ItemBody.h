@@ -51,6 +51,6 @@ class MAIN_API AItemBody : public AItem
 	/*
 	 * 切换身体部位
 	 */
-	UFUNCTION(BlueprintCallable)
+	UFUNCTION(BlueprintCallable,Category="ItemBody")
 	void SwitchBody(APawn* Pawn);
 };

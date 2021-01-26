@@ -124,4 +124,20 @@ public:
     EPlayerState GetPlayerState();
 	UFUNCTION()
     void OnRep_PlayerStateChange();
+
+	/*
+	 * 角色攻击函数
+	 */
+	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Replicated,Category="Player")
+	bool bIsAttacking=false;
+	int32 AttackNumber=0;
+	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Category="Player")
+	float AttackTime=3.0f;
+	FTimerHandle TimerHandle_Attack;
+	UFUNCTION(BlueprintCallable)
+	void Attack();
+	UFUNCTION(BlueprintCallable,Reliable,Server,WithValidation)
+	void AttackServer();
+	/*攻击回调函数*/
+	void AttackCallBack();
 };

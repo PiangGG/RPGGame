@@ -2,6 +2,7 @@
 
 
 #include "ItemBody.h"
+#include "RPGPayer.h"
 
 AItemBody::AItemBody()
 {
@@ -22,6 +23,19 @@ void AItemBody::InitItem()
 
 void AItemBody::SwitchBody(APawn* Pawn)
 {
+	ARPGPayer *Player=Cast<ARPGPayer>(Pawn);
+	
+	if (Player)return;;
+	switch (GetEPawnBodyType())
+	{
+		case EPawnBodyType::ECloth:
+			{
+				Player->ItemBodyCloth=ThisSkeletalMesh;
+				break;
+			}
+		default: break;
+	}
+	
 }
 
 void AItemBody::SetEPawnBody(EPawnBodyType NewPawnBodyType)

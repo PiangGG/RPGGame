@@ -19,6 +19,7 @@ void EmptyLinkFunctionForGeneratedCodeItemWeapon() {}
 	MAIN_API UClass* Z_Construct_UClass_AItemWeapon();
 	MAIN_API UClass* Z_Construct_UClass_AItem();
 	ENGINE_API UClass* Z_Construct_UClass_APawn_NoRegister();
+	ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 // End Cross Module References
 	static UEnum* EWeaponType_StaticEnum()
 	{
@@ -134,7 +135,9 @@ void EmptyLinkFunctionForGeneratedCodeItemWeapon() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AItemWeapon_Equipment_Statics::Function_MetaDataParams[] = {
+		{ "Comment", "/*\xe8\xa3\x85\xe5\xa4\x87\xe6\xad\xa6\xe5\x99\xa8*/" },
 		{ "ModuleRelativePath", "ItemWeapon.h" },
+		{ "ToolTip", "\xe8\xa3\x85\xe5\xa4\x87\xe6\xad\xa6\xe5\x99\xa8" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AItemWeapon_Equipment_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AItemWeapon, nullptr, "Equipment", nullptr, nullptr, sizeof(ItemWeapon_eventEquipment_Parms), Z_Construct_UFunction_AItemWeapon_Equipment_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AItemWeapon_Equipment_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AItemWeapon_Equipment_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AItemWeapon_Equipment_Statics::Function_MetaDataParams)) };
@@ -166,7 +169,9 @@ void EmptyLinkFunctionForGeneratedCodeItemWeapon() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AItemWeapon_SwapWeapon_Statics::Function_MetaDataParams[] = {
+		{ "Comment", "/*\xe5\x88\x87\xe6\x8d\xa2\xe6\xad\xa6\xe5\x99\xa8*/" },
 		{ "ModuleRelativePath", "ItemWeapon.h" },
+		{ "ToolTip", "\xe5\x88\x87\xe6\x8d\xa2\xe6\xad\xa6\xe5\x99\xa8" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AItemWeapon_SwapWeapon_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AItemWeapon, nullptr, "SwapWeapon", nullptr, nullptr, sizeof(ItemWeapon_eventSwapWeapon_Parms), Z_Construct_UFunction_AItemWeapon_SwapWeapon_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AItemWeapon_SwapWeapon_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AItemWeapon_SwapWeapon_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AItemWeapon_SwapWeapon_Statics::Function_MetaDataParams)) };
@@ -190,6 +195,10 @@ void EmptyLinkFunctionForGeneratedCodeItemWeapon() {}
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_StaticMeshComponent_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_StaticMeshComponent;
 		static const UE4CodeGen_Private::FBytePropertyParams NewProp_WeaponType_Underlying;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_WeaponType_MetaData[];
@@ -204,8 +213,8 @@ void EmptyLinkFunctionForGeneratedCodeItemWeapon() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_Main,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_AItemWeapon_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_AItemWeapon_Equipment, "Equipment" }, // 488372656
-		{ &Z_Construct_UFunction_AItemWeapon_SwapWeapon, "SwapWeapon" }, // 2999771752
+		{ &Z_Construct_UFunction_AItemWeapon_Equipment, "Equipment" }, // 847137131
+		{ &Z_Construct_UFunction_AItemWeapon_SwapWeapon, "SwapWeapon" }, // 1742506026
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AItemWeapon_Statics::Class_MetaDataParams[] = {
@@ -214,6 +223,16 @@ void EmptyLinkFunctionForGeneratedCodeItemWeapon() {}
 		{ "ModuleRelativePath", "ItemWeapon.h" },
 	};
 #endif
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AItemWeapon_Statics::NewProp_StaticMeshComponent_MetaData[] = {
+		{ "Category", "Weapon" },
+		{ "Comment", "/*\n\x09 * Component\n\x09 */" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "ItemWeapon.h" },
+		{ "ToolTip", "* Component" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AItemWeapon_Statics::NewProp_StaticMeshComponent = { "StaticMeshComponent", nullptr, (EPropertyFlags)0x001000000009000d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AItemWeapon, StaticMeshComponent), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AItemWeapon_Statics::NewProp_StaticMeshComponent_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AItemWeapon_Statics::NewProp_StaticMeshComponent_MetaData)) };
 	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UClass_AItemWeapon_Statics::NewProp_WeaponType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AItemWeapon_Statics::NewProp_WeaponType_MetaData[] = {
@@ -223,6 +242,7 @@ void EmptyLinkFunctionForGeneratedCodeItemWeapon() {}
 #endif
 	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UClass_AItemWeapon_Statics::NewProp_WeaponType = { "WeaponType", nullptr, (EPropertyFlags)0x0010000000010005, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AItemWeapon, WeaponType), Z_Construct_UEnum_Main_EWeaponType, METADATA_PARAMS(Z_Construct_UClass_AItemWeapon_Statics::NewProp_WeaponType_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AItemWeapon_Statics::NewProp_WeaponType_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AItemWeapon_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AItemWeapon_Statics::NewProp_StaticMeshComponent,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AItemWeapon_Statics::NewProp_WeaponType_Underlying,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AItemWeapon_Statics::NewProp_WeaponType,
 	};
@@ -253,7 +273,7 @@ void EmptyLinkFunctionForGeneratedCodeItemWeapon() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AItemWeapon, 2081594144);
+	IMPLEMENT_CLASS(AItemWeapon, 2638728734);
 	template<> MAIN_API UClass* StaticClass<AItemWeapon>()
 	{
 		return AItemWeapon::StaticClass();
