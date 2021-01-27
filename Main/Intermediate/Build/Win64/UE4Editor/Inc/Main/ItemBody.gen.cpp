@@ -374,7 +374,7 @@ void EmptyLinkFunctionForGeneratedCodeItemBody() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AItemBody, 1015744480);
+	IMPLEMENT_CLASS(AItemBody, 2904001002);
 	template<> MAIN_API UClass* StaticClass<AItemBody>()
 	{
 		return AItemBody::StaticClass();

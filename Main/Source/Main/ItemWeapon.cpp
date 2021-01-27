@@ -2,7 +2,6 @@
 
 
 #include "ItemWeapon.h"
-
 #include "RPGPayer.h"
 
 AItemWeapon::AItemWeapon()
@@ -27,3 +26,16 @@ void AItemWeapon::Equipment(APawn* Pawn)
 void AItemWeapon::SwapWeapon(AItemWeapon* ItemWeapon)
 {
 }
+
+void AItemWeapon::SphereComponent_BeginOverlap(UPrimitiveComponent* Component, AActor* OtherActor,
+	UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
+{
+	Super::SphereComponent_BeginOverlap(Component, OtherActor, OtherComp, OtherBodyIndex, bFromSweep, SweepResult);
+}
+
+void AItemWeapon::SphereComponent_EndOverlap(UPrimitiveComponent* Component,AActor* OtherActor,
+	UPrimitiveComponent* OtherComp, int32 OtherBodyIndex)
+{
+	Super::SphereComponent_EndOverlap( Component,OtherActor, OtherComp, OtherBodyIndex);
+}
+

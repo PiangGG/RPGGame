@@ -15,6 +15,9 @@ AItem::AItem()
 	SphereComponent=CreateDefaultSubobject<USphereComponent>(FName("SphereComponent"));
 	RootComponent=ThisSkeletalMesh;
 	SphereComponent->SetupAttachment(RootComponent);
+	SphereComponent->OnComponentBeginOverlap.AddDynamic(this,&AItem::SphereComponent_BeginOverlap);
+	
+	SphereComponent->OnComponentEndOverlap.AddDynamic(this,&AItem::SphereComponent_EndOverlap);
 }
 
 void AItem::GetLifetimeReplicatedProps(TArray<FLifetimeProperty> &OutLifetimeProps) const
@@ -67,8 +70,10 @@ void AItem::SetItemState(EItemState NewItemState)
 				ThisSkeletalMesh->SetRelativeScale3D(FVector(1));
 				
 				SphereComponent->SetCollisionEnabled(ECollisionEnabled::QueryOnly);
-				SphereComponent->SetCollisionResponseToChannels(ECR_Ignore);
-				SphereComponent->SetCollisionResponseToChannel(ECC_EngineTraceChannel1,ECR_Overlap);
+				//SphereComponent->SetCollisionObjectType(ECC_EngineTraceChannel1);
+				//SphereComponent->SetCollisionResponseToChannels(ECR_Ignore);
+				SphereComponent->SetCollisionResponseToAllChannels(ECR_Ignore);
+				SphereComponent->SetCollisionResponseToChannel(ECC_Pawn,ECR_Overlap);
 				SphereComponent->SetHiddenInGame(false);
 				break;
 			}
@@ -128,9 +133,10 @@ void AItem::SetItemState(EItemState NewItemState)
 				ThisSkeletalMesh->SetWorldScale3D(FVector(1));
 				ThisSkeletalMesh->SetRelativeScale3D(FVector(1));
 				
-				SphereComponent->SetCollisionEnabled(ECollisionEnabled::QueryOnly);
+				SphereComponent->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
 				SphereComponent->SetCollisionResponseToChannels(ECR_Ignore);
 				SphereComponent->SetCollisionResponseToChannel(ECC_EngineTraceChannel1,ECR_Overlap);
+				SphereComponent->SetCollisionResponseToChannel(ECC_GameTraceChannel1,ECR_Overlap);
 				SphereComponent->SetHiddenInGame(false);
 				break;
 			} 
@@ -142,6 +148,27 @@ void AItem::OnRep_SetItemState(EItemState NewItemState)
 	if (GetLocalRole()==ROLE_Authority)
 	{
 		CurrentItemState=NewItemState;
+	}
+}
+
+void AItem::SphereComponent_BeginOverlap(UPrimitiveComponent* Component, AActor* OtherActor,
+	UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
+{
+	APawn* Player=Cast<APawn>(OtherActor);
+	
+	if (GetItemState()==EItemState::InWorld&&Player)
+	{
+		UE_LOG(LogTemp,Warning,TEXT("BeginOverlap"));
+	}
+}
+
+void AItem::SphereComponent_EndOverlap(UPrimitiveComponent* Component,AActor* OtherActor,UPrimitiveComponent* OtherComp, int32 OtherBodyIndex)
+{
+	APawn* Player=Cast<APawn>(OtherActor);
+	
+	if (GetItemState()==EItemState::InWorld&&Player)
+	{
+		UE_LOG(LogTemp,Warning,TEXT("EndOverlap"));
 	}
 }
 

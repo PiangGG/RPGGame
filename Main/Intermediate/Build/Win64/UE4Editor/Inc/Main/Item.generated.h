@@ -9,6 +9,9 @@
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 class APawn;
+class UPrimitiveComponent;
+class AActor;
+struct FHitResult;
 enum class EItemState : uint8;
 #ifdef MAIN_Item_generated_h
 #error "Item.generated.h already included, missing '#pragma once' in Item.h"
@@ -26,6 +29,8 @@ template<> MAIN_API UScriptStruct* StaticStruct<struct FItemStruct>();
 #define Main_Source_Main_Item_h_71_RPC_WRAPPERS \
  \
 	DECLARE_FUNCTION(execPickUpItem); \
+	DECLARE_FUNCTION(execSphereComponent_EndOverlap); \
+	DECLARE_FUNCTION(execSphereComponent_BeginOverlap); \
 	DECLARE_FUNCTION(execOnRep_SetItemState); \
 	DECLARE_FUNCTION(execSetItemState); \
 	DECLARE_FUNCTION(execGetItemState);
@@ -34,6 +39,8 @@ template<> MAIN_API UScriptStruct* StaticStruct<struct FItemStruct>();
 #define Main_Source_Main_Item_h_71_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execPickUpItem); \
+	DECLARE_FUNCTION(execSphereComponent_EndOverlap); \
+	DECLARE_FUNCTION(execSphereComponent_BeginOverlap); \
 	DECLARE_FUNCTION(execOnRep_SetItemState); \
 	DECLARE_FUNCTION(execSetItemState); \
 	DECLARE_FUNCTION(execGetItemState);

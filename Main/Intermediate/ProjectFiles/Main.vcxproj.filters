@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Main.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{73791003-6941-47ED-ABB8-B0385A074F71}</UniqueIdentifier>
+      <UniqueIdentifier>{9EE06F7E-338C-47D5-AFDE-516C695F6687}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Main.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{30126C44-FE6B-42E9-BC03-5A827F7F2BF7}</UniqueIdentifier>
+      <UniqueIdentifier>{C4AF57BB-F263-4332-91E5-518BC3D88E21}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -23,20 +23,23 @@
     <None Include="..\..\Config\DefaultGame.ini">
       <Filter>Config</Filter>
     </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
     <Filter Include="Plugins">
-      <UniqueIdentifier>{D3A90C33-9C98-4DF9-B184-A219E4E45EB6}</UniqueIdentifier>
+      <UniqueIdentifier>{3A134AEE-2487-421E-83EB-D10FFA86BFD3}</UniqueIdentifier>
     </Filter>
     <Filter Include="Plugins\Developer">
-      <UniqueIdentifier>{B3DA7E6D-C07D-4362-8E24-F8E4FA137B0E}</UniqueIdentifier>
+      <UniqueIdentifier>{5FCC6EDD-AABB-4883-834A-6E0119D5BCC3}</UniqueIdentifier>
     </Filter>
     <Filter Include="Plugins\Developer\RiderLink">
-      <UniqueIdentifier>{3B58BEB6-C08F-4564-A4AB-7566C5380A66}</UniqueIdentifier>
+      <UniqueIdentifier>{B514E45C-76E8-457F-80D2-89B6A9DA942E}</UniqueIdentifier>
     </Filter>
     <Filter Include="Plugins\Developer\RiderLink\Source">
-      <UniqueIdentifier>{8CC1D89F-2CD4-41C2-A853-90A3CC6257DE}</UniqueIdentifier>
+      <UniqueIdentifier>{08005F28-4458-4325-883F-9BFFC82B07C9}</UniqueIdentifier>
     </Filter>
     <Filter Include="Plugins\Developer\RiderLink\Source\RD">
-      <UniqueIdentifier>{B4C2243D-67A7-4EC5-A86E-644D13554522}</UniqueIdentifier>
+      <UniqueIdentifier>{AA8C2CE9-490D-473C-B999-6E3871EE3CDA}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\Developer\RiderLink\Source\RD\RD.Build.cs">
       <Filter>Plugins\Developer\RiderLink\Source\RD</Filter>
@@ -48,22 +51,22 @@
       <Filter>Plugins\Developer\RiderLink\Source\RD</Filter>
     </ClInclude>
     <Filter Include="Plugins\Developer\RiderLink\Source\RD\src">
-      <UniqueIdentifier>{67783F77-EF86-450A-BF23-B677C70AAAB9}</UniqueIdentifier>
+      <UniqueIdentifier>{CF79A445-7432-44D9-ADE3-083443F2A780}</UniqueIdentifier>
     </Filter>
     <Filter Include="Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp">
-      <UniqueIdentifier>{386C60D3-E92E-418C-BC55-6EDCE68CD0D6}</UniqueIdentifier>
+      <UniqueIdentifier>{2D48C8CE-03E5-4A03-8064-41B63E3929D7}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\rd_core_export.h">
       <Filter>Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp</Filter>
     </ClInclude>
     <Filter Include="Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src">
-      <UniqueIdentifier>{95EE2948-D77B-4655-A451-3FDADEA23E4D}</UniqueIdentifier>
+      <UniqueIdentifier>{F2EADD4A-2503-48C0-A12D-52B433C58E75}</UniqueIdentifier>
     </Filter>
     <Filter Include="Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main">
-      <UniqueIdentifier>{C2F2768E-DCA4-48CB-8740-790AED49D312}</UniqueIdentifier>
+      <UniqueIdentifier>{DE8335E2-6135-4F78-82C2-948672141ACA}</UniqueIdentifier>
     </Filter>
     <Filter Include="Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\lifetime">
-      <UniqueIdentifier>{CD88609B-5436-475F-8DAA-E9C0501ADDD4}</UniqueIdentifier>
+      <UniqueIdentifier>{D9CC5178-A104-418C-9A4F-C4F7B1EB5DC0}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\lifetime\Lifetime.cpp">
       <Filter>Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\lifetime</Filter>
@@ -90,7 +93,7 @@
       <Filter>Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\lifetime</Filter>
     </ClInclude>
     <Filter Include="Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\reactive">
-      <UniqueIdentifier>{F1F5B717-2FF0-4C84-9795-F41379822FF0}</UniqueIdentifier>
+      <UniqueIdentifier>{E5E8D14C-2917-40C9-BDBC-CE9BDABED0E2}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\reactive\Property.h">
       <Filter>Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\reactive</Filter>
@@ -105,7 +108,7 @@
       <Filter>Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\reactive</Filter>
     </ClInclude>
     <Filter Include="Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\reactive\base">
-      <UniqueIdentifier>{6B171A3B-DD7B-4118-A886-F338EDC7A21D}</UniqueIdentifier>
+      <UniqueIdentifier>{5B2A506B-D50C-4BF2-AD9F-0BA25C895C39}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\reactive\base\interfaces.h">
       <Filter>Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\reactive\base</Filter>
@@ -138,7 +141,7 @@
       <Filter>Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\reactive\base</Filter>
     </ClInclude>
     <Filter Include="Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\std">
-      <UniqueIdentifier>{BDE98096-45C7-4614-855D-FDC9DE84CA47}</UniqueIdentifier>
+      <UniqueIdentifier>{97BB466B-301A-44A6-A0AE-9103664940AF}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\std\allocator.h">
       <Filter>Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\std</Filter>
@@ -159,7 +162,7 @@
       <Filter>Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\std</Filter>
     </ClInclude>
     <Filter Include="Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\types">
-      <UniqueIdentifier>{D2F32A92-F65E-480C-8A7F-E1C1CEA0261C}</UniqueIdentifier>
+      <UniqueIdentifier>{D080079B-51C8-4060-BA19-F26A3A981F06}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\types\DateTime.cpp">
       <Filter>Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\types</Filter>
@@ -174,7 +177,7 @@
       <Filter>Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\types</Filter>
     </ClInclude>
     <Filter Include="Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\util">
-      <UniqueIdentifier>{76353E65-353D-480C-B3D7-E998602638A9}</UniqueIdentifier>
+      <UniqueIdentifier>{E3EF119B-8905-4BF6-9E98-EF07F4E8F047}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\util\core_traits.h">
       <Filter>Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\util</Filter>
@@ -198,19 +201,19 @@
       <Filter>Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\util</Filter>
     </ClInclude>
     <Filter Include="Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp">
-      <UniqueIdentifier>{0A4B1940-CC99-4457-878D-4BC824EDC6BC}</UniqueIdentifier>
+      <UniqueIdentifier>{F086171B-F49C-4D2F-BD67-C7FF479E781A}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\rd_framework_export.h">
       <Filter>Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp</Filter>
     </ClInclude>
     <Filter Include="Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src">
-      <UniqueIdentifier>{54DE94BE-60D2-4FDD-A7D2-0C3DC17A737C}</UniqueIdentifier>
+      <UniqueIdentifier>{3EDCAB84-F16F-4D51-95C6-C6733D653644}</UniqueIdentifier>
     </Filter>
     <Filter Include="Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main">
-      <UniqueIdentifier>{73EDCEA8-CE19-440C-9E13-BD3EFEC0BF38}</UniqueIdentifier>
+      <UniqueIdentifier>{C126900F-ACC6-470A-98A1-6A69CC414C2E}</UniqueIdentifier>
     </Filter>
     <Filter Include="Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\base">
-      <UniqueIdentifier>{9356A7A6-9519-42BC-8B7C-D29EE32B2754}</UniqueIdentifier>
+      <UniqueIdentifier>{0AE1A31E-3792-4187-BCCD-6C5F7B8C91A9}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\base\IProtocol.cpp">
       <Filter>Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\base</Filter>
@@ -270,7 +273,7 @@
       <Filter>Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\base</Filter>
     </ClInclude>
     <Filter Include="Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\ext">
-      <UniqueIdentifier>{665F4198-01CE-40F4-BE2D-10C267EEDC6B}</UniqueIdentifier>
+      <UniqueIdentifier>{0CD1E04E-3A21-4F79-B0F7-DD532E4827BB}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\ext\ExtWire.cpp">
       <Filter>Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\ext</Filter>
@@ -285,7 +288,7 @@
       <Filter>Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\ext</Filter>
     </ClInclude>
     <Filter Include="Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\impl">
-      <UniqueIdentifier>{6046486D-2A2F-48FB-A5DD-33B87D8020F1}</UniqueIdentifier>
+      <UniqueIdentifier>{FA9D8054-7FF4-479A-B55B-732EAAE7751E}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\impl\RdList.h">
       <Filter>Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\impl</Filter>
@@ -309,7 +312,7 @@
       <Filter>Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\impl</Filter>
     </ClInclude>
     <Filter Include="Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\intern">
-      <UniqueIdentifier>{8CA7BA70-5B9C-4E55-9993-2C743BF9280E}</UniqueIdentifier>
+      <UniqueIdentifier>{F45D3BBE-4D5B-4913-8944-97DA36D6F272}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\intern\InternRoot.cpp">
       <Filter>Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\intern</Filter>
@@ -324,7 +327,7 @@
       <Filter>Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\intern</Filter>
     </ClInclude>
     <Filter Include="Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\protocol">
-      <UniqueIdentifier>{0AB0CB4E-90B3-4CF0-B756-047AFE5775AA}</UniqueIdentifier>
+      <UniqueIdentifier>{9CACF2D8-EB8F-4008-AC6E-D47287A6336A}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\protocol\Buffer.cpp">
       <Filter>Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\protocol</Filter>
@@ -357,7 +360,7 @@
       <Filter>Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\protocol</Filter>
     </ClInclude>
     <Filter Include="Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\scheduler">
-      <UniqueIdentifier>{DBF6DFF9-4028-4B7F-94F8-5A9B13CC2055}</UniqueIdentifier>
+      <UniqueIdentifier>{7C35988F-068A-499B-8966-CC3CC2A4E8AD}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\scheduler\SimpleScheduler.cpp">
       <Filter>Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\scheduler</Filter>
@@ -378,7 +381,7 @@
       <Filter>Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\scheduler</Filter>
     </ClInclude>
     <Filter Include="Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\scheduler\base">
-      <UniqueIdentifier>{8D1AF9A0-D6A4-4E78-B6FC-E4D7A2A7D6C5}</UniqueIdentifier>
+      <UniqueIdentifier>{74F8AFA8-D71D-4544-A892-2F8B4820C54D}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\scheduler\base\IScheduler.cpp">
       <Filter>Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\scheduler\base</Filter>
@@ -393,7 +396,7 @@
       <Filter>Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\scheduler\base</Filter>
     </ClInclude>
     <Filter Include="Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\serialization">
-      <UniqueIdentifier>{A1C272E5-6947-4402-8EB2-459A4265E8B6}</UniqueIdentifier>
+      <UniqueIdentifier>{FB590917-AA6F-4098-B5D0-38F14D421AFB}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\serialization\AbstractPolymorphic.h">
       <Filter>Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\serialization</Filter>
@@ -447,7 +450,7 @@
       <Filter>Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\serialization</Filter>
     </ClInclude>
     <Filter Include="Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\task">
-      <UniqueIdentifier>{170B591B-E52B-4EAD-A3E5-A4FBAA9618C3}</UniqueIdentifier>
+      <UniqueIdentifier>{C091D340-B142-4B75-92A5-FC5430501C09}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\task\RdCall.h">
       <Filter>Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\task</Filter>
@@ -474,7 +477,7 @@
       <Filter>Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\task</Filter>
     </ClInclude>
     <Filter Include="Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\util">
-      <UniqueIdentifier>{0287CBA3-A992-4637-9963-F5D5C193F66B}</UniqueIdentifier>
+      <UniqueIdentifier>{8A60A905-FEBF-4A9B-B7D0-72090DEF241F}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\util\framework_traits.h">
       <Filter>Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\util</Filter>
@@ -495,7 +498,7 @@
       <Filter>Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\util</Filter>
     </ClInclude>
     <Filter Include="Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\wire">
-      <UniqueIdentifier>{AFD7ED81-1BA8-42FF-BD60-05DBD91EBFDF}</UniqueIdentifier>
+      <UniqueIdentifier>{D709C296-510B-4617-ABC2-882A0EDEAEE1}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\wire\ByteBufferAsyncProcessor.cpp">
       <Filter>Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\wire</Filter>
@@ -528,10 +531,10 @@
       <Filter>Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\wire</Filter>
     </ClInclude>
     <Filter Include="Plugins\Developer\RiderLink\Source\RD\src\rd_gen_cpp">
-      <UniqueIdentifier>{F62F66A9-E2E2-43BF-9498-A32A92A871F1}</UniqueIdentifier>
+      <UniqueIdentifier>{F413F152-8A2C-443B-93C1-BA13D916EDFB}</UniqueIdentifier>
     </Filter>
     <Filter Include="Plugins\Developer\RiderLink\Source\RD\src\rd_gen_cpp\src">
-      <UniqueIdentifier>{6125B080-1FE0-4477-91AB-9B7AE0AEC3EA}</UniqueIdentifier>
+      <UniqueIdentifier>{C64DF1FF-7D47-4509-80D3-FFE548122FDB}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Plugins\Developer\RiderLink\Source\RD\src\rd_gen_cpp\src\RdTextBuffer.cpp">
       <Filter>Plugins\Developer\RiderLink\Source\RD\src\rd_gen_cpp\src</Filter>
@@ -540,7 +543,7 @@
       <Filter>Plugins\Developer\RiderLink\Source\RD\src\rd_gen_cpp\src</Filter>
     </ClInclude>
     <Filter Include="Plugins\Developer\RiderLink\Source\RD\thirdparty">
-      <UniqueIdentifier>{5B87A4F9-0F89-4DFB-9ABB-7577C8C1B3AF}</UniqueIdentifier>
+      <UniqueIdentifier>{EBCC726D-3414-439A-9EB2-A0E7C0D08AC2}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Plugins\Developer\RiderLink\Source\RD\thirdparty\thirdparty.cpp">
       <Filter>Plugins\Developer\RiderLink\Source\RD\thirdparty</Filter>
@@ -549,13 +552,13 @@
       <Filter>Plugins\Developer\RiderLink\Source\RD\thirdparty</Filter>
     </None>
     <Filter Include="Plugins\Developer\RiderLink\Source\RD\thirdparty\clsocket">
-      <UniqueIdentifier>{F26D287E-CCCC-49AC-A438-A92ADC760C6D}</UniqueIdentifier>
+      <UniqueIdentifier>{0EE539B6-1AFD-448F-ADF3-191A5E27D826}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\Developer\RiderLink\Source\RD\thirdparty\clsocket\README">
       <Filter>Plugins\Developer\RiderLink\Source\RD\thirdparty\clsocket</Filter>
     </None>
     <Filter Include="Plugins\Developer\RiderLink\Source\RD\thirdparty\clsocket\src">
-      <UniqueIdentifier>{11D41654-D1CF-45FC-A018-0C49BC45596D}</UniqueIdentifier>
+      <UniqueIdentifier>{C08B7B10-54E3-4C99-8248-7D6CA40C86B7}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Plugins\Developer\RiderLink\Source\RD\thirdparty\clsocket\src\ActiveSocket.cpp">
       <Filter>Plugins\Developer\RiderLink\Source\RD\thirdparty\clsocket\src</Filter>
@@ -582,7 +585,7 @@
       <Filter>Plugins\Developer\RiderLink\Source\RD\thirdparty\clsocket\src</Filter>
     </ClInclude>
     <Filter Include="Plugins\Developer\RiderLink\Source\RD\thirdparty\countdownlatch">
-      <UniqueIdentifier>{E577B7B8-3F7D-420C-AF23-DCD861ADBA42}</UniqueIdentifier>
+      <UniqueIdentifier>{B3714DDB-71F0-48E4-89F7-5DD2B33FC45B}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Plugins\Developer\RiderLink\Source\RD\thirdparty\countdownlatch\countdownlatch.cpp">
       <Filter>Plugins\Developer\RiderLink\Source\RD\thirdparty\countdownlatch</Filter>
@@ -597,7 +600,7 @@
       <Filter>Plugins\Developer\RiderLink\Source\RD\thirdparty\countdownlatch</Filter>
     </None>
     <Filter Include="Plugins\Developer\RiderLink\Source\RD\thirdparty\CTPL">
-      <UniqueIdentifier>{C34AAD37-C9A6-4DFD-A079-62600C29CA49}</UniqueIdentifier>
+      <UniqueIdentifier>{CDA6E1C9-4BA5-4BC6-B784-D797C01EEEA5}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\Developer\RiderLink\Source\RD\thirdparty\CTPL\LICENSE">
       <Filter>Plugins\Developer\RiderLink\Source\RD\thirdparty\CTPL</Filter>
@@ -606,13 +609,13 @@
       <Filter>Plugins\Developer\RiderLink\Source\RD\thirdparty\CTPL</Filter>
     </None>
     <Filter Include="Plugins\Developer\RiderLink\Source\RD\thirdparty\CTPL\include">
-      <UniqueIdentifier>{EF081D78-32FB-4FFB-8E44-0E4C7DF94376}</UniqueIdentifier>
+      <UniqueIdentifier>{36A81992-765C-4A49-A520-9928C8D497ED}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\Developer\RiderLink\Source\RD\thirdparty\CTPL\include\ctpl_stl.h">
       <Filter>Plugins\Developer\RiderLink\Source\RD\thirdparty\CTPL\include</Filter>
     </ClInclude>
     <Filter Include="Plugins\Developer\RiderLink\Source\RD\thirdparty\optional">
-      <UniqueIdentifier>{725CC7C7-390C-470B-8844-90D5C4A7309B}</UniqueIdentifier>
+      <UniqueIdentifier>{6DC06937-602A-45E3-AD67-DB7A974D1CBE}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\Developer\RiderLink\Source\RD\thirdparty\optional\COPYING">
       <Filter>Plugins\Developer\RiderLink\Source\RD\thirdparty\optional</Filter>
@@ -621,13 +624,13 @@
       <Filter>Plugins\Developer\RiderLink\Source\RD\thirdparty\optional</Filter>
     </None>
     <Filter Include="Plugins\Developer\RiderLink\Source\RD\thirdparty\optional\tl">
-      <UniqueIdentifier>{04E675F7-1593-487B-9AE4-AF42B68F5B1D}</UniqueIdentifier>
+      <UniqueIdentifier>{511A4AB7-A35D-45ED-8CA1-70FF55A6EBA9}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\Developer\RiderLink\Source\RD\thirdparty\optional\tl\optional.hpp">
       <Filter>Plugins\Developer\RiderLink\Source\RD\thirdparty\optional\tl</Filter>
     </None>
     <Filter Include="Plugins\Developer\RiderLink\Source\RD\thirdparty\ordered-map">
-      <UniqueIdentifier>{F1412837-287A-43ED-B3AC-6B5DDBD27C75}</UniqueIdentifier>
+      <UniqueIdentifier>{EFF9CC7A-C79A-4906-B27A-6BA12E88ACD1}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\Developer\RiderLink\Source\RD\thirdparty\ordered-map\LICENSE">
       <Filter>Plugins\Developer\RiderLink\Source\RD\thirdparty\ordered-map</Filter>
@@ -636,10 +639,10 @@
       <Filter>Plugins\Developer\RiderLink\Source\RD\thirdparty\ordered-map</Filter>
     </None>
     <Filter Include="Plugins\Developer\RiderLink\Source\RD\thirdparty\ordered-map\include">
-      <UniqueIdentifier>{0682C1FC-01EC-4C21-81C3-B61FF5B1F8F1}</UniqueIdentifier>
+      <UniqueIdentifier>{A98172AC-B327-4FFF-AAF5-4D5BC9D30DD7}</UniqueIdentifier>
     </Filter>
     <Filter Include="Plugins\Developer\RiderLink\Source\RD\thirdparty\ordered-map\include\tsl">
-      <UniqueIdentifier>{C14F653D-938C-429F-BD6A-14A1488A5C2E}</UniqueIdentifier>
+      <UniqueIdentifier>{EE8CA8D9-688C-48D6-9F7C-2C18FF9E453F}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\Developer\RiderLink\Source\RD\thirdparty\ordered-map\include\tsl\ordered_hash.h">
       <Filter>Plugins\Developer\RiderLink\Source\RD\thirdparty\ordered-map\include\tsl</Filter>
@@ -651,7 +654,7 @@
       <Filter>Plugins\Developer\RiderLink\Source\RD\thirdparty\ordered-map\include\tsl</Filter>
     </ClInclude>
     <Filter Include="Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog">
-      <UniqueIdentifier>{CDDD34D9-4404-4B7F-A873-6716BDB7DA12}</UniqueIdentifier>
+      <UniqueIdentifier>{172865DF-278A-447B-8342-D5DD128B8D79}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\LICENSE">
       <Filter>Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog</Filter>
@@ -660,7 +663,7 @@
       <Filter>Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog</Filter>
     </None>
     <Filter Include="Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\cmake">
-      <UniqueIdentifier>{13FC2570-C45F-4D7A-AA12-FCE3611B2DF5}</UniqueIdentifier>
+      <UniqueIdentifier>{88ABC524-EA26-4E72-BEB0-82425410FCA5}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\cmake\ide.cmake">
       <Filter>Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\cmake</Filter>
@@ -684,10 +687,10 @@
       <Filter>Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\cmake</Filter>
     </None>
     <Filter Include="Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include">
-      <UniqueIdentifier>{8C8EEA95-42D4-44CE-B015-866C8F097AE8}</UniqueIdentifier>
+      <UniqueIdentifier>{0A5C32E2-3EF3-473A-B307-1437F37550DA}</UniqueIdentifier>
     </Filter>
     <Filter Include="Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog">
-      <UniqueIdentifier>{FB15A302-ECC7-400A-8C95-2C160F09F82C}</UniqueIdentifier>
+      <UniqueIdentifier>{E12C4D86-950D-4462-823C-D32628B6F7F6}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog\async.h">
       <Filter>Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog</Filter>
@@ -735,7 +738,7 @@
       <Filter>Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog</Filter>
     </ClInclude>
     <Filter Include="Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog\cfg">
-      <UniqueIdentifier>{E2D0AAF7-E013-42F6-8F0C-15BA86AADF85}</UniqueIdentifier>
+      <UniqueIdentifier>{E8E410FC-758C-4E33-887E-D933C005B4CC}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog\cfg\argv.h">
       <Filter>Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog\cfg</Filter>
@@ -753,7 +756,7 @@
       <Filter>Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog\cfg</Filter>
     </ClInclude>
     <Filter Include="Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog\details">
-      <UniqueIdentifier>{C8E802A8-FA67-447C-A857-6EA676091C5F}</UniqueIdentifier>
+      <UniqueIdentifier>{44A3FD48-C403-4192-8397-8E79CFE52A64}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog\details\backtracer-inl.h">
       <Filter>Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog\details</Filter>
@@ -831,7 +834,7 @@
       <Filter>Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog\details</Filter>
     </ClInclude>
     <Filter Include="Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog\fmt">
-      <UniqueIdentifier>{5505491C-583B-4112-8862-8EC5A66872B4}</UniqueIdentifier>
+      <UniqueIdentifier>{482C23D5-4106-4623-AA20-5C5ED9CC612D}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog\fmt\bin_to_hex.h">
       <Filter>Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog\fmt</Filter>
@@ -843,7 +846,7 @@
       <Filter>Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog\fmt</Filter>
     </ClInclude>
     <Filter Include="Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog\fmt\bundled">
-      <UniqueIdentifier>{AE32D73D-46BA-4D15-8A68-9B6CA10FF0A6}</UniqueIdentifier>
+      <UniqueIdentifier>{BF805A81-ECA9-4243-97FD-94A2A8263EF8}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog\fmt\bundled\chrono.h">
       <Filter>Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog\fmt\bundled</Filter>
@@ -882,7 +885,7 @@
       <Filter>Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog\fmt\bundled</Filter>
     </ClInclude>
     <Filter Include="Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog\sinks">
-      <UniqueIdentifier>{E92310B4-3763-4C65-B66B-4F5CBB750881}</UniqueIdentifier>
+      <UniqueIdentifier>{385A8581-CB19-4B60-9495-53723D38364F}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog\sinks\android_sink.h">
       <Filter>Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog\sinks</Filter>
@@ -969,13 +972,13 @@
       <Filter>Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog\sinks</Filter>
     </ClInclude>
     <Filter Include="Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\logos">
-      <UniqueIdentifier>{C536A3F8-2FFD-4449-885F-D1B867FD7C9B}</UniqueIdentifier>
+      <UniqueIdentifier>{E9A58D09-4DF5-4C78-A337-3EAE3D5D93D7}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\logos\jetbrains-variant-4.svg">
       <Filter>Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\logos</Filter>
     </None>
     <Filter Include="Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\scripts">
-      <UniqueIdentifier>{B82F2C09-2355-4C27-8C64-B7A1CF770843}</UniqueIdentifier>
+      <UniqueIdentifier>{C827D531-C5AD-40ED-8EBC-EB7925B1348A}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\scripts\extract_version.py">
       <Filter>Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\scripts</Filter>
@@ -984,7 +987,7 @@
       <Filter>Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\scripts</Filter>
     </None>
     <Filter Include="Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\src">
-      <UniqueIdentifier>{6F0A7E0F-7C1B-40FC-BD98-A65B543855E2}</UniqueIdentifier>
+      <UniqueIdentifier>{2E4EBB10-5734-488A-86AB-FAACBFF7720F}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\src\async.cpp">
       <Filter>Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\src</Filter>
@@ -1008,7 +1011,7 @@
       <Filter>Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\src</Filter>
     </ClCompile>
     <Filter Include="Plugins\Developer\RiderLink\Source\RD\thirdparty\string-view-lite">
-      <UniqueIdentifier>{94DB3B43-EB22-4ABC-A317-776B81B3BDC4}</UniqueIdentifier>
+      <UniqueIdentifier>{8CE2125E-6BCC-442E-B445-2DAF26DC2CA4}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\Developer\RiderLink\Source\RD\thirdparty\string-view-lite\LICENSE.txt">
       <Filter>Plugins\Developer\RiderLink\Source\RD\thirdparty\string-view-lite</Filter>
@@ -1017,22 +1020,22 @@
       <Filter>Plugins\Developer\RiderLink\Source\RD\thirdparty\string-view-lite</Filter>
     </None>
     <Filter Include="Plugins\Developer\RiderLink\Source\RD\thirdparty\string-view-lite\cmake">
-      <UniqueIdentifier>{360CE660-D29E-4991-AD95-FBE3CA040A1C}</UniqueIdentifier>
+      <UniqueIdentifier>{BDCA016E-1A58-45E2-A38F-91B3B74B107C}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\Developer\RiderLink\Source\RD\thirdparty\string-view-lite\cmake\string_view-lite-config.cmake.in">
       <Filter>Plugins\Developer\RiderLink\Source\RD\thirdparty\string-view-lite\cmake</Filter>
     </None>
     <Filter Include="Plugins\Developer\RiderLink\Source\RD\thirdparty\string-view-lite\include">
-      <UniqueIdentifier>{709FFBD5-CD6C-448F-8819-DEAC921F52C9}</UniqueIdentifier>
+      <UniqueIdentifier>{855BE560-82FF-4914-B219-A288223FDE3C}</UniqueIdentifier>
     </Filter>
     <Filter Include="Plugins\Developer\RiderLink\Source\RD\thirdparty\string-view-lite\include\nonstd">
-      <UniqueIdentifier>{82FFB627-3EA1-4CBC-B3EB-23F89DA783E4}</UniqueIdentifier>
+      <UniqueIdentifier>{9E3496A6-1703-42A0-ACE2-EA5E94BB4228}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\Developer\RiderLink\Source\RD\thirdparty\string-view-lite\include\nonstd\string_view.hpp">
       <Filter>Plugins\Developer\RiderLink\Source\RD\thirdparty\string-view-lite\include\nonstd</Filter>
     </None>
     <Filter Include="Plugins\Developer\RiderLink\Source\RD\thirdparty\variant">
-      <UniqueIdentifier>{9700DCFE-75ED-4EA9-BFB4-4A713C0DAD71}</UniqueIdentifier>
+      <UniqueIdentifier>{CD088676-410E-41F9-899B-738E5262267B}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\Developer\RiderLink\Source\RD\thirdparty\variant\CMakeLists.txt">
       <Filter>Plugins\Developer\RiderLink\Source\RD\thirdparty\variant</Filter>
@@ -1044,16 +1047,16 @@
       <Filter>Plugins\Developer\RiderLink\Source\RD\thirdparty\variant</Filter>
     </None>
     <Filter Include="Plugins\Developer\RiderLink\Source\RD\thirdparty\variant\cmake">
-      <UniqueIdentifier>{3899BD6D-D7DE-4BCF-B1B6-5E7C6DDA91E7}</UniqueIdentifier>
+      <UniqueIdentifier>{389661EB-0C98-4B1F-B1E7-BDE333D0802B}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\Developer\RiderLink\Source\RD\thirdparty\variant\cmake\mpark_variant-config.cmake.in">
       <Filter>Plugins\Developer\RiderLink\Source\RD\thirdparty\variant\cmake</Filter>
     </None>
     <Filter Include="Plugins\Developer\RiderLink\Source\RD\thirdparty\variant\include">
-      <UniqueIdentifier>{9B7B37EE-739D-4362-BAB3-5C9F398C0383}</UniqueIdentifier>
+      <UniqueIdentifier>{77E6897B-395E-4119-8BD8-42E1698783BE}</UniqueIdentifier>
     </Filter>
     <Filter Include="Plugins\Developer\RiderLink\Source\RD\thirdparty\variant\include\mpark">
-      <UniqueIdentifier>{A69BD034-FA12-4EE6-9B55-04FE0B90A7EA}</UniqueIdentifier>
+      <UniqueIdentifier>{B5B01032-2EE4-49B7-9D7E-E6BBE0E91488}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\Developer\RiderLink\Source\RD\thirdparty\variant\include\mpark\config.hpp">
       <Filter>Plugins\Developer\RiderLink\Source\RD\thirdparty\variant\include\mpark</Filter>
@@ -1071,19 +1074,19 @@
       <Filter>Plugins\Developer\RiderLink</Filter>
     </None>
     <Filter Include="Plugins\Developer\RiderLink\Resources">
-      <UniqueIdentifier>{5E7A3398-102A-4DAA-9F64-7FD791C1028D}</UniqueIdentifier>
+      <UniqueIdentifier>{145EB551-BD6B-45EC-AF85-2B18DC0E67F2}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\Developer\RiderLink\Resources\Icon128.png">
       <Filter>Plugins\Developer\RiderLink\Resources</Filter>
     </None>
     <Filter Include="Plugins\Developer\RiderLink\Source\RiderBlueprintExtension">
-      <UniqueIdentifier>{BE432396-39EC-4D3D-BD42-A9D3B2375F5D}</UniqueIdentifier>
+      <UniqueIdentifier>{AC299A2B-2A99-45FD-941E-B15B180F756D}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\Developer\RiderLink\Source\RiderBlueprintExtension\RiderBlueprintExtension.Build.cs">
       <Filter>Plugins\Developer\RiderLink\Source\RiderBlueprintExtension</Filter>
     </None>
     <Filter Include="Plugins\Developer\RiderLink\Source\RiderBlueprintExtension\Private">
-      <UniqueIdentifier>{844639DE-C8EB-461D-A240-331A1A7688C9}</UniqueIdentifier>
+      <UniqueIdentifier>{4C35C619-A0FF-4ECF-B4F8-6D2F4D3C821C}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Plugins\Developer\RiderLink\Source\RiderBlueprintExtension\Private\BlueprintProvider.cpp">
       <Filter>Plugins\Developer\RiderLink\Source\RiderBlueprintExtension\Private</Filter>
@@ -1092,7 +1095,7 @@
       <Filter>Plugins\Developer\RiderLink\Source\RiderBlueprintExtension\Private</Filter>
     </ClCompile>
     <Filter Include="Plugins\Developer\RiderLink\Source\RiderBlueprintExtension\Public">
-      <UniqueIdentifier>{7F63A4D0-FF24-41DF-8196-9A28BE6139B8}</UniqueIdentifier>
+      <UniqueIdentifier>{52EE074F-ED14-45D0-82BC-E4E6D8F8D305}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\Developer\RiderLink\Source\RiderBlueprintExtension\Public\BlueprintProvider.hpp">
       <Filter>Plugins\Developer\RiderLink\Source\RiderBlueprintExtension\Public</Filter>
@@ -1101,31 +1104,31 @@
       <Filter>Plugins\Developer\RiderLink\Source\RiderBlueprintExtension\Public</Filter>
     </None>
     <Filter Include="Plugins\Developer\RiderLink\Source\RiderGameControlExtension">
-      <UniqueIdentifier>{E87641BA-DB5F-4233-B46B-C51E70EB98F6}</UniqueIdentifier>
+      <UniqueIdentifier>{06D9FA48-30AB-4F97-BF40-F4A2B8FBC3F0}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\Developer\RiderLink\Source\RiderGameControlExtension\RiderGameControlExtension.Build.cs">
       <Filter>Plugins\Developer\RiderLink\Source\RiderGameControlExtension</Filter>
     </None>
     <Filter Include="Plugins\Developer\RiderLink\Source\RiderGameControlExtension\Private">
-      <UniqueIdentifier>{98C6E101-AFE7-41B6-A5F2-A40D5201AA02}</UniqueIdentifier>
+      <UniqueIdentifier>{C3C86F42-80C2-4B02-9872-4DFD98E99302}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Plugins\Developer\RiderLink\Source\RiderGameControlExtension\Private\RiderGameControlExtension.cpp">
       <Filter>Plugins\Developer\RiderLink\Source\RiderGameControlExtension\Private</Filter>
     </ClCompile>
     <Filter Include="Plugins\Developer\RiderLink\Source\RiderGameControlExtension\Public">
-      <UniqueIdentifier>{09D9ABF4-CCA8-446A-AC68-84147B9472B5}</UniqueIdentifier>
+      <UniqueIdentifier>{CABEF694-74D4-4147-B87C-B28B46731C5C}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\Developer\RiderLink\Source\RiderGameControlExtension\Public\RiderGameControlExtension.hpp">
       <Filter>Plugins\Developer\RiderLink\Source\RiderGameControlExtension\Public</Filter>
     </None>
     <Filter Include="Plugins\Developer\RiderLink\Source\RiderLink">
-      <UniqueIdentifier>{A6B527E9-F0A4-46E2-9565-E760416A9540}</UniqueIdentifier>
+      <UniqueIdentifier>{0E3AB5F5-5FCB-4E75-A04C-D66B7E676567}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\Developer\RiderLink\Source\RiderLink\RiderLink.Build.cs">
       <Filter>Plugins\Developer\RiderLink\Source\RiderLink</Filter>
     </None>
     <Filter Include="Plugins\Developer\RiderLink\Source\RiderLink\Private">
-      <UniqueIdentifier>{38153E11-969D-467C-A99C-6ED4BCF5B8FE}</UniqueIdentifier>
+      <UniqueIdentifier>{7A852801-2682-44E5-8AC4-D767FA7A41CA}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Plugins\Developer\RiderLink\Source\RiderLink\Private\ProtocolFactory.cpp">
       <Filter>Plugins\Developer\RiderLink\Source\RiderLink\Private</Filter>
@@ -1143,7 +1146,7 @@
       <Filter>Plugins\Developer\RiderLink\Source\RiderLink\Private</Filter>
     </ClCompile>
     <Filter Include="Plugins\Developer\RiderLink\Source\RiderLink\Public">
-      <UniqueIdentifier>{05CD3CCB-84A1-456F-A138-FEE97DACFB6D}</UniqueIdentifier>
+      <UniqueIdentifier>{D3C64E94-F850-4F69-82CB-9274F42BBBDC}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\Developer\RiderLink\Source\RiderLink\Public\RdConnection.hpp">
       <Filter>Plugins\Developer\RiderLink\Source\RiderLink\Public</Filter>
@@ -1155,10 +1158,10 @@
       <Filter>Plugins\Developer\RiderLink\Source\RiderLink\Public</Filter>
     </ClInclude>
     <Filter Include="Plugins\Developer\RiderLink\Source\RiderLink\Public\Model">
-      <UniqueIdentifier>{067BD366-012A-41DE-9F0F-39846F66C1E1}</UniqueIdentifier>
+      <UniqueIdentifier>{E684DDFC-9CE3-4B14-963A-BE10DFBE507D}</UniqueIdentifier>
     </Filter>
     <Filter Include="Plugins\Developer\RiderLink\Source\RiderLink\Public\Model\Library">
-      <UniqueIdentifier>{C0F73750-D822-43B6-924D-5CBCB1BDBC9E}</UniqueIdentifier>
+      <UniqueIdentifier>{79E8CF99-BE9A-4D93-A894-CAF260B682C5}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\Developer\RiderLink\Source\RiderLink\Public\Model\Library\CMakeLists.txt">
       <Filter>Plugins\Developer\RiderLink\Source\RiderLink\Public\Model\Library</Filter>
@@ -1170,7 +1173,7 @@
       <Filter>Plugins\Developer\RiderLink\Source\RiderLink\Public\Model\Library</Filter>
     </ClInclude>
     <Filter Include="Plugins\Developer\RiderLink\Source\RiderLink\Public\Model\Library\UE4Library">
-      <UniqueIdentifier>{81F42F58-982B-4173-A344-08DD69708100}</UniqueIdentifier>
+      <UniqueIdentifier>{9D72FF72-7CEA-457E-AAF9-AED44B261176}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Plugins\Developer\RiderLink\Source\RiderLink\Public\Model\Library\UE4Library\BlueprintFunction.Generated.cpp">
       <Filter>Plugins\Developer\RiderLink\Source\RiderLink\Public\Model\Library\UE4Library</Filter>
@@ -1287,7 +1290,7 @@
       <Filter>Plugins\Developer\RiderLink\Source\RiderLink\Public\Model\Library\UE4Library</Filter>
     </ClInclude>
     <Filter Include="Plugins\Developer\RiderLink\Source\RiderLink\Public\Model\RdEditorProtocol">
-      <UniqueIdentifier>{5836C7D5-66E7-452F-AB8B-227C5854650B}</UniqueIdentifier>
+      <UniqueIdentifier>{CC3C094B-7DFB-4A3D-A031-D1C8BABCB5A3}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\Developer\RiderLink\Source\RiderLink\Public\Model\RdEditorProtocol\CMakeLists.txt">
       <Filter>Plugins\Developer\RiderLink\Source\RiderLink\Public\Model\RdEditorProtocol</Filter>
@@ -1299,7 +1302,7 @@
       <Filter>Plugins\Developer\RiderLink\Source\RiderLink\Public\Model\RdEditorProtocol</Filter>
     </ClInclude>
     <Filter Include="Plugins\Developer\RiderLink\Source\RiderLink\Public\Model\RdEditorProtocol\RdEditorModel">
-      <UniqueIdentifier>{183C6B30-F501-4492-9515-FD4D4DC7385B}</UniqueIdentifier>
+      <UniqueIdentifier>{E0FF39FA-E929-4DB2-AD8E-A2709DACAE51}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Plugins\Developer\RiderLink\Source\RiderLink\Public\Model\RdEditorProtocol\RdEditorModel\RdEditorModel.Generated.cpp">
       <Filter>Plugins\Developer\RiderLink\Source\RiderLink\Public\Model\RdEditorProtocol\RdEditorModel</Filter>
@@ -1308,7 +1311,7 @@
       <Filter>Plugins\Developer\RiderLink\Source\RiderLink\Public\Model\RdEditorProtocol\RdEditorModel</Filter>
     </ClInclude>
     <Filter Include="Plugins\Developer\RiderLink\Source\RiderLink\Public\Model\RdEditorProtocol\RdEditorRoot">
-      <UniqueIdentifier>{12DEC80E-A5B2-43C7-A2FA-D07C6A5A6F5F}</UniqueIdentifier>
+      <UniqueIdentifier>{CDBF0DFF-8968-416B-8AB8-FF0A73B2309D}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Plugins\Developer\RiderLink\Source\RiderLink\Public\Model\RdEditorProtocol\RdEditorRoot\RdEditorRoot.Generated.cpp">
       <Filter>Plugins\Developer\RiderLink\Source\RiderLink\Public\Model\RdEditorProtocol\RdEditorRoot</Filter>
@@ -1317,13 +1320,13 @@
       <Filter>Plugins\Developer\RiderLink\Source\RiderLink\Public\Model\RdEditorProtocol\RdEditorRoot</Filter>
     </ClInclude>
     <Filter Include="Plugins\Developer\RiderLink\Source\RiderLoggingExtension">
-      <UniqueIdentifier>{5E167605-85DE-4902-B4E4-FB6C07ECA93C}</UniqueIdentifier>
+      <UniqueIdentifier>{FF4DEAC4-0264-4B3C-B262-9B6DCC246B1C}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\Developer\RiderLink\Source\RiderLoggingExtension\RiderLoggingExtension.Build.cs">
       <Filter>Plugins\Developer\RiderLink\Source\RiderLoggingExtension</Filter>
     </None>
     <Filter Include="Plugins\Developer\RiderLink\Source\RiderLoggingExtension\Private">
-      <UniqueIdentifier>{85FE2C3B-BDA0-4439-96E0-E69E1503FE83}</UniqueIdentifier>
+      <UniqueIdentifier>{3CAF8C2E-CF14-4E05-9370-C88767A31F9D}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Plugins\Developer\RiderLink\Source\RiderLoggingExtension\Private\RiderLoggingExtension.cpp">
       <Filter>Plugins\Developer\RiderLink\Source\RiderLoggingExtension\Private</Filter>
@@ -1335,13 +1338,13 @@
       <Filter>Plugins\Developer\RiderLink\Source\RiderLoggingExtension\Private</Filter>
     </None>
     <Filter Include="Plugins\Developer\RiderLink\Source\RiderLoggingExtension\Public">
-      <UniqueIdentifier>{93203E4A-143E-4ED1-9618-74298606A5B3}</UniqueIdentifier>
+      <UniqueIdentifier>{6FE0037B-3D33-4A85-8801-E2F0F48CF2AC}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\Developer\RiderLink\Source\RiderLoggingExtension\Public\RiderLoggingExtension.hpp">
       <Filter>Plugins\Developer\RiderLink\Source\RiderLoggingExtension\Public</Filter>
     </None>
     <Filter Include="Source\Main">
-      <UniqueIdentifier>{E678F614-40F1-494B-B7AA-5771C86070E6}</UniqueIdentifier>
+      <UniqueIdentifier>{3A812F77-797B-4572-9B35-BAF26AA0C601}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\Main\Item.cpp">
       <Filter>Source\Main</Filter>
@@ -1353,6 +1356,12 @@
       <Filter>Source\Main</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\Main\ItemBody.h">
+      <Filter>Source\Main</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Main\ItemBodyCloth.cpp">
+      <Filter>Source\Main</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Main\ItemBodyCloth.h">
       <Filter>Source\Main</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\Main\ItemWeapon.cpp">

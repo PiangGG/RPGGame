@@ -3,6 +3,8 @@
 #pragma once
 
 #include "CoreMinimal.h"
+
+#include "ItemBodyCloth.h"
 #include "GameFramework/Character.h"
 #include "RPGPayer.generated.h"
 

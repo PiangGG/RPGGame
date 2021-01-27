@@ -273,7 +273,7 @@ void EmptyLinkFunctionForGeneratedCodeItemWeapon() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AItemWeapon, 2638728734);
+	IMPLEMENT_CLASS(AItemWeapon, 2988776058);
 	template<> MAIN_API UClass* StaticClass<AItemWeapon>()
 	{
 		return AItemWeapon::StaticClass();

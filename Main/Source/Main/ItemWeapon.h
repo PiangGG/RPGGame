@@ -45,4 +45,8 @@ public:
 	/*切换武器*/
 	UFUNCTION(BlueprintCallable)
 	void SwapWeapon(AItemWeapon *ItemWeapon);
+
+	virtual void SphereComponent_BeginOverlap(class UPrimitiveComponent* Component,class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult) override;
+
+	virtual void SphereComponent_EndOverlap( UPrimitiveComponent* Component,AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex) override;
 };
