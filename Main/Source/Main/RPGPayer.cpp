@@ -67,10 +67,8 @@ ARPGPayer::ARPGPayer()
 	/*
 	 * init Body
 	 */
-	ItemBodyCloth=CreateDefaultSubobject<USkeletalMeshComponent>("ItemBodyCloth");
-	ItemBodyCloth->SetupAttachment(RootComponent);
 	
-	ItemBodyFace=CreateDefaultSubobject<USkeletalMeshComponent>("ItemBodyFace");
+	/*ItemBodyFace=CreateDefaultSubobject<USkeletalMeshComponent>("ItemBodyFace");
 	ItemBodyFace->SetupAttachment(ItemBodyCloth);
 
 	ItemBodyHair=CreateDefaultSubobject<USkeletalMeshComponent>("ItemBodyHair");
@@ -89,7 +87,7 @@ ARPGPayer::ARPGPayer()
 	ItemBodyShoulderPad->SetupAttachment(ItemBodyCloth);
 
 	ItemBodyBelt=CreateDefaultSubobject<USkeletalMeshComponent>("ItemBodyBelt");
-	ItemBodyBelt->SetupAttachment(ItemBodyCloth);
+	ItemBodyBelt->SetupAttachment(ItemBodyCloth);*/
 
 	GetCharacterMovement()->MaxWalkSpeed=BaseSpeed;
 }
@@ -100,6 +98,10 @@ void ARPGPayer::BeginPlay()
 	Super::BeginPlay();
 
 	SpringArm->SetRelativeRotation(FQuat::MakeFromEuler(FVector(0, -25, 180)));
+	if (GetWorld())
+	{
+		InitBody();
+	}
 }
 
 // Called every frame
@@ -125,6 +127,64 @@ void ARPGPayer::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 	
 	InputComponent->BindAction("Run",EInputEvent::IE_Pressed,this, &ARPGPayer::Run);
 	InputComponent->BindAction("Run",EInputEvent::IE_Released,this, &ARPGPayer::Run);
+}
+
+void ARPGPayer::InitBody()
+{
+	if (GetWorld())
+	{
+		/*ItemBodyCloth=GetWorld()->SpawnActor<AItemBody>(ItemBodyClothSub,RootMeshComponent->GetComponentLocation(),RootMeshComponent->GetComponentRotation());
+		if (ItemBodyCloth)
+		{
+			ItemBodyCloth->SetOwner(this);
+			ItemBodyCloth->SetItemState(EItemState::InPlayering);
+			ItemBodyCloth->AttachBody(this);
+		}*/
+
+		ItemBodyFace=GetWorld()->SpawnActor<AItemBody>(ItemBodyFaceSub);
+		if (ItemBodyFace)
+		{
+			ItemBodyFace->SetOwner(this);
+			ItemBodyFace->SetItemState(EItemState::InPlayering);
+			ItemBodyFace->AttachBody(this);
+		}
+		ItemBodyHair=GetWorld()->SpawnActor<AItemBody>(ItemBodyHairSub);
+		if (ItemBodyHair)
+		{
+			ItemBodyHair->SetOwner(this);
+			ItemBodyHair->SetItemState(EItemState::InPlayering);
+			ItemBodyHair->AttachBody(this);
+		}
+		ItemBodyShoe=GetWorld()->SpawnActor<AItemBody>(ItemBodyShoeSub);
+		if (ItemBodyShoe)
+		{
+			ItemBodyShoe->SetOwner(this);
+			ItemBodyShoe->SetItemState(EItemState::InPlayering);
+			ItemBodyShoe->AttachBody(this);
+		}
+		ItemBodyHeadGears=GetWorld()->SpawnActor<AItemBody>(ItemBodyHeadGearsSub);
+		if (ItemBodyHeadGears)
+		{
+			ItemBodyHeadGears->SetOwner(this);
+			ItemBodyHeadGears->SetItemState(EItemState::InPlayering);
+			ItemBodyHeadGears->AttachBody(this);
+		}
+		ItemBodyShoulderPad=GetWorld()->SpawnActor<AItemBody>(ItemBodyShoulderPadSub);
+		if (ItemBodyShoulderPad)
+		{
+			ItemBodyShoulderPad->SetOwner(this);
+			ItemBodyShoulderPad->SetItemState(EItemState::InPlayering);
+			ItemBodyShoulderPad->AttachBody(this);
+		}
+		ItemBodyBelt=GetWorld()->SpawnActor<AItemBody>(ItemBodyBeltSub);
+		if (ItemBodyBelt)
+		{
+			ItemBodyBelt->SetOwner(this);
+			ItemBodyBelt->SetItemState(EItemState::InPlayering);
+			ItemBodyBelt->AttachBody(this);
+		}
+	}
+	
 }
 
 void ARPGPayer::SetPlayerStance(EPlayerStance NewPlayerStance)

@@ -53,4 +53,10 @@ class MAIN_API AItemBody : public AItem
 	 */
 	UFUNCTION(BlueprintCallable,Category="ItemBody")
 	void SwitchBody(APawn* Pawn);
+
+	UFUNCTION(BlueprintCallable,Category="ItemBody")
+    void AttachBody(APawn* Pawn);
+	
+	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite)
+	FName AttachSoketName;
 };

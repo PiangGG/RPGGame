@@ -15,8 +15,8 @@ enum class EPlayerStance : uint8;
 #endif
 #define MAIN_RPGPayer_generated_h
 
-#define Main_Source_Main_RPGPayer_h_35_SPARSE_DATA
-#define Main_Source_Main_RPGPayer_h_35_RPC_WRAPPERS \
+#define Main_Source_Main_RPGPayer_h_36_SPARSE_DATA
+#define Main_Source_Main_RPGPayer_h_36_RPC_WRAPPERS \
 	virtual bool AttackServer_Validate(); \
 	virtual void AttackServer_Implementation(); \
 	virtual bool RunServer_Validate(); \
@@ -34,7 +34,7 @@ enum class EPlayerStance : uint8;
 	DECLARE_FUNCTION(execRun);
 
 
-#define Main_Source_Main_RPGPayer_h_35_RPC_WRAPPERS_NO_PURE_DECLS \
+#define Main_Source_Main_RPGPayer_h_36_RPC_WRAPPERS_NO_PURE_DECLS \
 	virtual bool AttackServer_Validate(); \
 	virtual void AttackServer_Implementation(); \
 	virtual bool RunServer_Validate(); \
@@ -52,9 +52,9 @@ enum class EPlayerStance : uint8;
 	DECLARE_FUNCTION(execRun);
 
 
-#define Main_Source_Main_RPGPayer_h_35_EVENT_PARMS
-#define Main_Source_Main_RPGPayer_h_35_CALLBACK_WRAPPERS
-#define Main_Source_Main_RPGPayer_h_35_INCLASS_NO_PURE_DECLS \
+#define Main_Source_Main_RPGPayer_h_36_EVENT_PARMS
+#define Main_Source_Main_RPGPayer_h_36_CALLBACK_WRAPPERS
+#define Main_Source_Main_RPGPayer_h_36_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesARPGPayer(); \
 	friend struct Z_Construct_UClass_ARPGPayer_Statics; \
@@ -71,7 +71,7 @@ public: \
 	NO_API virtual void ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const override;
 
 
-#define Main_Source_Main_RPGPayer_h_35_INCLASS \
+#define Main_Source_Main_RPGPayer_h_36_INCLASS \
 private: \
 	static void StaticRegisterNativesARPGPayer(); \
 	friend struct Z_Construct_UClass_ARPGPayer_Statics; \
@@ -88,7 +88,7 @@ public: \
 	NO_API virtual void ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const override;
 
 
-#define Main_Source_Main_RPGPayer_h_35_STANDARD_CONSTRUCTORS \
+#define Main_Source_Main_RPGPayer_h_36_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API ARPGPayer(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(ARPGPayer) \
@@ -101,7 +101,7 @@ private: \
 public:
 
 
-#define Main_Source_Main_RPGPayer_h_35_ENHANCED_CONSTRUCTORS \
+#define Main_Source_Main_RPGPayer_h_36_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API ARPGPayer(ARPGPayer&&); \
@@ -112,33 +112,33 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ARPGPayer); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(ARPGPayer)
 
 
-#define Main_Source_Main_RPGPayer_h_35_PRIVATE_PROPERTY_OFFSET
-#define Main_Source_Main_RPGPayer_h_32_PROLOG \
-	Main_Source_Main_RPGPayer_h_35_EVENT_PARMS
+#define Main_Source_Main_RPGPayer_h_36_PRIVATE_PROPERTY_OFFSET
+#define Main_Source_Main_RPGPayer_h_33_PROLOG \
+	Main_Source_Main_RPGPayer_h_36_EVENT_PARMS
 
 
-#define Main_Source_Main_RPGPayer_h_35_GENERATED_BODY_LEGACY \
+#define Main_Source_Main_RPGPayer_h_36_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Main_Source_Main_RPGPayer_h_35_PRIVATE_PROPERTY_OFFSET \
-	Main_Source_Main_RPGPayer_h_35_SPARSE_DATA \
-	Main_Source_Main_RPGPayer_h_35_RPC_WRAPPERS \
-	Main_Source_Main_RPGPayer_h_35_CALLBACK_WRAPPERS \
-	Main_Source_Main_RPGPayer_h_35_INCLASS \
-	Main_Source_Main_RPGPayer_h_35_STANDARD_CONSTRUCTORS \
+	Main_Source_Main_RPGPayer_h_36_PRIVATE_PROPERTY_OFFSET \
+	Main_Source_Main_RPGPayer_h_36_SPARSE_DATA \
+	Main_Source_Main_RPGPayer_h_36_RPC_WRAPPERS \
+	Main_Source_Main_RPGPayer_h_36_CALLBACK_WRAPPERS \
+	Main_Source_Main_RPGPayer_h_36_INCLASS \
+	Main_Source_Main_RPGPayer_h_36_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define Main_Source_Main_RPGPayer_h_35_GENERATED_BODY \
+#define Main_Source_Main_RPGPayer_h_36_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Main_Source_Main_RPGPayer_h_35_PRIVATE_PROPERTY_OFFSET \
-	Main_Source_Main_RPGPayer_h_35_SPARSE_DATA \
-	Main_Source_Main_RPGPayer_h_35_RPC_WRAPPERS_NO_PURE_DECLS \
-	Main_Source_Main_RPGPayer_h_35_CALLBACK_WRAPPERS \
-	Main_Source_Main_RPGPayer_h_35_INCLASS_NO_PURE_DECLS \
-	Main_Source_Main_RPGPayer_h_35_ENHANCED_CONSTRUCTORS \
+	Main_Source_Main_RPGPayer_h_36_PRIVATE_PROPERTY_OFFSET \
+	Main_Source_Main_RPGPayer_h_36_SPARSE_DATA \
+	Main_Source_Main_RPGPayer_h_36_RPC_WRAPPERS_NO_PURE_DECLS \
+	Main_Source_Main_RPGPayer_h_36_CALLBACK_WRAPPERS \
+	Main_Source_Main_RPGPayer_h_36_INCLASS_NO_PURE_DECLS \
+	Main_Source_Main_RPGPayer_h_36_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

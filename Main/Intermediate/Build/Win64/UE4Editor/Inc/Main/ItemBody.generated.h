@@ -18,6 +18,7 @@ enum class EPawnBodyType : uint8;
 #define Main_Source_Main_ItemBody_h_32_SPARSE_DATA
 #define Main_Source_Main_ItemBody_h_32_RPC_WRAPPERS \
  \
+	DECLARE_FUNCTION(execAttachBody); \
 	DECLARE_FUNCTION(execSwitchBody); \
 	DECLARE_FUNCTION(execInitItem); \
 	DECLARE_FUNCTION(execBeginPlay); \
@@ -27,6 +28,7 @@ enum class EPawnBodyType : uint8;
 
 #define Main_Source_Main_ItemBody_h_32_RPC_WRAPPERS_NO_PURE_DECLS \
  \
+	DECLARE_FUNCTION(execAttachBody); \
 	DECLARE_FUNCTION(execSwitchBody); \
 	DECLARE_FUNCTION(execInitItem); \
 	DECLARE_FUNCTION(execBeginPlay); \

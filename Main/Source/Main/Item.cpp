@@ -62,7 +62,7 @@ void AItem::SetItemState(EItemState NewItemState)
 	{
 		case EItemState::InWorld:
 			{
-				ThisSkeletalMesh->SetHiddenInGame(false);
+				/*ThisSkeletalMesh->SetHiddenInGame(false);
 				ThisSkeletalMesh->SetSimulatePhysics(true);
 				ThisSkeletalMesh->SetCollisionEnabled(ECollisionEnabled::PhysicsOnly);
 				ThisSkeletalMesh->SetCollisionResponseToChannels(ECR_Block);
@@ -70,14 +70,12 @@ void AItem::SetItemState(EItemState NewItemState)
 				ThisSkeletalMesh->SetRelativeScale3D(FVector(1));
 				
 				SphereComponent->SetCollisionEnabled(ECollisionEnabled::QueryOnly);
-				//SphereComponent->SetCollisionObjectType(ECC_EngineTraceChannel1);
-				//SphereComponent->SetCollisionResponseToChannels(ECR_Ignore);
 				SphereComponent->SetCollisionResponseToAllChannels(ECR_Ignore);
 				SphereComponent->SetCollisionResponseToChannel(ECC_Pawn,ECR_Overlap);
-				SphereComponent->SetHiddenInGame(false);
+				SphereComponent->SetHiddenInGame(false);*/
 				break;
 			}
-		case EItemState::InPack:
+		/*case EItemState::InPack:
 			{
 				ThisSkeletalMesh->SetHiddenInGame(true);
 				ThisSkeletalMesh->SetSimulatePhysics(false);
@@ -96,7 +94,7 @@ void AItem::SetItemState(EItemState NewItemState)
 			{
 				ThisSkeletalMesh->SetHiddenInGame(false);
 				ThisSkeletalMesh->SetSimulatePhysics(false);
-				ThisSkeletalMesh->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
+				ThisSkeletalMesh->SetCollisionEnabled(ECollisionEnabled::PhysicsOnly);
 				ThisSkeletalMesh->SetCollisionResponseToChannels(ECR_Overlap);
 				ThisSkeletalMesh->SetWorldScale3D(FVector(1));
 				ThisSkeletalMesh->SetRelativeScale3D(FVector(1));
@@ -123,10 +121,10 @@ void AItem::SetItemState(EItemState NewItemState)
 				
 				break;
 			}
-		
+		*/
 		default:
 			{
-				ThisSkeletalMesh->SetHiddenInGame(false);
+				/*ThisSkeletalMesh->SetHiddenInGame(false);
 				ThisSkeletalMesh->SetSimulatePhysics(true);
 				ThisSkeletalMesh->SetCollisionEnabled(ECollisionEnabled::PhysicsOnly);
 				ThisSkeletalMesh->SetCollisionResponseToChannels(ECR_Block);
@@ -137,7 +135,7 @@ void AItem::SetItemState(EItemState NewItemState)
 				SphereComponent->SetCollisionResponseToChannels(ECR_Ignore);
 				SphereComponent->SetCollisionResponseToChannel(ECC_EngineTraceChannel1,ECR_Overlap);
 				SphereComponent->SetCollisionResponseToChannel(ECC_GameTraceChannel1,ECR_Overlap);
-				SphereComponent->SetHiddenInGame(false);
+				SphereComponent->SetHiddenInGame(false);*/
 				break;
 			} 
 	}
@@ -174,4 +172,5 @@ void AItem::SphereComponent_EndOverlap(UPrimitiveComponent* Component,AActor* Ot
 
 void AItem::PickUpItem(APawn* Pawn)
 {
+	
 }

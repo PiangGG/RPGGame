@@ -99,6 +99,14 @@ void EmptyLinkFunctionForGeneratedCodeItemBody() {}
 		}
 		return ReturnEnum;
 	}
+	DEFINE_FUNCTION(AItemBody::execAttachBody)
+	{
+		P_GET_OBJECT(APawn,Z_Param_Pawn);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->AttachBody(Z_Param_Pawn);
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(AItemBody::execSwitchBody)
 	{
 		P_GET_OBJECT(APawn,Z_Param_Pawn);
@@ -140,6 +148,7 @@ void EmptyLinkFunctionForGeneratedCodeItemBody() {}
 	{
 		UClass* Class = AItemBody::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
+			{ "AttachBody", &AItemBody::execAttachBody },
 			{ "BeginPlay", &AItemBody::execBeginPlay },
 			{ "GetEPawnBodyType", &AItemBody::execGetEPawnBodyType },
 			{ "InitItem", &AItemBody::execInitItem },
@@ -147,6 +156,39 @@ void EmptyLinkFunctionForGeneratedCodeItemBody() {}
 			{ "SwitchBody", &AItemBody::execSwitchBody },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_AItemBody_AttachBody_Statics
+	{
+		struct ItemBody_eventAttachBody_Parms
+		{
+			APawn* Pawn;
+		};
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Pawn;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_AItemBody_AttachBody_Statics::NewProp_Pawn = { "Pawn", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ItemBody_eventAttachBody_Parms, Pawn), Z_Construct_UClass_APawn_NoRegister, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AItemBody_AttachBody_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AItemBody_AttachBody_Statics::NewProp_Pawn,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AItemBody_AttachBody_Statics::Function_MetaDataParams[] = {
+		{ "Category", "ItemBody" },
+		{ "ModuleRelativePath", "ItemBody.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AItemBody_AttachBody_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AItemBody, nullptr, "AttachBody", nullptr, nullptr, sizeof(ItemBody_eventAttachBody_Parms), Z_Construct_UFunction_AItemBody_AttachBody_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AItemBody_AttachBody_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AItemBody_AttachBody_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AItemBody_AttachBody_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AItemBody_AttachBody()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AItemBody_AttachBody_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	struct Z_Construct_UFunction_AItemBody_BeginPlay_Statics
 	{
@@ -313,6 +355,10 @@ void EmptyLinkFunctionForGeneratedCodeItemBody() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_PawnBodyType_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_PawnBodyType;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_AttachSoketName_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FNamePropertyParams NewProp_AttachSoketName;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -322,6 +368,7 @@ void EmptyLinkFunctionForGeneratedCodeItemBody() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_Main,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_AItemBody_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_AItemBody_AttachBody, "AttachBody" }, // 1904030867
 		{ &Z_Construct_UFunction_AItemBody_BeginPlay, "BeginPlay" }, // 3606741401
 		{ &Z_Construct_UFunction_AItemBody_GetEPawnBodyType, "GetEPawnBodyType" }, // 2776063966
 		{ &Z_Construct_UFunction_AItemBody_InitItem, "InitItem" }, // 1469664223
@@ -343,9 +390,17 @@ void EmptyLinkFunctionForGeneratedCodeItemBody() {}
 	};
 #endif
 	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UClass_AItemBody_Statics::NewProp_PawnBodyType = { "PawnBodyType", nullptr, (EPropertyFlags)0x0010000000010005, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AItemBody, PawnBodyType), Z_Construct_UEnum_Main_EPawnBodyType, METADATA_PARAMS(Z_Construct_UClass_AItemBody_Statics::NewProp_PawnBodyType_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AItemBody_Statics::NewProp_PawnBodyType_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AItemBody_Statics::NewProp_AttachSoketName_MetaData[] = {
+		{ "Category", "ItemBody" },
+		{ "ModuleRelativePath", "ItemBody.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UClass_AItemBody_Statics::NewProp_AttachSoketName = { "AttachSoketName", nullptr, (EPropertyFlags)0x0010000000010005, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AItemBody, AttachSoketName), METADATA_PARAMS(Z_Construct_UClass_AItemBody_Statics::NewProp_AttachSoketName_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AItemBody_Statics::NewProp_AttachSoketName_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AItemBody_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AItemBody_Statics::NewProp_PawnBodyType_Underlying,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AItemBody_Statics::NewProp_PawnBodyType,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AItemBody_Statics::NewProp_AttachSoketName,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AItemBody_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AItemBody>::IsAbstract,
@@ -374,7 +429,7 @@ void EmptyLinkFunctionForGeneratedCodeItemBody() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AItemBody, 2904001002);
+	IMPLEMENT_CLASS(AItemBody, 1660905128);
 	template<> MAIN_API UClass* StaticClass<AItemBody>()
 	{
 		return AItemBody::StaticClass();

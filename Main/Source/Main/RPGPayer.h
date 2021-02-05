@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 
 #include "ItemBodyCloth.h"
+#include "Chaos/AABB.h"
 #include "GameFramework/Character.h"
 #include "RPGPayer.generated.h"
 
@@ -87,21 +88,50 @@ public:
 	 * ALL BODY
 	 */
 	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Category="PlayerBody")
-	class USkeletalMeshComponent* ItemBodyCloth;
+	class USceneComponent* RootMeshComponent;
+	void InitBody();
+	//UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Category="PlayerBody")
+	//TMap<EPawnBodyType,TSubclassOf<AItemBody>> PawnBodyMap;
 	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Category="PlayerBody")
-	class USkeletalMeshComponent* ItemBodyFace;
+	TSubclassOf<AItemBody> ItemBodyClothSub;
 	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Category="PlayerBody")
-	class USkeletalMeshComponent* ItemBodyHair;
+	class AItemBody *ItemBodyCloth;
+	
 	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Category="PlayerBody")
-	class USkeletalMeshComponent* ItemBodyGlove;
+	TSubclassOf<AItemBody> ItemBodyFaceSub;
 	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Category="PlayerBody")
-	class USkeletalMeshComponent* ItemBodyShoe;
+	class AItemBody* ItemBodyFace;
+
 	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Category="PlayerBody")
-	class USkeletalMeshComponent* ItemBodyHeadGears;
+	TSubclassOf<AItemBody> ItemBodyHairSub;
 	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Category="PlayerBody")
-	class USkeletalMeshComponent* ItemBodyShoulderPad;
+	class AItemBody* ItemBodyHair;
+
+
 	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Category="PlayerBody")
-	class USkeletalMeshComponent* ItemBodyBelt;
+	TSubclassOf<AItemBody> ItemBodyGloveSub;
+	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Category="PlayerBody")
+	class AItemBody* ItemBodyGlove;
+
+	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Category="PlayerBody")
+	TSubclassOf<AItemBody> ItemBodyShoeSub;
+	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Category="PlayerBody")
+	class AItemBody* ItemBodyShoe;
+	
+	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Category="PlayerBody")
+	TSubclassOf<AItemBody> ItemBodyHeadGearsSub;
+	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Category="PlayerBody")
+	class AItemBody* ItemBodyHeadGears;
+	
+	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Category="PlayerBody")
+	TSubclassOf<AItemBody> ItemBodyShoulderPadSub;
+	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Category="PlayerBody")
+	class AItemBody* ItemBodyShoulderPad;
+	
+	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Category="PlayerBody")
+	TSubclassOf<AItemBody> ItemBodyBeltSub;
+	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Category="PlayerBody")
+	class AItemBody* ItemBodyBelt;
 public:
 	/*
 	 * 角色武器状态姿势
@@ -142,4 +172,13 @@ public:
 	void AttackServer();
 	/*攻击回调函数*/
 	void AttackCallBack();
+
+	/*
+	 * 物品
+	 * 角色装备
+	 * 拾取
+	 * 装备
+	 */
+	//所有物品
+	TArray<AItem> IntArray;
 };
