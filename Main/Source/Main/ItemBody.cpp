@@ -25,16 +25,17 @@ void AItemBody::SwitchBody(APawn* Pawn)
 {
 	ARPGPayer *Player=Cast<ARPGPayer>(Pawn);
 	
-	if (!Player)return;;
-	switch (GetEPawnBodyType())
+	if (!Player)return;
+	AttachBody(Pawn);
+	/*switch (GetEPawnBodyType())
 	{
 		case EPawnBodyType::ECloth:
 			{
-				//Player->ItemBodyCloth=ThisSkeletalMesh;
+				Player->GetMesh()=ThisSkeletalMesh;
 				break;
 			}
 		default: break;
-	}
+	}*/
 	
 }
 
@@ -42,20 +43,24 @@ void AItemBody::AttachBody(APawn* Pawn)
 {
 	ARPGPayer *Player=Cast<ARPGPayer>(Pawn);
 	
-	if (!Player)return;;
+	if (!Player&&!ThisSkeletalMesh)return;;
 	switch (GetEPawnBodyType())
 	{
 	case EPawnBodyType::ECloth:
 		{
 			//this->AttachToActor(Player,FAttachmentTransformRules::KeepRelativeTransform,AttachSoketName);
-			this->ThisSkeletalMesh->AttachToComponent(Player->RootMeshComponent,FAttachmentTransformRules::KeepRelativeTransform,AttachSoketName);
+			//this->ThisSkeletalMesh->AttachToComponent(Player->RootMeshComponent,FAttachmentTransformRules::KeepRelativeTransform,AttachSoketName)
+			if (ThisSkeletalMesh->SkeletalMesh)
+			{
+				UE_LOG(LogTemp,Warning,TEXT("SetSkeletalMesh1"));
+				Player->GetMesh()->SetSkeletalMesh(ThisSkeletalMesh->SkeletalMesh);
+			}
 			
 			break;
 		}
 	case EPawnBodyType::EFace:
 		{
 			this->ThisSkeletalMesh->AttachToComponent(Player->GetMesh(),FAttachmentTransformRules::KeepRelativeTransform,AttachSoketName);
-			
 			break;
 		}
 	case EPawnBodyType::EHair:
@@ -102,6 +107,17 @@ void AItemBody::AttachBody(APawn* Pawn)
 		}
 	default: break;
 	}
+}
+
+void AItemBody::SphereComponent_BeginOverlap(UPrimitiveComponent* Component, AActor* OtherActor,
+	UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
+{
+	Super::SphereComponent_BeginOverlap(Component, OtherActor, OtherComp, OtherBodyIndex, bFromSweep, SweepResult);
+	ARPGPayer *player=Cast<ARPGPayer>(OtherActor);
+	if (GetLocalRole()==ROLE_Authority&&player)
+	{
+		SwitchBody(player);
+	}	
 }
 
 void AItemBody::SetEPawnBody(EPawnBodyType NewPawnBodyType)

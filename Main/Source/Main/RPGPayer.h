@@ -88,11 +88,32 @@ public:
 	 * ALL BODY
 	 */
 	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Category="PlayerBody")
+	class USkeletalMeshComponent* ItemBodyFace;
+
+	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Category="PlayerBody")
+	class USkeletalMeshComponent* ItemBodyHair;
+	
+	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Category="PlayerBody")
+	class USkeletalMeshComponent* ItemBodyGlove;
+
+	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Category="PlayerBody")
+	class USkeletalMeshComponent* ItemBodyShoe;
+
+	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Category="PlayerBody")
+	class USkeletalMeshComponent* ItemBodyHeadGears;
+
+	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Category="PlayerBody")
+	class USkeletalMeshComponent* ItemBodyShoulderPad;
+
+	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Category="PlayerBody")
+	class USkeletalMeshComponent* ItemBodyBelt;
+	
+	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Category="PlayerBody")
 	class USceneComponent* RootMeshComponent;
 	void InitBody();
 	//UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Category="PlayerBody")
 	//TMap<EPawnBodyType,TSubclassOf<AItemBody>> PawnBodyMap;
-	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Category="PlayerBody")
+	/*UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Category="PlayerBody")
 	TSubclassOf<AItemBody> ItemBodyClothSub;
 	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Category="PlayerBody")
 	class AItemBody *ItemBodyCloth;
@@ -131,7 +152,7 @@ public:
 	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Category="PlayerBody")
 	TSubclassOf<AItemBody> ItemBodyBeltSub;
 	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Category="PlayerBody")
-	class AItemBody* ItemBodyBelt;
+	class AItemBody* ItemBodyBelt;*/
 public:
 	/*
 	 * 角色武器状态姿势

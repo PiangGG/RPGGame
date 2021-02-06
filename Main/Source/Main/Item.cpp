@@ -89,7 +89,7 @@ void AItem::SetItemState(EItemState NewItemState)
 				//SphereComponent->SetCollisionResponseToChannel(ECC_EngineTraceChannel1,ECR_Overlap);
 				SphereComponent->SetHiddenInGame(true);
 				break;
-			}
+			}*/
 		case EItemState::InPlayering:
 			{
 				ThisSkeletalMesh->SetHiddenInGame(false);
@@ -99,13 +99,12 @@ void AItem::SetItemState(EItemState NewItemState)
 				ThisSkeletalMesh->SetWorldScale3D(FVector(1));
 				ThisSkeletalMesh->SetRelativeScale3D(FVector(1));
 
-				SphereComponent->SetCollisionEnabled(ECollisionEnabled::NoCollision);
-				SphereComponent->SetCollisionResponseToChannels(ECR_Ignore);
-				//SphereComponent->SetCollisionResponseToChannel(ECC_EngineTraceChannel1,ECR_Overlap);
-				SphereComponent->SetHiddenInGame(false);
+				/*SphereComponent->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+				SphereComponent->SetCollisionResponseToChannels(ECR_Ignore);*/
+				SphereComponent->SetHiddenInGame(true);
 				break;
 			}
-		case EItemState::Other:
+		/*case EItemState::Other:
 			{
 				ThisSkeletalMesh->SetHiddenInGame(false);
 				ThisSkeletalMesh->SetSimulatePhysics(true);

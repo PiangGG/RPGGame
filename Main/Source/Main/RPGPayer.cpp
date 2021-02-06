@@ -67,29 +67,30 @@ ARPGPayer::ARPGPayer()
 	/*
 	 * init Body
 	 */
-	
-	/*ItemBodyFace=CreateDefaultSubobject<USkeletalMeshComponent>("ItemBodyFace");
-	ItemBodyFace->SetupAttachment(ItemBodyCloth);
+	ItemBodyFace=CreateDefaultSubobject<USkeletalMeshComponent>("ItemBodyFace");
+	ItemBodyFace->SetupAttachment(GetMesh());
 
 	ItemBodyHair=CreateDefaultSubobject<USkeletalMeshComponent>("ItemBodyHair");
-	ItemBodyHair->SetupAttachment(ItemBodyCloth);
+	ItemBodyHair->SetupAttachment(GetMesh());
 
 	ItemBodyGlove=CreateDefaultSubobject<USkeletalMeshComponent>("ItemBodyGlove");
-	ItemBodyGlove->SetupAttachment(ItemBodyCloth);
+	ItemBodyGlove->SetupAttachment(GetMesh());
 
 	ItemBodyShoe=CreateDefaultSubobject<USkeletalMeshComponent>("ItemBodyShoe");
-	ItemBodyShoe->SetupAttachment(ItemBodyCloth);
+	ItemBodyShoe->SetupAttachment(GetMesh());
 
 	ItemBodyHeadGears=CreateDefaultSubobject<USkeletalMeshComponent>("ItemBodyHeadGears");
-	ItemBodyHeadGears->SetupAttachment(ItemBodyCloth);
+	ItemBodyHeadGears->SetupAttachment(GetMesh());
 
 	ItemBodyShoulderPad=CreateDefaultSubobject<USkeletalMeshComponent>("ItemBodyShoulderPad");
-	ItemBodyShoulderPad->SetupAttachment(ItemBodyCloth);
+	ItemBodyShoulderPad->SetupAttachment(GetMesh());
 
 	ItemBodyBelt=CreateDefaultSubobject<USkeletalMeshComponent>("ItemBodyBelt");
-	ItemBodyBelt->SetupAttachment(ItemBodyCloth);*/
+	ItemBodyBelt->SetupAttachment(GetMesh());
 
 	GetCharacterMovement()->MaxWalkSpeed=BaseSpeed;
+
+	
 }
 
 // Called when the game starts or when spawned
@@ -98,10 +99,7 @@ void ARPGPayer::BeginPlay()
 	Super::BeginPlay();
 
 	SpringArm->SetRelativeRotation(FQuat::MakeFromEuler(FVector(0, -25, 180)));
-	if (GetWorld())
-	{
-		InitBody();
-	}
+	//InitBody();
 }
 
 // Called every frame
@@ -139,7 +137,7 @@ void ARPGPayer::InitBody()
 			ItemBodyCloth->SetOwner(this);
 			ItemBodyCloth->SetItemState(EItemState::InPlayering);
 			ItemBodyCloth->AttachBody(this);
-		}*/
+		}
 
 		ItemBodyFace=GetWorld()->SpawnActor<AItemBody>(ItemBodyFaceSub);
 		if (ItemBodyFace)
@@ -155,12 +153,15 @@ void ARPGPayer::InitBody()
 			ItemBodyHair->SetItemState(EItemState::InPlayering);
 			ItemBodyHair->AttachBody(this);
 		}
+		FActorSpawnParameters SpawnParameters;
+		SpawnParameters.SpawnCollisionHandlingOverride=ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
+		
 		ItemBodyShoe=GetWorld()->SpawnActor<AItemBody>(ItemBodyShoeSub);
 		if (ItemBodyShoe)
 		{
 			ItemBodyShoe->SetOwner(this);
-			ItemBodyShoe->SetItemState(EItemState::InPlayering);
-			ItemBodyShoe->AttachBody(this);
+			//ItemBodyShoe->SetItemState(EItemState::InPlayering);
+			//ItemBodyShoe->AttachBody(this);
 		}
 		ItemBodyHeadGears=GetWorld()->SpawnActor<AItemBody>(ItemBodyHeadGearsSub);
 		if (ItemBodyHeadGears)
@@ -182,7 +183,7 @@ void ARPGPayer::InitBody()
 			ItemBodyBelt->SetOwner(this);
 			ItemBodyBelt->SetItemState(EItemState::InPlayering);
 			ItemBodyBelt->AttachBody(this);
-		}
+		}*/
 	}
 	
 }

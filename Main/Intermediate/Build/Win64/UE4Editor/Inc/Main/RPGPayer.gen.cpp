@@ -22,9 +22,8 @@ void EmptyLinkFunctionForGeneratedCodeRPGPayer() {}
 	ENGINE_API UClass* Z_Construct_UClass_USpringArmComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UArrowComponent_NoRegister();
+	ENGINE_API UClass* Z_Construct_UClass_USkeletalMeshComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USceneComponent_NoRegister();
-	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
-	MAIN_API UClass* Z_Construct_UClass_AItemBody_NoRegister();
 // End Cross Module References
 	static UEnum* EPlayerState_StaticEnum()
 	{
@@ -580,73 +579,37 @@ void EmptyLinkFunctionForGeneratedCodeRPGPayer() {}
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_RunSpeed;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_RootMeshComponent_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_RootMeshComponent;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ItemBodyClothSub_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FClassPropertyParams NewProp_ItemBodyClothSub;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ItemBodyCloth_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_ItemBodyCloth;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ItemBodyFaceSub_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FClassPropertyParams NewProp_ItemBodyFaceSub;
-#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ItemBodyFace_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_ItemBodyFace;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ItemBodyHairSub_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FClassPropertyParams NewProp_ItemBodyHairSub;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ItemBodyHair_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_ItemBodyHair;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ItemBodyGloveSub_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FClassPropertyParams NewProp_ItemBodyGloveSub;
-#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ItemBodyGlove_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_ItemBodyGlove;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ItemBodyShoeSub_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FClassPropertyParams NewProp_ItemBodyShoeSub;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ItemBodyShoe_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_ItemBodyShoe;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ItemBodyHeadGearsSub_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FClassPropertyParams NewProp_ItemBodyHeadGearsSub;
-#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ItemBodyHeadGears_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_ItemBodyHeadGears;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ItemBodyShoulderPadSub_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FClassPropertyParams NewProp_ItemBodyShoulderPadSub;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ItemBodyShoulderPad_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_ItemBodyShoulderPad;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ItemBodyBeltSub_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FClassPropertyParams NewProp_ItemBodyBeltSub;
-#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ItemBodyBelt_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_ItemBodyBelt;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_RootMeshComponent_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_RootMeshComponent;
 		static const UE4CodeGen_Private::FBytePropertyParams NewProp_CurrentPlayerStance_Underlying;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CurrentPlayerStance_MetaData[];
@@ -749,7 +712,7 @@ void EmptyLinkFunctionForGeneratedCodeRPGPayer() {}
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ARPGPayer_Statics::NewProp_RunSpeed = { "RunSpeed", nullptr, (EPropertyFlags)0x0010000000010005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ARPGPayer, RunSpeed), METADATA_PARAMS(Z_Construct_UClass_ARPGPayer_Statics::NewProp_RunSpeed_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ARPGPayer_Statics::NewProp_RunSpeed_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ARPGPayer_Statics::NewProp_RootMeshComponent_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyFace_MetaData[] = {
 		{ "Category", "PlayerBody" },
 		{ "Comment", "/*\n\x09 * ALL BODY\n\x09 */" },
 		{ "EditInline", "true" },
@@ -757,121 +720,63 @@ void EmptyLinkFunctionForGeneratedCodeRPGPayer() {}
 		{ "ToolTip", "* ALL BODY" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ARPGPayer_Statics::NewProp_RootMeshComponent = { "RootMeshComponent", nullptr, (EPropertyFlags)0x001000000009000d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ARPGPayer, RootMeshComponent), Z_Construct_UClass_USceneComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ARPGPayer_Statics::NewProp_RootMeshComponent_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ARPGPayer_Statics::NewProp_RootMeshComponent_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyClothSub_MetaData[] = {
-		{ "Category", "PlayerBody" },
-		{ "Comment", "//UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Category=\"PlayerBody\")\n//TMap<EPawnBodyType,TSubclassOf<AItemBody>> PawnBodyMap;\n" },
-		{ "ModuleRelativePath", "RPGPayer.h" },
-		{ "ToolTip", "UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Category=\"PlayerBody\")\nTMap<EPawnBodyType,TSubclassOf<AItemBody>> PawnBodyMap;" },
-	};
-#endif
-	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyClothSub = { "ItemBodyClothSub", nullptr, (EPropertyFlags)0x0014000000010005, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ARPGPayer, ItemBodyClothSub), Z_Construct_UClass_AItemBody_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyClothSub_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyClothSub_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyCloth_MetaData[] = {
-		{ "Category", "PlayerBody" },
-		{ "ModuleRelativePath", "RPGPayer.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyCloth = { "ItemBodyCloth", nullptr, (EPropertyFlags)0x0010000000010005, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ARPGPayer, ItemBodyCloth), Z_Construct_UClass_AItemBody_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyCloth_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyCloth_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyFaceSub_MetaData[] = {
-		{ "Category", "PlayerBody" },
-		{ "ModuleRelativePath", "RPGPayer.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyFaceSub = { "ItemBodyFaceSub", nullptr, (EPropertyFlags)0x0014000000010005, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ARPGPayer, ItemBodyFaceSub), Z_Construct_UClass_AItemBody_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyFaceSub_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyFaceSub_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyFace_MetaData[] = {
-		{ "Category", "PlayerBody" },
-		{ "ModuleRelativePath", "RPGPayer.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyFace = { "ItemBodyFace", nullptr, (EPropertyFlags)0x0010000000010005, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ARPGPayer, ItemBodyFace), Z_Construct_UClass_AItemBody_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyFace_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyFace_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyHairSub_MetaData[] = {
-		{ "Category", "PlayerBody" },
-		{ "ModuleRelativePath", "RPGPayer.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyHairSub = { "ItemBodyHairSub", nullptr, (EPropertyFlags)0x0014000000010005, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ARPGPayer, ItemBodyHairSub), Z_Construct_UClass_AItemBody_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyHairSub_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyHairSub_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyFace = { "ItemBodyFace", nullptr, (EPropertyFlags)0x001000000009000d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ARPGPayer, ItemBodyFace), Z_Construct_UClass_USkeletalMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyFace_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyFace_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyHair_MetaData[] = {
 		{ "Category", "PlayerBody" },
+		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "RPGPayer.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyHair = { "ItemBodyHair", nullptr, (EPropertyFlags)0x0010000000010005, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ARPGPayer, ItemBodyHair), Z_Construct_UClass_AItemBody_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyHair_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyHair_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyGloveSub_MetaData[] = {
-		{ "Category", "PlayerBody" },
-		{ "ModuleRelativePath", "RPGPayer.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyGloveSub = { "ItemBodyGloveSub", nullptr, (EPropertyFlags)0x0014000000010005, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ARPGPayer, ItemBodyGloveSub), Z_Construct_UClass_AItemBody_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyGloveSub_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyGloveSub_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyHair = { "ItemBodyHair", nullptr, (EPropertyFlags)0x001000000009000d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ARPGPayer, ItemBodyHair), Z_Construct_UClass_USkeletalMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyHair_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyHair_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyGlove_MetaData[] = {
 		{ "Category", "PlayerBody" },
+		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "RPGPayer.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyGlove = { "ItemBodyGlove", nullptr, (EPropertyFlags)0x0010000000010005, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ARPGPayer, ItemBodyGlove), Z_Construct_UClass_AItemBody_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyGlove_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyGlove_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyShoeSub_MetaData[] = {
-		{ "Category", "PlayerBody" },
-		{ "ModuleRelativePath", "RPGPayer.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyShoeSub = { "ItemBodyShoeSub", nullptr, (EPropertyFlags)0x0014000000010005, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ARPGPayer, ItemBodyShoeSub), Z_Construct_UClass_AItemBody_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyShoeSub_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyShoeSub_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyGlove = { "ItemBodyGlove", nullptr, (EPropertyFlags)0x001000000009000d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ARPGPayer, ItemBodyGlove), Z_Construct_UClass_USkeletalMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyGlove_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyGlove_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyShoe_MetaData[] = {
 		{ "Category", "PlayerBody" },
+		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "RPGPayer.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyShoe = { "ItemBodyShoe", nullptr, (EPropertyFlags)0x0010000000010005, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ARPGPayer, ItemBodyShoe), Z_Construct_UClass_AItemBody_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyShoe_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyShoe_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyHeadGearsSub_MetaData[] = {
-		{ "Category", "PlayerBody" },
-		{ "ModuleRelativePath", "RPGPayer.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyHeadGearsSub = { "ItemBodyHeadGearsSub", nullptr, (EPropertyFlags)0x0014000000010005, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ARPGPayer, ItemBodyHeadGearsSub), Z_Construct_UClass_AItemBody_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyHeadGearsSub_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyHeadGearsSub_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyShoe = { "ItemBodyShoe", nullptr, (EPropertyFlags)0x001000000009000d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ARPGPayer, ItemBodyShoe), Z_Construct_UClass_USkeletalMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyShoe_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyShoe_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyHeadGears_MetaData[] = {
 		{ "Category", "PlayerBody" },
+		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "RPGPayer.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyHeadGears = { "ItemBodyHeadGears", nullptr, (EPropertyFlags)0x0010000000010005, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ARPGPayer, ItemBodyHeadGears), Z_Construct_UClass_AItemBody_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyHeadGears_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyHeadGears_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyShoulderPadSub_MetaData[] = {
-		{ "Category", "PlayerBody" },
-		{ "ModuleRelativePath", "RPGPayer.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyShoulderPadSub = { "ItemBodyShoulderPadSub", nullptr, (EPropertyFlags)0x0014000000010005, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ARPGPayer, ItemBodyShoulderPadSub), Z_Construct_UClass_AItemBody_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyShoulderPadSub_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyShoulderPadSub_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyHeadGears = { "ItemBodyHeadGears", nullptr, (EPropertyFlags)0x001000000009000d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ARPGPayer, ItemBodyHeadGears), Z_Construct_UClass_USkeletalMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyHeadGears_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyHeadGears_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyShoulderPad_MetaData[] = {
 		{ "Category", "PlayerBody" },
+		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "RPGPayer.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyShoulderPad = { "ItemBodyShoulderPad", nullptr, (EPropertyFlags)0x0010000000010005, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ARPGPayer, ItemBodyShoulderPad), Z_Construct_UClass_AItemBody_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyShoulderPad_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyShoulderPad_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyBeltSub_MetaData[] = {
-		{ "Category", "PlayerBody" },
-		{ "ModuleRelativePath", "RPGPayer.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyBeltSub = { "ItemBodyBeltSub", nullptr, (EPropertyFlags)0x0014000000010005, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ARPGPayer, ItemBodyBeltSub), Z_Construct_UClass_AItemBody_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyBeltSub_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyBeltSub_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyShoulderPad = { "ItemBodyShoulderPad", nullptr, (EPropertyFlags)0x001000000009000d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ARPGPayer, ItemBodyShoulderPad), Z_Construct_UClass_USkeletalMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyShoulderPad_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyShoulderPad_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyBelt_MetaData[] = {
 		{ "Category", "PlayerBody" },
+		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "RPGPayer.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyBelt = { "ItemBodyBelt", nullptr, (EPropertyFlags)0x0010000000010005, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ARPGPayer, ItemBodyBelt), Z_Construct_UClass_AItemBody_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyBelt_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyBelt_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyBelt = { "ItemBodyBelt", nullptr, (EPropertyFlags)0x001000000009000d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ARPGPayer, ItemBodyBelt), Z_Construct_UClass_USkeletalMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyBelt_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyBelt_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ARPGPayer_Statics::NewProp_RootMeshComponent_MetaData[] = {
+		{ "Category", "PlayerBody" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "RPGPayer.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ARPGPayer_Statics::NewProp_RootMeshComponent = { "RootMeshComponent", nullptr, (EPropertyFlags)0x001000000009000d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ARPGPayer, RootMeshComponent), Z_Construct_UClass_USceneComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ARPGPayer_Statics::NewProp_RootMeshComponent_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ARPGPayer_Statics::NewProp_RootMeshComponent_MetaData)) };
 	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UClass_ARPGPayer_Statics::NewProp_CurrentPlayerStance_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ARPGPayer_Statics::NewProp_CurrentPlayerStance_MetaData[] = {
@@ -919,23 +824,14 @@ void EmptyLinkFunctionForGeneratedCodeRPGPayer() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARPGPayer_Statics::NewProp_bIsRun,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARPGPayer_Statics::NewProp_BaseSpeed,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARPGPayer_Statics::NewProp_RunSpeed,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARPGPayer_Statics::NewProp_RootMeshComponent,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyClothSub,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyCloth,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyFaceSub,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyFace,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyHairSub,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyHair,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyGloveSub,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyGlove,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyShoeSub,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyShoe,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyHeadGearsSub,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyHeadGears,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyShoulderPadSub,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyShoulderPad,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyBeltSub,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARPGPayer_Statics::NewProp_ItemBodyBelt,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARPGPayer_Statics::NewProp_RootMeshComponent,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARPGPayer_Statics::NewProp_CurrentPlayerStance_Underlying,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARPGPayer_Statics::NewProp_CurrentPlayerStance,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ARPGPayer_Statics::NewProp_CurrentPlayerState_Underlying,
@@ -970,7 +866,7 @@ void EmptyLinkFunctionForGeneratedCodeRPGPayer() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ARPGPayer, 3856531071);
+	IMPLEMENT_CLASS(ARPGPayer, 41570286);
 	template<> MAIN_API UClass* StaticClass<ARPGPayer>()
 	{
 		return ARPGPayer::StaticClass();
