@@ -26,7 +26,11 @@ void AItemBody::SwitchBody(APawn* Pawn)
 	ARPGPayer *Player=Cast<ARPGPayer>(Pawn);
 	
 	if (!Player)return;
-	AttachBody(Pawn);
+	if (GetLocalRole()<ROLE_Authority)
+	{
+		SwitchBodyServer(Pawn);
+	}
+	AttachBody(Player);
 	/*switch (GetEPawnBodyType())
 	{
 		case EPawnBodyType::ECloth:
@@ -39,11 +43,30 @@ void AItemBody::SwitchBody(APawn* Pawn)
 	
 }
 
+void AItemBody::SwitchBodyServer_Implementation(APawn* Pawn)
+{
+	SwitchBody(Pawn);
+}
+
+bool AItemBody::SwitchBodyServer_Validate(APawn* Pawn)
+{
+	return true;
+}
+
 void AItemBody::AttachBody(APawn* Pawn)
 {
+	if (GetLocalRole()<ROLE_Authority)
+	{
+		AttachBodyServer(Pawn);
+	}
 	ARPGPayer *Player=Cast<ARPGPayer>(Pawn);
 	
 	if (!Player&&!ThisSkeletalMesh)return;;
+	/*
+	 * 拾取物品动画蒙太奇
+	 */
+	Player->PlayAnimMontage(PickAnimMontage,"PickAnimMontage");
+	
 	switch (GetEPawnBodyType())
 	{
 	case EPawnBodyType::ECloth:
@@ -52,7 +75,6 @@ void AItemBody::AttachBody(APawn* Pawn)
 			//this->ThisSkeletalMesh->AttachToComponent(Player->RootMeshComponent,FAttachmentTransformRules::KeepRelativeTransform,AttachSoketName)
 			if (ThisSkeletalMesh->SkeletalMesh)
 			{
-				UE_LOG(LogTemp,Warning,TEXT("SetSkeletalMesh1"));
 				Player->GetMesh()->SetSkeletalMesh(ThisSkeletalMesh->SkeletalMesh);
 			}
 			
@@ -71,8 +93,10 @@ void AItemBody::AttachBody(APawn* Pawn)
 		}
 	case EPawnBodyType::EShoe:
 		{
-			this->ThisSkeletalMesh->AttachToComponent(Player->GetMesh(),FAttachmentTransformRules::KeepRelativeTransform,AttachSoketName);
-			
+			if (ThisSkeletalMesh->SkeletalMesh)
+			{
+				Player->ItemBodyShoe->SetSkeletalMesh(ThisSkeletalMesh->SkeletalMesh);
+			}
 			break;
 		}
 	case EPawnBodyType::EGlove:
@@ -107,17 +131,28 @@ void AItemBody::AttachBody(APawn* Pawn)
 		}
 	default: break;
 	}
+	if (this)
+	{
+		SetItemState(EItemState::InPlayering);
+	}
+}
+
+void AItemBody::AttachBodyServer_Implementation(APawn* Pawn)
+{
+	AttachBody(Pawn);
+}
+
+bool AItemBody::AttachBodyServer_Validate(APawn* Pawn)
+{
+	return true;
 }
 
 void AItemBody::SphereComponent_BeginOverlap(UPrimitiveComponent* Component, AActor* OtherActor,
-	UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
+                                             UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
 	Super::SphereComponent_BeginOverlap(Component, OtherActor, OtherComp, OtherBodyIndex, bFromSweep, SweepResult);
 	ARPGPayer *player=Cast<ARPGPayer>(OtherActor);
-	if (GetLocalRole()==ROLE_Authority&&player)
-	{
-		SwitchBody(player);
-	}	
+	SwitchBody(player);
 }
 
 void AItemBody::SetEPawnBody(EPawnBodyType NewPawnBodyType)

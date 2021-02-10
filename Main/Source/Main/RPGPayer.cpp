@@ -331,6 +331,165 @@ void ARPGPayer::AttackCallBack()
 	bIsAttacking=false;
 }
 
+void ARPGPayer::PlayAnimMontage(UAnimMontage* AnimMontage,FName name)
+{
+	if (GetMesh()&&ItemBodyFace&&ItemBodyHair&&ItemBodyGlove&&ItemBodyShoe&&ItemBodyHeadGears&&ItemBodyShoulderPad&&ItemBodyBelt)
+	{
+		UAnimInstance* PlayerAnimation =GetMesh()->GetAnimInstance();
+		if (PlayerAnimation)
+		{
+			if (AnimMontage)
+			{
+			
+				if (PlayerAnimation->IsAnyMontagePlaying()==false)
+				{
+				
+					PlayerAnimation->Montage_Play(AnimMontage);
+					PlayerAnimation->Montage_JumpToSection(name,AnimMontage);
+				}else
+				{
+					PlayerAnimation->Montage_Play(AnimMontage);
+					PlayerAnimation->Montage_JumpToSection(name,AnimMontage);
+				}
+					
+			}
+		}
+		UAnimInstance* ItemBodyFaceAnimation =ItemBodyFace->GetAnimInstance();
+		if (ItemBodyFaceAnimation)
+		{
+			if (AnimMontage)
+			{
+			
+				if (ItemBodyFaceAnimation->IsAnyMontagePlaying()==false)
+				{
+				
+					ItemBodyFaceAnimation->Montage_Play(AnimMontage);
+					ItemBodyFaceAnimation->Montage_JumpToSection(name,AnimMontage);
+				}else
+				{
+					ItemBodyFaceAnimation->Montage_Play(AnimMontage);
+					ItemBodyFaceAnimation->Montage_JumpToSection(name,AnimMontage);
+				}
+					
+			}
+		}
+		UAnimInstance* ItemBodyHairAnimation =ItemBodyHair->GetAnimInstance();
+		if (ItemBodyHairAnimation)
+		{
+			if (AnimMontage)
+			{
+			
+				if (ItemBodyHairAnimation->IsAnyMontagePlaying()==false)
+				{
+				
+					ItemBodyHairAnimation->Montage_Play(AnimMontage);
+					ItemBodyHairAnimation->Montage_JumpToSection(name,AnimMontage);
+				}else
+				{
+					ItemBodyHairAnimation->Montage_Play(AnimMontage);
+					ItemBodyHairAnimation->Montage_JumpToSection(name,AnimMontage);
+				}
+					
+			}
+		}
+		UAnimInstance* ItemBodyGloveAnimation =ItemBodyGlove->GetAnimInstance();
+		if (ItemBodyGloveAnimation)
+		{
+			if (AnimMontage)
+			{
+			
+				if (ItemBodyGloveAnimation->IsAnyMontagePlaying()==false)
+				{
+				
+					ItemBodyGloveAnimation->Montage_Play(AnimMontage);
+					ItemBodyGloveAnimation->Montage_JumpToSection(name,AnimMontage);
+				}else
+				{
+					ItemBodyGloveAnimation->Montage_Play(AnimMontage);
+					ItemBodyGloveAnimation->Montage_JumpToSection(name,AnimMontage);
+				}
+					
+			}
+		}
+		UAnimInstance* ItemBodyShoeAnimation =ItemBodyShoe->GetAnimInstance();
+		if (ItemBodyShoeAnimation)
+		{
+			if (AnimMontage)
+			{
+			
+				if (ItemBodyShoeAnimation->IsAnyMontagePlaying()==false)
+				{
+				
+					ItemBodyShoeAnimation->Montage_Play(AnimMontage);
+					ItemBodyShoeAnimation->Montage_JumpToSection(name,AnimMontage);
+				}else
+				{
+					ItemBodyShoeAnimation->Montage_Play(AnimMontage);
+					ItemBodyShoeAnimation->Montage_JumpToSection(name,AnimMontage);
+				}
+					
+			}
+		}
+		UAnimInstance* ItemBodyHeadGearsAnimation =ItemBodyHeadGears->GetAnimInstance();
+		if (ItemBodyHeadGearsAnimation)
+		{
+			if (ItemBodyShoeAnimation)
+			{
+			
+				if (ItemBodyHeadGearsAnimation->IsAnyMontagePlaying()==false)
+				{
+				
+					ItemBodyHeadGearsAnimation->Montage_Play(AnimMontage);
+					ItemBodyHeadGearsAnimation->Montage_JumpToSection(name,AnimMontage);
+				}else
+				{
+					ItemBodyHeadGearsAnimation->Montage_Play(AnimMontage);
+					ItemBodyHeadGearsAnimation->Montage_JumpToSection(name,AnimMontage);
+				}
+					
+			}
+		}
+		UAnimInstance* ItemBodyShoulderPadAnimation =ItemBodyShoulderPad->GetAnimInstance();
+		if (ItemBodyShoulderPadAnimation)
+		{
+			if (AnimMontage)
+			{
+			
+				if (ItemBodyShoulderPadAnimation->IsAnyMontagePlaying()==false)
+				{
+				
+					ItemBodyShoulderPadAnimation->Montage_Play(AnimMontage);
+					ItemBodyShoulderPadAnimation->Montage_JumpToSection(name,AnimMontage);
+				}else
+				{
+					ItemBodyShoulderPadAnimation->Montage_Play(AnimMontage);
+					ItemBodyShoulderPadAnimation->Montage_JumpToSection(name,AnimMontage);
+				}
+					
+			}
+		}
+		UAnimInstance* ItemBodyBeltAnimation =ItemBodyBelt->GetAnimInstance();
+		if (ItemBodyBeltAnimation)
+		{
+			if (AnimMontage)
+			{
+			
+				if (ItemBodyBeltAnimation->IsAnyMontagePlaying()==false)
+				{
+				
+					ItemBodyBeltAnimation->Montage_Play(AnimMontage);
+					ItemBodyBeltAnimation->Montage_JumpToSection(name,AnimMontage);
+				}else
+				{
+					ItemBodyBeltAnimation->Montage_Play(AnimMontage);
+					ItemBodyBeltAnimation->Montage_JumpToSection(name,AnimMontage);
+				}
+					
+			}
+		}
+	}
+}
+
 bool ARPGPayer::AttackServer_Validate()
 {
 	return true;

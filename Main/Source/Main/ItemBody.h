@@ -53,9 +53,13 @@ class MAIN_API AItemBody : public AItem
 	 */
 	UFUNCTION(BlueprintCallable,Category="ItemBody")
 	void SwitchBody(APawn* Pawn);
+	UFUNCTION(BlueprintCallable,Reliable,WithValidation,Server,Category="ItemBody")
+    void SwitchBodyServer(APawn* Pawn);
 
 	UFUNCTION(BlueprintCallable,Category="ItemBody")
     void AttachBody(APawn* Pawn);
+	UFUNCTION(BlueprintCallable,Reliable,WithValidation,Server,Category="ItemBody")
+	void AttachBodyServer(APawn* Pawn);
 	
 	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite)
 	FName AttachSoketName;
@@ -64,6 +68,8 @@ class MAIN_API AItemBody : public AItem
 	 * overlap
 	 */
 	//UFUNCTION(BlueprintCallable)
-	virtual void SphereComponent_BeginOverlap(class UPrimitiveComponent* Component,class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)override;
+	void SphereComponent_BeginOverlap(class UPrimitiveComponent* Component,class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)override;
 
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "ItemBodyAnimationMontage")
+	class UAnimMontage* PickAnimMontage;
 };

@@ -17,8 +17,14 @@ enum class EPawnBodyType : uint8;
 
 #define Main_Source_Main_ItemBody_h_32_SPARSE_DATA
 #define Main_Source_Main_ItemBody_h_32_RPC_WRAPPERS \
+	virtual bool AttachBodyServer_Validate(APawn* ); \
+	virtual void AttachBodyServer_Implementation(APawn* Pawn); \
+	virtual bool SwitchBodyServer_Validate(APawn* ); \
+	virtual void SwitchBodyServer_Implementation(APawn* Pawn); \
  \
+	DECLARE_FUNCTION(execAttachBodyServer); \
 	DECLARE_FUNCTION(execAttachBody); \
+	DECLARE_FUNCTION(execSwitchBodyServer); \
 	DECLARE_FUNCTION(execSwitchBody); \
 	DECLARE_FUNCTION(execInitItem); \
 	DECLARE_FUNCTION(execBeginPlay); \
@@ -27,8 +33,14 @@ enum class EPawnBodyType : uint8;
 
 
 #define Main_Source_Main_ItemBody_h_32_RPC_WRAPPERS_NO_PURE_DECLS \
+	virtual bool AttachBodyServer_Validate(APawn* ); \
+	virtual void AttachBodyServer_Implementation(APawn* Pawn); \
+	virtual bool SwitchBodyServer_Validate(APawn* ); \
+	virtual void SwitchBodyServer_Implementation(APawn* Pawn); \
  \
+	DECLARE_FUNCTION(execAttachBodyServer); \
 	DECLARE_FUNCTION(execAttachBody); \
+	DECLARE_FUNCTION(execSwitchBodyServer); \
 	DECLARE_FUNCTION(execSwitchBody); \
 	DECLARE_FUNCTION(execInitItem); \
 	DECLARE_FUNCTION(execBeginPlay); \
@@ -36,6 +48,18 @@ enum class EPawnBodyType : uint8;
 	DECLARE_FUNCTION(execSetEPawnBody);
 
 
+#define Main_Source_Main_ItemBody_h_32_EVENT_PARMS \
+	struct ItemBody_eventAttachBodyServer_Parms \
+	{ \
+		APawn* Pawn; \
+	}; \
+	struct ItemBody_eventSwitchBodyServer_Parms \
+	{ \
+		APawn* Pawn; \
+	};
+
+
+#define Main_Source_Main_ItemBody_h_32_CALLBACK_WRAPPERS
 #define Main_Source_Main_ItemBody_h_32_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAItemBody(); \
@@ -79,13 +103,17 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AItemBody); \
 
 
 #define Main_Source_Main_ItemBody_h_32_PRIVATE_PROPERTY_OFFSET
-#define Main_Source_Main_ItemBody_h_29_PROLOG
+#define Main_Source_Main_ItemBody_h_29_PROLOG \
+	Main_Source_Main_ItemBody_h_32_EVENT_PARMS
+
+
 #define Main_Source_Main_ItemBody_h_32_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	Main_Source_Main_ItemBody_h_32_PRIVATE_PROPERTY_OFFSET \
 	Main_Source_Main_ItemBody_h_32_SPARSE_DATA \
 	Main_Source_Main_ItemBody_h_32_RPC_WRAPPERS \
+	Main_Source_Main_ItemBody_h_32_CALLBACK_WRAPPERS \
 	Main_Source_Main_ItemBody_h_32_INCLASS \
 	Main_Source_Main_ItemBody_h_32_STANDARD_CONSTRUCTORS \
 public: \
@@ -98,6 +126,7 @@ public: \
 	Main_Source_Main_ItemBody_h_32_PRIVATE_PROPERTY_OFFSET \
 	Main_Source_Main_ItemBody_h_32_SPARSE_DATA \
 	Main_Source_Main_ItemBody_h_32_RPC_WRAPPERS_NO_PURE_DECLS \
+	Main_Source_Main_ItemBody_h_32_CALLBACK_WRAPPERS \
 	Main_Source_Main_ItemBody_h_32_INCLASS_NO_PURE_DECLS \
 	Main_Source_Main_ItemBody_h_32_ENHANCED_CONSTRUCTORS \
 private: \

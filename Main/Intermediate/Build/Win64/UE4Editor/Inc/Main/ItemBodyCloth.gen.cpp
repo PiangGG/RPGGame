@@ -72,7 +72,7 @@ void EmptyLinkFunctionForGeneratedCodeItemBodyCloth() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AItemBodyCloth, 3827415114);
+	IMPLEMENT_CLASS(AItemBodyCloth, 4270129694);
 	template<> MAIN_API UClass* StaticClass<AItemBodyCloth>()
 	{
 		return AItemBodyCloth::StaticClass();

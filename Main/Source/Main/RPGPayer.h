@@ -202,4 +202,6 @@ public:
 	 */
 	//所有物品
 	TArray<AItem> IntArray;
+
+	void PlayAnimMontage(UAnimMontage* PickAnimMontage,FName name);
 };

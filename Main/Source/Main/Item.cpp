@@ -18,6 +18,9 @@ AItem::AItem()
 	SphereComponent->OnComponentBeginOverlap.AddDynamic(this,&AItem::SphereComponent_BeginOverlap);
 	
 	SphereComponent->OnComponentEndOverlap.AddDynamic(this,&AItem::SphereComponent_EndOverlap);
+
+	SetReplicates(true);
+	SetReplicateMovement(true);
 }
 
 void AItem::GetLifetimeReplicatedProps(TArray<FLifetimeProperty> &OutLifetimeProps) const
@@ -62,22 +65,22 @@ void AItem::SetItemState(EItemState NewItemState)
 	{
 		case EItemState::InWorld:
 			{
-				/*ThisSkeletalMesh->SetHiddenInGame(false);
-				ThisSkeletalMesh->SetSimulatePhysics(true);
-				ThisSkeletalMesh->SetCollisionEnabled(ECollisionEnabled::PhysicsOnly);
-				ThisSkeletalMesh->SetCollisionResponseToChannels(ECR_Block);
+				ThisSkeletalMesh->SetHiddenInGame(false);
+				ThisSkeletalMesh->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+				ThisSkeletalMesh->SetCollisionResponseToChannels(ECR_Ignore);
 				ThisSkeletalMesh->SetWorldScale3D(FVector(1));
 				ThisSkeletalMesh->SetRelativeScale3D(FVector(1));
 				
 				SphereComponent->SetCollisionEnabled(ECollisionEnabled::QueryOnly);
 				SphereComponent->SetCollisionResponseToAllChannels(ECR_Ignore);
 				SphereComponent->SetCollisionResponseToChannel(ECC_Pawn,ECR_Overlap);
-				SphereComponent->SetHiddenInGame(false);*/
+				//ThisSkeletalMesh->SetSimulatePhysics(true);
+				SphereComponent->SetHiddenInGame(true);
 				break;
 			}
-		/*case EItemState::InPack:
+		case EItemState::InPack:
 			{
-				ThisSkeletalMesh->SetHiddenInGame(true);
+				/*ThisSkeletalMesh->SetHiddenInGame(true);
 				ThisSkeletalMesh->SetSimulatePhysics(false);
 				ThisSkeletalMesh->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 				ThisSkeletalMesh->SetCollisionResponseToChannels(ECR_Ignore);
@@ -87,9 +90,9 @@ void AItem::SetItemState(EItemState NewItemState)
 				SphereComponent->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 				SphereComponent->SetCollisionResponseToChannels(ECR_Ignore);
 				//SphereComponent->SetCollisionResponseToChannel(ECC_EngineTraceChannel1,ECR_Overlap);
-				SphereComponent->SetHiddenInGame(true);
+				SphereComponent->SetHiddenInGame(true);*/
 				break;
-			}*/
+			}
 		case EItemState::InPlayering:
 			{
 				ThisSkeletalMesh->SetHiddenInGame(false);
@@ -151,13 +154,16 @@ void AItem::OnRep_SetItemState(EItemState NewItemState)
 void AItem::SphereComponent_BeginOverlap(UPrimitiveComponent* Component, AActor* OtherActor,
 	UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
+	
 	APawn* Player=Cast<APawn>(OtherActor);
 	
 	if (GetItemState()==EItemState::InWorld&&Player)
 	{
 		UE_LOG(LogTemp,Warning,TEXT("BeginOverlap"));
 	}
+	
 }
+
 
 void AItem::SphereComponent_EndOverlap(UPrimitiveComponent* Component,AActor* OtherActor,UPrimitiveComponent* OtherComp, int32 OtherBodyIndex)
 {
