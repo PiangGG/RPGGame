@@ -31,12 +31,18 @@
 /wd4244
 /wd4838
 /I .
-/I ..\Intermediate\Build\Win64\UE4Editor\Inc\Engine
+/I ..\Plugins\Online\OnlineSubsystem\Intermediate\Build\Win64\UE4Editor\Inc\OnlineSubsystem
+/I ..\Plugins\Online\OnlineSubsystem
+/I ..\Plugins\Online\OnlineSubsystem\Source
+/I ..\Plugins\Online\OnlineSubsystem\Source\Public
 /I Runtime
-/I Runtime\Engine\Classes
-/I Runtime\Engine\Public
+/I Runtime\Json\Public
 /I Runtime\TraceLog\Public
 /I Runtime\Core\Public
+/I Runtime\SignalProcessing\Public
+/I ..\Intermediate\Build\Win64\UE4Editor\Inc\Engine
+/I Runtime\Engine\Classes
+/I Runtime\Engine\Public
 /I ..\Intermediate\Build\Win64\UE4Editor\Inc\CoreUObject
 /I Runtime\CoreUObject\Public
 /I ..\Intermediate\Build\Win64\UE4Editor\Inc\NetCore
@@ -45,7 +51,6 @@
 /I Runtime\Net\Core\Public
 /I Runtime\ApplicationCore\Public
 /I Runtime\RHI\Public
-/I Runtime\Json\Public
 /I ..\Intermediate\Build\Win64\UE4Editor\Inc\SlateCore
 /I Runtime\SlateCore\Public
 /I ..\Intermediate\Build\Win64\UE4Editor\Inc\InputCore
@@ -102,7 +107,6 @@
 /I ThirdParty\Intel
 /I Runtime\Experimental\Voronoi\Public
 /I ThirdParty
-/I Runtime\SignalProcessing\Public
 /I ..\Intermediate\Build\Win64\UE4Editor\Inc\AudioExtensions
 /I Runtime\AudioExtensions\Public
 /I Runtime\AudioMixerCore\Public

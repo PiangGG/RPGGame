@@ -7,6 +7,7 @@
 /IGNORE:4221
 /NODEFAULTLIB
 "D:\Code\UE4\RPGGame\Main\Intermediate\Build\Win64\MainEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
+"D:\Code\UE4\RPGGame\Main\Intermediate\Build\Win64\UE4Editor\Development\Main\GI.cpp.obj"
 "D:\Code\UE4\RPGGame\Main\Intermediate\Build\Win64\UE4Editor\Development\Main\Item.cpp.obj"
 "D:\Code\UE4\RPGGame\Main\Intermediate\Build\Win64\UE4Editor\Development\Main\ItemBody.cpp.obj"
 "D:\Code\UE4\RPGGame\Main\Intermediate\Build\Win64\UE4Editor\Development\Main\ItemBodyCloth.cpp.obj"
@@ -16,6 +17,7 @@
 "D:\Code\UE4\RPGGame\Main\Intermediate\Build\Win64\UE4Editor\Development\Main\RPGEnum.cpp.obj"
 "D:\Code\UE4\RPGGame\Main\Intermediate\Build\Win64\UE4Editor\Development\Main\RPGPayer.cpp.obj"
 "D:\Code\UE4\RPGGame\Main\Intermediate\Build\Win64\UE4Editor\Development\Main\RPGStruct.cpp.obj"
+"D:\Code\UE4\RPGGame\Main\Intermediate\Build\Win64\UE4Editor\Development\Main\GI.gen.cpp.obj"
 "D:\Code\UE4\RPGGame\Main\Intermediate\Build\Win64\UE4Editor\Development\Main\Item.gen.cpp.obj"
 "D:\Code\UE4\RPGGame\Main\Intermediate\Build\Win64\UE4Editor\Development\Main\ItemBody.gen.cpp.obj"
 "D:\Code\UE4\RPGGame\Main\Intermediate\Build\Win64\UE4Editor\Development\Main\ItemBodyCloth.gen.cpp.obj"

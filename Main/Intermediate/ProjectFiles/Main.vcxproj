@@ -25,6 +25,14 @@
       <Configuration>DebugGame_Editor</Configuration>
       <Platform>x64</Platform>
     </ProjectConfiguration>
+    <ProjectConfiguration Include="Android_DebugGame|Win32">
+      <Configuration>Android_DebugGame</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Android_DebugGame|x64">
+      <Configuration>Android_DebugGame</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
     <ProjectConfiguration Include="Linux_DebugGame|Win32">
       <Configuration>Linux_DebugGame</Configuration>
       <Platform>Win32</Platform>
@@ -65,6 +73,14 @@
       <Configuration>Development_Editor</Configuration>
       <Platform>x64</Platform>
     </ProjectConfiguration>
+    <ProjectConfiguration Include="Android_Development|Win32">
+      <Configuration>Android_Development</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Android_Development|x64">
+      <Configuration>Android_Development</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
     <ProjectConfiguration Include="Linux_Development|Win32">
       <Configuration>Linux_Development</Configuration>
       <Platform>Win32</Platform>
@@ -95,6 +111,14 @@
     </ProjectConfiguration>
     <ProjectConfiguration Include="Shipping|x64">
       <Configuration>Shipping</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Android_Shipping|Win32">
+      <Configuration>Android_Shipping</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Android_Shipping|x64">
+      <Configuration>Android_Shipping</Configuration>
       <Platform>x64</Platform>
     </ProjectConfiguration>
     <ProjectConfiguration Include="Linux_Shipping|Win32">
@@ -154,6 +178,16 @@
     <PlatformToolset>v142</PlatformToolset>
     <PlatformToolset Condition="'$(VisualStudioVersion)' == '15.0'">v141</PlatformToolset>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Android_DebugGame|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '15.0'">v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Android_DebugGame|x64'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '15.0'">v141</PlatformToolset>
+  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Linux_DebugGame|Win32'" Label="Configuration">
     <ConfigurationType>Makefile</ConfigurationType>
     <PlatformToolset>v142</PlatformToolset>
@@ -204,6 +238,16 @@
     <PlatformToolset>v142</PlatformToolset>
     <PlatformToolset Condition="'$(VisualStudioVersion)' == '15.0'">v141</PlatformToolset>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Android_Development|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '15.0'">v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Android_Development|x64'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '15.0'">v141</PlatformToolset>
+  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Linux_Development|Win32'" Label="Configuration">
     <ConfigurationType>Makefile</ConfigurationType>
     <PlatformToolset>v142</PlatformToolset>
@@ -240,6 +284,16 @@
     <PlatformToolset Condition="'$(VisualStudioVersion)' == '15.0'">v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Shipping|x64'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '15.0'">v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Android_Shipping|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '15.0'">v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Android_Shipping|x64'" Label="Configuration">
     <ConfigurationType>Makefile</ConfigurationType>
     <PlatformToolset>v142</PlatformToolset>
     <PlatformToolset Condition="'$(VisualStudioVersion)' == '15.0'">v141</PlatformToolset>
@@ -333,6 +387,23 @@
     <NMakeReBuildCommandLine>"D:\ComputerApps\Epic Games\UE_4.26\Engine\Build\BatchFiles\Rebuild.bat" MainEditor Win64 DebugGame -Project="$(SolutionDir)Main.uproject" -WaitMutex -FromMsBuild</NMakeReBuildCommandLine>
     <NMakeCleanCommandLine>"D:\ComputerApps\Epic Games\UE_4.26\Engine\Build\BatchFiles\Clean.bat" MainEditor Win64 DebugGame -Project="$(SolutionDir)Main.uproject" -WaitMutex -FromMsBuild</NMakeCleanCommandLine>
     <NMakeOutput>D:\ComputerApps\Epic Games\UE_4.26\Engine\Binaries\Win64\UE4Editor-Win64-DebugGame.exe</NMakeOutput>
+  </PropertyGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Android_DebugGame|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Android_DebugGame|Win32'">
+    <IncludePath />
+    <ReferencePath />
+    <LibraryPath />
+    <LibraryWPath />
+    <SourcePath />
+    <ExcludePath />
+    <OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+    <IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+    <NMakeBuildCommandLine>"D:\ComputerApps\Epic Games\UE_4.26\Engine\Build\BatchFiles\Build.bat" Main Android DebugGame -Project="$(SolutionDir)Main.uproject" -WaitMutex -FromMsBuild</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>"D:\ComputerApps\Epic Games\UE_4.26\Engine\Build\BatchFiles\Rebuild.bat" Main Android DebugGame -Project="$(SolutionDir)Main.uproject" -WaitMutex -FromMsBuild</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>"D:\ComputerApps\Epic Games\UE_4.26\Engine\Build\BatchFiles\Clean.bat" Main Android DebugGame -Project="$(SolutionDir)Main.uproject" -WaitMutex -FromMsBuild</NMakeCleanCommandLine>
+    <NMakeOutput>..\..\Binaries\Android\Main-Android-DebugGame.so</NMakeOutput>
   </PropertyGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Linux_DebugGame|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -436,6 +507,23 @@
     <NMakeCleanCommandLine>"D:\ComputerApps\Epic Games\UE_4.26\Engine\Build\BatchFiles\Clean.bat" MainEditor Win64 Development -Project="$(SolutionDir)Main.uproject" -WaitMutex -FromMsBuild</NMakeCleanCommandLine>
     <NMakeOutput>D:\ComputerApps\Epic Games\UE_4.26\Engine\Binaries\Win64\UE4Editor.exe</NMakeOutput>
   </PropertyGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Android_Development|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Android_Development|Win32'">
+    <IncludePath />
+    <ReferencePath />
+    <LibraryPath />
+    <LibraryWPath />
+    <SourcePath />
+    <ExcludePath />
+    <OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+    <IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+    <NMakeBuildCommandLine>"D:\ComputerApps\Epic Games\UE_4.26\Engine\Build\BatchFiles\Build.bat" Main Android Development -Project="$(SolutionDir)Main.uproject" -WaitMutex -FromMsBuild</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>"D:\ComputerApps\Epic Games\UE_4.26\Engine\Build\BatchFiles\Rebuild.bat" Main Android Development -Project="$(SolutionDir)Main.uproject" -WaitMutex -FromMsBuild</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>"D:\ComputerApps\Epic Games\UE_4.26\Engine\Build\BatchFiles\Clean.bat" Main Android Development -Project="$(SolutionDir)Main.uproject" -WaitMutex -FromMsBuild</NMakeCleanCommandLine>
+    <NMakeOutput>..\..\Binaries\Android\Main.so</NMakeOutput>
+  </PropertyGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Linux_Development|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
@@ -520,6 +608,23 @@
     <NMakeReBuildCommandLine>"D:\ComputerApps\Epic Games\UE_4.26\Engine\Build\BatchFiles\Rebuild.bat" Main Win64 Shipping -Project="$(SolutionDir)Main.uproject" -WaitMutex -FromMsBuild</NMakeReBuildCommandLine>
     <NMakeCleanCommandLine>"D:\ComputerApps\Epic Games\UE_4.26\Engine\Build\BatchFiles\Clean.bat" Main Win64 Shipping -Project="$(SolutionDir)Main.uproject" -WaitMutex -FromMsBuild</NMakeCleanCommandLine>
     <NMakeOutput>..\..\Binaries\Win64\Main-Win64-Shipping.exe</NMakeOutput>
+  </PropertyGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Android_Shipping|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Android_Shipping|Win32'">
+    <IncludePath />
+    <ReferencePath />
+    <LibraryPath />
+    <LibraryWPath />
+    <SourcePath />
+    <ExcludePath />
+    <OutDir>$(ProjectDir)..\Build\Unused\</OutDir>
+    <IntDir>$(ProjectDir)..\Build\Unused\</IntDir>
+    <NMakeBuildCommandLine>"D:\ComputerApps\Epic Games\UE_4.26\Engine\Build\BatchFiles\Build.bat" Main Android Shipping -Project="$(SolutionDir)Main.uproject" -WaitMutex -FromMsBuild</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>"D:\ComputerApps\Epic Games\UE_4.26\Engine\Build\BatchFiles\Rebuild.bat" Main Android Shipping -Project="$(SolutionDir)Main.uproject" -WaitMutex -FromMsBuild</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>"D:\ComputerApps\Epic Games\UE_4.26\Engine\Build\BatchFiles\Clean.bat" Main Android Shipping -Project="$(SolutionDir)Main.uproject" -WaitMutex -FromMsBuild</NMakeCleanCommandLine>
+    <NMakeOutput>..\..\Binaries\Android\Main-Android-Shipping.so</NMakeOutput>
   </PropertyGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Linux_Shipping|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -1189,6 +1294,11 @@
     </ClCompile>
     <None Include="..\..\Plugins\Developer\RiderLink\Source\RiderLoggingExtension\Private\RiderOutputDevice.hpp"/>
     <None Include="..\..\Plugins\Developer\RiderLink\Source\RiderLoggingExtension\Public\RiderLoggingExtension.hpp"/>
+    <ClCompile Include="..\..\Source\Main\GI.cpp">
+      <AdditionalIncludeDirectories>$(NMakeIncludeSearchPath);D:\ComputerApps\Epic Games\UE_4.26\Engine\Source\ThirdParty\PhysX3\PxShared\include;D:\ComputerApps\Epic Games\UE_4.26\Engine\Source\ThirdParty\PhysX3\PxShared\include\cudamanager;D:\ComputerApps\Epic Games\UE_4.26\Engine\Source\ThirdParty\PhysX3\PxShared\include\filebuf;D:\ComputerApps\Epic Games\UE_4.26\Engine\Source\ThirdParty\PhysX3\PxShared\include\foundation;D:\ComputerApps\Epic Games\UE_4.26\Engine\Source\ThirdParty\PhysX3\PxShared\include\pvd;D:\ComputerApps\Epic Games\UE_4.26\Engine\Source\ThirdParty\PhysX3\PxShared\include\task;D:\ComputerApps\Epic Games\UE_4.26\Engine\Source\ThirdParty\PhysX3\PhysX_3.4\Include;D:\ComputerApps\Epic Games\UE_4.26\Engine\Source\ThirdParty\PhysX3\PhysX_3.4\Include\cooking;D:\ComputerApps\Epic Games\UE_4.26\Engine\Source\ThirdParty\PhysX3\PhysX_3.4\Include\common;D:\ComputerApps\Epic Games\UE_4.26\Engine\Source\ThirdParty\PhysX3\PhysX_3.4\Include\extensions;D:\ComputerApps\Epic Games\UE_4.26\Engine\Source\ThirdParty\PhysX3\PhysX_3.4\Include\geometry;D:\ComputerApps\Epic Games\UE_4.26\Engine\Source\ThirdParty\PhysX3\APEX_1.4\include;D:\ComputerApps\Epic Games\UE_4.26\Engine\Source\ThirdParty\PhysX3\APEX_1.4\include\clothing;D:\ComputerApps\Epic Games\UE_4.26\Engine\Source\ThirdParty\PhysX3\APEX_1.4\include\nvparameterized;D:\ComputerApps\Epic Games\UE_4.26\Engine\Source\ThirdParty\PhysX3\APEX_1.4\include\legacy;D:\ComputerApps\Epic Games\UE_4.26\Engine\Source\ThirdParty\PhysX3\APEX_1.4\include\PhysX3;D:\ComputerApps\Epic Games\UE_4.26\Engine\Source\ThirdParty\PhysX3\APEX_1.4\common\include;D:\ComputerApps\Epic Games\UE_4.26\Engine\Source\ThirdParty\PhysX3\APEX_1.4\common\include\autogen;D:\ComputerApps\Epic Games\UE_4.26\Engine\Source\ThirdParty\PhysX3\APEX_1.4\framework\include;D:\ComputerApps\Epic Games\UE_4.26\Engine\Source\ThirdParty\PhysX3\APEX_1.4\framework\include\autogen;D:\ComputerApps\Epic Games\UE_4.26\Engine\Source\ThirdParty\PhysX3\APEX_1.4\shared\general\RenderDebug\public;D:\ComputerApps\Epic Games\UE_4.26\Engine\Source\ThirdParty\PhysX3\APEX_1.4\shared\general\PairFilter\include;D:\ComputerApps\Epic Games\UE_4.26\Engine\Source\ThirdParty\PhysX3\APEX_1.4\shared\internal\include;</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(NMakeForcedIncludes);$(SolutionDir)Intermediate\Build\Win64\UE4Editor\Development\Main\Definitions.Main.h;$(SolutionDir)Intermediate\Build\Win64\MainEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h</ForcedIncludeFiles>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Main\GI.h"/>
     <ClCompile Include="..\..\Source\Main\Item.cpp">
       <AdditionalIncludeDirectories>$(NMakeIncludeSearchPath);D:\ComputerApps\Epic Games\UE_4.26\Engine\Source\ThirdParty\PhysX3\PxShared\include;D:\ComputerApps\Epic Games\UE_4.26\Engine\Source\ThirdParty\PhysX3\PxShared\include\cudamanager;D:\ComputerApps\Epic Games\UE_4.26\Engine\Source\ThirdParty\PhysX3\PxShared\include\filebuf;D:\ComputerApps\Epic Games\UE_4.26\Engine\Source\ThirdParty\PhysX3\PxShared\include\foundation;D:\ComputerApps\Epic Games\UE_4.26\Engine\Source\ThirdParty\PhysX3\PxShared\include\pvd;D:\ComputerApps\Epic Games\UE_4.26\Engine\Source\ThirdParty\PhysX3\PxShared\include\task;D:\ComputerApps\Epic Games\UE_4.26\Engine\Source\ThirdParty\PhysX3\PhysX_3.4\Include;D:\ComputerApps\Epic Games\UE_4.26\Engine\Source\ThirdParty\PhysX3\PhysX_3.4\Include\cooking;D:\ComputerApps\Epic Games\UE_4.26\Engine\Source\ThirdParty\PhysX3\PhysX_3.4\Include\common;D:\ComputerApps\Epic Games\UE_4.26\Engine\Source\ThirdParty\PhysX3\PhysX_3.4\Include\extensions;D:\ComputerApps\Epic Games\UE_4.26\Engine\Source\ThirdParty\PhysX3\PhysX_3.4\Include\geometry;D:\ComputerApps\Epic Games\UE_4.26\Engine\Source\ThirdParty\PhysX3\APEX_1.4\include;D:\ComputerApps\Epic Games\UE_4.26\Engine\Source\ThirdParty\PhysX3\APEX_1.4\include\clothing;D:\ComputerApps\Epic Games\UE_4.26\Engine\Source\ThirdParty\PhysX3\APEX_1.4\include\nvparameterized;D:\ComputerApps\Epic Games\UE_4.26\Engine\Source\ThirdParty\PhysX3\APEX_1.4\include\legacy;D:\ComputerApps\Epic Games\UE_4.26\Engine\Source\ThirdParty\PhysX3\APEX_1.4\include\PhysX3;D:\ComputerApps\Epic Games\UE_4.26\Engine\Source\ThirdParty\PhysX3\APEX_1.4\common\include;D:\ComputerApps\Epic Games\UE_4.26\Engine\Source\ThirdParty\PhysX3\APEX_1.4\common\include\autogen;D:\ComputerApps\Epic Games\UE_4.26\Engine\Source\ThirdParty\PhysX3\APEX_1.4\framework\include;D:\ComputerApps\Epic Games\UE_4.26\Engine\Source\ThirdParty\PhysX3\APEX_1.4\framework\include\autogen;D:\ComputerApps\Epic Games\UE_4.26\Engine\Source\ThirdParty\PhysX3\APEX_1.4\shared\general\RenderDebug\public;D:\ComputerApps\Epic Games\UE_4.26\Engine\Source\ThirdParty\PhysX3\APEX_1.4\shared\general\PairFilter\include;D:\ComputerApps\Epic Games\UE_4.26\Engine\Source\ThirdParty\PhysX3\APEX_1.4\shared\internal\include;</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(NMakeForcedIncludes);$(SolutionDir)Intermediate\Build\Win64\UE4Editor\Development\Main\Definitions.Main.h;$(SolutionDir)Intermediate\Build\Win64\MainEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h</ForcedIncludeFiles>
