@@ -6,22 +6,6 @@
 #include "Item.h"
 #include "ItemBody.generated.h"
 
-/*
- * 身体类型的枚举
- */
-UENUM(BlueprintType)
-enum class EPawnBodyType:uint8
-{
-	ECloth			UMETA(DisplayName = "衣服"),
-	EFace			UMETA(DisplayName = "脸"),
-	EHair			UMETA(DisplayName = "头发"),
-	EGlove			UMETA(DisplayName = "手掌"),
-	EShoe			UMETA(DisplayName = "鞋"),
-	EHeadGears		UMETA(DisplayName = "头饰"),
-	EShoulderPad	UMETA(DisplayName = "肩垫"),
-	EBelt			UMETA(DisplayName = "皮带"),
-	EOther			UMETA(DisplayName = "其他"),
-};
 
 /**
  * 

@@ -13,93 +13,14 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeItemBody() {}
 // Cross Module References
-	MAIN_API UEnum* Z_Construct_UEnum_Main_EPawnBodyType();
-	UPackage* Z_Construct_UPackage__Script_Main();
 	MAIN_API UClass* Z_Construct_UClass_AItemBody_NoRegister();
 	MAIN_API UClass* Z_Construct_UClass_AItemBody();
 	MAIN_API UClass* Z_Construct_UClass_AItem();
+	UPackage* Z_Construct_UPackage__Script_Main();
 	ENGINE_API UClass* Z_Construct_UClass_APawn_NoRegister();
+	MAIN_API UEnum* Z_Construct_UEnum_Main_EPawnBodyType();
 	ENGINE_API UClass* Z_Construct_UClass_UAnimMontage_NoRegister();
 // End Cross Module References
-	static UEnum* EPawnBodyType_StaticEnum()
-	{
-		static UEnum* Singleton = nullptr;
-		if (!Singleton)
-		{
-			Singleton = GetStaticEnum(Z_Construct_UEnum_Main_EPawnBodyType, Z_Construct_UPackage__Script_Main(), TEXT("EPawnBodyType"));
-		}
-		return Singleton;
-	}
-	template<> MAIN_API UEnum* StaticEnum<EPawnBodyType>()
-	{
-		return EPawnBodyType_StaticEnum();
-	}
-	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_EPawnBodyType(EPawnBodyType_StaticEnum, TEXT("/Script/Main"), TEXT("EPawnBodyType"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_Main_EPawnBodyType_Hash() { return 265721481U; }
-	UEnum* Z_Construct_UEnum_Main_EPawnBodyType()
-	{
-#if WITH_HOT_RELOAD
-		UPackage* Outer = Z_Construct_UPackage__Script_Main();
-		static UEnum* ReturnEnum = FindExistingEnumIfHotReloadOrDynamic(Outer, TEXT("EPawnBodyType"), 0, Get_Z_Construct_UEnum_Main_EPawnBodyType_Hash(), false);
-#else
-		static UEnum* ReturnEnum = nullptr;
-#endif // WITH_HOT_RELOAD
-		if (!ReturnEnum)
-		{
-			static const UE4CodeGen_Private::FEnumeratorParam Enumerators[] = {
-				{ "EPawnBodyType::ECloth", (int64)EPawnBodyType::ECloth },
-				{ "EPawnBodyType::EFace", (int64)EPawnBodyType::EFace },
-				{ "EPawnBodyType::EHair", (int64)EPawnBodyType::EHair },
-				{ "EPawnBodyType::EGlove", (int64)EPawnBodyType::EGlove },
-				{ "EPawnBodyType::EShoe", (int64)EPawnBodyType::EShoe },
-				{ "EPawnBodyType::EHeadGears", (int64)EPawnBodyType::EHeadGears },
-				{ "EPawnBodyType::EShoulderPad", (int64)EPawnBodyType::EShoulderPad },
-				{ "EPawnBodyType::EBelt", (int64)EPawnBodyType::EBelt },
-				{ "EPawnBodyType::EOther", (int64)EPawnBodyType::EOther },
-			};
-#if WITH_METADATA
-			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
-				{ "BlueprintType", "true" },
-				{ "Comment", "/*\n * \xe8\xba\xab\xe4\xbd\x93\xe7\xb1\xbb\xe5\x9e\x8b\xe7\x9a\x84\xe6\x9e\x9a\xe4\xb8\xbe\n */" },
-				{ "EBelt.DisplayName", "\xe7\x9a\xae\xe5\xb8\xa6" },
-				{ "EBelt.Name", "EPawnBodyType::EBelt" },
-				{ "ECloth.DisplayName", "\xe8\xa1\xa3\xe6\x9c\x8d" },
-				{ "ECloth.Name", "EPawnBodyType::ECloth" },
-				{ "EFace.DisplayName", "\xe8\x84\xb8" },
-				{ "EFace.Name", "EPawnBodyType::EFace" },
-				{ "EGlove.DisplayName", "\xe6\x89\x8b\xe6\x8e\x8c" },
-				{ "EGlove.Name", "EPawnBodyType::EGlove" },
-				{ "EHair.DisplayName", "\xe5\xa4\xb4\xe5\x8f\x91" },
-				{ "EHair.Name", "EPawnBodyType::EHair" },
-				{ "EHeadGears.DisplayName", "\xe5\xa4\xb4\xe9\xa5\xb0" },
-				{ "EHeadGears.Name", "EPawnBodyType::EHeadGears" },
-				{ "EOther.DisplayName", "\xe5\x85\xb6\xe4\xbb\x96" },
-				{ "EOther.Name", "EPawnBodyType::EOther" },
-				{ "EShoe.DisplayName", "\xe9\x9e\x8b" },
-				{ "EShoe.Name", "EPawnBodyType::EShoe" },
-				{ "EShoulderPad.DisplayName", "\xe8\x82\xa9\xe5\x9e\xab" },
-				{ "EShoulderPad.Name", "EPawnBodyType::EShoulderPad" },
-				{ "ModuleRelativePath", "ItemBody.h" },
-				{ "ToolTip", "* \xe8\xba\xab\xe4\xbd\x93\xe7\xb1\xbb\xe5\x9e\x8b\xe7\x9a\x84\xe6\x9e\x9a\xe4\xb8\xbe" },
-			};
-#endif
-			static const UE4CodeGen_Private::FEnumParams EnumParams = {
-				(UObject*(*)())Z_Construct_UPackage__Script_Main,
-				nullptr,
-				"EPawnBodyType",
-				"EPawnBodyType",
-				Enumerators,
-				UE_ARRAY_COUNT(Enumerators),
-				RF_Public|RF_Transient|RF_MarkAsNative,
-				EEnumFlags::None,
-				UE4CodeGen_Private::EDynamicType::NotDynamic,
-				(uint8)UEnum::ECppForm::EnumClass,
-				METADATA_PARAMS(Enum_MetaDataParams, UE_ARRAY_COUNT(Enum_MetaDataParams))
-			};
-			UE4CodeGen_Private::ConstructUEnum(ReturnEnum, EnumParams);
-		}
-		return ReturnEnum;
-	}
 	DEFINE_FUNCTION(AItemBody::execAttachBodyServer)
 	{
 		P_GET_OBJECT(APawn,Z_Param_Pawn);

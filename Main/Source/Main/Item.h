@@ -4,26 +4,8 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "RPGEnum.h"
 #include "Item.generated.h"
-
-/*设置物品状态*/
-UENUM(BlueprintType)
-enum class EItemState:uint8
-{  
-	InWorld		UMETA(DisplayName = "在场景中"),
-    InPack		UMETA(DisplayName = "在背包中"),
-	InPlayering	UMETA(DisplayName = "玩家使用中"),
-	Other		UMETA(DisplayName = "其他"),
-};
-
-UENUM(BlueprintType)
-enum class EItemType:uint8
-{  
-	Weapon	UMETA(DisplayName = "武器"),
-    Drug	UMETA(DisplayName = "药"),
-    Body	UMETA(DisplayName = "身体"),
-    Other	UMETA(DisplayName = "其他"),
-};
 
 USTRUCT(BlueprintType)
 struct FItemStruct

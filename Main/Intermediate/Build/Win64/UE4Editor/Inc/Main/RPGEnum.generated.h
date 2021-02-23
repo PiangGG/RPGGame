@@ -17,6 +17,38 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define CURRENT_FILE_ID Main_Source_Main_RPGEnum_h
 
 
+#define FOREACH_ENUM_EPAWNBODYTYPE(op) \
+	op(EPawnBodyType::ECloth) \
+	op(EPawnBodyType::EFace) \
+	op(EPawnBodyType::EHair) \
+	op(EPawnBodyType::EGlove) \
+	op(EPawnBodyType::EShoe) \
+	op(EPawnBodyType::EHeadGears) \
+	op(EPawnBodyType::EShoulderPad) \
+	op(EPawnBodyType::EBelt) \
+	op(EPawnBodyType::EOther) 
+
+enum class EPawnBodyType : uint8;
+template<> MAIN_API UEnum* StaticEnum<EPawnBodyType>();
+
+#define FOREACH_ENUM_EITEMTYPE(op) \
+	op(EItemType::Weapon) \
+	op(EItemType::Drug) \
+	op(EItemType::Body) \
+	op(EItemType::Other) 
+
+enum class EItemType : uint8;
+template<> MAIN_API UEnum* StaticEnum<EItemType>();
+
+#define FOREACH_ENUM_EITEMSTATE(op) \
+	op(EItemState::InWorld) \
+	op(EItemState::InPack) \
+	op(EItemState::InPlayering) \
+	op(EItemState::Other) 
+
+enum class EItemState : uint8;
+template<> MAIN_API UEnum* StaticEnum<EItemState>();
+
 #define FOREACH_ENUM_EITEM(op) \
 	op(EItem::Weapon) \
 	op(EItem::Drug) 

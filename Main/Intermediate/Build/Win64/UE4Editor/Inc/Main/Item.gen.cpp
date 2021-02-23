@@ -13,14 +13,14 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeItem() {}
 // Cross Module References
-	MAIN_API UEnum* Z_Construct_UEnum_Main_EItemType();
-	UPackage* Z_Construct_UPackage__Script_Main();
-	MAIN_API UEnum* Z_Construct_UEnum_Main_EItemState();
 	MAIN_API UScriptStruct* Z_Construct_UScriptStruct_FItemStruct();
+	UPackage* Z_Construct_UPackage__Script_Main();
+	MAIN_API UEnum* Z_Construct_UEnum_Main_EItemType();
 	ENGINE_API UClass* Z_Construct_UClass_UTexture2D_NoRegister();
 	MAIN_API UClass* Z_Construct_UClass_AItem_NoRegister();
 	MAIN_API UClass* Z_Construct_UClass_AItem();
 	ENGINE_API UClass* Z_Construct_UClass_AActor();
+	MAIN_API UEnum* Z_Construct_UEnum_Main_EItemState();
 	ENGINE_API UClass* Z_Construct_UClass_APawn_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UPrimitiveComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
@@ -28,132 +28,6 @@ void EmptyLinkFunctionForGeneratedCodeItem() {}
 	ENGINE_API UClass* Z_Construct_UClass_USkeletalMeshComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USphereComponent_NoRegister();
 // End Cross Module References
-	static UEnum* EItemType_StaticEnum()
-	{
-		static UEnum* Singleton = nullptr;
-		if (!Singleton)
-		{
-			Singleton = GetStaticEnum(Z_Construct_UEnum_Main_EItemType, Z_Construct_UPackage__Script_Main(), TEXT("EItemType"));
-		}
-		return Singleton;
-	}
-	template<> MAIN_API UEnum* StaticEnum<EItemType>()
-	{
-		return EItemType_StaticEnum();
-	}
-	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_EItemType(EItemType_StaticEnum, TEXT("/Script/Main"), TEXT("EItemType"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_Main_EItemType_Hash() { return 2616277715U; }
-	UEnum* Z_Construct_UEnum_Main_EItemType()
-	{
-#if WITH_HOT_RELOAD
-		UPackage* Outer = Z_Construct_UPackage__Script_Main();
-		static UEnum* ReturnEnum = FindExistingEnumIfHotReloadOrDynamic(Outer, TEXT("EItemType"), 0, Get_Z_Construct_UEnum_Main_EItemType_Hash(), false);
-#else
-		static UEnum* ReturnEnum = nullptr;
-#endif // WITH_HOT_RELOAD
-		if (!ReturnEnum)
-		{
-			static const UE4CodeGen_Private::FEnumeratorParam Enumerators[] = {
-				{ "EItemType::Weapon", (int64)EItemType::Weapon },
-				{ "EItemType::Drug", (int64)EItemType::Drug },
-				{ "EItemType::Body", (int64)EItemType::Body },
-				{ "EItemType::Other", (int64)EItemType::Other },
-			};
-#if WITH_METADATA
-			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
-				{ "BlueprintType", "true" },
-				{ "Body.DisplayName", "\xe8\xba\xab\xe4\xbd\x93" },
-				{ "Body.Name", "EItemType::Body" },
-				{ "Drug.DisplayName", "\xe8\x8d\xaf" },
-				{ "Drug.Name", "EItemType::Drug" },
-				{ "ModuleRelativePath", "Item.h" },
-				{ "Other.DisplayName", "\xe5\x85\xb6\xe4\xbb\x96" },
-				{ "Other.Name", "EItemType::Other" },
-				{ "Weapon.DisplayName", "\xe6\xad\xa6\xe5\x99\xa8" },
-				{ "Weapon.Name", "EItemType::Weapon" },
-			};
-#endif
-			static const UE4CodeGen_Private::FEnumParams EnumParams = {
-				(UObject*(*)())Z_Construct_UPackage__Script_Main,
-				nullptr,
-				"EItemType",
-				"EItemType",
-				Enumerators,
-				UE_ARRAY_COUNT(Enumerators),
-				RF_Public|RF_Transient|RF_MarkAsNative,
-				EEnumFlags::None,
-				UE4CodeGen_Private::EDynamicType::NotDynamic,
-				(uint8)UEnum::ECppForm::EnumClass,
-				METADATA_PARAMS(Enum_MetaDataParams, UE_ARRAY_COUNT(Enum_MetaDataParams))
-			};
-			UE4CodeGen_Private::ConstructUEnum(ReturnEnum, EnumParams);
-		}
-		return ReturnEnum;
-	}
-	static UEnum* EItemState_StaticEnum()
-	{
-		static UEnum* Singleton = nullptr;
-		if (!Singleton)
-		{
-			Singleton = GetStaticEnum(Z_Construct_UEnum_Main_EItemState, Z_Construct_UPackage__Script_Main(), TEXT("EItemState"));
-		}
-		return Singleton;
-	}
-	template<> MAIN_API UEnum* StaticEnum<EItemState>()
-	{
-		return EItemState_StaticEnum();
-	}
-	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_EItemState(EItemState_StaticEnum, TEXT("/Script/Main"), TEXT("EItemState"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_Main_EItemState_Hash() { return 1106735349U; }
-	UEnum* Z_Construct_UEnum_Main_EItemState()
-	{
-#if WITH_HOT_RELOAD
-		UPackage* Outer = Z_Construct_UPackage__Script_Main();
-		static UEnum* ReturnEnum = FindExistingEnumIfHotReloadOrDynamic(Outer, TEXT("EItemState"), 0, Get_Z_Construct_UEnum_Main_EItemState_Hash(), false);
-#else
-		static UEnum* ReturnEnum = nullptr;
-#endif // WITH_HOT_RELOAD
-		if (!ReturnEnum)
-		{
-			static const UE4CodeGen_Private::FEnumeratorParam Enumerators[] = {
-				{ "EItemState::InWorld", (int64)EItemState::InWorld },
-				{ "EItemState::InPack", (int64)EItemState::InPack },
-				{ "EItemState::InPlayering", (int64)EItemState::InPlayering },
-				{ "EItemState::Other", (int64)EItemState::Other },
-			};
-#if WITH_METADATA
-			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
-				{ "BlueprintType", "true" },
-				{ "Comment", "/*\xe8\xae\xbe\xe7\xbd\xae\xe7\x89\xa9\xe5\x93\x81\xe7\x8a\xb6\xe6\x80\x81*/" },
-				{ "InPack.DisplayName", "\xe5\x9c\xa8\xe8\x83\x8c\xe5\x8c\x85\xe4\xb8\xad" },
-				{ "InPack.Name", "EItemState::InPack" },
-				{ "InPlayering.DisplayName", "\xe7\x8e\xa9\xe5\xae\xb6\xe4\xbd\xbf\xe7\x94\xa8\xe4\xb8\xad" },
-				{ "InPlayering.Name", "EItemState::InPlayering" },
-				{ "InWorld.DisplayName", "\xe5\x9c\xa8\xe5\x9c\xba\xe6\x99\xaf\xe4\xb8\xad" },
-				{ "InWorld.Name", "EItemState::InWorld" },
-				{ "ModuleRelativePath", "Item.h" },
-				{ "Other.DisplayName", "\xe5\x85\xb6\xe4\xbb\x96" },
-				{ "Other.Name", "EItemState::Other" },
-				{ "ToolTip", "\xe8\xae\xbe\xe7\xbd\xae\xe7\x89\xa9\xe5\x93\x81\xe7\x8a\xb6\xe6\x80\x81" },
-			};
-#endif
-			static const UE4CodeGen_Private::FEnumParams EnumParams = {
-				(UObject*(*)())Z_Construct_UPackage__Script_Main,
-				nullptr,
-				"EItemState",
-				"EItemState",
-				Enumerators,
-				UE_ARRAY_COUNT(Enumerators),
-				RF_Public|RF_Transient|RF_MarkAsNative,
-				EEnumFlags::None,
-				UE4CodeGen_Private::EDynamicType::NotDynamic,
-				(uint8)UEnum::ECppForm::EnumClass,
-				METADATA_PARAMS(Enum_MetaDataParams, UE_ARRAY_COUNT(Enum_MetaDataParams))
-			};
-			UE4CodeGen_Private::ConstructUEnum(ReturnEnum, EnumParams);
-		}
-		return ReturnEnum;
-	}
 class UScriptStruct* FItemStruct::StaticStruct()
 {
 	static class UScriptStruct* Singleton = NULL;

@@ -15,8 +15,8 @@ enum class EPawnBodyType : uint8;
 #endif
 #define MAIN_ItemBody_generated_h
 
-#define Main_Source_Main_ItemBody_h_32_SPARSE_DATA
-#define Main_Source_Main_ItemBody_h_32_RPC_WRAPPERS \
+#define Main_Source_Main_ItemBody_h_16_SPARSE_DATA
+#define Main_Source_Main_ItemBody_h_16_RPC_WRAPPERS \
 	virtual bool AttachBodyServer_Validate(APawn* ); \
 	virtual void AttachBodyServer_Implementation(APawn* Pawn); \
 	virtual bool SwitchBodyServer_Validate(APawn* ); \
@@ -32,7 +32,7 @@ enum class EPawnBodyType : uint8;
 	DECLARE_FUNCTION(execSetEPawnBody);
 
 
-#define Main_Source_Main_ItemBody_h_32_RPC_WRAPPERS_NO_PURE_DECLS \
+#define Main_Source_Main_ItemBody_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
 	virtual bool AttachBodyServer_Validate(APawn* ); \
 	virtual void AttachBodyServer_Implementation(APawn* Pawn); \
 	virtual bool SwitchBodyServer_Validate(APawn* ); \
@@ -48,7 +48,7 @@ enum class EPawnBodyType : uint8;
 	DECLARE_FUNCTION(execSetEPawnBody);
 
 
-#define Main_Source_Main_ItemBody_h_32_EVENT_PARMS \
+#define Main_Source_Main_ItemBody_h_16_EVENT_PARMS \
 	struct ItemBody_eventAttachBodyServer_Parms \
 	{ \
 		APawn* Pawn; \
@@ -59,8 +59,8 @@ enum class EPawnBodyType : uint8;
 	};
 
 
-#define Main_Source_Main_ItemBody_h_32_CALLBACK_WRAPPERS
-#define Main_Source_Main_ItemBody_h_32_INCLASS_NO_PURE_DECLS \
+#define Main_Source_Main_ItemBody_h_16_CALLBACK_WRAPPERS
+#define Main_Source_Main_ItemBody_h_16_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAItemBody(); \
 	friend struct Z_Construct_UClass_AItemBody_Statics; \
@@ -69,7 +69,7 @@ public: \
 	DECLARE_SERIALIZER(AItemBody)
 
 
-#define Main_Source_Main_ItemBody_h_32_INCLASS \
+#define Main_Source_Main_ItemBody_h_16_INCLASS \
 private: \
 	static void StaticRegisterNativesAItemBody(); \
 	friend struct Z_Construct_UClass_AItemBody_Statics; \
@@ -78,7 +78,7 @@ public: \
 	DECLARE_SERIALIZER(AItemBody)
 
 
-#define Main_Source_Main_ItemBody_h_32_STANDARD_CONSTRUCTORS \
+#define Main_Source_Main_ItemBody_h_16_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API AItemBody(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AItemBody) \
@@ -91,7 +91,7 @@ private: \
 public:
 
 
-#define Main_Source_Main_ItemBody_h_32_ENHANCED_CONSTRUCTORS \
+#define Main_Source_Main_ItemBody_h_16_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API AItemBody(AItemBody&&); \
@@ -102,33 +102,33 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AItemBody); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AItemBody)
 
 
-#define Main_Source_Main_ItemBody_h_32_PRIVATE_PROPERTY_OFFSET
-#define Main_Source_Main_ItemBody_h_29_PROLOG \
-	Main_Source_Main_ItemBody_h_32_EVENT_PARMS
+#define Main_Source_Main_ItemBody_h_16_PRIVATE_PROPERTY_OFFSET
+#define Main_Source_Main_ItemBody_h_13_PROLOG \
+	Main_Source_Main_ItemBody_h_16_EVENT_PARMS
 
 
-#define Main_Source_Main_ItemBody_h_32_GENERATED_BODY_LEGACY \
+#define Main_Source_Main_ItemBody_h_16_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Main_Source_Main_ItemBody_h_32_PRIVATE_PROPERTY_OFFSET \
-	Main_Source_Main_ItemBody_h_32_SPARSE_DATA \
-	Main_Source_Main_ItemBody_h_32_RPC_WRAPPERS \
-	Main_Source_Main_ItemBody_h_32_CALLBACK_WRAPPERS \
-	Main_Source_Main_ItemBody_h_32_INCLASS \
-	Main_Source_Main_ItemBody_h_32_STANDARD_CONSTRUCTORS \
+	Main_Source_Main_ItemBody_h_16_PRIVATE_PROPERTY_OFFSET \
+	Main_Source_Main_ItemBody_h_16_SPARSE_DATA \
+	Main_Source_Main_ItemBody_h_16_RPC_WRAPPERS \
+	Main_Source_Main_ItemBody_h_16_CALLBACK_WRAPPERS \
+	Main_Source_Main_ItemBody_h_16_INCLASS \
+	Main_Source_Main_ItemBody_h_16_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define Main_Source_Main_ItemBody_h_32_GENERATED_BODY \
+#define Main_Source_Main_ItemBody_h_16_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Main_Source_Main_ItemBody_h_32_PRIVATE_PROPERTY_OFFSET \
-	Main_Source_Main_ItemBody_h_32_SPARSE_DATA \
-	Main_Source_Main_ItemBody_h_32_RPC_WRAPPERS_NO_PURE_DECLS \
-	Main_Source_Main_ItemBody_h_32_CALLBACK_WRAPPERS \
-	Main_Source_Main_ItemBody_h_32_INCLASS_NO_PURE_DECLS \
-	Main_Source_Main_ItemBody_h_32_ENHANCED_CONSTRUCTORS \
+	Main_Source_Main_ItemBody_h_16_PRIVATE_PROPERTY_OFFSET \
+	Main_Source_Main_ItemBody_h_16_SPARSE_DATA \
+	Main_Source_Main_ItemBody_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
+	Main_Source_Main_ItemBody_h_16_CALLBACK_WRAPPERS \
+	Main_Source_Main_ItemBody_h_16_INCLASS_NO_PURE_DECLS \
+	Main_Source_Main_ItemBody_h_16_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -138,19 +138,5 @@ template<> MAIN_API UClass* StaticClass<class AItemBody>();
 #undef CURRENT_FILE_ID
 #define CURRENT_FILE_ID Main_Source_Main_ItemBody_h
 
-
-#define FOREACH_ENUM_EPAWNBODYTYPE(op) \
-	op(EPawnBodyType::ECloth) \
-	op(EPawnBodyType::EFace) \
-	op(EPawnBodyType::EHair) \
-	op(EPawnBodyType::EGlove) \
-	op(EPawnBodyType::EShoe) \
-	op(EPawnBodyType::EHeadGears) \
-	op(EPawnBodyType::EShoulderPad) \
-	op(EPawnBodyType::EBelt) \
-	op(EPawnBodyType::EOther) 
-
-enum class EPawnBodyType : uint8;
-template<> MAIN_API UEnum* StaticEnum<EPawnBodyType>();
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
