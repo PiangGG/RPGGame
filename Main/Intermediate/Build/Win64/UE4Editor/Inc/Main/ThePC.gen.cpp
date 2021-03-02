@@ -114,9 +114,9 @@ void EmptyLinkFunctionForGeneratedCodeThePC() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AThePC_Statics::NewProp_bPauseMenuDisplayed_MetaData[] = {
 		{ "Category", "PC" },
-		{ "Comment", "//to hide or show pause menu\n" },
+		{ "Comment", "/*UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = \"PC\")\n\x09TSubclassOf<class UUserWidget> TSubTextUserWidget;\n\n\x09//HUD instance\n\x09UUserWidget *TextUserWidget;*///to hide or show pause menu\n" },
 		{ "ModuleRelativePath", "ThePC.h" },
-		{ "ToolTip", "to hide or show pause menu" },
+		{ "ToolTip", "UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = \"PC\")\n       TSubclassOf<class UUserWidget> TSubTextUserWidget;\n\n       //HUD instance\n       UUserWidget *TextUserWidget;//to hide or show pause menu" },
 	};
 #endif
 	void Z_Construct_UClass_AThePC_Statics::NewProp_bPauseMenuDisplayed_SetBit(void* Obj)
@@ -169,7 +169,7 @@ void EmptyLinkFunctionForGeneratedCodeThePC() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AThePC, 706654646);
+	IMPLEMENT_CLASS(AThePC, 45064302);
 	template<> MAIN_API UClass* StaticClass<AThePC>()
 	{
 		return AThePC::StaticClass();

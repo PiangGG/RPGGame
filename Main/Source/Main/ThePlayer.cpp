@@ -165,6 +165,7 @@ void AThePlayer::Attack()
 	 * 
 	 */
 	UE_LOG(LogTemp,Warning,TEXT("Attack"));
+	
 }
 
 void AThePlayer::AttackServer_Implementation()
@@ -202,7 +203,8 @@ void AThePlayer::Run()
 void AThePlayer::OverlapActorChange()
 {
 	UE_LOG(LogTemp,Warning,TEXT("OverlapActorChange"));
-	if (!OverlapActorTSub)
+	
+	if (!OverlapActorTSub||!IsLocallyControlled()||!InputComponent)
 	{
 		return;
 	}
@@ -213,7 +215,7 @@ void AThePlayer::OverlapActorChange()
 		{
 			//add the widget to the viewport
 			UUserWidgetOverlapActor->AddToViewport();
-			UE_LOG(LogTemp,Warning,TEXT("UUserWidgetOverlapActor->AddToViewport"));
+			CanWear(InputComponent);
 			//go to the appropriate input mode
 			//SetInputMode(EInputMode::EUIOnly, true);     
 		}else
@@ -222,16 +224,21 @@ void AThePlayer::OverlapActorChange()
 		}
 	}else if(OverlapActor.IsValidIndex(0)&&UUserWidgetOverlapActor)
 	{
+		UE_LOG(LogTemp,Warning,TEXT("OverlapActor.IsValidIndex(0)&&UUserWidgetOverlapActor"));
+		
 		UUserWidgetOverlapActor->RemoveFromViewport();
 		UUserWidgetOverlapActor=nullptr;
 		UUserWidgetOverlapActor = CreateWidget<UUserWidget>(GetWorld()->GetFirstPlayerController(), OverlapActorTSub);
 		UUserWidgetOverlapActor->AddToViewport();
+		CanWear(InputComponent);
 		//UpdateUUserWidgetOverlapActor();
 		//UUserWidgetOverlapActor=nullptr;
 	}else
 	{
+		UE_LOG(LogTemp,Warning,TEXT("else"));
 		UUserWidgetOverlapActor->RemoveFromViewport();
 		UUserWidgetOverlapActor=nullptr;
+		NotCanWear(InputComponent);
 	}
 }
 
@@ -399,6 +406,75 @@ EPlayerState AThePlayer::GetPlayerState()
 void AThePlayer::OnRep_PlayerStateChange()
 {
 	UE_LOG(LogTemp,Warning,TEXT("OnRep_PlayerStateChange"));
+}
+
+void AThePlayer::Wear(AActor* Actor)
+{
+	if (GetLocalRole()<ROLE_Authority)
+	{
+		WearServer(Actor);
+	}
+	ABody *Body=Cast<ABody>(Actor);
+	if (!Body)return;
+	Body->SetItemState(EItemState::InPlayering);
+	switch (Body->GetPawnBodyType())
+	{
+		case EPawnBodyType::ECloth:{
+			if (GetMesh())
+			{
+				USkeletalMesh* temp=GetMesh()->SkeletalMesh;
+				GetMesh()->SetSkeletalMesh(Body->ThisSkeletalMesh->SkeletalMesh);
+				Body->ThisSkeletalMesh->SetSkeletalMesh(temp);
+				Body->SetItemState(EItemState::InWorld);
+			}	
+			break;
+		}
+		
+	default:
+		UE_LOG(LogTemp,Warning,TEXT("Body->GetItemType()ERR"));
+		break;
+	}
+}
+
+void AThePlayer::WearServer_Implementation(AActor* Actor)
+{
+	Wear(Actor);
+}
+
+bool AThePlayer::WearServer_Validate(AActor* Actor)
+{
+	return true;
+}
+
+void AThePlayer::CanWear(UInputComponent* PlayerInputComponent)
+{
+	if(IsLocallyControlled()&&isCanWear==false)
+	{
+		isCanWear=true;
+		PlayerInputComponent->BindAction("Wear",EInputEvent::IE_Pressed,this,&AThePlayer::BindActionWear);
+	}
+}
+
+void AThePlayer::BindActionWear()
+{
+	if (OverlapActor.IsValidIndex(0))
+	{
+		ABody * Body=Cast<ABody>(OverlapActor.Top());
+		if (!Body)return;
+		Body->Wear(this);
+		
+		OverlapActor.RemoveAt(0);
+		OverlapActorChange();
+	}
+}
+
+void AThePlayer::NotCanWear(UInputComponent* PlayerInputComponent)
+{
+	if(IsLocallyControlled()&&isCanWear==true)
+	{
+		isCanWear=false;
+		PlayerInputComponent->RemoveActionBinding("Wear",EInputEvent::IE_Pressed);
+	}
 }
 
 void AThePlayer::RunServer_Implementation()

@@ -8,6 +8,7 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class AActor;
 enum class EPlayerState : uint8;
 enum class EPlayerStance : uint8;
 #ifdef MAIN_ThePlayer_generated_h
@@ -17,11 +18,14 @@ enum class EPlayerStance : uint8;
 
 #define Main_Source_Main_ThePlayer_h_18_SPARSE_DATA
 #define Main_Source_Main_ThePlayer_h_18_RPC_WRAPPERS \
+	virtual bool WearServer_Validate(AActor* ); \
+	virtual void WearServer_Implementation(AActor* Actor); \
 	virtual bool RunServer_Validate(); \
 	virtual void RunServer_Implementation(); \
 	virtual bool AttackServer_Validate(); \
 	virtual void AttackServer_Implementation(); \
  \
+	DECLARE_FUNCTION(execWearServer); \
 	DECLARE_FUNCTION(execOnRep_PlayerStateChange); \
 	DECLARE_FUNCTION(execGetPlayerState); \
 	DECLARE_FUNCTION(execSetPlayerState); \
@@ -36,11 +40,14 @@ enum class EPlayerStance : uint8;
 
 
 #define Main_Source_Main_ThePlayer_h_18_RPC_WRAPPERS_NO_PURE_DECLS \
+	virtual bool WearServer_Validate(AActor* ); \
+	virtual void WearServer_Implementation(AActor* Actor); \
 	virtual bool RunServer_Validate(); \
 	virtual void RunServer_Implementation(); \
 	virtual bool AttackServer_Validate(); \
 	virtual void AttackServer_Implementation(); \
  \
+	DECLARE_FUNCTION(execWearServer); \
 	DECLARE_FUNCTION(execOnRep_PlayerStateChange); \
 	DECLARE_FUNCTION(execGetPlayerState); \
 	DECLARE_FUNCTION(execSetPlayerState); \
@@ -54,7 +61,13 @@ enum class EPlayerStance : uint8;
 	DECLARE_FUNCTION(execAttack);
 
 
-#define Main_Source_Main_ThePlayer_h_18_EVENT_PARMS
+#define Main_Source_Main_ThePlayer_h_18_EVENT_PARMS \
+	struct ThePlayer_eventWearServer_Parms \
+	{ \
+		AActor* Actor; \
+	};
+
+
 #define Main_Source_Main_ThePlayer_h_18_CALLBACK_WRAPPERS
 #define Main_Source_Main_ThePlayer_h_18_INCLASS_NO_PURE_DECLS \
 private: \

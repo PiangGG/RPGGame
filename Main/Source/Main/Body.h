@@ -48,5 +48,17 @@ public:
 	UFUNCTION(BlueprintCallable)
     virtual void SphereComponent_EndOverlap(UPrimitiveComponent* Component,AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
 	
+	UFUNCTION(BlueprintCallable)
+	void Wear(APawn *Pawn);
+	UFUNCTION(Server,WithValidation,Reliable)
+	void WearServer(APawn *Pawn);
 
+	EItemType ItemType=EItemType::Other;
+	
+	EItemType GetItemType();
+
+	EPawnBodyType PawnBodyType=EPawnBodyType::ECloth;
+	
+	EPawnBodyType GetPawnBodyType();
+	
 };

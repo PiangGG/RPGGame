@@ -8,6 +8,7 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class APawn;
 class UPrimitiveComponent;
 class AActor;
 struct FHitResult;
@@ -19,7 +20,11 @@ enum class EItemState : uint8;
 
 #define Main_Source_Main_Body_h_14_SPARSE_DATA
 #define Main_Source_Main_Body_h_14_RPC_WRAPPERS \
+	virtual bool WearServer_Validate(APawn* ); \
+	virtual void WearServer_Implementation(APawn* Pawn); \
  \
+	DECLARE_FUNCTION(execWearServer); \
+	DECLARE_FUNCTION(execWear); \
 	DECLARE_FUNCTION(execSphereComponent_EndOverlap); \
 	DECLARE_FUNCTION(execSphereComponent_BeginOverlap); \
 	DECLARE_FUNCTION(execOnRep_SetItemState); \
@@ -28,7 +33,11 @@ enum class EItemState : uint8;
 
 
 #define Main_Source_Main_Body_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
+	virtual bool WearServer_Validate(APawn* ); \
+	virtual void WearServer_Implementation(APawn* Pawn); \
  \
+	DECLARE_FUNCTION(execWearServer); \
+	DECLARE_FUNCTION(execWear); \
 	DECLARE_FUNCTION(execSphereComponent_EndOverlap); \
 	DECLARE_FUNCTION(execSphereComponent_BeginOverlap); \
 	DECLARE_FUNCTION(execOnRep_SetItemState); \
@@ -36,6 +45,14 @@ enum class EItemState : uint8;
 	DECLARE_FUNCTION(execGetItemState);
 
 
+#define Main_Source_Main_Body_h_14_EVENT_PARMS \
+	struct Body_eventWearServer_Parms \
+	{ \
+		APawn* Pawn; \
+	};
+
+
+#define Main_Source_Main_Body_h_14_CALLBACK_WRAPPERS
 #define Main_Source_Main_Body_h_14_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesABody(); \
@@ -93,13 +110,17 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ABody); \
 
 
 #define Main_Source_Main_Body_h_14_PRIVATE_PROPERTY_OFFSET
-#define Main_Source_Main_Body_h_11_PROLOG
+#define Main_Source_Main_Body_h_11_PROLOG \
+	Main_Source_Main_Body_h_14_EVENT_PARMS
+
+
 #define Main_Source_Main_Body_h_14_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	Main_Source_Main_Body_h_14_PRIVATE_PROPERTY_OFFSET \
 	Main_Source_Main_Body_h_14_SPARSE_DATA \
 	Main_Source_Main_Body_h_14_RPC_WRAPPERS \
+	Main_Source_Main_Body_h_14_CALLBACK_WRAPPERS \
 	Main_Source_Main_Body_h_14_INCLASS \
 	Main_Source_Main_Body_h_14_STANDARD_CONSTRUCTORS \
 public: \
@@ -112,6 +133,7 @@ public: \
 	Main_Source_Main_Body_h_14_PRIVATE_PROPERTY_OFFSET \
 	Main_Source_Main_Body_h_14_SPARSE_DATA \
 	Main_Source_Main_Body_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
+	Main_Source_Main_Body_h_14_CALLBACK_WRAPPERS \
 	Main_Source_Main_Body_h_14_INCLASS_NO_PURE_DECLS \
 	Main_Source_Main_Body_h_14_ENHANCED_CONSTRUCTORS \
 private: \

@@ -51,7 +51,7 @@ void ABody::SetItemState(EItemState NewItemState)
 
 void ABody::OnRep_SetItemState(EItemState NewItemState)
 {
-	UE_LOG(LogTemp,Warning,TEXT("%s"),NewItemState);
+	//UE_LOG(LogTemp,Warning,TEXT("%s"),NewItemState);
 	switch (CurrentItemState)
 	{
 	case EItemState::InWorld:
@@ -81,7 +81,7 @@ void ABody::SphereComponent_BeginOverlap(UPrimitiveComponent* Component, AActor*
 {
 	AThePlayer* Player=Cast<AThePlayer>(OtherActor);
 	
-	if (GetItemState()==EItemState::InWorld&&Player&&bOverlap==false)
+	if (GetItemState()==EItemState::InWorld&&Player&&bOverlap==false&&Player->IsLocallyControlled())
 	{
 		UE_LOG(LogTemp,Warning,TEXT("ABody::BeginOverlap"));
 		bOverlap=true;
@@ -95,13 +95,45 @@ void ABody::SphereComponent_EndOverlap(UPrimitiveComponent* Component, AActor* O
 {
 	AThePlayer* Player=Cast<AThePlayer>(OtherActor);
 	
-	if (GetItemState()==EItemState::InWorld&&Player&&bOverlap==true)
+	if (GetItemState()==EItemState::InWorld&&Player&&bOverlap==true&&Player->OverlapActor.Contains(this))
 	{
 		bOverlap=false;
-		UE_LOG(LogTemp,Warning,TEXT("ABody::EndOverlap"));
+		
 		Player->OverlapActor.Remove(this);
+	
 		Player->OverlapActorChange();
 	}
+}
+
+void ABody::Wear(APawn* Pawn)
+{
+	if (GetLocalRole()<ROLE_Authority)
+	{
+		WearServer(Pawn);
+	}
+	AThePlayer * Player=Cast<AThePlayer>(Pawn);
+	if (!Player&&Player->IsLocallyControlled())return;
+	Player->Wear(this);
+}
+
+EItemType ABody::GetItemType()
+{
+	return ItemType;;
+}
+
+EPawnBodyType ABody::GetPawnBodyType()
+{
+	return PawnBodyType;
+}
+
+void ABody::WearServer_Implementation(APawn* Pawn)
+{
+	Wear(Pawn);
+}
+
+bool ABody::WearServer_Validate(APawn* Pawn)
+{
+	return true;
 }
 
 

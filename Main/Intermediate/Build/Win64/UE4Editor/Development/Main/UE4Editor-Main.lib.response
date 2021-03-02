@@ -21,6 +21,7 @@
 "D:\Code\UE4\RPGGame\Main\Intermediate\Build\Win64\UE4Editor\Development\Main\RPGStruct.cpp.obj"
 "D:\Code\UE4\RPGGame\Main\Intermediate\Build\Win64\UE4Editor\Development\Main\ThePC.cpp.obj"
 "D:\Code\UE4\RPGGame\Main\Intermediate\Build\Win64\UE4Editor\Development\Main\ThePlayer.cpp.obj"
+"D:\Code\UE4\RPGGame\Main\Intermediate\Build\Win64\UE4Editor\Development\Main\Weapon.cpp.obj"
 "D:\Code\UE4\RPGGame\Main\Intermediate\Build\Win64\UE4Editor\Development\Main\Body.gen.cpp.obj"
 "D:\Code\UE4\RPGGame\Main\Intermediate\Build\Win64\UE4Editor\Development\Main\ClothesComponent.gen.cpp.obj"
 "D:\Code\UE4\RPGGame\Main\Intermediate\Build\Win64\UE4Editor\Development\Main\GI.gen.cpp.obj"
@@ -34,6 +35,7 @@
 "D:\Code\UE4\RPGGame\Main\Intermediate\Build\Win64\UE4Editor\Development\Main\RPGPayer.gen.cpp.obj"
 "D:\Code\UE4\RPGGame\Main\Intermediate\Build\Win64\UE4Editor\Development\Main\ThePC.gen.cpp.obj"
 "D:\Code\UE4\RPGGame\Main\Intermediate\Build\Win64\UE4Editor\Development\Main\ThePlayer.gen.cpp.obj"
+"D:\Code\UE4\RPGGame\Main\Intermediate\Build\Win64\UE4Editor\Development\Main\Weapon.gen.cpp.obj"
 "D:\Code\UE4\RPGGame\Main\Intermediate\Build\Win64\UE4Editor\Development\Main\Default.rc2.res"
 /OUT:"D:\Code\UE4\RPGGame\Main\Intermediate\Build\Win64\UE4Editor\Development\Main\UE4Editor-Main.lib"
 /INCLUDE:IMPLEMENT_MODULE_Main

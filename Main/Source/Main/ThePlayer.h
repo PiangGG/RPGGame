@@ -152,5 +152,13 @@ public:
     EPlayerState GetPlayerState();
 	UFUNCTION()
     void OnRep_PlayerStateChange();
+
+	void Wear(AActor* Actor);
+	UFUNCTION(Server,WithValidation,Reliable)
+	void WearServer(AActor* Actor);
+	void CanWear(UInputComponent* PlayerInputComponent);
+	bool isCanWear=false;
+	void BindActionWear();
+	void NotCanWear(UInputComponent* PlayerInputComponent);
 };
 

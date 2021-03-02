@@ -27,6 +27,12 @@ class MAIN_API AThePC : public APlayerController
 	//HUD instance
 	UUserWidget *HUD;
 
+	/*UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "PC")
+	TSubclassOf<class UUserWidget> TSubTextUserWidget;
+
+	//HUD instance
+	UUserWidget *TextUserWidget;*/
+	
 	//to hide or show pause menu
 	UPROPERTY(BlueprintReadOnly, Category = "PC")
 	bool bPauseMenuDisplayed;
