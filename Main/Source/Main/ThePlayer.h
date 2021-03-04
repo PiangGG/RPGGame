@@ -83,7 +83,7 @@ public:
 	UFUNCTION(BlueprintCallable)
     virtual void SphereComponent_EndOverlap(UPrimitiveComponent* Component,AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
 	*/
-	UPROPERTY(BlueprintReadWrite,EditDefaultsOnly,Category="Character")
+	UPROPERTY(BlueprintReadWrite,Replicated,EditDefaultsOnly,Category="Character")
 	TArray<AActor*> OverlapActor;
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "UUserWidget")
@@ -108,7 +108,7 @@ public:
 	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Category="Clothes")
 	USkeletalMeshComponent* GloveMesh;
 
-	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Category="Clothes")
+	UPROPERTY(EditDefaultsOnly,Replicated,BlueprintReadWrite,Category="Clothes")
 	USkeletalMeshComponent* ShoeMesh;
 
 	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Category="Clothes")
@@ -153,11 +153,13 @@ public:
 	UFUNCTION()
     void OnRep_PlayerStateChange();
 
-	void Wear(AActor* Actor);
+	UFUNCTION(BlueprintCallable)
+	void Wear(AActor* theActor);
 	UFUNCTION(Server,WithValidation,Reliable)
-	void WearServer(AActor* Actor);
+	void WearServer(AActor* theActor);
 	void CanWear(UInputComponent* PlayerInputComponent);
-	bool isCanWear=false;
+	UPROPERTY(Replicated,EditDefaultsOnly,BlueprintReadWrite)
+	bool isCanWear;
 	void BindActionWear();
 	void NotCanWear(UInputComponent* PlayerInputComponent);
 };

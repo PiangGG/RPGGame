@@ -33,15 +33,23 @@ void EmptyLinkFunctionForGeneratedCodeThePlayer() {}
 // End Cross Module References
 	DEFINE_FUNCTION(AThePlayer::execWearServer)
 	{
-		P_GET_OBJECT(AActor,Z_Param_Actor);
+		P_GET_OBJECT(AActor,Z_Param_theActor);
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		if (!P_THIS->WearServer_Validate(Z_Param_Actor))
+		if (!P_THIS->WearServer_Validate(Z_Param_theActor))
 		{
 			RPC_ValidateFailed(TEXT("WearServer_Validate"));
 			return;
 		}
-		P_THIS->WearServer_Implementation(Z_Param_Actor);
+		P_THIS->WearServer_Implementation(Z_Param_theActor);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AThePlayer::execWear)
+	{
+		P_GET_OBJECT(AActor,Z_Param_theActor);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->Wear(Z_Param_theActor);
 		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(AThePlayer::execOnRep_PlayerStateChange)
@@ -149,10 +157,10 @@ void EmptyLinkFunctionForGeneratedCodeThePlayer() {}
 		ProcessEvent(FindFunctionChecked(NAME_AThePlayer_UpdateUUserWidgetOverlapActor),NULL);
 	}
 	static FName NAME_AThePlayer_WearServer = FName(TEXT("WearServer"));
-	void AThePlayer::WearServer(AActor* Actor)
+	void AThePlayer::WearServer(AActor* theActor)
 	{
 		ThePlayer_eventWearServer_Parms Parms;
-		Parms.Actor=Actor;
+		Parms.theActor=theActor;
 		ProcessEvent(FindFunctionChecked(NAME_AThePlayer_WearServer),&Parms);
 	}
 	void AThePlayer::StaticRegisterNativesAThePlayer()
@@ -170,6 +178,7 @@ void EmptyLinkFunctionForGeneratedCodeThePlayer() {}
 			{ "RunServer", &AThePlayer::execRunServer },
 			{ "SetPlayerStance", &AThePlayer::execSetPlayerStance },
 			{ "SetPlayerState", &AThePlayer::execSetPlayerState },
+			{ "Wear", &AThePlayer::execWear },
 			{ "WearServer", &AThePlayer::execWearServer },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
@@ -490,18 +499,50 @@ void EmptyLinkFunctionForGeneratedCodeThePlayer() {}
 		}
 		return ReturnFunction;
 	}
-	struct Z_Construct_UFunction_AThePlayer_WearServer_Statics
+	struct Z_Construct_UFunction_AThePlayer_Wear_Statics
 	{
-		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Actor;
+		struct ThePlayer_eventWear_Parms
+		{
+			AActor* theActor;
+		};
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_theActor;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
 #endif
 		static const UE4CodeGen_Private::FFunctionParams FuncParams;
 	};
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_AThePlayer_WearServer_Statics::NewProp_Actor = { "Actor", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ThePlayer_eventWearServer_Parms, Actor), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_AThePlayer_Wear_Statics::NewProp_theActor = { "theActor", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ThePlayer_eventWear_Parms, theActor), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AThePlayer_Wear_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AThePlayer_Wear_Statics::NewProp_theActor,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AThePlayer_Wear_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "ThePlayer.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AThePlayer_Wear_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AThePlayer, nullptr, "Wear", nullptr, nullptr, sizeof(ThePlayer_eventWear_Parms), Z_Construct_UFunction_AThePlayer_Wear_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AThePlayer_Wear_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AThePlayer_Wear_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AThePlayer_Wear_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AThePlayer_Wear()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AThePlayer_Wear_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_AThePlayer_WearServer_Statics
+	{
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_theActor;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_AThePlayer_WearServer_Statics::NewProp_theActor = { "theActor", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ThePlayer_eventWearServer_Parms, theActor), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AThePlayer_WearServer_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AThePlayer_WearServer_Statics::NewProp_Actor,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AThePlayer_WearServer_Statics::NewProp_theActor,
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AThePlayer_WearServer_Statics::Function_MetaDataParams[] = {
@@ -620,6 +661,11 @@ void EmptyLinkFunctionForGeneratedCodeThePlayer() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CurrentPlayerState_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_CurrentPlayerState;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_isCanWear_MetaData[];
+#endif
+		static void NewProp_isCanWear_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_isCanWear;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -641,7 +687,8 @@ void EmptyLinkFunctionForGeneratedCodeThePlayer() {}
 		{ &Z_Construct_UFunction_AThePlayer_SetPlayerStance, "SetPlayerStance" }, // 159329711
 		{ &Z_Construct_UFunction_AThePlayer_SetPlayerState, "SetPlayerState" }, // 2954460778
 		{ &Z_Construct_UFunction_AThePlayer_UpdateUUserWidgetOverlapActor, "UpdateUUserWidgetOverlapActor" }, // 3440859590
-		{ &Z_Construct_UFunction_AThePlayer_WearServer, "WearServer" }, // 4202782105
+		{ &Z_Construct_UFunction_AThePlayer_Wear, "Wear" }, // 900518122
+		{ &Z_Construct_UFunction_AThePlayer_WearServer, "WearServer" }, // 3648525771
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AThePlayer_Statics::Class_MetaDataParams[] = {
@@ -730,7 +777,7 @@ void EmptyLinkFunctionForGeneratedCodeThePlayer() {}
 		{ "ToolTip", "UFUNCTION(BlueprintCallable)\nvirtual void SphereComponent_BeginOverlap(class UPrimitiveComponent* Component,class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);\nUFUNCTION(BlueprintCallable)\nvirtual void SphereComponent_EndOverlap(UPrimitiveComponent* Component,AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);" },
 	};
 #endif
-	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UClass_AThePlayer_Statics::NewProp_OverlapActor = { "OverlapActor", nullptr, (EPropertyFlags)0x0010000000010005, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AThePlayer, OverlapActor), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_AThePlayer_Statics::NewProp_OverlapActor_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AThePlayer_Statics::NewProp_OverlapActor_MetaData)) };
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UClass_AThePlayer_Statics::NewProp_OverlapActor = { "OverlapActor", nullptr, (EPropertyFlags)0x0010000000010025, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AThePlayer, OverlapActor), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_AThePlayer_Statics::NewProp_OverlapActor_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AThePlayer_Statics::NewProp_OverlapActor_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AThePlayer_Statics::NewProp_OverlapActorTSub_MetaData[] = {
 		{ "Category", "UUserWidget" },
@@ -771,7 +818,7 @@ void EmptyLinkFunctionForGeneratedCodeThePlayer() {}
 		{ "ModuleRelativePath", "ThePlayer.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AThePlayer_Statics::NewProp_ShoeMesh = { "ShoeMesh", nullptr, (EPropertyFlags)0x001000000009000d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AThePlayer, ShoeMesh), Z_Construct_UClass_USkeletalMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AThePlayer_Statics::NewProp_ShoeMesh_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AThePlayer_Statics::NewProp_ShoeMesh_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AThePlayer_Statics::NewProp_ShoeMesh = { "ShoeMesh", nullptr, (EPropertyFlags)0x001000000009002d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AThePlayer, ShoeMesh), Z_Construct_UClass_USkeletalMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AThePlayer_Statics::NewProp_ShoeMesh_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AThePlayer_Statics::NewProp_ShoeMesh_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AThePlayer_Statics::NewProp_HeadGearsMesh_MetaData[] = {
 		{ "Category", "Clothes" },
@@ -834,6 +881,17 @@ void EmptyLinkFunctionForGeneratedCodeThePlayer() {}
 	};
 #endif
 	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UClass_AThePlayer_Statics::NewProp_CurrentPlayerState = { "CurrentPlayerState", "OnRep_PlayerStateChange", (EPropertyFlags)0x0010000100010025, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AThePlayer, CurrentPlayerState), Z_Construct_UEnum_Main_EPlayerState, METADATA_PARAMS(Z_Construct_UClass_AThePlayer_Statics::NewProp_CurrentPlayerState_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AThePlayer_Statics::NewProp_CurrentPlayerState_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AThePlayer_Statics::NewProp_isCanWear_MetaData[] = {
+		{ "Category", "ThePlayer" },
+		{ "ModuleRelativePath", "ThePlayer.h" },
+	};
+#endif
+	void Z_Construct_UClass_AThePlayer_Statics::NewProp_isCanWear_SetBit(void* Obj)
+	{
+		((AThePlayer*)Obj)->isCanWear = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AThePlayer_Statics::NewProp_isCanWear = { "isCanWear", nullptr, (EPropertyFlags)0x0010000000010025, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(AThePlayer), &Z_Construct_UClass_AThePlayer_Statics::NewProp_isCanWear_SetBit, METADATA_PARAMS(Z_Construct_UClass_AThePlayer_Statics::NewProp_isCanWear_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AThePlayer_Statics::NewProp_isCanWear_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AThePlayer_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AThePlayer_Statics::NewProp_SpringArm,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AThePlayer_Statics::NewProp_Camera,
@@ -862,6 +920,7 @@ void EmptyLinkFunctionForGeneratedCodeThePlayer() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AThePlayer_Statics::NewProp_CurrentPlayerStance,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AThePlayer_Statics::NewProp_CurrentPlayerState_Underlying,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AThePlayer_Statics::NewProp_CurrentPlayerState,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AThePlayer_Statics::NewProp_isCanWear,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AThePlayer_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AThePlayer>::IsAbstract,
@@ -890,7 +949,7 @@ void EmptyLinkFunctionForGeneratedCodeThePlayer() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AThePlayer, 520642991);
+	IMPLEMENT_CLASS(AThePlayer, 2154435948);
 	template<> MAIN_API UClass* StaticClass<AThePlayer>()
 	{
 		return AThePlayer::StaticClass();
@@ -899,12 +958,18 @@ void EmptyLinkFunctionForGeneratedCodeThePlayer() {}
 
 	void AThePlayer::ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const
 	{
+		static const FName Name_OverlapActor(TEXT("OverlapActor"));
+		static const FName Name_ShoeMesh(TEXT("ShoeMesh"));
 		static const FName Name_CurrentPlayerStance(TEXT("CurrentPlayerStance"));
 		static const FName Name_CurrentPlayerState(TEXT("CurrentPlayerState"));
+		static const FName Name_isCanWear(TEXT("isCanWear"));
 
 		const bool bIsValid = true
+			&& Name_OverlapActor == ClassReps[(int32)ENetFields_Private::OverlapActor].Property->GetFName()
+			&& Name_ShoeMesh == ClassReps[(int32)ENetFields_Private::ShoeMesh].Property->GetFName()
 			&& Name_CurrentPlayerStance == ClassReps[(int32)ENetFields_Private::CurrentPlayerStance].Property->GetFName()
-			&& Name_CurrentPlayerState == ClassReps[(int32)ENetFields_Private::CurrentPlayerState].Property->GetFName();
+			&& Name_CurrentPlayerState == ClassReps[(int32)ENetFields_Private::CurrentPlayerState].Property->GetFName()
+			&& Name_isCanWear == ClassReps[(int32)ENetFields_Private::isCanWear].Property->GetFName();
 
 		checkf(bIsValid, TEXT("UHT Generated Rep Indices do not match runtime populated Rep Indices for properties in AThePlayer"));
 	}

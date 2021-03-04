@@ -24,6 +24,8 @@ void EmptyLinkFunctionForGeneratedCodeBody() {}
 	ENGINE_API UClass* Z_Construct_UClass_APawn_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USphereComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USkeletalMeshComponent_NoRegister();
+	MAIN_API UEnum* Z_Construct_UEnum_Main_EItemType();
+	MAIN_API UEnum* Z_Construct_UEnum_Main_EPawnBodyType();
 // End Cross Module References
 	DEFINE_FUNCTION(ABody::execWearServer)
 	{
@@ -453,6 +455,16 @@ void EmptyLinkFunctionForGeneratedCodeBody() {}
 #endif
 		static void NewProp_bOverlap_SetBit(void* Obj);
 		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bOverlap;
+		static const UE4CodeGen_Private::FBytePropertyParams NewProp_ItemType_Underlying;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ItemType_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_ItemType;
+		static const UE4CodeGen_Private::FBytePropertyParams NewProp_PawnBodyType_Underlying;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_PawnBodyType_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_PawnBodyType;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -501,7 +513,7 @@ void EmptyLinkFunctionForGeneratedCodeBody() {}
 		{ "ModuleRelativePath", "Body.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABody_Statics::NewProp_ThisSkeletalMesh = { "ThisSkeletalMesh", nullptr, (EPropertyFlags)0x001000000009000d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ABody, ThisSkeletalMesh), Z_Construct_UClass_USkeletalMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ABody_Statics::NewProp_ThisSkeletalMesh_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ABody_Statics::NewProp_ThisSkeletalMesh_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABody_Statics::NewProp_ThisSkeletalMesh = { "ThisSkeletalMesh", nullptr, (EPropertyFlags)0x001000000009002d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ABody, ThisSkeletalMesh), Z_Construct_UClass_USkeletalMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ABody_Statics::NewProp_ThisSkeletalMesh_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ABody_Statics::NewProp_ThisSkeletalMesh_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABody_Statics::NewProp_bOverlap_MetaData[] = {
 		{ "ModuleRelativePath", "Body.h" },
@@ -512,12 +524,32 @@ void EmptyLinkFunctionForGeneratedCodeBody() {}
 		((ABody*)Obj)->bOverlap = 1;
 	}
 	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_ABody_Statics::NewProp_bOverlap = { "bOverlap", nullptr, (EPropertyFlags)0x0010000000000000, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(ABody), &Z_Construct_UClass_ABody_Statics::NewProp_bOverlap_SetBit, METADATA_PARAMS(Z_Construct_UClass_ABody_Statics::NewProp_bOverlap_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ABody_Statics::NewProp_bOverlap_MetaData)) };
+	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UClass_ABody_Statics::NewProp_ItemType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABody_Statics::NewProp_ItemType_MetaData[] = {
+		{ "Category", "ItemSetting" },
+		{ "ModuleRelativePath", "Body.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UClass_ABody_Statics::NewProp_ItemType = { "ItemType", nullptr, (EPropertyFlags)0x0010000000010025, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ABody, ItemType), Z_Construct_UEnum_Main_EItemType, METADATA_PARAMS(Z_Construct_UClass_ABody_Statics::NewProp_ItemType_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ABody_Statics::NewProp_ItemType_MetaData)) };
+	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UClass_ABody_Statics::NewProp_PawnBodyType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABody_Statics::NewProp_PawnBodyType_MetaData[] = {
+		{ "Category", "ItemSetting" },
+		{ "ModuleRelativePath", "Body.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UClass_ABody_Statics::NewProp_PawnBodyType = { "PawnBodyType", nullptr, (EPropertyFlags)0x0010000000010025, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ABody, PawnBodyType), Z_Construct_UEnum_Main_EPawnBodyType, METADATA_PARAMS(Z_Construct_UClass_ABody_Statics::NewProp_PawnBodyType_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ABody_Statics::NewProp_PawnBodyType_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ABody_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABody_Statics::NewProp_CurrentItemState_Underlying,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABody_Statics::NewProp_CurrentItemState,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABody_Statics::NewProp_SphereComponent,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABody_Statics::NewProp_ThisSkeletalMesh,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABody_Statics::NewProp_bOverlap,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABody_Statics::NewProp_ItemType_Underlying,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABody_Statics::NewProp_ItemType,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABody_Statics::NewProp_PawnBodyType_Underlying,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABody_Statics::NewProp_PawnBodyType,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ABody_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<ABody>::IsAbstract,
@@ -546,7 +578,7 @@ void EmptyLinkFunctionForGeneratedCodeBody() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ABody, 2084696760);
+	IMPLEMENT_CLASS(ABody, 667628640);
 	template<> MAIN_API UClass* StaticClass<ABody>()
 	{
 		return ABody::StaticClass();
@@ -556,9 +588,15 @@ void EmptyLinkFunctionForGeneratedCodeBody() {}
 	void ABody::ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const
 	{
 		static const FName Name_CurrentItemState(TEXT("CurrentItemState"));
+		static const FName Name_ThisSkeletalMesh(TEXT("ThisSkeletalMesh"));
+		static const FName Name_ItemType(TEXT("ItemType"));
+		static const FName Name_PawnBodyType(TEXT("PawnBodyType"));
 
 		const bool bIsValid = true
-			&& Name_CurrentItemState == ClassReps[(int32)ENetFields_Private::CurrentItemState].Property->GetFName();
+			&& Name_CurrentItemState == ClassReps[(int32)ENetFields_Private::CurrentItemState].Property->GetFName()
+			&& Name_ThisSkeletalMesh == ClassReps[(int32)ENetFields_Private::ThisSkeletalMesh].Property->GetFName()
+			&& Name_ItemType == ClassReps[(int32)ENetFields_Private::ItemType].Property->GetFName()
+			&& Name_PawnBodyType == ClassReps[(int32)ENetFields_Private::PawnBodyType].Property->GetFName();
 
 		checkf(bIsValid, TEXT("UHT Generated Rep Indices do not match runtime populated Rep Indices for properties in ABody"));
 	}

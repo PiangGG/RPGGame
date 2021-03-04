@@ -38,8 +38,6 @@ AThePlayer::AThePlayer()
 	//set up basic network replication
 	bReplicates = true;
 	bAlwaysRelevant = true;
-	//bReplicateMovement = true;
-	this->ACharacter::SetReplicateMovement(true);
 	//Set up character movement properties
 	GetCharacterMovement()->bOrientRotationToMovement = true;
 	bUseControllerRotationPitch = false;
@@ -56,11 +54,8 @@ AThePlayer::AThePlayer()
 	 * init Body
 	 */
 	Init();
-	
+	isCanWear=false;
 	GetCharacterMovement()->MaxWalkSpeed=BaseSpeed;
-
-	/*SphereComponent->OnComponentBeginOverlap.AddDynamic(this,&AThePlayer::SphereComponent_BeginOverlap);
-	SphereComponent->OnComponentEndOverlap.AddDynamic(this,&AThePlayer::SphereComponent_EndOverlap);*/
 }
 
 // Called when the game starts or when spawned
@@ -99,7 +94,11 @@ void AThePlayer::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent
 void AThePlayer::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
 {
 	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-	//DOREPLIFETIME(AThePlayer,OverlapActor);
+	//DOREPLIFETIME(AThePlayer,MeshCompMap);
+	DOREPLIFETIME(AThePlayer,isCanWear);
+	DOREPLIFETIME(AThePlayer,ShoeMesh);
+	DOREPLIFETIME(AThePlayer,OverlapActor);
+	//DOREPLIFETIME(AThePlayer,GetMesh());
 }
 
 void AThePlayer::MoveForward(float amount)
@@ -202,9 +201,7 @@ void AThePlayer::Run()
 
 void AThePlayer::OverlapActorChange()
 {
-	UE_LOG(LogTemp,Warning,TEXT("OverlapActorChange"));
-	
-	if (!OverlapActorTSub||!IsLocallyControlled()||!InputComponent)
+	if (!OverlapActorTSub/*||!IsLocallyControlled()*/||!InputComponent)
 	{
 		return;
 	}
@@ -235,32 +232,12 @@ void AThePlayer::OverlapActorChange()
 		//UUserWidgetOverlapActor=nullptr;
 	}else
 	{
-		UE_LOG(LogTemp,Warning,TEXT("else"));
+		UE_LOG(LogTemp,Warning,TEXT("OverlapActorChange:else"));
 		UUserWidgetOverlapActor->RemoveFromViewport();
 		UUserWidgetOverlapActor=nullptr;
 		NotCanWear(InputComponent);
 	}
 }
-
-/*void AThePlayer::SphereComponent_BeginOverlap(UPrimitiveComponent* Component, AActor* OtherActor,
-	UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
-{
-	if (OtherActor)
-	{
-		//OverlapActor.Add(OtherActor);
-		UE_LOG(LogTemp,Warning,TEXT("BeginOverlap"));
-	}
-}
-
-void AThePlayer::SphereComponent_EndOverlap(UPrimitiveComponent* Component, AActor* OtherActor,
-	UPrimitiveComponent* OtherComp, int32 OtherBodyIndex)
-{
-	if (OtherActor)
-	{
-		//OverlapActor.Remove(OtherActor);
-		UE_LOG(LogTemp,Warning,TEXT("EndOverlap"));
-	}
-}*/
 
 void AThePlayer::Init()
 {
@@ -270,6 +247,7 @@ void AThePlayer::Init()
 	if (theClothesMesh.Object&&GetMesh())
 	{
 		GetMesh()->SetSkeletalMesh(theClothesMesh.Object);
+		GetMesh()->SetIsReplicated(true);
 	}else
 	{
 		return;
@@ -305,6 +283,7 @@ void AThePlayer::Init()
 	if (theShoeMesh.Object&&ShoeMesh)
 	{
 		ShoeMesh->SetSkeletalMesh(theShoeMesh.Object);
+		ShoeMesh->SetIsReplicated(true);
 		ShoeMesh->SetupAttachment(GetMesh());
 
 	}
@@ -408,47 +387,66 @@ void AThePlayer::OnRep_PlayerStateChange()
 	UE_LOG(LogTemp,Warning,TEXT("OnRep_PlayerStateChange"));
 }
 
-void AThePlayer::Wear(AActor* Actor)
+void AThePlayer::Wear(AActor* theActor)
 {
 	if (GetLocalRole()<ROLE_Authority)
 	{
-		WearServer(Actor);
+		this->WearServer(theActor);
 	}
-	ABody *Body=Cast<ABody>(Actor);
+	ABody *Body=Cast<ABody>(theActor);
 	if (!Body)return;
-	Body->SetItemState(EItemState::InPlayering);
+	//Body->SetItemState(EItemState::InPlayering);
 	switch (Body->GetPawnBodyType())
 	{
-		case EPawnBodyType::ECloth:{
-			if (GetMesh())
+	case EPawnBodyType::ECloth:{
+			if (GetMesh()&&Body->ThisSkeletalMesh)
 			{
-				USkeletalMesh* temp=GetMesh()->SkeletalMesh;
+				USkeletalMesh* MeshComponent=GetMesh()->SkeletalMesh;
 				GetMesh()->SetSkeletalMesh(Body->ThisSkeletalMesh->SkeletalMesh);
-				Body->ThisSkeletalMesh->SetSkeletalMesh(temp);
+				Body->ThisSkeletalMesh->SetSkeletalMesh(MeshComponent);
 				Body->SetItemState(EItemState::InWorld);
 			}	
 			break;
-		}
-		
+	}
+	case EPawnBodyType::EShoe:{
+			if (ShoeMesh&&Body->ThisSkeletalMesh)
+			{
+				UE_LOG(LogTemp,Warning,TEXT("case EPawnBodyType::EShoe"));
+				/*ShoeMesh->DetachFromComponent(FDetachmentTransformRules::KeepWorldTransform);
+				//Body->ThisSkeletalMesh->DetachFromComponent(FDetachmentTransformRules::KeepWorldTransform);
+				ShoeMesh->AttachToComponent(Body->GetRootComponent(),FAttachmentTransformRules::SnapToTargetIncludingScale);
+				ShoeMesh->SetAnimClass(GetMesh()->GetAnimClass());
+				Body->ThisSkeletalMesh->AttachToComponent(GetMesh(),FAttachmentTransformRules::SnapToTargetIncludingScale);
+				Body->ThisSkeletalMesh->SetAnimation(nullptr);
+				Body->SetOwner(nullptr);
+				Body->SetItemState(EItemState::InWorld);*/
+				
+				USkeletalMesh* MeshComponent=ShoeMesh->SkeletalMesh;
+				ShoeMesh->SetSkeletalMesh(Body->ThisSkeletalMesh->SkeletalMesh);
+				Body->ThisSkeletalMesh->SetSkeletalMesh(MeshComponent);
+				Body->SetItemState(EItemState::InWorld);
+			}	
+			break;
+	}
 	default:
 		UE_LOG(LogTemp,Warning,TEXT("Body->GetItemType()ERR"));
 		break;
 	}
 }
 
-void AThePlayer::WearServer_Implementation(AActor* Actor)
+void AThePlayer::WearServer_Implementation(AActor *theActor)
 {
-	Wear(Actor);
+	Wear(theActor);
 }
 
-bool AThePlayer::WearServer_Validate(AActor* Actor)
+bool AThePlayer::WearServer_Validate(AActor* theActor)
 {
 	return true;
 }
 
 void AThePlayer::CanWear(UInputComponent* PlayerInputComponent)
 {
-	if(IsLocallyControlled()&&isCanWear==false)
+	if(/*IsLocallyControlled()&&*/isCanWear==false)
 	{
 		isCanWear=true;
 		PlayerInputComponent->BindAction("Wear",EInputEvent::IE_Pressed,this,&AThePlayer::BindActionWear);
@@ -462,7 +460,7 @@ void AThePlayer::BindActionWear()
 		ABody * Body=Cast<ABody>(OverlapActor.Top());
 		if (!Body)return;
 		Body->Wear(this);
-		
+		//Wear(Body);
 		OverlapActor.RemoveAt(0);
 		OverlapActorChange();
 	}
@@ -470,7 +468,7 @@ void AThePlayer::BindActionWear()
 
 void AThePlayer::NotCanWear(UInputComponent* PlayerInputComponent)
 {
-	if(IsLocallyControlled()&&isCanWear==true)
+	if(/*IsLocallyControlled()&&*/isCanWear==true)
 	{
 		isCanWear=false;
 		PlayerInputComponent->RemoveActionBinding("Wear",EInputEvent::IE_Pressed);

@@ -37,7 +37,7 @@ public:
 	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Category="ItemSetting")
 	class USphereComponent *SphereComponent;
 	
-	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Category="ItemSetting")
+	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Replicated,Category="ItemSetting")
 	class USkeletalMeshComponent *ThisSkeletalMesh;
 
 	UPROPERTY()
@@ -53,10 +53,12 @@ public:
 	UFUNCTION(Server,WithValidation,Reliable)
 	void WearServer(APawn *Pawn);
 
+	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Replicated,Category="ItemSetting")
 	EItemType ItemType=EItemType::Other;
 	
 	EItemType GetItemType();
 
+	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Replicated,Category="ItemSetting")
 	EPawnBodyType PawnBodyType=EPawnBodyType::ECloth;
 	
 	EPawnBodyType GetPawnBodyType();

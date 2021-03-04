@@ -24,6 +24,8 @@ ABody::ABody()
 
 	SetReplicates(true);
 	SetReplicateMovement(true);
+	ThisSkeletalMesh->SetAnimationMode(EAnimationMode::AnimationBlueprint);
+	
 }
 void ABody::GetLifetimeReplicatedProps(TArray<FLifetimeProperty> &OutLifetimeProps) const
 {
@@ -31,6 +33,9 @@ void ABody::GetLifetimeReplicatedProps(TArray<FLifetimeProperty> &OutLifetimePro
 
 	//replicates to everyone
 	DOREPLIFETIME(ABody, CurrentItemState);
+	DOREPLIFETIME(ABody, PawnBodyType);
+	DOREPLIFETIME(ABody, ItemType);
+	DOREPLIFETIME(ABody, ThisSkeletalMesh);
 }
 // Called when the game starts or when spawned
 void ABody::BeginPlay()
@@ -46,13 +51,9 @@ EItemState ABody::GetItemState()
 
 void ABody::SetItemState(EItemState NewItemState)
 {
+	UE_LOG(LogTemp,Warning,TEXT("Body->SetItemState"));
 	CurrentItemState=NewItemState;
-}
-
-void ABody::OnRep_SetItemState(EItemState NewItemState)
-{
-	//UE_LOG(LogTemp,Warning,TEXT("%s"),NewItemState);
-	switch (CurrentItemState)
+	/*switch (CurrentItemState)
 	{
 	case EItemState::InWorld:
 		{
@@ -69,10 +70,66 @@ void ABody::OnRep_SetItemState(EItemState NewItemState)
 			ThisSkeletalMesh->SetRelativeScale3D(FVector(1));
 			break;
 		}
+	case EItemState::InPlayering:
+		{
+			SphereComponent->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+			SphereComponent->SetCollisionResponseToAllChannels(ECR_Ignore);
+			//SphereComponent->SetCollisionResponseToChannel(ECC_Pawn,ECR_Overlap);
+			ThisSkeletalMesh->SetSimulatePhysics(false);
+			//SphereComponent->SetHiddenInGame(true);
+			
+			ThisSkeletalMesh->SetHiddenInGame(false);
+			ThisSkeletalMesh->SetCollisionEnabled(ECollisionEnabled::PhysicsOnly);
+			//ThisSkeletalMesh->SetCollisionResponseToChannels(ECR_Ignore);
+			ThisSkeletalMesh->SetWorldScale3D(FVector(1));
+			ThisSkeletalMesh->SetRelativeScale3D(FVector(1));
+			break;
+		}
 	default:
 		UE_LOG(LogTemp,Warning,TEXT("OnRep_SetItemState:default"));
 		break;
-		;
+	}*/
+}
+
+void ABody::OnRep_SetItemState(EItemState NewItemState)
+{
+	UE_LOG(LogTemp,Warning,TEXT("Body->OnRep_SetItemState"));
+	switch (CurrentItemState)
+	{
+	case EItemState::InWorld:
+		{
+			SphereComponent->SetCollisionEnabled(ECollisionEnabled::QueryOnly);
+			SphereComponent->SetCollisionResponseToAllChannels(ECR_Ignore);
+			SphereComponent->SetCollisionResponseToChannel(ECC_Pawn,ECR_Overlap);
+			SphereComponent->SetCollisionResponseToChannel(ECC_WorldStatic,ECR_Block);
+			ThisSkeletalMesh->SetSimulatePhysics(true);
+			//SphereComponent->SetHiddenInGame(true);
+			
+			ThisSkeletalMesh->SetHiddenInGame(false);
+			ThisSkeletalMesh->SetCollisionEnabled(ECollisionEnabled::PhysicsOnly);
+			ThisSkeletalMesh->SetCollisionResponseToChannels(ECR_Ignore);
+			ThisSkeletalMesh->SetWorldScale3D(FVector(1));
+			ThisSkeletalMesh->SetRelativeScale3D(FVector(1));
+			break;
+		}
+		case EItemState::InPlayering:
+		{
+			SphereComponent->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+			SphereComponent->SetCollisionResponseToAllChannels(ECR_Ignore);
+			//SphereComponent->SetCollisionResponseToChannel(ECC_Pawn,ECR_Overlap);
+			ThisSkeletalMesh->SetSimulatePhysics(false);
+			//SphereComponent->SetHiddenInGame(true);
+			
+			ThisSkeletalMesh->SetHiddenInGame(false);
+			ThisSkeletalMesh->SetCollisionEnabled(ECollisionEnabled::PhysicsOnly);
+			//ThisSkeletalMesh->SetCollisionResponseToChannels(ECR_Ignore);
+			ThisSkeletalMesh->SetWorldScale3D(FVector(1));
+			ThisSkeletalMesh->SetRelativeScale3D(FVector(1));
+			break;
+		}
+	default:
+		UE_LOG(LogTemp,Warning,TEXT("OnRep_SetItemState:default"));
+		break;
 	}
 }
 
@@ -83,7 +140,6 @@ void ABody::SphereComponent_BeginOverlap(UPrimitiveComponent* Component, AActor*
 	
 	if (GetItemState()==EItemState::InWorld&&Player&&bOverlap==false&&Player->IsLocallyControlled())
 	{
-		UE_LOG(LogTemp,Warning,TEXT("ABody::BeginOverlap"));
 		bOverlap=true;
 		Player->OverlapActor.Add(this);
 		Player->OverlapActorChange();
@@ -100,7 +156,6 @@ void ABody::SphereComponent_EndOverlap(UPrimitiveComponent* Component, AActor* O
 		bOverlap=false;
 		
 		Player->OverlapActor.Remove(this);
-	
 		Player->OverlapActorChange();
 	}
 }
@@ -111,8 +166,8 @@ void ABody::Wear(APawn* Pawn)
 	{
 		WearServer(Pawn);
 	}
-	AThePlayer * Player=Cast<AThePlayer>(Pawn);
-	if (!Player&&Player->IsLocallyControlled())return;
+	AThePlayer*Player=Cast<AThePlayer>(Pawn);
+	if (!Player/*&&Player->IsLocallyControlled()*/)return;
 	Player->Wear(this);
 }
 
