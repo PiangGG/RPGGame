@@ -31,6 +31,19 @@ void EmptyLinkFunctionForGeneratedCodeThePlayer() {}
 	MAIN_API UEnum* Z_Construct_UEnum_Main_EPawnBodyType();
 	ENGINE_API UClass* Z_Construct_UClass_UAnimMontage_NoRegister();
 // End Cross Module References
+	DEFINE_FUNCTION(AThePlayer::execWearNetMulticast)
+	{
+		P_GET_OBJECT(AActor,Z_Param_theActor);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		if (!P_THIS->WearNetMulticast_Validate(Z_Param_theActor))
+		{
+			RPC_ValidateFailed(TEXT("WearNetMulticast_Validate"));
+			return;
+		}
+		P_THIS->WearNetMulticast_Implementation(Z_Param_theActor);
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(AThePlayer::execWearServer)
 	{
 		P_GET_OBJECT(AActor,Z_Param_theActor);
@@ -156,6 +169,13 @@ void EmptyLinkFunctionForGeneratedCodeThePlayer() {}
 	{
 		ProcessEvent(FindFunctionChecked(NAME_AThePlayer_UpdateUUserWidgetOverlapActor),NULL);
 	}
+	static FName NAME_AThePlayer_WearNetMulticast = FName(TEXT("WearNetMulticast"));
+	void AThePlayer::WearNetMulticast(AActor* theActor)
+	{
+		ThePlayer_eventWearNetMulticast_Parms Parms;
+		Parms.theActor=theActor;
+		ProcessEvent(FindFunctionChecked(NAME_AThePlayer_WearNetMulticast),&Parms);
+	}
 	static FName NAME_AThePlayer_WearServer = FName(TEXT("WearServer"));
 	void AThePlayer::WearServer(AActor* theActor)
 	{
@@ -179,6 +199,7 @@ void EmptyLinkFunctionForGeneratedCodeThePlayer() {}
 			{ "SetPlayerStance", &AThePlayer::execSetPlayerStance },
 			{ "SetPlayerState", &AThePlayer::execSetPlayerState },
 			{ "Wear", &AThePlayer::execWear },
+			{ "WearNetMulticast", &AThePlayer::execWearNetMulticast },
 			{ "WearServer", &AThePlayer::execWearServer },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
@@ -531,6 +552,34 @@ void EmptyLinkFunctionForGeneratedCodeThePlayer() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_AThePlayer_WearNetMulticast_Statics
+	{
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_theActor;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_AThePlayer_WearNetMulticast_Statics::NewProp_theActor = { "theActor", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ThePlayer_eventWearNetMulticast_Parms, theActor), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AThePlayer_WearNetMulticast_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AThePlayer_WearNetMulticast_Statics::NewProp_theActor,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AThePlayer_WearNetMulticast_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "ThePlayer.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AThePlayer_WearNetMulticast_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AThePlayer, nullptr, "WearNetMulticast", nullptr, nullptr, sizeof(ThePlayer_eventWearNetMulticast_Parms), Z_Construct_UFunction_AThePlayer_WearNetMulticast_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AThePlayer_WearNetMulticast_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x80024CC0, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AThePlayer_WearNetMulticast_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AThePlayer_WearNetMulticast_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AThePlayer_WearNetMulticast()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AThePlayer_WearNetMulticast_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	struct Z_Construct_UFunction_AThePlayer_WearServer_Statics
 	{
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_theActor;
@@ -688,6 +737,7 @@ void EmptyLinkFunctionForGeneratedCodeThePlayer() {}
 		{ &Z_Construct_UFunction_AThePlayer_SetPlayerState, "SetPlayerState" }, // 2954460778
 		{ &Z_Construct_UFunction_AThePlayer_UpdateUUserWidgetOverlapActor, "UpdateUUserWidgetOverlapActor" }, // 3440859590
 		{ &Z_Construct_UFunction_AThePlayer_Wear, "Wear" }, // 900518122
+		{ &Z_Construct_UFunction_AThePlayer_WearNetMulticast, "WearNetMulticast" }, // 2069612326
 		{ &Z_Construct_UFunction_AThePlayer_WearServer, "WearServer" }, // 3648525771
 	};
 #if WITH_METADATA
@@ -949,7 +999,7 @@ void EmptyLinkFunctionForGeneratedCodeThePlayer() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AThePlayer, 2154435948);
+	IMPLEMENT_CLASS(AThePlayer, 559421413);
 	template<> MAIN_API UClass* StaticClass<AThePlayer>()
 	{
 		return AThePlayer::StaticClass();

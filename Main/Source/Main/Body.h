@@ -52,6 +52,8 @@ public:
 	void Wear(APawn *Pawn);
 	UFUNCTION(Server,WithValidation,Reliable)
 	void WearServer(APawn *Pawn);
+	void WearServer_Implementation(APawn* Pawn);
+	bool WearServer_Validate(APawn* Pawn);
 
 	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Replicated,Category="ItemSetting")
 	EItemType ItemType=EItemType::Other;

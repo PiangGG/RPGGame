@@ -157,6 +157,8 @@ public:
 	void Wear(AActor* theActor);
 	UFUNCTION(Server,WithValidation,Reliable)
 	void WearServer(AActor* theActor);
+	UFUNCTION(NetMulticast,WithValidation,Reliable)
+	void WearNetMulticast(AActor* theActor);
 	void CanWear(UInputComponent* PlayerInputComponent);
 	UPROPERTY(Replicated,EditDefaultsOnly,BlueprintReadWrite)
 	bool isCanWear;

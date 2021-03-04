@@ -389,10 +389,21 @@ void AThePlayer::OnRep_PlayerStateChange()
 
 void AThePlayer::Wear(AActor* theActor)
 {
-	if (GetLocalRole()<ROLE_Authority)
-	{
-		this->WearServer(theActor);
-	}
+	WearServer(theActor);
+}
+
+void AThePlayer::WearServer_Implementation(AActor *theActor)
+{
+	WearNetMulticast(theActor);
+}
+
+bool AThePlayer::WearServer_Validate(AActor* theActor)
+{
+	return true;
+}
+
+void AThePlayer::WearNetMulticast_Implementation(AActor* theActor)
+{
 	ABody *Body=Cast<ABody>(theActor);
 	if (!Body)return;
 	//Body->SetItemState(EItemState::InPlayering);
@@ -434,12 +445,7 @@ void AThePlayer::Wear(AActor* theActor)
 	}
 }
 
-void AThePlayer::WearServer_Implementation(AActor *theActor)
-{
-	Wear(theActor);
-}
-
-bool AThePlayer::WearServer_Validate(AActor* theActor)
+bool AThePlayer::WearNetMulticast_Validate(AActor* theActor)
 {
 	return true;
 }

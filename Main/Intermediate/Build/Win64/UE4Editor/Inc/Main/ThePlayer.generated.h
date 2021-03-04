@@ -18,6 +18,8 @@ enum class EPlayerStance : uint8;
 
 #define Main_Source_Main_ThePlayer_h_18_SPARSE_DATA
 #define Main_Source_Main_ThePlayer_h_18_RPC_WRAPPERS \
+	virtual bool WearNetMulticast_Validate(AActor* ); \
+	virtual void WearNetMulticast_Implementation(AActor* theActor); \
 	virtual bool WearServer_Validate(AActor* ); \
 	virtual void WearServer_Implementation(AActor* theActor); \
 	virtual bool RunServer_Validate(); \
@@ -25,6 +27,7 @@ enum class EPlayerStance : uint8;
 	virtual bool AttackServer_Validate(); \
 	virtual void AttackServer_Implementation(); \
  \
+	DECLARE_FUNCTION(execWearNetMulticast); \
 	DECLARE_FUNCTION(execWearServer); \
 	DECLARE_FUNCTION(execWear); \
 	DECLARE_FUNCTION(execOnRep_PlayerStateChange); \
@@ -41,6 +44,8 @@ enum class EPlayerStance : uint8;
 
 
 #define Main_Source_Main_ThePlayer_h_18_RPC_WRAPPERS_NO_PURE_DECLS \
+	virtual bool WearNetMulticast_Validate(AActor* ); \
+	virtual void WearNetMulticast_Implementation(AActor* theActor); \
 	virtual bool WearServer_Validate(AActor* ); \
 	virtual void WearServer_Implementation(AActor* theActor); \
 	virtual bool RunServer_Validate(); \
@@ -48,6 +53,7 @@ enum class EPlayerStance : uint8;
 	virtual bool AttackServer_Validate(); \
 	virtual void AttackServer_Implementation(); \
  \
+	DECLARE_FUNCTION(execWearNetMulticast); \
 	DECLARE_FUNCTION(execWearServer); \
 	DECLARE_FUNCTION(execWear); \
 	DECLARE_FUNCTION(execOnRep_PlayerStateChange); \
@@ -64,6 +70,10 @@ enum class EPlayerStance : uint8;
 
 
 #define Main_Source_Main_ThePlayer_h_18_EVENT_PARMS \
+	struct ThePlayer_eventWearNetMulticast_Parms \
+	{ \
+		AActor* theActor; \
+	}; \
 	struct ThePlayer_eventWearServer_Parms \
 	{ \
 		AActor* theActor; \

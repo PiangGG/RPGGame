@@ -33,8 +33,6 @@ enum class EItemState : uint8;
 
 
 #define Main_Source_Main_Body_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
-	virtual bool WearServer_Validate(APawn* ); \
-	virtual void WearServer_Implementation(APawn* Pawn); \
  \
 	DECLARE_FUNCTION(execWearServer); \
 	DECLARE_FUNCTION(execWear); \
