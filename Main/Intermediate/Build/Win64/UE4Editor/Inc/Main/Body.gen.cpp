@@ -80,6 +80,19 @@ void EmptyLinkFunctionForGeneratedCodeBody() {}
 		P_THIS->OnRep_SetItemState(EItemState(Z_Param_NewItemState));
 		P_NATIVE_END;
 	}
+	DEFINE_FUNCTION(ABody::execSetItemStateServer)
+	{
+		P_GET_ENUM(EItemState,Z_Param_NewItemState);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		if (!P_THIS->SetItemStateServer_Validate(EItemState(Z_Param_NewItemState)))
+		{
+			RPC_ValidateFailed(TEXT("SetItemStateServer_Validate"));
+			return;
+		}
+		P_THIS->SetItemStateServer_Implementation(EItemState(Z_Param_NewItemState));
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(ABody::execSetItemState)
 	{
 		P_GET_ENUM(EItemState,Z_Param_NewItemState);
@@ -95,6 +108,13 @@ void EmptyLinkFunctionForGeneratedCodeBody() {}
 		*(EItemState*)Z_Param__Result=P_THIS->GetItemState();
 		P_NATIVE_END;
 	}
+	static FName NAME_ABody_SetItemStateServer = FName(TEXT("SetItemStateServer"));
+	void ABody::SetItemStateServer(EItemState NewItemState)
+	{
+		Body_eventSetItemStateServer_Parms Parms;
+		Parms.NewItemState=NewItemState;
+		ProcessEvent(FindFunctionChecked(NAME_ABody_SetItemStateServer),&Parms);
+	}
 	static FName NAME_ABody_WearServer = FName(TEXT("WearServer"));
 	void ABody::WearServer(APawn* Pawn)
 	{
@@ -109,6 +129,7 @@ void EmptyLinkFunctionForGeneratedCodeBody() {}
 			{ "GetItemState", &ABody::execGetItemState },
 			{ "OnRep_SetItemState", &ABody::execOnRep_SetItemState },
 			{ "SetItemState", &ABody::execSetItemState },
+			{ "SetItemStateServer", &ABody::execSetItemStateServer },
 			{ "SphereComponent_BeginOverlap", &ABody::execSphereComponent_BeginOverlap },
 			{ "SphereComponent_EndOverlap", &ABody::execSphereComponent_EndOverlap },
 			{ "Wear", &ABody::execWear },
@@ -222,6 +243,37 @@ void EmptyLinkFunctionForGeneratedCodeBody() {}
 		if (!ReturnFunction)
 		{
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ABody_SetItemState_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_ABody_SetItemStateServer_Statics
+	{
+		static const UE4CodeGen_Private::FBytePropertyParams NewProp_NewItemState_Underlying;
+		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_NewItemState;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UFunction_ABody_SetItemStateServer_Statics::NewProp_NewItemState_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_ABody_SetItemStateServer_Statics::NewProp_NewItemState = { "NewItemState", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(Body_eventSetItemStateServer_Parms, NewItemState), Z_Construct_UEnum_Main_EItemState, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ABody_SetItemStateServer_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ABody_SetItemStateServer_Statics::NewProp_NewItemState_Underlying,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ABody_SetItemStateServer_Statics::NewProp_NewItemState,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ABody_SetItemStateServer_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Body.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ABody_SetItemStateServer_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ABody, nullptr, "SetItemStateServer", nullptr, nullptr, sizeof(Body_eventSetItemStateServer_Parms), Z_Construct_UFunction_ABody_SetItemStateServer_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ABody_SetItemStateServer_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x80220CC0, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ABody_SetItemStateServer_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ABody_SetItemStateServer_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_ABody_SetItemStateServer()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ABody_SetItemStateServer_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -477,6 +529,7 @@ void EmptyLinkFunctionForGeneratedCodeBody() {}
 		{ &Z_Construct_UFunction_ABody_GetItemState, "GetItemState" }, // 14670697
 		{ &Z_Construct_UFunction_ABody_OnRep_SetItemState, "OnRep_SetItemState" }, // 4122073991
 		{ &Z_Construct_UFunction_ABody_SetItemState, "SetItemState" }, // 2506680166
+		{ &Z_Construct_UFunction_ABody_SetItemStateServer, "SetItemStateServer" }, // 1019129278
 		{ &Z_Construct_UFunction_ABody_SphereComponent_BeginOverlap, "SphereComponent_BeginOverlap" }, // 908960640
 		{ &Z_Construct_UFunction_ABody_SphereComponent_EndOverlap, "SphereComponent_EndOverlap" }, // 379654845
 		{ &Z_Construct_UFunction_ABody_Wear, "Wear" }, // 317164962
@@ -578,7 +631,7 @@ void EmptyLinkFunctionForGeneratedCodeBody() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ABody, 667628640);
+	IMPLEMENT_CLASS(ABody, 3459548064);
 	template<> MAIN_API UClass* StaticClass<ABody>()
 	{
 		return ABody::StaticClass();

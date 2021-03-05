@@ -22,28 +22,38 @@ enum class EItemState : uint8;
 #define Main_Source_Main_Body_h_14_RPC_WRAPPERS \
 	virtual bool WearServer_Validate(APawn* ); \
 	virtual void WearServer_Implementation(APawn* Pawn); \
+	virtual bool SetItemStateServer_Validate(EItemState ); \
+	virtual void SetItemStateServer_Implementation(EItemState NewItemState); \
  \
 	DECLARE_FUNCTION(execWearServer); \
 	DECLARE_FUNCTION(execWear); \
 	DECLARE_FUNCTION(execSphereComponent_EndOverlap); \
 	DECLARE_FUNCTION(execSphereComponent_BeginOverlap); \
 	DECLARE_FUNCTION(execOnRep_SetItemState); \
+	DECLARE_FUNCTION(execSetItemStateServer); \
 	DECLARE_FUNCTION(execSetItemState); \
 	DECLARE_FUNCTION(execGetItemState);
 
 
 #define Main_Source_Main_Body_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
+	virtual bool SetItemStateServer_Validate(EItemState ); \
+	virtual void SetItemStateServer_Implementation(EItemState NewItemState); \
  \
 	DECLARE_FUNCTION(execWearServer); \
 	DECLARE_FUNCTION(execWear); \
 	DECLARE_FUNCTION(execSphereComponent_EndOverlap); \
 	DECLARE_FUNCTION(execSphereComponent_BeginOverlap); \
 	DECLARE_FUNCTION(execOnRep_SetItemState); \
+	DECLARE_FUNCTION(execSetItemStateServer); \
 	DECLARE_FUNCTION(execSetItemState); \
 	DECLARE_FUNCTION(execGetItemState);
 
 
 #define Main_Source_Main_Body_h_14_EVENT_PARMS \
+	struct Body_eventSetItemStateServer_Parms \
+	{ \
+		EItemState NewItemState; \
+	}; \
 	struct Body_eventWearServer_Parms \
 	{ \
 		APawn* Pawn; \

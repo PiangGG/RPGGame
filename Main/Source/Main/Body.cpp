@@ -51,49 +51,12 @@ EItemState ABody::GetItemState()
 
 void ABody::SetItemState(EItemState NewItemState)
 {
+	if (GetLocalRole()<ROLE_Authority)
+	{
+		SetItemStateServer(NewItemState);
+	}
 	UE_LOG(LogTemp,Warning,TEXT("Body->SetItemState"));
 	CurrentItemState=NewItemState;
-	/*switch (CurrentItemState)
-	{
-	case EItemState::InWorld:
-		{
-			SphereComponent->SetCollisionEnabled(ECollisionEnabled::QueryOnly);
-			SphereComponent->SetCollisionResponseToAllChannels(ECR_Ignore);
-			SphereComponent->SetCollisionResponseToChannel(ECC_Pawn,ECR_Overlap);
-			ThisSkeletalMesh->SetSimulatePhysics(true);
-			//SphereComponent->SetHiddenInGame(true);
-			
-			ThisSkeletalMesh->SetHiddenInGame(false);
-			ThisSkeletalMesh->SetCollisionEnabled(ECollisionEnabled::PhysicsOnly);
-			ThisSkeletalMesh->SetCollisionResponseToChannels(ECR_Ignore);
-			ThisSkeletalMesh->SetWorldScale3D(FVector(1));
-			ThisSkeletalMesh->SetRelativeScale3D(FVector(1));
-			break;
-		}
-	case EItemState::InPlayering:
-		{
-			SphereComponent->SetCollisionEnabled(ECollisionEnabled::NoCollision);
-			SphereComponent->SetCollisionResponseToAllChannels(ECR_Ignore);
-			//SphereComponent->SetCollisionResponseToChannel(ECC_Pawn,ECR_Overlap);
-			ThisSkeletalMesh->SetSimulatePhysics(false);
-			//SphereComponent->SetHiddenInGame(true);
-			
-			ThisSkeletalMesh->SetHiddenInGame(false);
-			ThisSkeletalMesh->SetCollisionEnabled(ECollisionEnabled::PhysicsOnly);
-			//ThisSkeletalMesh->SetCollisionResponseToChannels(ECR_Ignore);
-			ThisSkeletalMesh->SetWorldScale3D(FVector(1));
-			ThisSkeletalMesh->SetRelativeScale3D(FVector(1));
-			break;
-		}
-	default:
-		UE_LOG(LogTemp,Warning,TEXT("OnRep_SetItemState:default"));
-		break;
-	}*/
-}
-
-void ABody::OnRep_SetItemState(EItemState NewItemState)
-{
-	UE_LOG(LogTemp,Warning,TEXT("Body->OnRep_SetItemState"));
 	switch (CurrentItemState)
 	{
 	case EItemState::InWorld:
@@ -101,9 +64,65 @@ void ABody::OnRep_SetItemState(EItemState NewItemState)
 			SphereComponent->SetCollisionEnabled(ECollisionEnabled::QueryOnly);
 			SphereComponent->SetCollisionResponseToAllChannels(ECR_Ignore);
 			SphereComponent->SetCollisionResponseToChannel(ECC_Pawn,ECR_Overlap);
-			SphereComponent->SetCollisionResponseToChannel(ECC_WorldStatic,ECR_Block);
-			ThisSkeletalMesh->SetSimulatePhysics(true);
+			//ThisSkeletalMesh->SetSimulatePhysics(true);
+			SphereComponent->SetHiddenInGame(false);
+			
+			//ThisSkeletalMesh->SetHiddenInGame(false);
+			ThisSkeletalMesh->SetCollisionEnabled(ECollisionEnabled::PhysicsOnly);
+			ThisSkeletalMesh->SetCollisionResponseToChannels(ECR_Ignore);
+			ThisSkeletalMesh->SetWorldScale3D(FVector(1));
+			ThisSkeletalMesh->SetRelativeScale3D(FVector(1));
+
+			bOverlap=false;
+			break;
+		}
+	case EItemState::InPlayering:
+		{
+			SphereComponent->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+			SphereComponent->SetCollisionResponseToAllChannels(ECR_Ignore);
+			//SphereComponent->SetCollisionResponseToChannel(ECC_Pawn,ECR_Overlap);
+			//ThisSkeletalMesh->SetSimulatePhysics(false);
 			//SphereComponent->SetHiddenInGame(true);
+			
+			//ThisSkeletalMesh->SetHiddenInGame(false);
+			ThisSkeletalMesh->SetCollisionEnabled(ECollisionEnabled::PhysicsOnly);
+			//ThisSkeletalMesh->SetCollisionResponseToChannels(ECR_Ignore);
+			ThisSkeletalMesh->SetWorldScale3D(FVector(1));
+			ThisSkeletalMesh->SetRelativeScale3D(FVector(1));
+			break;
+		}
+		case EItemState::InPack:
+		{
+			break;
+		}
+	default:
+		UE_LOG(LogTemp,Warning,TEXT("OnRep_SetItemState:default"));
+		break;
+	}
+}
+
+void ABody::SetItemStateServer_Implementation(EItemState NewItemState)
+{
+	SetItemState(NewItemState);
+}
+
+bool ABody::SetItemStateServer_Validate(EItemState NewItemState)
+{
+	return true;
+}
+void ABody::OnRep_SetItemState(EItemState NewItemState)
+{
+	UE_LOG(LogTemp,Warning,TEXT("Body->OnRep_SetItemState"));
+	/*switch (CurrentItemState)
+	{
+	case EItemState::InWorld:
+		{
+			SphereComponent->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
+			SphereComponent->SetCollisionResponseToAllChannels(ECR_Ignore);
+			SphereComponent->SetCollisionResponseToChannel(ECC_Pawn,ECR_Overlap);
+			SphereComponent->SetCollisionResponseToChannel(ECC_WorldStatic,ECR_Block);
+			SphereComponent->SetSimulatePhysics(true);
+			SphereComponent->SetHiddenInGame(false);
 			
 			ThisSkeletalMesh->SetHiddenInGame(false);
 			ThisSkeletalMesh->SetCollisionEnabled(ECollisionEnabled::PhysicsOnly);
@@ -118,7 +137,7 @@ void ABody::OnRep_SetItemState(EItemState NewItemState)
 			SphereComponent->SetCollisionResponseToAllChannels(ECR_Ignore);
 			//SphereComponent->SetCollisionResponseToChannel(ECC_Pawn,ECR_Overlap);
 			ThisSkeletalMesh->SetSimulatePhysics(false);
-			//SphereComponent->SetHiddenInGame(true);
+			SphereComponent->SetHiddenInGame(true);
 			
 			ThisSkeletalMesh->SetHiddenInGame(false);
 			ThisSkeletalMesh->SetCollisionEnabled(ECollisionEnabled::PhysicsOnly);
@@ -130,7 +149,7 @@ void ABody::OnRep_SetItemState(EItemState NewItemState)
 	default:
 		UE_LOG(LogTemp,Warning,TEXT("OnRep_SetItemState:default"));
 		break;
-	}
+	}*/
 }
 
 void ABody::SphereComponent_BeginOverlap(UPrimitiveComponent* Component, AActor* OtherActor,

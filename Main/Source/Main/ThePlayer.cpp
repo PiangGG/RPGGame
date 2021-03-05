@@ -332,6 +332,7 @@ void AThePlayer::Init()
 
 void AThePlayer::PlayAnimMontage(UAnimMontage* PickAnimMontage, FName name)
 {
+	UE_LOG(LogTemp,Warning,TEXT("PlayAnimMontage"));
 	if (PickAnimMontage&&name!=""&&MeshCompMap.Num()>0)
 	{
 		for (auto& Elem :MeshCompMap)
@@ -369,7 +370,6 @@ EPlayerStance AThePlayer::GetPlayerStance()
 void AThePlayer::OnRep_PlayerStanceChange()
 {
 	UE_LOG(LogTemp,Warning,TEXT("OnRep_PlayerStanceChange"));
-	return;
 }
 
 void AThePlayer::SetPlayerState(EPlayerState NewPlayerState)
@@ -406,6 +406,7 @@ void AThePlayer::WearNetMulticast_Implementation(AActor* theActor)
 {
 	ABody *Body=Cast<ABody>(theActor);
 	if (!Body)return;
+	PlayAnimMontage(AnimMontage,"Wear");
 	//Body->SetItemState(EItemState::InPlayering);
 	switch (Body->GetPawnBodyType())
 	{
@@ -422,18 +423,68 @@ void AThePlayer::WearNetMulticast_Implementation(AActor* theActor)
 	case EPawnBodyType::EShoe:{
 			if (ShoeMesh&&Body->ThisSkeletalMesh)
 			{
-				UE_LOG(LogTemp,Warning,TEXT("case EPawnBodyType::EShoe"));
-				/*ShoeMesh->DetachFromComponent(FDetachmentTransformRules::KeepWorldTransform);
-				//Body->ThisSkeletalMesh->DetachFromComponent(FDetachmentTransformRules::KeepWorldTransform);
-				ShoeMesh->AttachToComponent(Body->GetRootComponent(),FAttachmentTransformRules::SnapToTargetIncludingScale);
-				ShoeMesh->SetAnimClass(GetMesh()->GetAnimClass());
-				Body->ThisSkeletalMesh->AttachToComponent(GetMesh(),FAttachmentTransformRules::SnapToTargetIncludingScale);
-				Body->ThisSkeletalMesh->SetAnimation(nullptr);
-				Body->SetOwner(nullptr);
-				Body->SetItemState(EItemState::InWorld);*/
-				
 				USkeletalMesh* MeshComponent=ShoeMesh->SkeletalMesh;
 				ShoeMesh->SetSkeletalMesh(Body->ThisSkeletalMesh->SkeletalMesh);
+				Body->ThisSkeletalMesh->SetSkeletalMesh(MeshComponent);
+				Body->SetItemState(EItemState::InWorld);
+			}	
+			break;
+	}
+	case EPawnBodyType::EFace:{
+			if (FaceMesh&&Body->ThisSkeletalMesh)
+			{
+				USkeletalMesh* MeshComponent=FaceMesh->SkeletalMesh;
+				FaceMesh->SetSkeletalMesh(Body->ThisSkeletalMesh->SkeletalMesh);
+				Body->ThisSkeletalMesh->SetSkeletalMesh(MeshComponent);
+				Body->SetItemState(EItemState::InWorld);
+			}	
+			break;
+	}
+	case EPawnBodyType::EBelt:{
+			if (BeltMesh&&Body->ThisSkeletalMesh)
+			{
+				USkeletalMesh* MeshComponent=BeltMesh->SkeletalMesh;
+				BeltMesh->SetSkeletalMesh(Body->ThisSkeletalMesh->SkeletalMesh);
+				Body->ThisSkeletalMesh->SetSkeletalMesh(MeshComponent);
+				Body->SetItemState(EItemState::InWorld);
+			}	
+			break;
+	}
+	case EPawnBodyType::EGlove:{
+			if (GloveMesh&&Body->ThisSkeletalMesh)
+			{
+				USkeletalMesh* MeshComponent=GloveMesh->SkeletalMesh;
+				GloveMesh->SetSkeletalMesh(Body->ThisSkeletalMesh->SkeletalMesh);
+				Body->ThisSkeletalMesh->SetSkeletalMesh(MeshComponent);
+				Body->SetItemState(EItemState::InWorld);
+			}	
+			break;
+	}
+	case EPawnBodyType::EHair:{
+			if (HairMesh&&Body->ThisSkeletalMesh)
+			{
+				USkeletalMesh* MeshComponent=HairMesh->SkeletalMesh;
+				HairMesh->SetSkeletalMesh(Body->ThisSkeletalMesh->SkeletalMesh);
+				Body->ThisSkeletalMesh->SetSkeletalMesh(MeshComponent);
+				Body->SetItemState(EItemState::InWorld);
+			}	
+			break;
+	}
+	case EPawnBodyType::EHeadGears:{
+			if (HeadGearsMesh&&Body->ThisSkeletalMesh)
+			{
+				USkeletalMesh* MeshComponent=HeadGearsMesh->SkeletalMesh;
+				HeadGearsMesh->SetSkeletalMesh(Body->ThisSkeletalMesh->SkeletalMesh);
+				Body->ThisSkeletalMesh->SetSkeletalMesh(MeshComponent);
+				Body->SetItemState(EItemState::InWorld);
+			}	
+			break;
+	}
+	case EPawnBodyType::EShoulderPad:{
+			if (ShoulderPadMesh&&Body->ThisSkeletalMesh)
+			{
+				USkeletalMesh* MeshComponent=ShoulderPadMesh->SkeletalMesh;
+				ShoulderPadMesh->SetSkeletalMesh(Body->ThisSkeletalMesh->SkeletalMesh);
 				Body->ThisSkeletalMesh->SetSkeletalMesh(MeshComponent);
 				Body->SetItemState(EItemState::InWorld);
 			}	

@@ -32,6 +32,8 @@ public:
 	//设置物品状态变量函数
 	UFUNCTION(BlueprintCallable)
     virtual void SetItemState(EItemState NewItemState);
+	UFUNCTION(Server,WithValidation,Reliable)
+    virtual void SetItemStateServer(EItemState NewItemState);
 	UFUNCTION()
     virtual void OnRep_SetItemState(EItemState NewItemState);
 	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Category="ItemSetting")
