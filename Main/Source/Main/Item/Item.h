@@ -1,49 +1,14 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #pragma once
+
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "Main/Core/RPGEnum.h"
 #include "Item.generated.h"
 
-/*USTRUCT(BlueprintType)
-struct FItemStruct{
+class USphereComponent;
 
-	GENERATED_BODY()
-	/*
-	* 物体类型
-	* 默认其他
-	*
-	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Category="ItemSetting")
-	EItemType ItemType;
-	
-	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Category="ItemSetting")
-	FString ItemName;
-
-	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Category="ItemSetting")
-	UTexture2D* ItemIcon;
-
-	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Category="ItemSetting")
-	FString AttachSocket;
-	FItemStruct()
-	{
-		ItemType=EItemType::Other;
-
-		ItemName="NullName";
-		 
-		ItemIcon=nullptr;
-
-		AttachSocket="";
-	}
-
-	FItemStruct(EItemType NewItemType,FString NewItemName,UTexture2D* NewItemIcon,FString NewAttachSocket)
-	{
-		ItemType=NewItemType;
-		ItemName=NewItemName;
-		ItemIcon=NewItemIcon;
-		AttachSocket=NewAttachSocket;
-	}
-};*/
 UCLASS()
 class MAIN_API AItem : public AActor
 {
@@ -60,37 +25,50 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+	
+	void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
-	virtual void InitItem(); 
-	/*
-	 * 物品状态
-	 */
 	//物品状态变量
-	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Replicated,Category="ItemSetting")
-	EItemState CurrentItemState=EItemState::Other;
-	//获得物品状态变量函数
-	UFUNCTION(BlueprintCallable)
-	virtual EItemState GetItemState();
-	//设置物品状态变量函数
-	UFUNCTION(BlueprintCallable)
-	virtual void SetItemState(EItemState NewItemState);
-	/*
-	 * 拾取碰撞体
-	 */
+	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,ReplicatedUsing=OnRep_SetItemState,Category="ItemSetting")
+	EItemState CurrentItemState=EItemState::InWorld;
+	UFUNCTION()
+    virtual EItemState GetItemState();
+	UFUNCTION()
+    virtual void SetItemState(EItemState NewItemState);
+	UFUNCTION(Server,WithValidation,Reliable)
+    virtual void SetItemStateServer(EItemState NewItemState);
+	UFUNCTION()
+    virtual void OnRep_SetItemState(EItemState NewItemState);
+	
 	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Category="ItemSetting")
-	class USphereComponent *SphereComponent;
+	USphereComponent *SphereComponent;
 
+	UPROPERTY(EditDefaultsOnly,Replicated,BlueprintReadWrite,Category="ItemSetting")
+	bool bOverlap=false;
+
+	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Category="ItemSetting")
+	float RotationSpeed=10.0f;
 	UFUNCTION(BlueprintCallable)
     virtual void SphereComponent_BeginOverlap(class UPrimitiveComponent* Component,class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
 	UFUNCTION(BlueprintCallable)
     virtual void SphereComponent_EndOverlap(UPrimitiveComponent* Component,AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
+
+	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Replicated,Category="ItemSetting")
+	EItemType ItemType=EItemType::Other;
+
+	UFUNCTION(BlueprintCallable)
+	virtual EItemType GetItemType();
 	
-	/*UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Category="ItemSetting")
-	FItemStruct ItemStruct;*/
-	
+	UFUNCTION(BlueprintCallable)
+	virtual void SetItemType(EItemType NewItemType);
+
 	/*
-	 * 拾取这个Item进背包
+	 * 拾取物品函数
 	 */
 	UFUNCTION(BlueprintCallable)
-	virtual void PickUpItem(APawn* Pawn);
+    void Pickup(APawn *Pawn);
+	UFUNCTION(Server,WithValidation,Reliable)
+    void PickupServer(APawn *Pawn);
+	void PickupServer_Implementation(APawn* Pawn);
+	bool PickupServer_Validate(APawn* Pawn);
 };
