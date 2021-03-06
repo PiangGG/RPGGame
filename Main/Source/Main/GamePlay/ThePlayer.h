@@ -9,6 +9,7 @@
 
 class UClothesComponent;
 class UArrowComponent;
+class AWeapon;
 UCLASS()
 class MAIN_API AThePlayer : public ACharacter
 {
@@ -52,13 +53,6 @@ public:
 	void RotateCamera(float amount);
 
 	void ChangeCameraHeight(float amount);
-
-	
-	UFUNCTION(BlueprintCallable)
-	void Attack();
-	UFUNCTION(Server,Reliable,WithValidation)
-	void AttackServer();
-	void AttackCallBack();
 	
 	UFUNCTION(BlueprintCallable)
     void Run();
@@ -120,13 +114,13 @@ public:
 	void Init();
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "AnimMontage")
-	class UAnimMontage* AnimMontage;
-	void PlayAnimMontage(UAnimMontage* PickAnimMontage,FName name);
+	class UAnimMontage* PickupAnimMontage;
+	void PlayAnimtionMontage(UAnimMontage* AnimMontage,FName name);
 
 	/*
 	* 角色武器状态姿势
 	*/
-	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,ReplicatedUsing=OnRep_PlayerStanceChange,Category="Player")
+	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Replicated,/*ReplicatedUsing=OnRep_PlayerStanceChange,*/Category="Player")
 	EPlayerStance CurrentPlayerStance=EPlayerStance::ENoWeaponStance;
 	UFUNCTION(BlueprintCallable)
     void SetPlayerStance(EPlayerStance NewPlayerStance);
@@ -138,7 +132,7 @@ public:
 	/*
 	* 设置角色状态相关
 	*/
-	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,ReplicatedUsing=OnRep_PlayerStateChange,Category="Player")
+	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Replicated/*,ReplicatedUsing=OnRep_PlayerStateChange*/,Category="Player")
 	EPlayerState CurrentPlayerState=EPlayerState::ENormal;
 	UFUNCTION(BlueprintCallable)
     void SetPlayerState(EPlayerState NewPlayerState);
@@ -153,15 +147,44 @@ public:
 	void WearServer(AActor* theActor);
 	UFUNCTION(NetMulticast,WithValidation,Reliable)
 	void WearNetMulticast(AActor* theActor);
-	void CanWear(UInputComponent* PlayerInputComponent);
-	UPROPERTY(Replicated,EditDefaultsOnly,BlueprintReadWrite)
-	bool isCanWear;
-	void BindActionWear();
-	void NotCanWear(UInputComponent* PlayerInputComponent);
 
+	UFUNCTION()
+	void CanPickup(UInputComponent* PlayerInputComponent);
+	void NotCanPickup(UInputComponent* PlayerInputComponent);
+	UPROPERTY(Replicated,EditDefaultsOnly,BlueprintReadWrite)
+	bool bCanPickup;
+	void BindActionPickup();
+
+	/*
+	* Player Weapon and 装备函数
+	*/
+	UPROPERTY(BlueprintReadWrite,Replicated,EditDefaultsOnly,Category="Character")
+	TArray<AWeapon*> Weapons;
+	UPROPERTY(BlueprintReadWrite,Replicated,EditDefaultsOnly,Category="Character")
+	AWeapon* CurrentWeapon=nullptr;
 	UFUNCTION(BlueprintCallable)
     void Equipment(AActor* theActor);
 	UFUNCTION(Server,WithValidation,Reliable)
     void EquipmentServer(AActor* theActor);
+
+	/*
+	 * 攻击
+	 */
+	void BindActionAttack();
+	UPROPERTY(Replicated,EditDefaultsOnly,BlueprintReadWrite,Category="Attack")
+	bool bAttack=false;
+	/**攻击定时器*//**攻击CD时间*//**现在攻击时间*/
+	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Category="Attack")
+	FTimerHandle TimerHandle_Attack;
+	UFUNCTION(BlueprintCallable)
+    void Attack_1(AWeapon *Weapon);
+	UFUNCTION(Server,Reliable,WithValidation)
+    void AttackServer_1(AWeapon *Weapon);
+	void AttackCallBack_1();
+	
+	UFUNCTION(BlueprintCallable)
+    void Pickup(AActor* theActor);
+	UFUNCTION(Server,WithValidation,Reliable)
+    void PickupServer(AActor* theActor);
 };
 

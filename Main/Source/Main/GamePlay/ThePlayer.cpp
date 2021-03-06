@@ -9,6 +9,9 @@
 #include "Net/UnrealNetwork.h"
 #include "ThePC.h"
 #include "Main/Item/Body.h"
+#include "Main/Item/Weapon.h"
+#include "Engine/World.h"
+#include "TimerManager.h"
 
 // Sets default values
 AThePlayer::AThePlayer()
@@ -54,7 +57,7 @@ AThePlayer::AThePlayer()
 	 * init Body
 	 */
 	Init();
-	isCanWear=false;
+	bCanPickup=false;
 	GetCharacterMovement()->MaxWalkSpeed=BaseSpeed;
 }
 
@@ -79,8 +82,6 @@ void AThePlayer::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent
 	
 	InputComponent->BindAction("Jump", EInputEvent::IE_Pressed, this, &ACharacter::Jump);
 
-	InputComponent->BindAction("Attack", EInputEvent::IE_Pressed, this, &AThePlayer::Attack);
-
 	InputComponent->BindAxis("ChangeCameraHeight", this, &AThePlayer::ChangeCameraHeight);
 	InputComponent->BindAxis("RotateCamera", this, &AThePlayer::RotateCamera);
 	InputComponent->BindAxis("MoveForward", this, &AThePlayer::MoveForward);
@@ -89,15 +90,21 @@ void AThePlayer::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent
 	InputComponent->BindAction("Run",EInputEvent::IE_Pressed,this, &AThePlayer::Run);
 	InputComponent->BindAction("Run",EInputEvent::IE_Released,this, &AThePlayer::Run);
 
+	InputComponent->BindAction("Attack1",EInputEvent::IE_Pressed,this, &AThePlayer::BindActionAttack);
+	//InputComponent->BindAction("Attak1",EInputEvent::IE_Released,this, &AThePlayer::BindActionAttack);
+
 }
 
 void AThePlayer::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
 {
 	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
 	//DOREPLIFETIME(AThePlayer,MeshCompMap);
-	DOREPLIFETIME(AThePlayer,isCanWear);
+	DOREPLIFETIME(AThePlayer,bCanPickup);
 	DOREPLIFETIME(AThePlayer,ShoeMesh);
 	DOREPLIFETIME(AThePlayer,OverlapActor);
+	DOREPLIFETIME(AThePlayer,CurrentWeapon);
+	DOREPLIFETIME(AThePlayer,Weapons);
+	DOREPLIFETIME(AThePlayer,bAttack);
 	//DOREPLIFETIME(AThePlayer,GetMesh());
 }
 
@@ -153,33 +160,119 @@ void AThePlayer::ChangeCameraHeight(float amount)
 		SpringArm->SetWorldRotation(FQuat::MakeFromEuler(rot));
 	}
 }
-
-void AThePlayer::Attack()
+void AThePlayer::BindActionAttack()
+{
+	if (CurrentWeapon)
+	{
+		Attack_1(CurrentWeapon);
+	}
+}
+void AThePlayer::Attack_1(AWeapon *Weapon)
 {
 	if (GetLocalRole()<ROLE_Authority)
 	{
-		AttackServer();
+		AttackServer_1(Weapon);
 	}
 	/*
 	 * 
 	 */
 	UE_LOG(LogTemp,Warning,TEXT("Attack"));
+	if (!Weapon)return;
+	if (bAttack==false)
+	{
+		bAttack=true;
+	}
+	if (GetVelocity().Size()<50.f)
+	{
+		switch (Weapon->AttackNumber%5)
+		{
+		case 0:
+			{
+				GetWorld()->GetTimerManager().SetTimer(TimerHandle_Attack,this,&AThePlayer::AttackCallBack_1,Weapon->AttackTimerCD,false,-1.0f);
+				PlayAnimtionMontage(Weapon->AttackAnimMontage,"Attack1");
+				break;
+			}
+		case 1:
+			{
+				GetWorld()->GetTimerManager().SetTimer(TimerHandle_Attack,this,&AThePlayer::AttackCallBack_1,Weapon->AttackTimerCD,false,-1.0f);
+				PlayAnimtionMontage(Weapon->AttackAnimMontage,"Attack2");
+				break;
+			}
+		case 2:
+			{
+				GetWorld()->GetTimerManager().SetTimer(TimerHandle_Attack,this,&AThePlayer::AttackCallBack_1,Weapon->AttackTimerCD,false,-1.0f);
+				PlayAnimtionMontage(Weapon->AttackAnimMontage,"Attack3");
+				break;
+			}
+		case 4:
+			{
+				GetWorld()->GetTimerManager().SetTimer(TimerHandle_Attack,this,&AThePlayer::AttackCallBack_1,Weapon->AttackTimerCD,false,-1.0f);
+				PlayAnimtionMontage(Weapon->AttackAnimMontage,"Attack4");
+				break;
+			}
+		case 5:
+			{
+				GetWorld()->GetTimerManager().SetTimer(TimerHandle_Attack,this,&AThePlayer::AttackCallBack_1,Weapon->AttackTimerCD,false,-1.0f);
+				PlayAnimtionMontage(Weapon->AttackAnimMontage,"Attack5");
+				break;
+			}
+		default: break;
+		}
+	}else
+	{
+		switch (Weapon->AttackNumber%5)
+		{
+		case 0:
+			{
+				GetWorld()->GetTimerManager().SetTimer(TimerHandle_Attack,this,&AThePlayer::AttackCallBack_1,Weapon->AttackTimerCD,false,-1.0f);
+				PlayAnimtionMontage(Weapon->AttackAnimMontage,"Attack6");
+				break;
+			}
+		case 1:
+			{
+				GetWorld()->GetTimerManager().SetTimer(TimerHandle_Attack,this,&AThePlayer::AttackCallBack_1,Weapon->AttackTimerCD,false,-1.0f);
+				PlayAnimtionMontage(Weapon->AttackAnimMontage,"Attack7");
+				break;
+			}
+		case 2:
+			{
+				GetWorld()->GetTimerManager().SetTimer(TimerHandle_Attack,this,&AThePlayer::AttackCallBack_1,Weapon->AttackTimerCD,false,-1.0f);
+				PlayAnimtionMontage(Weapon->AttackAnimMontage,"Attack8");
+				break;
+			}
+		case 4:
+			{
+				GetWorld()->GetTimerManager().SetTimer(TimerHandle_Attack,this,&AThePlayer::AttackCallBack_1,Weapon->AttackTimerCD,false,-1.0f);
+				PlayAnimtionMontage(Weapon->AttackAnimMontage,"Attack9");
+				break;
+			}
+		case 5:
+			{
+				GetWorld()->GetTimerManager().SetTimer(TimerHandle_Attack,this,&AThePlayer::AttackCallBack_1,Weapon->AttackTimerCD,false,-1.0f);
+				PlayAnimtionMontage(Weapon->AttackAnimMontage,"Attack10");
+				break;
+			}
+		default: break;
+		}
+	}
 	
+	Weapon->AttackNumber++;
 }
 
-void AThePlayer::AttackServer_Implementation()
+void AThePlayer::AttackServer_1_Implementation(AWeapon *Weapon)
 {
-	Attack();
+	Attack_1(Weapon);
 }
 
-bool AThePlayer::AttackServer_Validate()
+bool AThePlayer::AttackServer_1_Validate(AWeapon *Weapon)
 {
 	return  true;
 }
 
-void AThePlayer::AttackCallBack()
+void AThePlayer::AttackCallBack_1()
 {
-	
+	bAttack=false;
+	GWorld->GetTimerManager().ClearTimer(TimerHandle_Attack);
 }
 
 void AThePlayer::Run()
@@ -201,7 +294,7 @@ void AThePlayer::Run()
 
 void AThePlayer::OverlapActorChange()
 {
-	if (!OverlapActorTSub/*||!IsLocallyControlled()*/||!InputComponent)
+	if (!OverlapActorTSub||!InputComponent)
 	{
 		return;
 	}
@@ -210,10 +303,10 @@ void AThePlayer::OverlapActorChange()
 		UUserWidgetOverlapActor = CreateWidget<UUserWidget>(GetWorld()->GetFirstPlayerController(), OverlapActorTSub);
 		if (UUserWidgetOverlapActor)
 		{
-			//add the widget to the viewport
+			//添加可拾取物品面板到视口
 			UUserWidgetOverlapActor->AddToViewport();
-			CanWear(InputComponent);
-			//go to the appropriate input mode
+			CanPickup(InputComponent);
+			//设置输入模式
 			//SetInputMode(EInputMode::EUIOnly, true);     
 		}else
 		{
@@ -221,21 +314,16 @@ void AThePlayer::OverlapActorChange()
 		}
 	}else if(OverlapActor.IsValidIndex(0)&&UUserWidgetOverlapActor)
 	{
-		UE_LOG(LogTemp,Warning,TEXT("OverlapActor.IsValidIndex(0)&&UUserWidgetOverlapActor"));
-		
 		UUserWidgetOverlapActor->RemoveFromViewport();
 		UUserWidgetOverlapActor=nullptr;
 		UUserWidgetOverlapActor = CreateWidget<UUserWidget>(GetWorld()->GetFirstPlayerController(), OverlapActorTSub);
 		UUserWidgetOverlapActor->AddToViewport();
-		CanWear(InputComponent);
-		//UpdateUUserWidgetOverlapActor();
-		//UUserWidgetOverlapActor=nullptr;
+		CanPickup(InputComponent);
 	}else
 	{
-		UE_LOG(LogTemp,Warning,TEXT("OverlapActorChange:else"));
 		UUserWidgetOverlapActor->RemoveFromViewport();
 		UUserWidgetOverlapActor=nullptr;
-		NotCanWear(InputComponent);
+		NotCanPickup(InputComponent);
 	}
 }
 
@@ -330,10 +418,10 @@ void AThePlayer::Init()
 	}
 }
 
-void AThePlayer::PlayAnimMontage(UAnimMontage* PickAnimMontage, FName name)
+void AThePlayer::PlayAnimtionMontage(UAnimMontage* AnimMontage, FName name)
 {
 	UE_LOG(LogTemp,Warning,TEXT("PlayAnimMontage"));
-	if (PickAnimMontage&&name!=""&&MeshCompMap.Num()>0)
+	if (AnimMontage&&name!=""&&MeshCompMap.Num()>0)
 	{
 		for (auto& Elem :MeshCompMap)
 		{
@@ -406,7 +494,7 @@ void AThePlayer::WearNetMulticast_Implementation(AActor* theActor)
 {
 	ABody *Body=Cast<ABody>(theActor);
 	if (!Body)return;
-	PlayAnimMontage(AnimMontage,"Wear");
+	PlayAnimtionMontage(PickupAnimMontage,"Wear");
 	//Body->SetItemState(EItemState::InPlayering);
 	switch (Body->GetPawnBodyType())
 	{
@@ -501,34 +589,50 @@ bool AThePlayer::WearNetMulticast_Validate(AActor* theActor)
 	return true;
 }
 
-void AThePlayer::CanWear(UInputComponent* PlayerInputComponent)
+void AThePlayer::CanPickup(UInputComponent* PlayerInputComponent)
 {
-	if(/*IsLocallyControlled()&&*/isCanWear==false)
+	if(bCanPickup==false)
 	{
-		isCanWear=true;
-		PlayerInputComponent->BindAction("Wear",EInputEvent::IE_Pressed,this,&AThePlayer::BindActionWear);
+		bCanPickup=true;
+		PlayerInputComponent->BindAction("Pickup",EInputEvent::IE_Pressed,this,&AThePlayer::BindActionPickup);
 	}
 }
 
-void AThePlayer::BindActionWear()
+void AThePlayer::BindActionPickup()
 {
 	if (OverlapActor.IsValidIndex(0))
 	{
-		ABody * Body=Cast<ABody>(OverlapActor.Top());
-		if (!Body)return;
-		Body->Wear(this);
-		//Wear(Body);
+		AItem * Item=Cast<AItem>(OverlapActor.Top());
+		if (!Item)return;
+		switch (Item->GetItemType())
+		{
+			case EItemType::Body:
+				{
+					ABody* Body=Cast<ABody>(Item);
+					if (!Body)return;;
+					Body->Wear(this);
+					break;
+				}
+			case EItemType::Weapon:
+				{
+					AWeapon* Weapon=Cast<AWeapon>(Item);
+					if (!Weapon)return;
+					Weapon->Equipment(this);
+					break;
+				}
+			default: break;
+		}
 		OverlapActor.RemoveAt(0);
 		OverlapActorChange();
 	}
 }
 
-void AThePlayer::NotCanWear(UInputComponent* PlayerInputComponent)
+void AThePlayer::NotCanPickup(UInputComponent* PlayerInputComponent)
 {
-	if(/*IsLocallyControlled()&&*/isCanWear==true)
+	if(bCanPickup==true)
 	{
-		isCanWear=false;
-		PlayerInputComponent->RemoveActionBinding("Wear",EInputEvent::IE_Pressed);
+		bCanPickup=false;
+		PlayerInputComponent->RemoveActionBinding("Pickup",EInputEvent::IE_Pressed);
 	}
 }
 
@@ -538,6 +642,44 @@ void AThePlayer::Equipment(AActor* theActor)
 	{
 		EquipmentServer(theActor);
 	}
+	AWeapon* Weapon=Cast<AWeapon>(theActor);
+	if (!CurrentWeapon&&Weapon)
+	{
+		CurrentWeapon=Weapon;
+		PlayAnimtionMontage(PickupAnimMontage,"Wear");
+		switch (Weapon->GetWeaponType())
+		{
+			case EWeaponType::ESword:
+				{
+					SetPlayerStance(EPlayerStance::ETwoHandSwordStance);
+					SetPlayerState(EPlayerState::EBattleing);
+					if (HeadGearsMesh)
+					{
+						Weapon->StaticMesh->AttachToComponent(GetMesh(),FAttachmentTransformRules::KeepRelativeTransform,Weapon->AttachLocation);
+					}
+					break;
+				}
+		default: break;
+		}
+	}
+}
+
+void AThePlayer::Pickup(AActor* theActor)
+{
+	if (GetLocalRole()<ROLE_Authority)
+	{
+		PickupServer(theActor);
+	}
+}
+
+void AThePlayer::PickupServer_Implementation(AActor* theActor)
+{
+	Pickup(theActor);
+}
+
+bool AThePlayer::PickupServer_Validate(AActor* theActor)
+{
+	return true;
 }
 
 void AThePlayer::EquipmentServer_Implementation(AActor* theActor)

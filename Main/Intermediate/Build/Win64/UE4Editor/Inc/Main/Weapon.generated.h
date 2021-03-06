@@ -1,0 +1,148 @@
+// Copyright Epic Games, Inc. All Rights Reserved.
+/*===========================================================================
+	Generated code exported from UnrealHeaderTool.
+	DO NOT modify this manually! Edit the corresponding .h files instead!
+===========================================================================*/
+
+#include "UObject/ObjectMacros.h"
+#include "UObject/ScriptMacros.h"
+
+PRAGMA_DISABLE_DEPRECATION_WARNINGS
+enum class EWeaponType : uint8;
+class APawn;
+#ifdef MAIN_Weapon_generated_h
+#error "Weapon.generated.h already included, missing '#pragma once' in Weapon.h"
+#endif
+#define MAIN_Weapon_generated_h
+
+#define Main_Source_Main_Item_Weapon_h_15_SPARSE_DATA
+#define Main_Source_Main_Item_Weapon_h_15_RPC_WRAPPERS \
+	virtual bool AttackServer_Validate(); \
+	virtual void AttackServer_Implementation(); \
+	virtual bool EquipmentServer_Validate(APawn* ); \
+	virtual void EquipmentServer_Implementation(APawn* Pawn); \
+ \
+	DECLARE_FUNCTION(execAttackServer); \
+	DECLARE_FUNCTION(execAttack); \
+	DECLARE_FUNCTION(execSetWeapon); \
+	DECLARE_FUNCTION(execGetWeaponType); \
+	DECLARE_FUNCTION(execEquipmentServer); \
+	DECLARE_FUNCTION(execEquipment);
+
+
+#define Main_Source_Main_Item_Weapon_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+	virtual bool AttackServer_Validate(); \
+	virtual void AttackServer_Implementation(); \
+ \
+	DECLARE_FUNCTION(execAttackServer); \
+	DECLARE_FUNCTION(execAttack); \
+	DECLARE_FUNCTION(execSetWeapon); \
+	DECLARE_FUNCTION(execGetWeaponType); \
+	DECLARE_FUNCTION(execEquipmentServer); \
+	DECLARE_FUNCTION(execEquipment);
+
+
+#define Main_Source_Main_Item_Weapon_h_15_EVENT_PARMS \
+	struct Weapon_eventEquipmentServer_Parms \
+	{ \
+		APawn* Pawn; \
+	};
+
+
+#define Main_Source_Main_Item_Weapon_h_15_CALLBACK_WRAPPERS
+#define Main_Source_Main_Item_Weapon_h_15_INCLASS_NO_PURE_DECLS \
+private: \
+	static void StaticRegisterNativesAWeapon(); \
+	friend struct Z_Construct_UClass_AWeapon_Statics; \
+public: \
+	DECLARE_CLASS(AWeapon, AItem, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/Main"), NO_API) \
+	DECLARE_SERIALIZER(AWeapon) \
+	void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override; \
+	enum class ENetFields_Private : uint16 \
+	{ \
+		NETFIELD_REP_START=(uint16)((int32)Super::ENetFields_Private::NETFIELD_REP_END + (int32)1), \
+		StaticMesh=NETFIELD_REP_START, \
+		WeaponType, \
+		NETFIELD_REP_END=WeaponType	}; \
+	NO_API virtual void ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const override;
+
+
+#define Main_Source_Main_Item_Weapon_h_15_INCLASS \
+private: \
+	static void StaticRegisterNativesAWeapon(); \
+	friend struct Z_Construct_UClass_AWeapon_Statics; \
+public: \
+	DECLARE_CLASS(AWeapon, AItem, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/Main"), NO_API) \
+	DECLARE_SERIALIZER(AWeapon) \
+	void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override; \
+	enum class ENetFields_Private : uint16 \
+	{ \
+		NETFIELD_REP_START=(uint16)((int32)Super::ENetFields_Private::NETFIELD_REP_END + (int32)1), \
+		StaticMesh=NETFIELD_REP_START, \
+		WeaponType, \
+		NETFIELD_REP_END=WeaponType	}; \
+	NO_API virtual void ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const override;
+
+
+#define Main_Source_Main_Item_Weapon_h_15_STANDARD_CONSTRUCTORS \
+	/** Standard constructor, called after all reflected properties have been initialized */ \
+	NO_API AWeapon(const FObjectInitializer& ObjectInitializer); \
+	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AWeapon) \
+	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, AWeapon); \
+DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AWeapon); \
+private: \
+	/** Private move- and copy-constructors, should never be used */ \
+	NO_API AWeapon(AWeapon&&); \
+	NO_API AWeapon(const AWeapon&); \
+public:
+
+
+#define Main_Source_Main_Item_Weapon_h_15_ENHANCED_CONSTRUCTORS \
+private: \
+	/** Private move- and copy-constructors, should never be used */ \
+	NO_API AWeapon(AWeapon&&); \
+	NO_API AWeapon(const AWeapon&); \
+public: \
+	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, AWeapon); \
+DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AWeapon); \
+	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AWeapon)
+
+
+#define Main_Source_Main_Item_Weapon_h_15_PRIVATE_PROPERTY_OFFSET
+#define Main_Source_Main_Item_Weapon_h_12_PROLOG \
+	Main_Source_Main_Item_Weapon_h_15_EVENT_PARMS
+
+
+#define Main_Source_Main_Item_Weapon_h_15_GENERATED_BODY_LEGACY \
+PRAGMA_DISABLE_DEPRECATION_WARNINGS \
+public: \
+	Main_Source_Main_Item_Weapon_h_15_PRIVATE_PROPERTY_OFFSET \
+	Main_Source_Main_Item_Weapon_h_15_SPARSE_DATA \
+	Main_Source_Main_Item_Weapon_h_15_RPC_WRAPPERS \
+	Main_Source_Main_Item_Weapon_h_15_CALLBACK_WRAPPERS \
+	Main_Source_Main_Item_Weapon_h_15_INCLASS \
+	Main_Source_Main_Item_Weapon_h_15_STANDARD_CONSTRUCTORS \
+public: \
+PRAGMA_ENABLE_DEPRECATION_WARNINGS
+
+
+#define Main_Source_Main_Item_Weapon_h_15_GENERATED_BODY \
+PRAGMA_DISABLE_DEPRECATION_WARNINGS \
+public: \
+	Main_Source_Main_Item_Weapon_h_15_PRIVATE_PROPERTY_OFFSET \
+	Main_Source_Main_Item_Weapon_h_15_SPARSE_DATA \
+	Main_Source_Main_Item_Weapon_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+	Main_Source_Main_Item_Weapon_h_15_CALLBACK_WRAPPERS \
+	Main_Source_Main_Item_Weapon_h_15_INCLASS_NO_PURE_DECLS \
+	Main_Source_Main_Item_Weapon_h_15_ENHANCED_CONSTRUCTORS \
+private: \
+PRAGMA_ENABLE_DEPRECATION_WARNINGS
+
+
+template<> MAIN_API UClass* StaticClass<class AWeapon>();
+
+#undef CURRENT_FILE_ID
+#define CURRENT_FILE_ID Main_Source_Main_Item_Weapon_h
+
+
+PRAGMA_ENABLE_DEPRECATION_WARNINGS

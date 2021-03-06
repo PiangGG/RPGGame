@@ -3,13 +3,14 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "GameFramework/Actor.h"
+#include "Item.h"
 #include "Main/Core/RPGEnum.h"
 #include "Weapon.generated.h"
 
+class UStaticMeshComponent;
 class USphereComponent;
 UCLASS()
-class MAIN_API AWeapon : public AActor
+class MAIN_API AWeapon : public AItem
 {
 	GENERATED_BODY()
 	
@@ -21,33 +22,18 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-public:	
-	//物品状态变量
-	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,ReplicatedUsing=OnRep_SetItemState,Category="ItemSetting")
-	EItemState CurrentItemState=EItemState::InWorld;
-	//获得物品状态变量函数
-	UFUNCTION(BlueprintCallable)
-    virtual EItemState GetItemState();
-	//设置物品状态变量函数
-	UFUNCTION(BlueprintCallable)
-    virtual void SetItemState(EItemState NewItemState);
-	UFUNCTION(Server,WithValidation,Reliable)
-    virtual void SetItemStateServer(EItemState NewItemState);
-	UFUNCTION()
-    virtual void OnRep_SetItemState(EItemState NewItemState);
-	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Category="ItemSetting")
-	class USphereComponent *SphereComponent;
-	
+public:
+	virtual void SetItemState(EItemState NewItemState)override;
 	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Replicated,Category="ItemSetting")
-	class UStaticMeshComponent *StaticMesh;
-
-	UPROPERTY(Replicated,EditDefaultsOnly,BlueprintReadWrite,Category="Weapon")
-	bool bOverlap=false;
-	
-	UFUNCTION(BlueprintCallable)
-    virtual void SphereComponent_BeginOverlap(class UPrimitiveComponent* Component,class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
-	UFUNCTION(BlueprintCallable)
-    virtual void SphereComponent_EndOverlap(UPrimitiveComponent* Component,AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
+	UStaticMeshComponent *StaticMesh;
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "AnimMontage")
+	class UAnimMontage* AttackAnimMontage;
+	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Category="Attack")
+	float AttackTimerCD=2.0f;
+	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Category="Attack")
+	float AttackCurrentTimerCD=0.0f;
+	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Category="Attack")
+	int32 AttackNumber=0;
 	
 	UFUNCTION(BlueprintCallable)
     void Equipment(APawn *Pawn);
@@ -57,12 +43,17 @@ public:
 	bool EquipmentServer_Validate(APawn* Pawn);
 
 	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Replicated,Category="ItemSetting")
-	EItemType ItemType=EItemType::Weapon;
-	
-	EItemType GetItemType();
-	
-	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Replicated,Category="ItemSetting")
 	EWeaponType WeaponType=EWeaponType::ESword;
-	
+	UFUNCTION(BlueprintCallable)
 	EWeaponType GetWeaponType();
+	UFUNCTION(BlueprintCallable)
+	void SetWeapon(EWeaponType NewEWeaponType);
+
+	UFUNCTION(BlueprintCallable)
+	void Attack();
+	UFUNCTION(Server,WithValidation,Reliable)
+    void AttackServer();
+
+	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Category="Attack")
+	FName AttachLocation="RightWeaponShield";
 };

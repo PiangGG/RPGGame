@@ -139,7 +139,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{409ECCB1-2CC5-453B-B067-C0D6E8470C9E}</ProjectGuid>
+    <ProjectGuid>{37298CDE-5E05-4D39-9F03-EA86A851171E}</ProjectGuid>
     <Keyword>MakeFileProj</Keyword>
     <RootNamespace>Main</RootNamespace>
     <PlatformToolset>v142</PlatformToolset>

@@ -1,0 +1,1758 @@
+﻿Log file open, 03/06/21 23:32:38
+LogInit: LLM is enabled
+LogInit: LLM CsvWriter: off TraceWriter: off
+LogInit: Display: Running engine for game: Main
+LogPlatformFile: Not using cached read wrapper
+LogTaskGraph: Started task graph with 5 named threads and 47 total threads with 3 sets of task threads.
+LogStats: Stats thread started at 0.188782
+LogD3D11RHI: Loaded GFSDK_Aftermath_Lib.x64.dll
+LogICUInternationalization: ICU TimeZone Detection - Raw Offset: +8:00, Platform Override: ''
+LogPluginManager: Mounting plugin MeshPainting
+LogPluginManager: Mounting plugin XGEController
+LogPluginManager: Mounting plugin Paper2D
+LogPluginManager: Mounting plugin AISupport
+LogPluginManager: Mounting plugin LightPropagationVolume
+LogPluginManager: Mounting plugin CameraShakePreviewer
+LogPluginManager: Mounting plugin EnvironmentQueryEditor
+LogPluginManager: Mounting plugin AnimationSharing
+LogPluginManager: Mounting plugin CLionSourceCodeAccess
+LogPluginManager: Mounting plugin CodeLiteSourceCodeAccess
+LogPluginManager: Mounting plugin NullSourceCodeAccess
+LogPluginManager: Mounting plugin GitSourceControl
+LogPluginManager: Mounting plugin KDevelopSourceCodeAccess
+LogPluginManager: Mounting plugin PerforceSourceControl
+LogPluginManager: Mounting plugin PluginUtils
+LogPluginManager: Mounting plugin PlasticSourceControl
+LogPluginManager: Mounting plugin PropertyAccessNode
+LogPluginManager: Mounting plugin RiderSourceCodeAccess
+LogPluginManager: Mounting plugin SubversionSourceControl
+LogPluginManager: Mounting plugin AssetManagerEditor
+LogPluginManager: Mounting plugin UObjectPlugin
+LogPluginManager: Mounting plugin VisualStudioSourceCodeAccess
+LogPluginManager: Mounting plugin XCodeSourceCodeAccess
+LogPluginManager: Mounting plugin VisualStudioCodeSourceCodeAccess
+LogPluginManager: Mounting plugin CryptoKeys
+LogPluginManager: Mounting plugin CurveEditorTools
+LogPluginManager: Mounting plugin DataValidation
+LogPluginManager: Mounting plugin FacialAnimation
+LogPluginManager: Mounting plugin GameplayTagsEditor
+LogPluginManager: Mounting plugin DatasmithContent
+LogPluginManager: Mounting plugin GeometryMode
+LogPluginManager: Mounting plugin MaterialAnalyzer
+LogPluginManager: Mounting plugin MacGraphicsSwitching
+LogPluginManager: Mounting plugin MobileLauncherProfileWizard
+LogPluginManager: Mounting plugin SpeedTreeImporter
+LogPluginManager: Mounting plugin PluginBrowser
+LogPluginManager: Mounting plugin Niagara
+LogPluginManager: Mounting plugin VariantManagerContent
+LogPluginManager: Mounting plugin AlembicImporter
+LogPluginManager: Mounting plugin AutomationUtils
+LogPluginManager: Mounting plugin BackChannel
+LogPluginManager: Mounting plugin ChaosClothEditor
+LogPluginManager: Mounting plugin ChaosEditor
+LogPluginManager: Mounting plugin ChaosCloth
+LogPluginManager: Mounting plugin ChaosNiagara
+LogPluginManager: Mounting plugin CharacterAI
+LogPluginManager: Mounting plugin ChaosSolverPlugin
+LogPluginManager: Mounting plugin GeometryCache
+LogPluginManager: Mounting plugin GeometryCollectionPlugin
+LogPluginManager: Mounting plugin GeometryProcessing
+LogPluginManager: Mounting plugin MotoSynth
+LogPluginManager: Mounting plugin PlanarCut
+LogPluginManager: Mounting plugin PlatformCrypto
+LogPluginManager: Mounting plugin ProxyLODPlugin
+LogPluginManager: Mounting plugin LuminPlatformFeatures
+LogPluginManager: Mounting plugin MagicLeap
+LogPluginManager: Mounting plugin SkeletalReduction
+LogPluginManager: Mounting plugin AndroidMedia
+LogPluginManager: Mounting plugin MagicLeapLightEstimation
+LogPluginManager: Mounting plugin MagicLeapMedia
+LogPluginManager: Mounting plugin AvfMedia
+LogPluginManager: Mounting plugin MagicLeapPassableWorld
+LogPluginManager: Mounting plugin MLSDK
+LogPluginManager: Mounting plugin TcpMessaging
+LogPluginManager: Mounting plugin UdpMessaging
+LogPluginManager: Mounting plugin LauncherChunkInstaller
+LogPluginManager: Mounting plugin ActorSequence
+LogPluginManager: Mounting plugin ImgMedia
+LogPluginManager: Mounting plugin MediaCompositing
+LogPluginManager: Mounting plugin MediaPlayerEditor
+LogPluginManager: Mounting plugin LevelSequenceEditor
+LogPluginManager: Mounting plugin WebMMedia
+LogPluginManager: Mounting plugin WmfMedia
+LogPluginManager: Mounting plugin MatineeToLevelSequence
+LogPluginManager: Mounting plugin TemplateSequence
+LogPluginManager: Mounting plugin ActorLayerUtilities
+LogPluginManager: Mounting plugin OnlineSubsystem
+LogPluginManager: Mounting plugin AndroidDeviceProfileSelector
+LogPluginManager: Mounting plugin AndroidMoviePlayer
+LogPluginManager: Mounting plugin OnlineSubsystemNull
+LogPluginManager: Mounting plugin AndroidPermission
+LogPluginManager: Mounting plugin OnlineSubsystemUtils
+LogPluginManager: Mounting plugin AppleImageUtils
+LogPluginManager: Mounting plugin AppleMoviePlayer
+LogPluginManager: Mounting plugin ArchVisCharacter
+LogPluginManager: Mounting plugin AssetTags
+LogPluginManager: Mounting plugin AudioCapture
+LogPluginManager: Mounting plugin AudioSynesthesia
+LogPluginManager: Mounting plugin CableComponent
+LogPluginManager: Mounting plugin EditableMesh
+LogPluginManager: Mounting plugin CustomMeshComponent
+LogPluginManager: Mounting plugin ChunkDownloader
+LogPluginManager: Mounting plugin ExampleDeviceProfileSelector
+LogPluginManager: Mounting plugin GoogleCloudMessaging
+LogPluginManager: Mounting plugin GooglePAD
+LogPluginManager: Mounting plugin IOSDeviceProfileSelector
+LogPluginManager: Mounting plugin LinuxDeviceProfileSelector
+LogPluginManager: Mounting plugin LocationServicesBPLibrary
+LogPluginManager: Mounting plugin MobilePatchingUtils
+LogPluginManager: Mounting plugin PhysXVehicles
+LogPluginManager: Mounting plugin PostSplashScreen
+LogPluginManager: Mounting plugin ProceduralMeshComponent
+LogPluginManager: Mounting plugin PropertyAccessEditor
+LogPluginManager: Mounting plugin RuntimePhysXCooking
+LogPluginManager: Mounting plugin SignificanceManager
+LogPluginManager: Mounting plugin SoundFields
+LogPluginManager: Mounting plugin Synthesis
+LogPluginManager: Mounting plugin WebMMoviePlayer
+LogPluginManager: Mounting plugin WindowsMoviePlayer
+LogPluginManager: Mounting plugin ScreenshotTools
+LogPluginManager: Mounting plugin ContentBrowserAssetDataSource
+LogPluginManager: Mounting plugin ContentBrowserClassDataSource
+LogPluginManager: Mounting plugin OnlineSubsystemGooglePlay
+LogPluginManager: Mounting plugin OnlineSubsystemIOS
+LogPluginManager: Mounting plugin OculusVR
+LogPluginManager: Mounting plugin SteamVR
+LogPluginManager: Mounting plugin RiderLink
+LogXGEController: Cleaning working directory: C:/Users/piang/AppData/Local/Temp/UnrealXGEWorkingDir/
+LogInit: Using libcurl 7.55.1-DEV
+LogInit:  - built for x86_64-pc-win32
+LogInit:  - supports SSL with OpenSSL/1.1.1
+LogInit:  - supports HTTP deflate (compression) using libz 1.2.8
+LogInit:  - other features:
+LogInit:      CURL_VERSION_SSL
+LogInit:      CURL_VERSION_LIBZ
+LogInit:      CURL_VERSION_IPV6
+LogInit:      CURL_VERSION_ASYNCHDNS
+LogInit:      CURL_VERSION_LARGEFILE
+LogInit:      CURL_VERSION_IDN
+LogInit:  CurlRequestOptions (configurable via config and command line):
+LogInit:  - bVerifyPeer = true  - Libcurl will verify peer certificate
+LogInit:  - bUseHttpProxy = false  - Libcurl will NOT use HTTP proxy
+LogInit:  - bDontReuseConnections = false  - Libcurl will reuse connections
+LogInit:  - MaxHostConnections = 16  - Libcurl will limit the number of connections to a host
+LogInit:  - LocalHostAddr = Default
+LogInit:  - BufferSize = 65536
+LogOnline: OSS: Creating online subsystem instance for: NULL
+LogInit: WinSock: version 1.1 (2.2), MaxSocks=32767, MaxUdp=65467
+LogOnline: OSS: TryLoadSubsystemAndSetDefault: Loaded subsystem for module [NULL]
+LogInit: Build: ++UE4+Release-4.26-CL-14830424
+LogInit: Engine Version: 4.26.0-14830424+++UE4+Release-4.26
+LogInit: Compatible Engine Version: 4.26.0-14830424+++UE4+Release-4.26
+LogInit: Net CL: 14830424
+LogInit: OS: Windows 10 (Release 2009) (), CPU: Intel(R) Core(TM) i7-10875H CPU @ 2.30GHz, GPU: NVIDIA GeForce RTX 2080 Super with Max-Q Design
+LogInit: Compiled (64-bit): Dec  1 2020 15:13:26
+LogInit: Compiled with Visual C++: 19.24.28315.00
+LogInit: Build Configuration: Development
+LogInit: Branch Name: ++UE4+Release-4.26
+LogInit: Command Line:  -skipcompile
+LogInit: Base Directory: D:/ComputerApps/Epic Games/UE_4.26/Engine/Binaries/Win64/
+LogInit: Allocator: TBB
+LogInit: Installed Engine Build: 1
+LogDevObjectVersion: Number of dev versions registered: 29
+LogDevObjectVersion:   Dev-Blueprints (B0D832E4-1F89-4F0D-ACCF-7EB736FD4AA2): 10
+LogDevObjectVersion:   Dev-Build (E1C64328-A22C-4D53-A36C-8E866417BD8C): 0
+LogDevObjectVersion:   Dev-Core (375EC13C-06E4-48FB-B500-84F0262A717E): 4
+LogDevObjectVersion:   Dev-Editor (E4B068ED-F494-42E9-A231-DA0B2E46BB41): 40
+LogDevObjectVersion:   Dev-Framework (CFFC743F-43B0-4480-9391-14DF171D2073): 37
+LogDevObjectVersion:   Dev-Mobile (B02B49B5-BB20-44E9-A304-32B752E40360): 3
+LogDevObjectVersion:   Dev-Networking (A4E4105C-59A1-49B5-A7C5-40C4547EDFEE): 0
+LogDevObjectVersion:   Dev-Online (39C831C9-5AE6-47DC-9A44-9C173E1C8E7C): 0
+LogDevObjectVersion:   Dev-Physics (78F01B33-EBEA-4F98-B9B4-84EACCB95AA2): 4
+LogDevObjectVersion:   Dev-Platform (6631380F-2D4D-43E0-8009-CF276956A95A): 0
+LogDevObjectVersion:   Dev-Rendering (12F88B9F-8875-4AFC-A67C-D90C383ABD29): 44
+LogDevObjectVersion:   Dev-Sequencer (7B5AE74C-D270-4C10-A958-57980B212A5A): 12
+LogDevObjectVersion:   Dev-VR (D7296918-1DD6-4BDD-9DE2-64A83CC13884): 3
+LogDevObjectVersion:   Dev-LoadTimes (C2A15278-BFE7-4AFE-6C17-90FF531DF755): 1
+LogDevObjectVersion:   Private-Geometry (6EACA3D4-40EC-4CC1-B786-8BED09428FC5): 3
+LogDevObjectVersion:   Dev-AnimPhys (29E575DD-E0A3-4627-9D10-D276232CDCEA): 17
+LogDevObjectVersion:   Dev-Anim (AF43A65D-7FD3-4947-9873-3E8ED9C1BB05): 15
+LogDevObjectVersion:   Dev-ReflectionCapture (6B266CEC-1EC7-4B8F-A30B-E4D90942FC07): 1
+LogDevObjectVersion:   Dev-Automation (0DF73D61-A23F-47EA-B727-89E90C41499A): 1
+LogDevObjectVersion:   FortniteMain (601D1886-AC64-4F84-AA16-D3DE0DEAC7D6): 43
+LogDevObjectVersion:   FortniteRelease (E7086368-6B23-4C58-8439-1B7016265E91): 1
+LogDevObjectVersion:   Dev-Enterprise (9DFFBCD6-494F-0158-E221-12823C92A888): 10
+LogDevObjectVersion:   Dev-Niagara (F2AED0AC-9AFE-416F-8664-AA7FFA26D6FC): 1
+LogDevObjectVersion:   Dev-Destruction (174F1F0B-B4C6-45A5-B13F-2EE8D0FB917D): 10
+LogDevObjectVersion:   Dev-Physics-Ext (35F94A83-E258-406C-A318-09F59610247C): 40
+LogDevObjectVersion:   Dev-PhysicsMaterial-Chaos (B68FC16E-8B1B-42E2-B453-215C058844FE): 1
+LogDevObjectVersion:   Dev-CineCamera (B2E18506-4273-CFC2-A54E-F4BB758BBA07): 1
+LogDevObjectVersion:   Dev-VirtualProduction (64F58936-FD1B-42BA-BA96-7289D5D0FA4E): 1
+LogDevObjectVersion:   Dev-MediaFramework (6F0ED827-A609-4895-9C91-998D90180EA4): 2
+LogInit: Presizing for max 25165824 objects, including 0 objects not considered by GC, pre-allocating 0 bytes for permanent pool.
+LogConfig: Applying CVar settings from Section [/Script/Engine.StreamingSettings] File [D:/Code/UE4/RPGGame/Main/Saved/Config/Windows/Engine.ini]
+LogConfig: Setting CVar [[s.MinBulkDataSizeForAsyncLoading:131072]]
+LogConfig: Setting CVar [[s.AsyncLoadingThreadEnabled:0]]
+LogConfig: Setting CVar [[s.EventDrivenLoaderEnabled:1]]
+LogConfig: Setting CVar [[s.WarnIfTimeLimitExceeded:0]]
+LogConfig: Setting CVar [[s.TimeLimitExceededMultiplier:1.5]]
+LogConfig: Setting CVar [[s.TimeLimitExceededMinTime:0.005]]
+LogConfig: Setting CVar [[s.UseBackgroundLevelStreaming:1]]
+LogConfig: Setting CVar [[s.PriorityAsyncLoadingExtraTime:15.0]]
+LogConfig: Setting CVar [[s.LevelStreamingActorsUpdateTimeLimit:5.0]]
+LogConfig: Setting CVar [[s.PriorityLevelStreamingActorsUpdateExtraTime:5.0]]
+LogConfig: Setting CVar [[s.LevelStreamingComponentsRegistrationGranularity:10]]
+LogConfig: Setting CVar [[s.UnregisterComponentsTimeLimit:1.0]]
+LogConfig: Setting CVar [[s.LevelStreamingComponentsUnregistrationGranularity:5]]
+LogConfig: Setting CVar [[s.FlushStreamingOnExit:1]]
+LogInit: Object subsystem initialized
+LogConfig: Setting CVar [[con.DebugEarlyDefault:1]]
+LogConfig: Setting CVar [[r.setres:1280x720]]
+[2021.03.06-15.32.39:073][  0]LogConfig: Setting CVar [[r.VSync:0]]
+[2021.03.06-15.32.39:073][  0]LogConfig: Setting CVar [[r.RHICmdBypass:0]]
+[2021.03.06-15.32.39:073][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.RendererSettings] File [D:/Code/UE4/RPGGame/Main/Saved/Config/Windows/Engine.ini]
+[2021.03.06-15.32.39:073][  0]LogConfig: Setting CVar [[r.GPUCrashDebugging:0]]
+[2021.03.06-15.32.39:073][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.RendererOverrideSettings] File [D:/Code/UE4/RPGGame/Main/Saved/Config/Windows/Engine.ini]
+[2021.03.06-15.32.39:073][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.StreamingSettings] File [D:/Code/UE4/RPGGame/Main/Saved/Config/Windows/Engine.ini]
+[2021.03.06-15.32.39:073][  0]LogConfig: Setting CVar [[s.MinBulkDataSizeForAsyncLoading:131072]]
+[2021.03.06-15.32.39:073][  0]LogConfig: Setting CVar [[s.AsyncLoadingThreadEnabled:0]]
+[2021.03.06-15.32.39:073][  0]LogConfig: Setting CVar [[s.EventDrivenLoaderEnabled:1]]
+[2021.03.06-15.32.39:073][  0]LogConfig: Setting CVar [[s.WarnIfTimeLimitExceeded:0]]
+[2021.03.06-15.32.39:073][  0]LogConfig: Setting CVar [[s.TimeLimitExceededMultiplier:1.5]]
+[2021.03.06-15.32.39:073][  0]LogConfig: Setting CVar [[s.TimeLimitExceededMinTime:0.005]]
+[2021.03.06-15.32.39:073][  0]LogConfig: Setting CVar [[s.UseBackgroundLevelStreaming:1]]
+[2021.03.06-15.32.39:073][  0]LogConfig: Setting CVar [[s.PriorityAsyncLoadingExtraTime:15.0]]
+[2021.03.06-15.32.39:073][  0]LogConfig: Setting CVar [[s.LevelStreamingActorsUpdateTimeLimit:5.0]]
+[2021.03.06-15.32.39:073][  0]LogConfig: Setting CVar [[s.PriorityLevelStreamingActorsUpdateExtraTime:5.0]]
+[2021.03.06-15.32.39:073][  0]LogConfig: Setting CVar [[s.LevelStreamingComponentsRegistrationGranularity:10]]
+[2021.03.06-15.32.39:073][  0]LogConfig: Setting CVar [[s.UnregisterComponentsTimeLimit:1.0]]
+[2021.03.06-15.32.39:073][  0]LogConfig: Setting CVar [[s.LevelStreamingComponentsUnregistrationGranularity:5]]
+[2021.03.06-15.32.39:073][  0]LogConfig: Setting CVar [[s.FlushStreamingOnExit:1]]
+[2021.03.06-15.32.39:073][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.GarbageCollectionSettings] File [D:/Code/UE4/RPGGame/Main/Saved/Config/Windows/Engine.ini]
+[2021.03.06-15.32.39:073][  0]LogConfig: Setting CVar [[gc.MaxObjectsNotConsideredByGC:1]]
+[2021.03.06-15.32.39:073][  0]LogConfig: Setting CVar [[gc.SizeOfPermanentObjectPool:0]]
+[2021.03.06-15.32.39:073][  0]LogConfig: Setting CVar [[gc.FlushStreamingOnGC:0]]
+[2021.03.06-15.32.39:073][  0]LogConfig: Setting CVar [[gc.NumRetriesBeforeForcingGC:10]]
+[2021.03.06-15.32.39:073][  0]LogConfig: Setting CVar [[gc.AllowParallelGC:1]]
+[2021.03.06-15.32.39:073][  0]LogConfig: Setting CVar [[gc.TimeBetweenPurgingPendingKillObjects:61.1]]
+[2021.03.06-15.32.39:073][  0]LogConfig: Setting CVar [[gc.MaxObjectsInEditor:25165824]]
+[2021.03.06-15.32.39:073][  0]LogConfig: Setting CVar [[gc.IncrementalBeginDestroyEnabled:1]]
+[2021.03.06-15.32.39:073][  0]LogConfig: Setting CVar [[gc.CreateGCClusters:1]]
+[2021.03.06-15.32.39:073][  0]LogConfig: Setting CVar [[gc.MinGCClusterSize:5]]
+[2021.03.06-15.32.39:073][  0]LogConfig: Setting CVar [[gc.ActorClusteringEnabled:0]]
+[2021.03.06-15.32.39:073][  0]LogConfig: Setting CVar [[gc.BlueprintClusteringEnabled:0]]
+[2021.03.06-15.32.39:073][  0]LogConfig: Setting CVar [[gc.UseDisregardForGCOnDedicatedServers:0]]
+[2021.03.06-15.32.39:073][  0]LogConfig: Setting CVar [[gc.MultithreadedDestructionEnabled:1]]
+[2021.03.06-15.32.39:073][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.NetworkSettings] File [D:/Code/UE4/RPGGame/Main/Saved/Config/Windows/Engine.ini]
+[2021.03.06-15.32.39:073][  0]LogConfig: Applying CVar settings from Section [/Script/UnrealEd.CookerSettings] File [D:/Code/UE4/RPGGame/Main/Saved/Config/Windows/Engine.ini]
+[2021.03.06-15.32.39:076][  0]LogConfig: Applying CVar settings from Section [ViewDistanceQuality@3] File [D:/Code/UE4/RPGGame/Main/Saved/Config/Windows/Scalability.ini]
+[2021.03.06-15.32.39:076][  0]LogConfig: Setting CVar [[r.SkeletalMeshLODBias:0]]
+[2021.03.06-15.32.39:076][  0]LogConfig: Setting CVar [[r.ViewDistanceScale:1.0]]
+[2021.03.06-15.32.39:076][  0]LogConfig: Applying CVar settings from Section [AntiAliasingQuality@3] File [D:/Code/UE4/RPGGame/Main/Saved/Config/Windows/Scalability.ini]
+[2021.03.06-15.32.39:076][  0]LogConfig: Setting CVar [[r.PostProcessAAQuality:4]]
+[2021.03.06-15.32.39:076][  0]LogConfig: Applying CVar settings from Section [ShadowQuality@3] File [D:/Code/UE4/RPGGame/Main/Saved/Config/Windows/Scalability.ini]
+[2021.03.06-15.32.39:076][  0]LogConfig: Setting CVar [[r.LightFunctionQuality:1]]
+[2021.03.06-15.32.39:076][  0]LogConfig: Setting CVar [[r.ShadowQuality:5]]
+[2021.03.06-15.32.39:077][  0]LogConfig: Setting CVar [[r.Shadow.CSM.MaxCascades:10]]
+[2021.03.06-15.32.39:077][  0]LogConfig: Setting CVar [[r.Shadow.MaxResolution:2048]]
+[2021.03.06-15.32.39:077][  0]LogConfig: Setting CVar [[r.Shadow.MaxCSMResolution:2048]]
+[2021.03.06-15.32.39:077][  0]LogConfig: Setting CVar [[r.Shadow.RadiusThreshold:0.01]]
+[2021.03.06-15.32.39:077][  0]LogConfig: Setting CVar [[r.Shadow.DistanceScale:1.0]]
+[2021.03.06-15.32.39:077][  0]LogConfig: Setting CVar [[r.Shadow.CSM.TransitionScale:1.0]]
+[2021.03.06-15.32.39:077][  0]LogConfig: Setting CVar [[r.Shadow.PreShadowResolutionFactor:1.0]]
+[2021.03.06-15.32.39:077][  0]LogConfig: Setting CVar [[r.DistanceFieldShadowing:1]]
+[2021.03.06-15.32.39:077][  0]LogConfig: Setting CVar [[r.DistanceFieldAO:1]]
+[2021.03.06-15.32.39:077][  0]LogConfig: Setting CVar [[r.AOQuality:2]]
+[2021.03.06-15.32.39:077][  0]LogConfig: Setting CVar [[r.VolumetricFog:1]]
+[2021.03.06-15.32.39:077][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridPixelSize:8]]
+[2021.03.06-15.32.39:077][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridSizeZ:128]]
+[2021.03.06-15.32.39:077][  0]LogConfig: Setting CVar [[r.VolumetricFog.HistoryMissSupersampleCount:4]]
+[2021.03.06-15.32.39:077][  0]LogConfig: Setting CVar [[r.LightMaxDrawDistanceScale:1]]
+[2021.03.06-15.32.39:077][  0]LogConfig: Setting CVar [[r.CapsuleShadows:1]]
+[2021.03.06-15.32.39:077][  0]LogConfig: Applying CVar settings from Section [PostProcessQuality@3] File [D:/Code/UE4/RPGGame/Main/Saved/Config/Windows/Scalability.ini]
+[2021.03.06-15.32.39:077][  0]LogConfig: Setting CVar [[r.MotionBlurQuality:4]]
+[2021.03.06-15.32.39:077][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMipLevelFactor:0.4]]
+[2021.03.06-15.32.39:077][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMaxQuality:100]]
+[2021.03.06-15.32.39:077][  0]LogConfig: Setting CVar [[r.AmbientOcclusionLevels:-1]]
+[2021.03.06-15.32.39:077][  0]LogConfig: Setting CVar [[r.AmbientOcclusionRadiusScale:1.0]]
+[2021.03.06-15.32.39:077][  0]LogConfig: Setting CVar [[r.DepthOfFieldQuality:2]]
+[2021.03.06-15.32.39:077][  0]LogConfig: Setting CVar [[r.RenderTargetPoolMin:400]]
+[2021.03.06-15.32.39:077][  0]LogConfig: Setting CVar [[r.LensFlareQuality:2]]
+[2021.03.06-15.32.39:077][  0]LogConfig: Setting CVar [[r.SceneColorFringeQuality:1]]
+[2021.03.06-15.32.39:077][  0]LogConfig: Setting CVar [[r.EyeAdaptationQuality:2]]
+[2021.03.06-15.32.39:077][  0]LogConfig: Setting CVar [[r.BloomQuality:5]]
+[2021.03.06-15.32.39:077][  0]LogConfig: Setting CVar [[r.FastBlurThreshold:100]]
+[2021.03.06-15.32.39:077][  0]LogConfig: Setting CVar [[r.Upscale.Quality:3]]
+[2021.03.06-15.32.39:077][  0]LogConfig: Setting CVar [[r.Tonemapper.GrainQuantization:1]]
+[2021.03.06-15.32.39:077][  0]LogConfig: Setting CVar [[r.LightShaftQuality:1]]
+[2021.03.06-15.32.39:077][  0]LogConfig: Setting CVar [[r.Filter.SizeScale:1]]
+[2021.03.06-15.32.39:077][  0]LogConfig: Setting CVar [[r.Tonemapper.Quality:5]]
+[2021.03.06-15.32.39:077][  0]LogConfig: Setting CVar [[r.DOF.Gather.AccumulatorQuality:1        ; higher gathering accumulator quality]]
+[2021.03.06-15.32.39:077][  0]LogConfig: Setting CVar [[r.DOF.Gather.PostfilterMethod:1          ; Median3x3 postfilering method]]
+[2021.03.06-15.32.39:077][  0]LogConfig: Setting CVar [[r.DOF.Gather.EnableBokehSettings:0       ; no bokeh simulation when gathering]]
+[2021.03.06-15.32.39:077][  0]LogConfig: Setting CVar [[r.DOF.Gather.RingCount:4                 ; medium number of samples when gathering]]
+[2021.03.06-15.32.39:077][  0]LogConfig: Setting CVar [[r.DOF.Scatter.ForegroundCompositing:1    ; additive foreground scattering]]
+[2021.03.06-15.32.39:077][  0]LogConfig: Setting CVar [[r.DOF.Scatter.BackgroundCompositing:2    ; additive background scattering]]
+[2021.03.06-15.32.39:077][  0]LogConfig: Setting CVar [[r.DOF.Scatter.EnableBokehSettings:1      ; bokeh simulation when scattering]]
+[2021.03.06-15.32.39:077][  0]LogConfig: Setting CVar [[r.DOF.Scatter.MaxSpriteRatio:0.1         ; only a maximum of 10% of scattered bokeh]]
+[2021.03.06-15.32.39:077][  0]LogConfig: Setting CVar [[r.DOF.Recombine.Quality:1                ; cheap slight out of focus]]
+[2021.03.06-15.32.39:077][  0]LogConfig: Setting CVar [[r.DOF.Recombine.EnableBokehSettings:0    ; no bokeh simulation on slight out of focus]]
+[2021.03.06-15.32.39:077][  0]LogConfig: Setting CVar [[r.DOF.TemporalAAQuality:1                ; more stable temporal accumulation]]
+[2021.03.06-15.32.39:077][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxForegroundRadius:0.025]]
+[2021.03.06-15.32.39:077][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxBackgroundRadius:0.025]]
+[2021.03.06-15.32.39:077][  0]LogConfig: Applying CVar settings from Section [TextureQuality@3] File [D:/Code/UE4/RPGGame/Main/Saved/Config/Windows/Scalability.ini]
+[2021.03.06-15.32.39:077][  0]LogConfig: Setting CVar [[r.Streaming.MipBias:0]]
+[2021.03.06-15.32.39:077][  0]LogConfig: Setting CVar [[r.Streaming.AmortizeCPUToGPUCopy:0]]
+[2021.03.06-15.32.39:077][  0]LogConfig: Setting CVar [[r.Streaming.MaxNumTexturesToStreamPerFrame:0]]
+[2021.03.06-15.32.39:077][  0]LogConfig: Setting CVar [[r.Streaming.Boost:1]]
+[2021.03.06-15.32.39:077][  0]LogConfig: Setting CVar [[r.MaxAnisotropy:8]]
+[2021.03.06-15.32.39:077][  0]LogConfig: Setting CVar [[r.VT.MaxAnisotropy:8]]
+[2021.03.06-15.32.39:077][  0]LogConfig: Setting CVar [[r.Streaming.LimitPoolSizeToVRAM:0]]
+[2021.03.06-15.32.39:077][  0]LogConfig: Setting CVar [[r.Streaming.PoolSize:1000]]
+[2021.03.06-15.32.39:077][  0]LogConfig: Setting CVar [[r.Streaming.MaxEffectiveScreenSize:0]]
+[2021.03.06-15.32.39:077][  0]LogConfig: Applying CVar settings from Section [EffectsQuality@3] File [D:/Code/UE4/RPGGame/Main/Saved/Config/Windows/Scalability.ini]
+[2021.03.06-15.32.39:077][  0]LogConfig: Setting CVar [[r.TranslucencyLightingVolumeDim:64]]
+[2021.03.06-15.32.39:077][  0]LogConfig: Setting CVar [[r.RefractionQuality:2]]
+[2021.03.06-15.32.39:077][  0]LogConfig: Setting CVar [[r.SSR.Quality:3]]
+[2021.03.06-15.32.39:077][  0]LogConfig: Setting CVar [[r.SSR.HalfResSceneColor:0]]
+[2021.03.06-15.32.39:077][  0]LogConfig: Setting CVar [[r.SceneColorFormat:4]]
+[2021.03.06-15.32.39:077][  0]LogConfig: Setting CVar [[r.DetailMode:2]]
+[2021.03.06-15.32.39:077][  0]LogConfig: Setting CVar [[r.TranslucencyVolumeBlur:1]]
+[2021.03.06-15.32.39:077][  0]LogConfig: Setting CVar [[r.MaterialQualityLevel:1 ; High quality]]
+[2021.03.06-15.32.39:077][  0]LogConfig: Setting CVar [[r.AnisotropicMaterials:1]]
+[2021.03.06-15.32.39:077][  0]LogConfig: Setting CVar [[r.SSS.Scale:1]]
+[2021.03.06-15.32.39:077][  0]LogConfig: Setting CVar [[r.SSS.SampleSet:2]]
+[2021.03.06-15.32.39:077][  0]LogConfig: Setting CVar [[r.SSS.Quality:1]]
+[2021.03.06-15.32.39:077][  0]LogConfig: Setting CVar [[r.SSS.HalfRes:0]]
+[2021.03.06-15.32.39:077][  0]LogConfig: Setting CVar [[r.SSGI.Quality:3]]
+[2021.03.06-15.32.39:077][  0]LogConfig: Setting CVar [[r.EmitterSpawnRateScale:1.0]]
+[2021.03.06-15.32.39:077][  0]LogConfig: Setting CVar [[r.ParticleLightQuality:2]]
+[2021.03.06-15.32.39:077][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.FastApplyOnOpaque:1 ; Always have FastSkyLUT 1 in this case to avoid wrong sky]]
+[2021.03.06-15.32.39:077][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.SampleCountMaxPerSlice:4]]
+[2021.03.06-15.32.39:077][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.DepthResolution:16.0]]
+[2021.03.06-15.32.39:077][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT:1]]
+[2021.03.06-15.32.39:077][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT.SampleCountMin:4.0]]
+[2021.03.06-15.32.39:077][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT.SampleCountMax:128.0]]
+[2021.03.06-15.32.39:077][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.SampleCountMin:4.0]]
+[2021.03.06-15.32.39:077][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.SampleCountMax:128.0]]
+[2021.03.06-15.32.39:077][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.TransmittanceLUT.UseSmallFormat:0]]
+[2021.03.06-15.32.39:077][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.TransmittanceLUT.SampleCount:10.0]]
+[2021.03.06-15.32.39:077][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.MultiScatteringLUT.SampleCount:15.0]]
+[2021.03.06-15.32.39:077][  0]LogConfig: Applying CVar settings from Section [FoliageQuality@3] File [D:/Code/UE4/RPGGame/Main/Saved/Config/Windows/Scalability.ini]
+[2021.03.06-15.32.39:077][  0]LogConfig: Setting CVar [[foliage.DensityScale:1.0]]
+[2021.03.06-15.32.39:077][  0]LogConfig: Setting CVar [[grass.DensityScale:1.0]]
+[2021.03.06-15.32.39:077][  0]LogConfig: Applying CVar settings from Section [ShadingQuality@3] File [D:/Code/UE4/RPGGame/Main/Saved/Config/Windows/Scalability.ini]
+[2021.03.06-15.32.39:077][  0]LogConfig: Setting CVar [[r.HairStrands.SkyLighting.IntegrationType:2]]
+[2021.03.06-15.32.39:077][  0]LogConfig: Setting CVar [[r.HairStrands.SkyAO.SampleCount:4]]
+[2021.03.06-15.32.39:077][  0]LogConfig: Setting CVar [[r.HairStrands.Visibility.MSAA.SamplePerPixel:4]]
+[2021.03.06-15.32.39:077][  0]LogInit: Selected Device Profile: [Windows]
+[2021.03.06-15.32.39:077][  0]LogInit: Applying CVar settings loaded from the selected device profile: [Windows]
+[2021.03.06-15.32.39:077][  0]LogHAL: Display: Platform has ~ 32 GB [34261880832 / 34359738368 / 32], which maps to Largest [LargestMinGB=32, LargerMinGB=12, DefaultMinGB=8, SmallerMinGB=6, SmallestMinGB=0)
+[2021.03.06-15.32.39:077][  0]LogInit: Going up to parent DeviceProfile []
+[2021.03.06-15.32.39:078][  0]LogConfig: Applying CVar settings from Section [ViewDistanceQuality@3] File [D:/Code/UE4/RPGGame/Main/Saved/Config/Windows/Scalability.ini]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.SkeletalMeshLODBias:0]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.ViewDistanceScale:1.0]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Applying CVar settings from Section [AntiAliasingQuality@3] File [D:/Code/UE4/RPGGame/Main/Saved/Config/Windows/Scalability.ini]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.PostProcessAAQuality:4]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Applying CVar settings from Section [ShadowQuality@3] File [D:/Code/UE4/RPGGame/Main/Saved/Config/Windows/Scalability.ini]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.LightFunctionQuality:1]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.ShadowQuality:5]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.Shadow.CSM.MaxCascades:10]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.Shadow.MaxResolution:2048]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.Shadow.MaxCSMResolution:2048]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.Shadow.RadiusThreshold:0.01]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.Shadow.DistanceScale:1.0]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.Shadow.CSM.TransitionScale:1.0]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.Shadow.PreShadowResolutionFactor:1.0]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.DistanceFieldShadowing:1]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.DistanceFieldAO:1]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.AOQuality:2]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.VolumetricFog:1]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridPixelSize:8]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridSizeZ:128]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.VolumetricFog.HistoryMissSupersampleCount:4]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.LightMaxDrawDistanceScale:1]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.CapsuleShadows:1]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Applying CVar settings from Section [PostProcessQuality@3] File [D:/Code/UE4/RPGGame/Main/Saved/Config/Windows/Scalability.ini]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.MotionBlurQuality:4]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMipLevelFactor:0.4]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMaxQuality:100]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.AmbientOcclusionLevels:-1]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.AmbientOcclusionRadiusScale:1.0]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.DepthOfFieldQuality:2]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.RenderTargetPoolMin:400]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.LensFlareQuality:2]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.SceneColorFringeQuality:1]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.EyeAdaptationQuality:2]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.BloomQuality:5]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.FastBlurThreshold:100]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.Upscale.Quality:3]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.Tonemapper.GrainQuantization:1]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.LightShaftQuality:1]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.Filter.SizeScale:1]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.Tonemapper.Quality:5]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.DOF.Gather.AccumulatorQuality:1        ; higher gathering accumulator quality]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.DOF.Gather.PostfilterMethod:1          ; Median3x3 postfilering method]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.DOF.Gather.EnableBokehSettings:0       ; no bokeh simulation when gathering]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.DOF.Gather.RingCount:4                 ; medium number of samples when gathering]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.DOF.Scatter.ForegroundCompositing:1    ; additive foreground scattering]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.DOF.Scatter.BackgroundCompositing:2    ; additive background scattering]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.DOF.Scatter.EnableBokehSettings:1      ; bokeh simulation when scattering]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.DOF.Scatter.MaxSpriteRatio:0.1         ; only a maximum of 10% of scattered bokeh]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.DOF.Recombine.Quality:1                ; cheap slight out of focus]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.DOF.Recombine.EnableBokehSettings:0    ; no bokeh simulation on slight out of focus]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.DOF.TemporalAAQuality:1                ; more stable temporal accumulation]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxForegroundRadius:0.025]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxBackgroundRadius:0.025]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Applying CVar settings from Section [TextureQuality@3] File [D:/Code/UE4/RPGGame/Main/Saved/Config/Windows/Scalability.ini]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.Streaming.MipBias:0]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.Streaming.AmortizeCPUToGPUCopy:0]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.Streaming.MaxNumTexturesToStreamPerFrame:0]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.Streaming.Boost:1]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.MaxAnisotropy:8]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.VT.MaxAnisotropy:8]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.Streaming.LimitPoolSizeToVRAM:0]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.Streaming.PoolSize:1000]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.Streaming.MaxEffectiveScreenSize:0]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Applying CVar settings from Section [EffectsQuality@3] File [D:/Code/UE4/RPGGame/Main/Saved/Config/Windows/Scalability.ini]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.TranslucencyLightingVolumeDim:64]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.RefractionQuality:2]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.SSR.Quality:3]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.SSR.HalfResSceneColor:0]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.SceneColorFormat:4]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.DetailMode:2]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.TranslucencyVolumeBlur:1]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.MaterialQualityLevel:1 ; High quality]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.AnisotropicMaterials:1]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.SSS.Scale:1]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.SSS.SampleSet:2]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.SSS.Quality:1]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.SSS.HalfRes:0]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.SSGI.Quality:3]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.EmitterSpawnRateScale:1.0]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.ParticleLightQuality:2]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.FastApplyOnOpaque:1 ; Always have FastSkyLUT 1 in this case to avoid wrong sky]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.SampleCountMaxPerSlice:4]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.AerialPerspectiveLUT.DepthResolution:16.0]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT:1]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT.SampleCountMin:4.0]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.FastSkyLUT.SampleCountMax:128.0]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.SampleCountMin:4.0]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.SampleCountMax:128.0]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.TransmittanceLUT.UseSmallFormat:0]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.TransmittanceLUT.SampleCount:10.0]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.SkyAtmosphere.MultiScatteringLUT.SampleCount:15.0]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Applying CVar settings from Section [FoliageQuality@3] File [D:/Code/UE4/RPGGame/Main/Saved/Config/Windows/Scalability.ini]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[foliage.DensityScale:1.0]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[grass.DensityScale:1.0]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Applying CVar settings from Section [ShadingQuality@3] File [D:/Code/UE4/RPGGame/Main/Saved/Config/Windows/Scalability.ini]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.HairStrands.SkyLighting.IntegrationType:2]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.HairStrands.SkyAO.SampleCount:4]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Setting CVar [[r.HairStrands.Visibility.MSAA.SamplePerPixel:4]]
+[2021.03.06-15.32.39:078][  0]LogConfig: Applying CVar settings from Section [Startup] File [../../../Engine/Config/ConsoleVariables.ini]
+[2021.03.06-15.32.39:079][  0]LogConfig: Setting CVar [[net.UseAdaptiveNetUpdateFrequency:0]]
+[2021.03.06-15.32.39:079][  0]LogConfig: Setting CVar [[p.chaos.AllowCreatePhysxBodies:1]]
+[2021.03.06-15.32.39:079][  0]LogConfig: Setting CVar [[fx.SkipVectorVMBackendOptimizations:1]]
+[2021.03.06-15.32.39:079][  0]LogConfig: Applying CVar settings from Section [ConsoleVariables] File [D:/Code/UE4/RPGGame/Main/Saved/Config/Windows/Engine.ini]
+[2021.03.06-15.32.39:079][  0]LogInit: Computer: PIANG
+[2021.03.06-15.32.39:079][  0]LogInit: User: piang
+[2021.03.06-15.32.39:079][  0]LogInit: CPU Page size=4096, Cores=8
+[2021.03.06-15.32.39:079][  0]LogInit: High frequency timer resolution =10.000000 MHz
+[2021.03.06-15.32.39:079][  0]LogMemory: Memory total: Physical=31.9GB (32GB approx)
+[2021.03.06-15.32.39:079][  0]LogMemory: Platform Memory Stats for Windows
+[2021.03.06-15.32.39:079][  0]LogMemory: Process Physical Memory: 135.51 MB used, 135.52 MB peak
+[2021.03.06-15.32.39:079][  0]LogMemory: Process Virtual Memory: 112.72 MB used, 112.72 MB peak
+[2021.03.06-15.32.39:079][  0]LogMemory: Physical Memory: 11210.41 MB used,  21464.26 MB free, 32674.68 MB total
+[2021.03.06-15.32.39:079][  0]LogMemory: Virtual Memory: 134196976.00 MB used,  20752.70 MB free, 134217728.00 MB total
+[2021.03.06-15.32.39:085][  0]LogWindows: WindowsPlatformFeatures enabled
+[2021.03.06-15.32.39:138][  0]LogInit: Physics initialised using underlying interface: PhysX
+[2021.03.06-15.32.39:139][  0]LogInit: Using OS detected language (zh-CN).
+[2021.03.06-15.32.39:139][  0]LogInit: Using OS detected locale (en-US).
+[2021.03.06-15.32.39:140][  0]LogTextLocalizationManager: No specific localization for 'zh-CN' exists, so the 'zh-Hans' localization will be used.
+[2021.03.06-15.32.39:210][  0]LogTextLocalizationResource: LocRes '../../../Engine/Content/Localization/Editor/zh/Editor.locres' could not be opened for reading!
+[2021.03.06-15.32.39:210][  0]LogTextLocalizationResource: LocRes '../../../Engine/Content/Localization/EditorTutorials/zh/EditorTutorials.locres' could not be opened for reading!
+[2021.03.06-15.32.39:210][  0]LogTextLocalizationResource: LocRes '../../../Engine/Content/Localization/Keywords/zh/Keywords.locres' could not be opened for reading!
+[2021.03.06-15.32.39:210][  0]LogTextLocalizationResource: LocRes '../../../Engine/Content/Localization/Category/zh/Category.locres' could not be opened for reading!
+[2021.03.06-15.32.39:211][  0]LogTextLocalizationResource: LocRes '../../../Engine/Content/Localization/ToolTips/zh/ToolTips.locres' could not be opened for reading!
+[2021.03.06-15.32.39:211][  0]LogTextLocalizationResource: LocRes '../../../Engine/Content/Localization/PropertyNames/zh/PropertyNames.locres' could not be opened for reading!
+[2021.03.06-15.32.39:211][  0]LogTextLocalizationResource: LocRes '../../../Engine/Content/Localization/Engine/zh/Engine.locres' could not be opened for reading!
+[2021.03.06-15.32.39:211][  0]LogTextLocalizationResource: LocRes '../../../Engine/Plugins/Online/OnlineSubsystem/Content/Localization/OnlineSubsystem/zh/OnlineSubsystem.locres' could not be opened for reading!
+[2021.03.06-15.32.39:211][  0]LogTextLocalizationResource: LocRes '../../../Engine/Plugins/Online/OnlineSubsystemUtils/Content/Localization/OnlineSubsystemUtils/zh/OnlineSubsystemUtils.locres' could not be opened for reading!
+[2021.03.06-15.32.39:211][  0]LogTextLocalizationResource: LocRes '../../../Engine/Plugins/Online/Android/OnlineSubsystemGooglePlay/Content/Localization/OnlineSubsystemGooglePlay/zh/OnlineSubsystemGooglePlay.locres' could not be opened for reading!
+[2021.03.06-15.32.39:211][  0]LogTextLocalizationResource: LocRes '../../../Engine/Plugins/Online/IOS/OnlineSubsystemIOS/Content/Localization/OnlineSubsystemIOS/zh/OnlineSubsystemIOS.locres' could not be opened for reading!
+[2021.03.06-15.32.39:252][  0]LogInit: Setting process to per monitor DPI aware
+[2021.03.06-15.32.39:261][  0]LogWindowsTextInputMethodSystem: Display: IME system deactivated.
+[2021.03.06-15.32.39:276][  0]LogSlate: New Slate User Created.  User Index 0, Is Virtual User: 0
+[2021.03.06-15.32.39:276][  0]LogSlate: Slate User Registered.  User Index 0, Is Virtual User: 0
+[2021.03.06-15.32.39:420][  0]LogHMD: Failed to initialize OpenVR with code 110
+[2021.03.06-15.32.39:420][  0]LogD3D11RHI: D3D11 min allowed feature level: 11_0
+[2021.03.06-15.32.39:420][  0]LogD3D11RHI: D3D11 max allowed feature level: 11_0
+[2021.03.06-15.32.39:420][  0]LogD3D11RHI: D3D11 adapters:
+[2021.03.06-15.32.39:516][  0]LogD3D11RHI:    0. 'NVIDIA GeForce RTX 2080 Super with Max-Q Design' (Feature Level 11_0)
+[2021.03.06-15.32.39:516][  0]LogD3D11RHI:       8010/0/16337 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:1, VendorId:0x10de
+[2021.03.06-15.32.39:517][  0]LogD3D11RHI:    1. 'Microsoft Basic Render Driver' (Feature Level 11_0)
+[2021.03.06-15.32.39:517][  0]LogD3D11RHI:       0/0/16337 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:0, VendorId:0x1414
+[2021.03.06-15.32.39:517][  0]LogD3D11RHI: Chosen D3D11 Adapter: 0
+[2021.03.06-15.32.39:520][  0]LogD3D11RHI: Creating new Direct3DDevice
+[2021.03.06-15.32.39:520][  0]LogD3D11RHI:     GPU DeviceId: 0x1ed3 (for the marketing name, search the web for "GPU Device Id")
+[2021.03.06-15.32.39:520][  0]LogWindows: EnumDisplayDevices:
+[2021.03.06-15.32.39:520][  0]LogWindows:    0. 'NVIDIA GeForce RTX 2080 Super with Max-Q Design' (P:1 D:1)
+[2021.03.06-15.32.39:522][  0]LogWindows:    1. 'NVIDIA GeForce RTX 2080 Super with Max-Q Design' (P:0 D:0)
+[2021.03.06-15.32.39:522][  0]LogWindows:    2. 'NVIDIA GeForce RTX 2080 Super with Max-Q Design' (P:0 D:0)
+[2021.03.06-15.32.39:522][  0]LogWindows:    3. 'NVIDIA GeForce RTX 2080 Super with Max-Q Design' (P:0 D:0)
+[2021.03.06-15.32.39:522][  0]LogWindows: DebugString: FoundDriverCount:4 
+[2021.03.06-15.32.39:522][  0]LogD3D11RHI:     Adapter Name: NVIDIA GeForce RTX 2080 Super with Max-Q Design
+[2021.03.06-15.32.39:522][  0]LogD3D11RHI:   Driver Version: 461.40 (internal:27.21.14.6140, unified:461.40)
+[2021.03.06-15.32.39:522][  0]LogD3D11RHI:      Driver Date: 1-22-2021
+[2021.03.06-15.32.39:522][  0]LogRHI: Texture pool is 5607 MB (70% of 8010 MB)
+[2021.03.06-15.32.39:596][  0]LogD3D11RHI: RHI has support for 64 bit atomics
+[2021.03.06-15.32.39:596][  0]LogD3D11RHI: Async texture creation enabled
+[2021.03.06-15.32.39:596][  0]LogD3D11RHI: Array index from any shader is supported
+[2021.03.06-15.32.39:597][  0]LogD3D11RHI: HDR output is supported on display 0 (NvId: 0x80061086).
+[2021.03.06-15.32.39:612][  0]LogD3D11RHI: GPU Timing Frequency: 1000.000000 (Debug: 2 1)
+[2021.03.06-15.32.39:615][  0]LogRHI: GeForceNow SDK initialized: 1
+[2021.03.06-15.32.39:845][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'AllDesktop'
+[2021.03.06-15.32.39:860][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android'
+[2021.03.06-15.32.39:860][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_ASTC'
+[2021.03.06-15.32.39:860][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_DXT'
+[2021.03.06-15.32.39:860][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_ETC2'
+[2021.03.06-15.32.39:860][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'AndroidClient'
+[2021.03.06-15.32.39:860][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_ASTCClient'
+[2021.03.06-15.32.39:860][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_DXTClient'
+[2021.03.06-15.32.39:860][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_ETC2Client'
+[2021.03.06-15.32.39:860][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_Multi'
+[2021.03.06-15.32.39:860][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_MultiClient'
+[2021.03.06-15.32.39:879][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'IOSClient'
+[2021.03.06-15.32.39:879][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'IOS'
+[2021.03.06-15.32.39:886][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Linux'
+[2021.03.06-15.32.39:892][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'LinuxNoEditor'
+[2021.03.06-15.32.39:898][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'LinuxClient'
+[2021.03.06-15.32.39:905][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'LinuxServer'
+[2021.03.06-15.32.39:912][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'LinuxAArch64NoEditor'
+[2021.03.06-15.32.39:918][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'LinuxAArch64Client'
+[2021.03.06-15.32.39:925][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'LinuxAArch64Server'
+[2021.03.06-15.32.39:942][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Lumin'
+[2021.03.06-15.32.39:942][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'LuminClient'
+[2021.03.06-15.32.39:948][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'MacNoEditor'
+[2021.03.06-15.32.39:955][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Mac'
+[2021.03.06-15.32.39:962][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'MacClient'
+[2021.03.06-15.32.39:968][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'MacServer'
+[2021.03.06-15.32.39:979][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'TVOSClient'
+[2021.03.06-15.32.39:979][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'TVOS'
+[2021.03.06-15.32.39:986][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'WindowsNoEditor'
+[2021.03.06-15.32.39:993][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'Windows'
+[2021.03.06-15.32.40:000][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'WindowsClient'
+[2021.03.06-15.32.40:006][  0]LogTargetPlatformManager: Display: Loaded TargetPlatform 'WindowsServer'
+[2021.03.06-15.32.40:006][  0]LogTargetPlatformManager: Display: Building Assets For Windows
+[2021.03.06-15.32.40:013][  0]LogAudioDebug: Display: Lib vorbis DLL was dynamically loaded.
+[2021.03.06-15.32.40:067][  0]LogRendererCore: Ray tracing is disabled. Reason: r.RayTracing=0.
+[2021.03.06-15.32.40:067][  0]LogShaderCompilers: Guid format shader working directory is 6 characters bigger than the processId version (../../../../../../Code/UE4/RPGGame/Main/Intermediate/Shaders/WorkingDirectory/14736/).
+[2021.03.06-15.32.40:067][  0]LogShaderCompilers: Cleaned the shader compiler working directory 'C:/Users/piang/AppData/Local/Temp/UnrealShaderWorkingDir/97AB776D4D751E16077A2792C67B8CAA/'.
+[2021.03.06-15.32.40:068][  0]LogShaderCompilers: Display: Using XGE Controller for Shader Compilation.
+[2021.03.06-15.32.40:651][  0]LogDerivedDataCache: Display: Max Cache Size: 512 MB
+[2021.03.06-15.32.40:686][  0]LogDerivedDataCache: Loaded boot cache 0.04s 78MB C:/Users/piang/AppData/Local/UnrealEngine/4.26/DerivedDataCache/Boot.ddc.
+[2021.03.06-15.32.40:686][  0]LogDerivedDataCache: Display: Loaded Boot cache: C:/Users/piang/AppData/Local/UnrealEngine/4.26/DerivedDataCache/Boot.ddc
+[2021.03.06-15.32.40:686][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  Pak pak cache file ../../../../../../Code/UE4/RPGGame/Main/DerivedDataCache/DDC.ddp not found, will not use a pak cache.
+[2021.03.06-15.32.40:686][  0]LogDerivedDataCache: Unable to find inner node Pak for hierarchical cache Hierarchy.
+[2021.03.06-15.32.40:686][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  CompressedPak pak cache file ../../../../../../Code/UE4/RPGGame/Main/DerivedDataCache/Compressed.ddp not found, will not use a pak cache.
+[2021.03.06-15.32.40:686][  0]LogDerivedDataCache: Unable to find inner node CompressedPak for hierarchical cache Hierarchy.
+[2021.03.06-15.32.40:695][  0]LogDerivedDataCache: Display: Pak cache opened for reading ../../../Engine/DerivedDataCache/Compressed.ddp.
+[2021.03.06-15.32.40:695][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  EnterprisePak pak cache file ../../../Enterprise/DerivedDataCache/Compressed.ddp not found, will not use a pak cache.
+[2021.03.06-15.32.40:695][  0]LogDerivedDataCache: Unable to find inner node EnterprisePak for hierarchical cache Hierarchy.
+[2021.03.06-15.32.40:701][  0]LogDerivedDataCache: Speed tests for C:/Users/piang/AppData/Local/UnrealEngine/Common/DerivedDataCache took 0.01 seconds
+[2021.03.06-15.32.40:701][  0]LogDerivedDataCache: Display: Performance to C:/Users/piang/AppData/Local/UnrealEngine/Common/DerivedDataCache: Latency=0.04ms. RandomReadSpeed=1184.32MBs, RandomWriteSpeed=240.49MBs. Assigned SpeedClass 'Local'
+[2021.03.06-15.32.40:701][  0]LogDerivedDataCache: Using Local data cache path C:/Users/piang/AppData/Local/UnrealEngine/Common/DerivedDataCache: Writable
+[2021.03.06-15.32.40:701][  0]LogDerivedDataCache: Shared data cache path not found in *engine.ini, will not use an Shared cache.
+[2021.03.06-15.32.40:701][  0]LogDerivedDataCache: Unable to find inner node Shared for hierarchical cache Hierarchy.
+[2021.03.06-15.32.40:735][  0]LogSlate: Using FreeType 2.10.0
+[2021.03.06-15.32.40:736][  0]LogSlate: SlateFontServices - WITH_FREETYPE: 1, WITH_HARFBUZZ: 1
+[2021.03.06-15.32.40:757][  0]LogAssetRegistry: FAssetRegistry took 0.0020 seconds to start up
+[2021.03.06-15.32.40:925][  0]LogInit: Selected Device Profile: [Windows]
+[2021.03.06-15.32.40:925][  0]LogInit: Active device profile: [000002197B44A000][000002197A4AC440 49] Windows
+[2021.03.06-15.32.40:925][  0]LogInit: Profiles: [000002197B44A000][000002197A4AC440 49] Windows, [000002197B447E00][000002197A4B45C0 49] WindowsNoEditor, [000002197B44BC00][000002197A4B8740 49] WindowsServer, [000002197B444600][000002197A4BC8C0 49] WindowsClient, [000002197B448700][000002197A4C0A40 49] IOS, [000002197B446D00][000002197A4C4BC0 49] iPadAir, [000002197B44AD00][000002197A4C8D40 49] iPadAir2, [000002197B3F3800][000002197A4D1000 49] IPadPro, [000002197B3F3900][000002197A4CD040 49] iPadAir3, [000002197B449500][000002197A4D51C0 49] iPadAir4, [000002197B3F2700][000002197A4D9340 49] iPadMini2, [000002197B44B700][000002197A4DD4C0 49] iPadMini3, [000002197B3F2600][000002197A4B1600 49] iPadMini4, [000002197B448600][000002197B503740 49] iPadMini5, [000002197B427000][000002197B569980 49] iPhone6, [000002197B427100][000002197B53F9C0 49] iPodTouch6, [000002197B3F3600][000002197B5A1C80 49] iPhone7, [000002197B3F3500][000002197B57DCC0 49] iPodTouch7, [000002197B426600][000002197B5A4180 49] iPhone5S, [000002197B3F1600][000002197B5A8300 49] iPhone6Plus, [000002197B424F00][000002197B5AC480 49] iPhone6S, [000002197B3F1700][000002197B5D6600 49] iPhone6SPlus, [000002197B425700][000002197B5DA780 49] iPhone7Plus, [000002197B3F2900][000002197B5DE900 49] iPhoneSE, [000002197B426E00][000002197B5E6A80 49] iPhone8, [000002197B3F0B00][000002197B5F0C00 49] iPhone8Plus, [000002197B426200][000002197B5F4D80 49] iPhoneX, [000002197B3F1B00][000002197B602F00 49] iPhoneXS, [000002197B424500][000002197B607080 49] iPhoneXSMax, [000002197B3F0100][000002197B60B200 49] iPhoneXR, [000002197B427600][000002197B60F380 49] iPhone11, [000002197B3F3100][000002197B613500 49] iPhone11Pro, [000002197B426C00][000002197B579640 49] iPhone11ProMax, [000002197B3F2100][000002197B617780 49] iPhoneSE2, [000002197B426500][000002197B61B8C0 49] iPhone12Mini, [000002197B3F2300][000002197B61FA00 49] iPhone12, [000002197B426D00][000002197B627B80 49] iPhone12Pro, [000002197B3F0F00][000002197B62BD00 49] iPhone12ProMax, [000002197B424100][000002197B62E1C0 49] iPadPro105, [000002197B3F1C00][000002197B632340 49] iPadPro129, [000002197B425000][000002197B6564C0 49] iPadPro97, [000002197B3F3E00][000002197B65A640 49] iPadPro2_129, [000002197B424800][000002197B65E7C0 49] iPad5, [000002197B445300][000002197B662940 49] iPad6, [000002197B3F0D00][000002197B666AC0 49] iPad7, [000002197B445B00][000002197B66AC40 49] iPad8, [000002197B3F1800][000002197B66EDC0 49] iPadPro11, [000002197B444400][000002197B672F40 49] iPadPro2_11, [000002197B3F0200][000002197B6770C0 49] iPadPro3_129, [000002197B447100][000002197B67B240 49] iPadPro4_129, [000002197B3F3400][000002197B6AB3C0 49] AppleTV, [000002197B444F00][000002197B6AF540 49] AppleTV4K, [000002197B425B00][000002197B6B36C0 49] TVOS, [000002197B444C00][000002197B623800 49] Mac, [000002197B427800][000002197B6B7940 49] MacClient, [000002197B445C00][000002197B6BBA80 49] MacNoEditor, [000002197B425600][000002197B6C3C00 49] MacServer, [000002197B446C00][000002197B6C60C0 49] Linux, [000002197B427300][000002197B6CA240 49] LinuxNoEditor, [000002197B447000][000002197B6CE3C0 49] LinuxAArch64NoEditor, [000002197B426B00][000002197B6D2540 49] LinuxClient, [000002197B447200][000002197B6D66C0 49] LinuxAArch64Client, [000002197B426900][000002197B6DA840 49] LinuxServer, [000002197B446F00][000002197B6DE9C0 49] LinuxAArch64Server, [000002197B427A00][000002197B6E2B40 49] Android, [000002197B446E00][000002197B6E6CC0 49] Android_Low, [000002197B426300][000002197B6EAE40 49] Android_Mid, [000002197B447300][000002197B6EEFC0 49] Android_High, [000002197B427C00][000002197B6F3140 49] Android_Default, [000002197B447500][000002197B6F72C0 49] Android_Adreno4xx, [000002197B424300][000002197B6FB440 49] Android_Adreno5xx_Low, [000002197B444100][000002197B6FF5C0 49] Android_Adreno5xx, [000002197B425200][000002197B703740 49] Android_Adreno6xx, [000002197B445F00][000002197B6BF880 49] Android_Adreno6xx_Vulkan, [000002197B424A00][000002197B7079C0 49] Android_Mali_T6xx, [000002197B445400][000002197B70BB00 49] Android_Mali_T7xx, [000002197B425800][000002197B70FC40 49] Android_Mali_T8xx, [000002197B445600][000002197B716100 49] Android_Mali_G71, [000002197B426000][000002197B71A280 49] Android_Mali_G72, [000002197B446000][000002197B71E400 49] Android_Mali_G72_Vulkan, [000002197B426800][000002197B722580 49] Android_Mali_G76, [000002197B444A00][000002197B726700 49] Android_Mali_G76_Vulkan, [000002197B427B00][000002197B72A880 49] Android_Mali_G77, [000002197B444900][000002197B72EA00 49] Android_Mali_G77_Vulkan, [000002197B424B00][000002197B732B80 49] Android_Vulkan_SM5, [000002197B445700][000002197B736D00 49] Android_PowerVR_G6xxx, [000002197B424400][000002197B73AE80 49] Android_PowerVR_GT7xxx, [000002197B445800][000002197B73F000 49] Android_PowerVR_GE8xxx, [000002197B425F00][000002197B743180 49] Android_PowerVR_GM9xxx, [000002197B446200][000002197B747300 49] Android_PowerVR_GM9xxx_Vulkan, [000002197B425300][000002197B74B480 49] Android_TegraK1, [000002197B447600][000002197B74F600 49] Android_Unknown_Vulkan, [000002197B426A00][000002197B753780 49] Lumin, [000002197B446900][000002197B7138C0 49] Lumin_Desktop, [000002197B424900][000002197B757A00 49] HoloLens, 
+[2021.03.06-15.32.41:009][  0]LogMeshReduction: Using QuadricMeshReduction for automatic static mesh reduction
+[2021.03.06-15.32.41:009][  0]LogMeshReduction: Using SimplygonMeshReduction for automatic skeletal mesh reduction
+[2021.03.06-15.32.41:009][  0]LogMeshReduction: Using ProxyLODMeshReduction for automatic mesh merging
+[2021.03.06-15.32.41:009][  0]LogMeshReduction: No distributed automatic mesh merging module available
+[2021.03.06-15.32.41:009][  0]LogMeshMerging: No distributed automatic mesh merging module available
+[2021.03.06-15.32.41:023][  0]LogNetVersion: Main 1.0.0, NetCL: 14830424, EngineNetVer: 16, GameNetVer: 0 (Checksum: 212063694)
+[2021.03.06-15.32.41:349][  0]LogHMD: PokeAHoleMaterial loaded successfully
+[2021.03.06-15.32.41:389][  0]LogPackageLocalizationCache: Processed 22 localized package path(s) for 2 prioritized culture(s) in 0.040060 seconds
+[2021.03.06-15.32.41:392][  0]LogUObjectArray: 16830 objects as part of root set at end of initial load.
+[2021.03.06-15.32.41:392][  0]LogUObjectAllocator: 4209472 out of 0 bytes used by permanent object pool.
+[2021.03.06-15.32.41:392][  0]LogUObjectArray: CloseDisregardForGC: 0/0 objects in disregard for GC pool
+[2021.03.06-15.32.41:689][  0]LogTcpMessaging: Initializing TcpMessaging bridge
+[2021.03.06-15.32.41:693][  0]LogUdpMessaging: Initializing bridge on interface 0.0.0.0:0 to multicast group 230.0.0.1:6666.
+[2021.03.06-15.32.41:777][  0]LogActor: Warning: SetReplicates called on non-initialized actor Default__Item. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.03.06-15.32.41:777][  0]LogActor: Warning: SetReplicates called on non-initialized actor Default__Body. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.03.06-15.32.41:797][  0]LogActor: Warning: SetReplicates called on non-initialized actor Default__Weapon. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.03.06-15.32.41:834][  0]SourceControl: 源码管理已禁用
+[2021.03.06-15.32.41:834][  0]SourceControl: 源码管理已禁用
+[2021.03.06-15.32.41:837][  0]SourceControl: 源码管理已禁用
+[2021.03.06-15.32.41:843][  0]SourceControl: 源码管理已禁用
+[2021.03.06-15.32.41:849][  0]SourceControl: 源码管理已禁用
+[2021.03.06-15.32.41:855][  0]LogUProjectInfo: Found projects:
+[2021.03.06-15.32.42:051][  0]LogAndroidPermission: UAndroidPermissionCallbackProxy::GetInstance
+[2021.03.06-15.32.42:069][  0]LogAudioCaptureCore: Display: No Audio Capture implementations found. Audio input will be silent.
+[2021.03.06-15.32.42:069][  0]LogAudioCaptureCore: Display: No Audio Capture implementations found. Audio input will be silent.
+[2021.03.06-15.32.42:112][  0]LogCollectionManager: Loaded 0 collections in 0.000466 seconds
+[2021.03.06-15.32.42:130][  0]LogFileCache: Scanning file cache for directory 'D:/Code/UE4/RPGGame/Main/Saved/Collections/' took 0.00s
+[2021.03.06-15.32.42:130][  0]LogFileCache: Scanning file cache for directory 'D:/Code/UE4/RPGGame/Main/Content/Developers/piang/Collections/' took 0.00s
+[2021.03.06-15.32.42:130][  0]LogFileCache: Scanning file cache for directory 'D:/Code/UE4/RPGGame/Main/Content/Collections/' took 0.00s
+[2021.03.06-15.32.42:130][  0]LogOcInput: OculusInput pre-init called
+[2021.03.06-15.32.42:138][  0]LogWindows: Failed to load 'OVRPlugin.dll' (GetLastError=126)
+[2021.03.06-15.32.42:138][  0]LogWindows: File 'OVRPlugin.dll' does not exist
+[2021.03.06-15.32.42:179][  0]LogEngine: Initializing Engine...
+[2021.03.06-15.32.42:180][  0]LogHMD: Failed to initialize OpenVR with code 110
+[2021.03.06-15.32.42:180][  0]LogMagicLeap: Warning: VR disabled because ZI is not enabled.  To enable, in the editor, Edit -> Project Settings -> Plugins -> Magic Leap Plugin -> Enable Zero Iteration
+[2021.03.06-15.32.42:180][  0]LogStats: UGameplayTagsManager::InitializeManager -  0.000 s
+[2021.03.06-15.32.42:258][  0]LogInit: Initializing FReadOnlyCVARCache
+[2021.03.06-15.32.42:266][  0]LogAIModule: Creating AISystem for world Untitled
+[2021.03.06-15.32.42:274][  0]LogAudio: Display: Initializing Audio Device Manager...
+[2021.03.06-15.32.42:278][  0]LogAudio: Display: Audio Device Manager Initialized
+[2021.03.06-15.32.42:278][  0]LogAudio: Display: Creating Audio Device:                 Id: 1, Scope: Shared, Realtime: True
+[2021.03.06-15.32.42:278][  0]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2021.03.06-15.32.42:278][  0]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2021.03.06-15.32.42:278][  0]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2021.03.06-15.32.42:279][  0]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2021.03.06-15.32.42:279][  0]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2021.03.06-15.32.42:279][  0]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2021.03.06-15.32.42:279][  0]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2021.03.06-15.32.42:279][  0]LogAudio: Display: AudioDevice MaxSources: 32
+[2021.03.06-15.32.42:279][  0]LogAudio: Display: Using built-in audio occlusion.
+[2021.03.06-15.32.42:279][  0]LogAudioMixer: Display: Initializing audio mixer.
+[2021.03.06-15.32.42:294][  0]LogAudioMixer: Display: 0: FrontLeft
+[2021.03.06-15.32.42:294][  0]LogAudioMixer: Display: 1: FrontRight
+[2021.03.06-15.32.42:372][  0]LogAudioMixer: Display: Using Audio Device 耳机 (Realtek(R) Audio)
+[2021.03.06-15.32.42:374][  0]LogAudioMixer: Display: Initializing Sound Submixes...
+[2021.03.06-15.32.42:376][  0]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2021.03.06-15.32.42:376][  0]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2021.03.06-15.32.42:376][  0]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2021.03.06-15.32.42:377][  0]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called
+[2021.03.06-15.32.42:377][  0]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048
+[2021.03.06-15.32.42:377][  0]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal()
+[2021.03.06-15.32.42:377][  0]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time
+[2021.03.06-15.32.42:377][  0]LogInit: FAudioDevice initialized.
+[2021.03.06-15.32.42:378][  0]LogAudio: Display: Audio Device (ID: 1) registered with world 'Untitled'.
+[2021.03.06-15.32.42:378][  0]LogNetVersion: Set ProjectVersion to 1.0.0.0. Version Checksum will be recalculated on next use.
+[2021.03.06-15.32.42:414][  0]LogDerivedDataCache: Saved boot cache 0.04s 78MB C:/Users/piang/AppData/Local/UnrealEngine/4.26/DerivedDataCache/Boot.ddc.
+[2021.03.06-15.32.42:414][  0]LogInit: Texture streaming: Enabled
+[2021.03.06-15.32.42:425][  0]LogAnalytics: Display: [UEEditor.Rocket.Release] APIServer = https://datarouter.ol.epicgames.com/. AppVersion = 4.26.0-14830424+++UE4+Release-4.26
+[2021.03.06-15.32.42:431][  0]LogEngineSessionManager: EngineSessionManager initialized
+[2021.03.06-15.32.42:431][  0]LogEngineSessionManager: EngineSessionManager sent abnormal shutdown report. Type=AbnormalShutdown, SessionId={8D62B15F-49F0-2744-1DFF-9BB0144C272C}
+[2021.03.06-15.32.42:431][  0]LogEngineSessionManager: EngineSessionManager sent abnormal shutdown report. Type=AbnormalShutdown, SessionId={0FA3608C-46AC-337A-6D88-47ACC4553D7B}
+[2021.03.06-15.32.42:431][  0]LogEditorSessionSummary: Verbose: Initializing EditorSessionSummaryWriter for editor session tracking
+[2021.03.06-15.32.42:433][  0]LogEditorSessionSummary: EditorSessionSummaryWriter initialized
+[2021.03.06-15.32.42:454][  0]LogInit: Transaction tracking system initialized
+[2021.03.06-15.32.42:473][  0]BlueprintLog: New page: 编辑器加载
+[2021.03.06-15.32.42:536][  0]LocalizationService: 本地化服务已禁用
+[2021.03.06-15.32.42:559][  0]TimingProfiler: Initialize
+[2021.03.06-15.32.42:559][  0]TimingProfiler: OnSessionChanged
+[2021.03.06-15.32.42:559][  0]LoadingProfiler: Initialize
+[2021.03.06-15.32.42:559][  0]LoadingProfiler: OnSessionChanged
+[2021.03.06-15.32.42:559][  0]NetworkingProfiler: Initialize
+[2021.03.06-15.32.42:559][  0]NetworkingProfiler: OnSessionChanged
+[2021.03.06-15.32.42:559][  0]MemoryProfiler: Initialize
+[2021.03.06-15.32.42:559][  0]MemoryProfiler: OnSessionChanged
+[2021.03.06-15.32.42:894][  0]LogCook: Display: CookSettings for Memory: MemoryMaxUsedVirtual 0MiB, MemoryMaxUsedPhysical 16384MiB, MemoryMinFreeVirtual 0MiB, MemoryMinFreePhysical 1024MiB
+[2021.03.06-15.32.42:894][  0]LogCook: Display: Mobile HDR setting 1
+[2021.03.06-15.32.43:035][  0]LogFileCache: Scanning file cache for directory 'D:/Code/UE4/RPGGame/Main/Content/' took 0.00s
+[2021.03.06-15.32.43:207][  0]SourceControl: 源码管理已禁用
+[2021.03.06-15.32.43:207][  0]LogUnrealEdMisc: Loading editor; pre map load, took 4.899
+[2021.03.06-15.32.43:207][  0]Cmd: MAP LOAD FILE="../../../../../../Code/UE4/RPGGame/Main/Content/Demo/Maps/TestMap.umap" TEMPLATE=0 SHOWPROGRESS=1 FEATURELEVEL=3
+[2021.03.06-15.32.43:207][  0]LightingResults: New page: 光照构建
+[2021.03.06-15.32.43:208][  0]LogWorld: UWorld::CleanupWorld for Untitled, bSessionEnded=true, bCleanupResources=true
+[2021.03.06-15.32.43:208][  0]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.03.06-15.32.43:208][  0]MapCheck: New page: 地图检测
+[2021.03.06-15.32.43:208][  0]LightingResults: New page: 光照构建
+[2021.03.06-15.32.43:218][  0]LogUObjectHash: Compacting FUObjectHashTables data took   0.59ms
+[2021.03.06-15.32.43:252][  0]LogActor: Warning: SetReplicates called on non-initialized actor Default__BodyCloth02_C. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.03.06-15.32.43:253][  0]LogActor: Warning: SetReplicates called on non-initialized actor Default__SKEL_BodyCloth02_C. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.03.06-15.32.43:255][  0]LogActor: Warning: SetReplicates called on non-initialized actor Default__WeaponSword01_C. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.03.06-15.32.43:255][  0]LogClass: Warning: Property Weapon::StaticMesh (SourceClass: Weapon) was not registered in GetLifetimeReplicatedProps. This property will not be replicated. Use DISABLE_REPLICATED_PROPERTY if not replicating was intentional.
+[2021.03.06-15.32.43:255][  0]LogActor: Warning: SetReplicates called on non-initialized actor Default__SKEL_WeaponSword01_C. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.03.06-15.32.43:257][  0]LogActor: Warning: SetReplicates called on non-initialized actor BodyCloth02_2. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.03.06-15.32.43:257][  0]LogActor: Warning: SetReplicates called on non-initialized actor WeaponSword01_2. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.03.06-15.32.43:273][  0]LogAudio: Display: Audio Device (ID: 1) registered with world 'TestMap'.
+[2021.03.06-15.32.43:274][  0]LogAIModule: Creating AISystem for world TestMap
+[2021.03.06-15.32.43:276][  0]LogEditorServer: Finished looking for orphan Actors (0.000 secs)
+[2021.03.06-15.32.43:288][  0]LogUObjectHash: Compacting FUObjectHashTables data took   0.68ms
+[2021.03.06-15.32.43:289][  0]Cmd: MAP CHECKDEP NOCLEARLOG
+[2021.03.06-15.32.43:289][  0]MapCheck: 地图检测完成：0个错误、0个警告、完成用时0.08毫秒。
+[2021.03.06-15.32.43:289][  0]LogFileHelpers: Loading map 'TestMap' took 0.082
+[2021.03.06-15.32.43:291][  0]LogUnrealEdMisc: Total Editor Startup Time, took 4.983
+[2021.03.06-15.32.43:361][  0]LogWindowsTextInputMethodSystem: Display: IME system activated using TSF (微软拼音).
+[2021.03.06-15.32.43:392][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2021.03.06-15.32.43:396][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2021.03.06-15.32.43:400][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2021.03.06-15.32.43:404][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2021.03.06-15.32.43:415][  0]LogNativeClassHierarchy: Verbose: Native class hierarchy populated in 0.0074 seconds. Added 3608 classes and 863 folders.
+[2021.03.06-15.32.43:416][  0]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'WidgetCarousel' in 0.0002 seconds. Added 0 classes and 0 folders.
+[2021.03.06-15.32.43:418][  0]LogPakFile: PakFile PrimaryIndexSize=187
+[2021.03.06-15.32.43:418][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2021.03.06-15.32.43:418][  0]LogPakFile: PakFile FullDirectoryIndexSize=148
+[2021.03.06-15.32.43:418][  0]LogPakFile: OnPakFileMounted2Time == 0.000006
+[2021.03.06-15.32.43:419][  0]LogPakFile: PakFile PrimaryIndexSize=189
+[2021.03.06-15.32.43:419][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2021.03.06-15.32.43:419][  0]LogPakFile: PakFile FullDirectoryIndexSize=152
+[2021.03.06-15.32.43:419][  0]LogPakFile: OnPakFileMounted2Time == 0.000007
+[2021.03.06-15.32.43:420][  0]LogPakFile: PakFile PrimaryIndexSize=191
+[2021.03.06-15.32.43:420][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2021.03.06-15.32.43:420][  0]LogPakFile: PakFile FullDirectoryIndexSize=160
+[2021.03.06-15.32.43:420][  0]LogPakFile: OnPakFileMounted2Time == 0.000009
+[2021.03.06-15.32.43:420][  0]LogPakFile: PakFile PrimaryIndexSize=185
+[2021.03.06-15.32.43:420][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2021.03.06-15.32.43:420][  0]LogPakFile: PakFile FullDirectoryIndexSize=148
+[2021.03.06-15.32.43:420][  0]LogPakFile: OnPakFileMounted2Time == 0.000010
+[2021.03.06-15.32.43:421][  0]LogPakFile: PakFile PrimaryIndexSize=190
+[2021.03.06-15.32.43:421][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2021.03.06-15.32.43:421][  0]LogPakFile: PakFile FullDirectoryIndexSize=154
+[2021.03.06-15.32.43:421][  0]LogPakFile: OnPakFileMounted2Time == 0.000011
+[2021.03.06-15.32.43:421][  0]LogPakFile: PakFile PrimaryIndexSize=192
+[2021.03.06-15.32.43:421][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2021.03.06-15.32.43:421][  0]LogPakFile: PakFile FullDirectoryIndexSize=158
+[2021.03.06-15.32.43:421][  0]LogPakFile: OnPakFileMounted2Time == 0.000012
+[2021.03.06-15.32.43:422][  0]LogPakFile: PakFile PrimaryIndexSize=182
+[2021.03.06-15.32.43:422][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2021.03.06-15.32.43:422][  0]LogPakFile: PakFile FullDirectoryIndexSize=138
+[2021.03.06-15.32.43:422][  0]LogPakFile: OnPakFileMounted2Time == 0.000013
+[2021.03.06-15.32.43:422][  0]LogPakFile: PakFile PrimaryIndexSize=184
+[2021.03.06-15.32.43:422][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2021.03.06-15.32.43:422][  0]LogPakFile: PakFile FullDirectoryIndexSize=142
+[2021.03.06-15.32.43:422][  0]LogPakFile: OnPakFileMounted2Time == 0.000014
+[2021.03.06-15.32.43:423][  0]LogPakFile: PakFile PrimaryIndexSize=188
+[2021.03.06-15.32.43:423][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2021.03.06-15.32.43:423][  0]LogPakFile: PakFile FullDirectoryIndexSize=150
+[2021.03.06-15.32.43:423][  0]LogPakFile: OnPakFileMounted2Time == 0.000016
+[2021.03.06-15.32.43:423][  0]LogPakFile: PakFile PrimaryIndexSize=182
+[2021.03.06-15.32.43:423][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2021.03.06-15.32.43:423][  0]LogPakFile: PakFile FullDirectoryIndexSize=138
+[2021.03.06-15.32.43:424][  0]LogPakFile: OnPakFileMounted2Time == 0.000017
+[2021.03.06-15.32.43:424][  0]LogPakFile: PakFile PrimaryIndexSize=184
+[2021.03.06-15.32.43:424][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2021.03.06-15.32.43:424][  0]LogPakFile: PakFile FullDirectoryIndexSize=142
+[2021.03.06-15.32.43:424][  0]LogPakFile: OnPakFileMounted2Time == 0.000018
+[2021.03.06-15.32.43:424][  0]LogPakFile: PakFile PrimaryIndexSize=183
+[2021.03.06-15.32.43:424][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2021.03.06-15.32.43:424][  0]LogPakFile: PakFile FullDirectoryIndexSize=140
+[2021.03.06-15.32.43:425][  0]LogPakFile: OnPakFileMounted2Time == 0.000019
+[2021.03.06-15.32.43:425][  0]LogPakFile: PakFile PrimaryIndexSize=185
+[2021.03.06-15.32.43:425][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2021.03.06-15.32.43:425][  0]LogPakFile: PakFile FullDirectoryIndexSize=144
+[2021.03.06-15.32.43:425][  0]LogPakFile: OnPakFileMounted2Time == 0.000020
+[2021.03.06-15.32.43:425][  0]LogPakFile: PakFile PrimaryIndexSize=188
+[2021.03.06-15.32.43:425][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2021.03.06-15.32.43:426][  0]LogPakFile: PakFile FullDirectoryIndexSize=150
+[2021.03.06-15.32.43:426][  0]LogPakFile: OnPakFileMounted2Time == 0.000021
+[2021.03.06-15.32.43:426][  0]LogPakFile: PakFile PrimaryIndexSize=190
+[2021.03.06-15.32.43:426][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2021.03.06-15.32.43:426][  0]LogPakFile: PakFile FullDirectoryIndexSize=154
+[2021.03.06-15.32.43:426][  0]LogPakFile: OnPakFileMounted2Time == 0.000022
+[2021.03.06-15.32.43:426][  0]LogPakFile: PakFile PrimaryIndexSize=187
+[2021.03.06-15.32.43:427][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2021.03.06-15.32.43:427][  0]LogPakFile: PakFile FullDirectoryIndexSize=148
+[2021.03.06-15.32.43:427][  0]LogPakFile: OnPakFileMounted2Time == 0.000023
+[2021.03.06-15.32.43:427][  0]LogPakFile: PakFile PrimaryIndexSize=189
+[2021.03.06-15.32.43:427][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2021.03.06-15.32.43:427][  0]LogPakFile: PakFile FullDirectoryIndexSize=152
+[2021.03.06-15.32.43:427][  0]LogPakFile: OnPakFileMounted2Time == 0.000024
+[2021.03.06-15.32.43:428][  0]LogPakFile: PakFile PrimaryIndexSize=183
+[2021.03.06-15.32.43:428][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2021.03.06-15.32.43:428][  0]LogPakFile: PakFile FullDirectoryIndexSize=140
+[2021.03.06-15.32.43:428][  0]LogPakFile: OnPakFileMounted2Time == 0.000025
+[2021.03.06-15.32.43:428][  0]LogPakFile: PakFile PrimaryIndexSize=185
+[2021.03.06-15.32.43:428][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2021.03.06-15.32.43:428][  0]LogPakFile: PakFile FullDirectoryIndexSize=144
+[2021.03.06-15.32.43:428][  0]LogPakFile: OnPakFileMounted2Time == 0.000027
+[2021.03.06-15.32.43:429][  0]LogPakFile: PakFile PrimaryIndexSize=185
+[2021.03.06-15.32.43:429][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2021.03.06-15.32.43:429][  0]LogPakFile: PakFile FullDirectoryIndexSize=144
+[2021.03.06-15.32.43:429][  0]LogPakFile: OnPakFileMounted2Time == 0.000028
+[2021.03.06-15.32.43:429][  0]LogPakFile: PakFile PrimaryIndexSize=187
+[2021.03.06-15.32.43:429][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2021.03.06-15.32.43:429][  0]LogPakFile: PakFile FullDirectoryIndexSize=148
+[2021.03.06-15.32.43:429][  0]LogPakFile: OnPakFileMounted2Time == 0.000029
+[2021.03.06-15.32.43:430][  0]LogPakFile: PakFile PrimaryIndexSize=183
+[2021.03.06-15.32.43:430][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2021.03.06-15.32.43:430][  0]LogPakFile: PakFile FullDirectoryIndexSize=140
+[2021.03.06-15.32.43:430][  0]LogPakFile: OnPakFileMounted2Time == 0.000030
+[2021.03.06-15.32.43:430][  0]LogPakFile: PakFile PrimaryIndexSize=186
+[2021.03.06-15.32.43:430][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2021.03.06-15.32.43:430][  0]LogPakFile: PakFile FullDirectoryIndexSize=146
+[2021.03.06-15.32.43:430][  0]LogPakFile: OnPakFileMounted2Time == 0.000031
+[2021.03.06-15.32.43:431][  0]LogPakFile: PakFile PrimaryIndexSize=188
+[2021.03.06-15.32.43:431][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2021.03.06-15.32.43:431][  0]LogPakFile: PakFile FullDirectoryIndexSize=150
+[2021.03.06-15.32.43:431][  0]LogPakFile: OnPakFileMounted2Time == 0.000032
+[2021.03.06-15.32.43:432][  0]LogPakFile: PakFile PrimaryIndexSize=185
+[2021.03.06-15.32.43:432][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2021.03.06-15.32.43:432][  0]LogPakFile: PakFile FullDirectoryIndexSize=144
+[2021.03.06-15.32.43:432][  0]LogPakFile: OnPakFileMounted2Time == 0.000033
+[2021.03.06-15.32.43:432][  0]LogPakFile: PakFile PrimaryIndexSize=192
+[2021.03.06-15.32.43:432][  0]LogPakFile: PakFile PathHashIndexSize=101
+[2021.03.06-15.32.43:432][  0]LogPakFile: PakFile FullDirectoryIndexSize=158
+[2021.03.06-15.32.43:432][  0]LogPakFile: OnPakFileMounted2Time == 0.000034
+[2021.03.06-15.32.43:468][  0]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'AddContentDialog' in 0.0002 seconds. Added 0 classes and 0 folders.
+[2021.03.06-15.32.43:471][  0]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'SceneOutliner' in 0.0002 seconds. Added 2 classes and 0 folders.
+[2021.03.06-15.32.43:496][  0]LogSlate: Took 0.000177 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Regular.ttf' (155K)
+[2021.03.06-15.32.43:498][  0]LogSlate: Took 0.001292 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/DroidSansFallback.ttf' (3848K)
+[2021.03.06-15.32.43:499][  0]LogSlate: Took 0.000137 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Bold.ttf' (160K)
+[2021.03.06-15.32.43:501][  0]LogSlate: Took 0.000109 seconds to synchronously load lazily loaded font '../../../Engine/Content/Editor/Slate/Fonts/FontAwesome.ttf' (139K)
+[2021.03.06-15.32.43:574][  0]LogRenderer: Reallocating scene render targets to support 964x360 Format 10 NumSamples 1 (Frame:1).
+[2021.03.06-15.32.43:605][  0]LogSlate: Took 0.000147 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
+[2021.03.06-15.32.43:643][  0]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'HierarchicalLODOutliner' in 0.0002 seconds. Added 0 classes and 0 folders.
+[2021.03.06-15.32.43:643][  0]LogLoad: (Engine Initialization) Total time: 5.34 seconds
+[2021.03.06-15.32.43:643][  0]LogLoad: (Engine Initialization) Total Blueprint compile time: 0.00 seconds
+[2021.03.06-15.32.43:643][  0]LogInit: First time updating LLM stats...
+[2021.03.06-15.32.43:807][  0]LogAssetRegistry: Asset discovery search completed in 3.0498 seconds
+[2021.03.06-15.32.43:808][  0]LogCollectionManager: Fixed up redirectors for 0 collections in 0.000003 seconds (updated 0 objects)
+[2021.03.06-15.32.43:808][  0]LogContentStreaming: Texture pool size now 1000 MB
+[2021.03.06-15.32.55:143][677]LogTemp: Repeating last play command: 新建编辑器窗口（编辑器中运行）
+[2021.03.06-15.32.55:148][677]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2021.03.06-15.32.55:149][677]PIE: New page: PIE会话：TestMap（Mar 7, 2021, 7:32:55 AM）
+[2021.03.06-15.32.55:150][677]LogOnline: OSS: Creating online subsystem instance for: NULL
+[2021.03.06-15.32.55:150][677]LogOnline: OSS: TryLoadSubsystemAndSetDefault: Loaded subsystem for module [NULL]
+[2021.03.06-15.32.55:150][677]LogPlayLevel: Creating play world package: /Game/Demo/Maps/UEDPIE_0_TestMap
+[2021.03.06-15.32.55:151][677]LogActor: Warning: SetReplicates called on non-initialized actor BodyCloth02_2. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.03.06-15.32.55:151][677]LogActor: Warning: SetReplicates called on non-initialized actor WeaponSword01_2. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.03.06-15.32.55:155][677]LogPlayLevel: PIE: StaticDuplicateObject took: (0.004693s)
+[2021.03.06-15.32.55:156][677]LogAIModule: Creating AISystem for world TestMap
+[2021.03.06-15.32.55:157][677]LogPlayLevel: PIE: World Init took: (0.001418s)
+[2021.03.06-15.32.55:157][677]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Demo/Maps/TestMap.TestMap to /Game/Demo/Maps/UEDPIE_0_TestMap.TestMap (0.006240s)
+[2021.03.06-15.32.55:166][677]LogUObjectHash: Compacting FUObjectHashTables data took   0.47ms
+[2021.03.06-15.32.55:203][677]LogClass: Warning: Property ThePlayer::CurrentPlayerStance (SourceClass: ThePlayer) was not registered in GetLifetimeReplicatedProps. This property will not be replicated. Use DISABLE_REPLICATED_PROPERTY if not replicating was intentional.
+[2021.03.06-15.32.55:203][677]LogClass: Warning: Property ThePlayer::CurrentPlayerState (SourceClass: ThePlayer) was not registered in GetLifetimeReplicatedProps. This property will not be replicated. Use DISABLE_REPLICATED_PROPERTY if not replicating was intentional.
+[2021.03.06-15.32.55:221][677]LogLoad: Game class is 'BP_GameModeBase_C'
+[2021.03.06-15.32.55:223][677]LogWorld: Bringing World /Game/Demo/Maps/UEDPIE_0_TestMap.TestMap up for play (max tick rate 60) at 2021.03.06-23.32.55
+[2021.03.06-15.32.55:223][677]LogWorld: Bringing up level for play took: 0.000688
+[2021.03.06-15.32.55:223][677]LogNet: ReplicationDriverClass is null! Not using ReplicationDriver.
+[2021.03.06-15.32.55:223][677]LogNetCore: DDoS detection status: detection enabled: 0 analytics enabled: 0
+[2021.03.06-15.32.55:223][677]LogNet: PktLagMin set to 0
+[2021.03.06-15.32.55:223][677]LogNet: PktLagMax set to 0
+[2021.03.06-15.32.55:223][677]LogNet: PktLoss set to 0
+[2021.03.06-15.32.55:223][677]LogNet: PktIncomingLagMin set to 0
+[2021.03.06-15.32.55:223][677]LogNet: PktIncomingLagMax set to 0
+[2021.03.06-15.32.55:223][677]LogNet: PktIncomingLoss set to 0
+[2021.03.06-15.32.55:223][677]LogInit: WinSock: Socket queue. Rx: 131072 (config 131072) Tx: 131072 (config 131072)
+[2021.03.06-15.32.55:223][677]LogNet: Created socket for bind address: 0.0.0.0 on port 17777
+[2021.03.06-15.32.55:223][677]PacketHandlerLog: Loaded PacketHandler component: Engine.EngineHandlerComponentFactory (StatelessConnectHandlerComponent)
+[2021.03.06-15.32.55:224][677]LogNet: GameNetDriver IpNetDriver_0 IpNetDriver listening on port 17777
+[2021.03.06-15.32.55:224][677]PIE: 登陆的服务器
+[2021.03.06-15.32.55:224][677]PIE: PIE总开始时间：0.077秒。
+[2021.03.06-15.32.55:225][677]LogAudio: Display: Creating Audio Device:                 Id: 2, Scope: Unique, Realtime: True
+[2021.03.06-15.32.55:225][677]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2021.03.06-15.32.55:225][677]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2021.03.06-15.32.55:225][677]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2021.03.06-15.32.55:225][677]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2021.03.06-15.32.55:225][677]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2021.03.06-15.32.55:225][677]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2021.03.06-15.32.55:225][677]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2021.03.06-15.32.55:225][677]LogAudio: Display: AudioDevice MaxSources: 32
+[2021.03.06-15.32.55:225][677]LogAudio: Display: Using built-in audio occlusion.
+[2021.03.06-15.32.55:225][677]LogAudioMixer: Display: Initializing audio mixer.
+[2021.03.06-15.32.55:230][677]LogAudioMixer: Display: 0: FrontLeft
+[2021.03.06-15.32.55:230][677]LogAudioMixer: Display: 1: FrontRight
+[2021.03.06-15.32.55:242][677]LogAudioMixer: Display: Using Audio Device 耳机 (Realtek(R) Audio)
+[2021.03.06-15.32.55:242][677]LogAudioMixer: Display: Initializing Sound Submixes...
+[2021.03.06-15.32.55:242][677]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2021.03.06-15.32.55:242][677]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2021.03.06-15.32.55:243][677]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2021.03.06-15.32.55:243][677]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called
+[2021.03.06-15.32.55:243][677]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048
+[2021.03.06-15.32.55:254][677]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal()
+[2021.03.06-15.32.55:254][677]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time
+[2021.03.06-15.32.55:254][677]LogInit: FAudioDevice initialized.
+[2021.03.06-15.32.55:254][677]LogAudio: Display: Audio Device (ID: 2) registered with world 'Untitled'.
+[2021.03.06-15.32.55:274][677]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2021.03.06-15.32.55:275][677]LogNet: Browse: 127.0.0.1:17777/Game/Demo/Maps/TestMap
+[2021.03.06-15.32.55:275][677]LogInit: WinSock: Socket queue. Rx: 32768 (config 32768) Tx: 32768 (config 32768)
+[2021.03.06-15.32.55:275][677]LogNet: Created socket for bind address: 0.0.0.0 on port 0
+[2021.03.06-15.32.55:275][677]PacketHandlerLog: Loaded PacketHandler component: Engine.EngineHandlerComponentFactory (StatelessConnectHandlerComponent)
+[2021.03.06-15.32.55:275][677]LogNet: Game client on port 17777, rate 100000
+[2021.03.06-15.32.55:277][677]PIE: 已登陆客户端
+[2021.03.06-15.32.55:278][677]PIE: PIE总开始时间：0.131秒。
+[2021.03.06-15.32.55:280][677]LogOnline: OSS: Creating online subsystem instance for: :Context_3
+[2021.03.06-15.32.56:298][736]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:59247
+[2021.03.06-15.32.56:298][736]LogHandshake: SendConnectChallenge. Timestamp: 1.172262, Cookie: 142005027094069184165179055050005173018206028228104209108074
+[2021.03.06-15.32.56:299][736]LogHandshake: SendChallengeResponse. Timestamp: 1.172262, Cookie: 142005027094069184165179055050005173018206028228104209108074
+[2021.03.06-15.32.56:316][737]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:59247
+[2021.03.06-15.32.56:316][737]LogHandshake: SendChallengeAck. InCookie: 142005027094069184165179055050005173018206028228104209108074
+[2021.03.06-15.32.56:316][737]LogNet: Server accepting post-challenge connection from: 127.0.0.1:59247
+[2021.03.06-15.32.56:316][737]PacketHandlerLog: Loaded PacketHandler component: Engine.EngineHandlerComponentFactory (StatelessConnectHandlerComponent)
+[2021.03.06-15.32.56:316][737]LogNet: NotifyAcceptedConnection: Name: TestMap, TimeStamp: 03/06/21 23:32:56, [UNetConnection] RemoteAddr: 127.0.0.1:59247, Name: IpConnection_1, Driver: GameNetDriver IpNetDriver_0, IsServer: YES, PC: NULL, Owner: NULL, UniqueId: INVALID
+[2021.03.06-15.32.56:316][737]LogNet: AddClientConnection: Added client connection: [UNetConnection] RemoteAddr: 127.0.0.1:59247, Name: IpConnection_1, Driver: GameNetDriver IpNetDriver_0, IsServer: YES, PC: NULL, Owner: NULL, UniqueId: INVALID
+[2021.03.06-15.32.56:317][737]LogNetVersion: Main 1.0.0.0, NetCL: 14830424, EngineNetVer: 16, GameNetVer: 0 (Checksum: 2920255429)
+[2021.03.06-15.32.56:317][737]LogNet: UPendingNetGame::SendInitialJoin: Sending hello. [UNetConnection] RemoteAddr: 127.0.0.1:17777, Name: IpConnection_0, Driver: PendingNetDriver IpNetDriver_1, IsServer: NO, PC: NULL, Owner: NULL, UniqueId: INVALID
+[2021.03.06-15.32.56:332][738]LogNet: NotifyAcceptingChannel Control 0 server World /Game/Demo/Maps/UEDPIE_0_TestMap.TestMap: Accepted
+[2021.03.06-15.32.56:332][738]LogNet: Remote platform little endian=1
+[2021.03.06-15.32.56:332][738]LogNet: This platform little endian=1
+[2021.03.06-15.32.56:332][738]LogOnline: OSS: Creating online subsystem instance for: :Context_4
+[2021.03.06-15.32.56:349][739]LogNet: Login request: ?Name=PIANG-22CD7022428DDF534620EE9CA93CFF55 userId: NULL:PIANG-22CD7022428DDF534620EE9CA93CFF55 platform: NULL
+[2021.03.06-15.32.56:349][739]LogNet: Welcomed by server (Level: /Game/Demo/Maps/UEDPIE_0_TestMap, Game: /Game/Demo/GamePlay/GameMode/BP_GameModeBase.BP_GameModeBase_C)
+[2021.03.06-15.32.56:349][739]LogLoad: LoadMap: 127.0.0.1:17777/Game/Demo/Maps/UEDPIE_0_TestMap?game=/Game/Demo/GamePlay/GameMode/BP_GameModeBase.BP_GameModeBase_C
+[2021.03.06-15.32.56:349][739]LogWorld: BeginTearingDown for /Temp/Untitled_1
+[2021.03.06-15.32.56:349][739]LogWorld: UWorld::CleanupWorld for Untitled, bSessionEnded=true, bCleanupResources=true
+[2021.03.06-15.32.56:349][739]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.03.06-15.32.56:353][739]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2021.03.06-15.32.56:355][739]LogUObjectHash: Compacting FUObjectHashTables data took   0.65ms
+[2021.03.06-15.32.56:356][739]LogActor: Warning: SetReplicates called on non-initialized actor BodyCloth02_2. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.03.06-15.32.56:356][739]LogActor: Warning: SetReplicates called on non-initialized actor WeaponSword01_2. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.03.06-15.32.56:360][739]LogAudio: Display: Audio Device (ID: 2) registered with world 'TestMap'.
+[2021.03.06-15.32.56:361][739]LogAIModule: Creating AISystem for world TestMap
+[2021.03.06-15.32.56:362][739]LogWorld: Bringing World /Game/Demo/Maps/UEDPIE_1_TestMap.TestMap up for play (max tick rate 60) at 2021.03.06-23.32.56
+[2021.03.06-15.32.56:362][739]LogWorld: Bringing up level for play took: 0.000475
+[2021.03.06-15.32.56:362][739]LogLoad: Took 0.013208 seconds to LoadMap(/Game/Demo/Maps/UEDPIE_0_TestMap)
+[2021.03.06-15.32.56:362][739]LogNavigation: Warning: NavData RegistrationFailed_DataPendingKill.
+[2021.03.06-15.32.56:374][740]LogRenderer: Reallocating scene render targets to support 964x480 Format 10 NumSamples 1 (Frame:1).
+[2021.03.06-15.32.56:374][740]LogNet: Client netspeed is 100000
+[2021.03.06-15.32.56:374][740]LogNet: Join request: /Game/Demo/Maps/TestMap?Name=PIANG-22CD7022428DDF534620EE9CA93CFF55?SplitscreenCount=1
+[2021.03.06-15.32.56:374][740]LogOnlineSession: Warning: OSS: No game present to join for session (GameSession)
+[2021.03.06-15.32.56:377][740]LogNet: Join succeeded: PIANG-22CD7022428DDF
+[2021.03.06-15.32.56:394][741]LogOnlineSession: Warning: OSS: No game present to join for session (GameSession)
+[2021.03.06-15.32.57:359][799]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 无武器姿势
+[2021.03.06-15.32.57:359][799]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 正常状态
+[2021.03.06-15.32.57:359][799]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 
+[2021.03.06-15.32.57:376][800]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 无武器姿势
+[2021.03.06-15.32.57:376][800]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 正常状态
+[2021.03.06-15.32.57:376][800]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 
+[2021.03.06-15.32.58:358][859]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 无武器姿势
+[2021.03.06-15.32.58:358][859]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 正常状态
+[2021.03.06-15.32.58:358][859]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 
+[2021.03.06-15.32.58:375][860]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 无武器姿势
+[2021.03.06-15.32.58:375][860]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 正常状态
+[2021.03.06-15.32.58:375][860]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 
+[2021.03.06-15.32.59:359][919]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 无武器姿势
+[2021.03.06-15.32.59:359][919]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 正常状态
+[2021.03.06-15.32.59:359][919]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 
+[2021.03.06-15.32.59:376][920]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 无武器姿势
+[2021.03.06-15.32.59:376][920]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 正常状态
+[2021.03.06-15.32.59:376][920]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 
+[2021.03.06-15.32.59:409][922]LogTemp: Warning: SphereComponent_BeginOverlap
+[2021.03.06-15.32.59:410][922]LogBlueprintUserMessages: [WBP_OverlapActor_C_0] Client 1: 0
+[2021.03.06-15.32.59:410][922]LogTemp: Warning: SphereComponent_BeginOverlap
+[2021.03.06-15.32.59:425][923]LogTemp: Warning: SphereComponent_BeginOverlap
+[2021.03.06-15.32.59:425][923]LogTemp: Warning: SphereComponent_BeginOverlap
+[2021.03.06-15.32.59:692][939]LogTemp: Warning: AWeapon::Equipment
+[2021.03.06-15.32.59:692][939]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor WeaponSword01_2. Function EquipmentServer will not be processed.
+[2021.03.06-15.32.59:692][939]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor WeaponSword01_2. Function SetItemStateServer will not be processed.
+[2021.03.06-15.33.00:260][973]LogTemp: Warning: Attack
+[2021.03.06-15.33.00:260][973]LogTemp: Warning: PlayAnimMontage
+[2021.03.06-15.33.00:260][973]LogAnimMontage: Warning: JumpToSectionName Attack1 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.00:260][973]LogAnimMontage: Warning: JumpToSectionName Attack1 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.00:260][973]LogAnimMontage: Warning: JumpToSectionName Attack1 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.00:260][973]LogAnimMontage: Warning: JumpToSectionName Attack1 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.00:260][973]LogAnimMontage: Warning: JumpToSectionName Attack1 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.00:260][973]LogAnimMontage: Warning: JumpToSectionName Attack1 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.00:260][973]LogAnimMontage: Warning: JumpToSectionName Attack1 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.00:260][973]LogAnimMontage: Warning: JumpToSectionName Attack1 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.00:275][974]LogTemp: Warning: Attack
+[2021.03.06-15.33.00:275][974]LogTemp: Warning: PlayAnimMontage
+[2021.03.06-15.33.00:275][974]LogAnimMontage: Warning: JumpToSectionName Attack1 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.00:275][974]LogAnimMontage: Warning: JumpToSectionName Attack1 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.00:275][974]LogAnimMontage: Warning: JumpToSectionName Attack1 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.00:275][974]LogAnimMontage: Warning: JumpToSectionName Attack1 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.00:275][974]LogAnimMontage: Warning: JumpToSectionName Attack1 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.00:275][974]LogAnimMontage: Warning: JumpToSectionName Attack1 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.00:275][974]LogAnimMontage: Warning: JumpToSectionName Attack1 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.00:275][974]LogAnimMontage: Warning: JumpToSectionName Attack1 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.00:358][979]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 双手剑姿势
+[2021.03.06-15.33.00:358][979]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 战斗状态
+[2021.03.06-15.33.00:358][979]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: WeaponSword01
+[2021.03.06-15.33.00:375][980]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 双手剑姿势
+[2021.03.06-15.33.00:375][980]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 战斗状态
+[2021.03.06-15.33.00:375][980]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: WeaponSword01
+[2021.03.06-15.33.01:358][ 39]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 双手剑姿势
+[2021.03.06-15.33.01:358][ 39]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 战斗状态
+[2021.03.06-15.33.01:358][ 39]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: WeaponSword01
+[2021.03.06-15.33.01:376][ 40]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 双手剑姿势
+[2021.03.06-15.33.01:376][ 40]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 战斗状态
+[2021.03.06-15.33.01:376][ 40]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: WeaponSword01
+[2021.03.06-15.33.02:359][ 99]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 双手剑姿势
+[2021.03.06-15.33.02:359][ 99]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 战斗状态
+[2021.03.06-15.33.02:359][ 99]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: WeaponSword01
+[2021.03.06-15.33.02:376][100]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 双手剑姿势
+[2021.03.06-15.33.02:376][100]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 战斗状态
+[2021.03.06-15.33.02:376][100]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: WeaponSword01
+[2021.03.06-15.33.03:043][140]LogTemp: Warning: Attack
+[2021.03.06-15.33.03:043][140]LogTemp: Warning: PlayAnimMontage
+[2021.03.06-15.33.03:043][140]LogAnimMontage: Warning: JumpToSectionName Attack2 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.03:043][140]LogAnimMontage: Warning: JumpToSectionName Attack2 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.03:043][140]LogAnimMontage: Warning: JumpToSectionName Attack2 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.03:043][140]LogAnimMontage: Warning: JumpToSectionName Attack2 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.03:043][140]LogAnimMontage: Warning: JumpToSectionName Attack2 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.03:043][140]LogAnimMontage: Warning: JumpToSectionName Attack2 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.03:043][140]LogAnimMontage: Warning: JumpToSectionName Attack2 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.03:043][140]LogAnimMontage: Warning: JumpToSectionName Attack2 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.03:058][141]LogTemp: Warning: Attack
+[2021.03.06-15.33.03:058][141]LogTemp: Warning: PlayAnimMontage
+[2021.03.06-15.33.03:058][141]LogAnimMontage: Warning: JumpToSectionName Attack2 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.03:058][141]LogAnimMontage: Warning: JumpToSectionName Attack2 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.03:058][141]LogAnimMontage: Warning: JumpToSectionName Attack2 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.03:058][141]LogAnimMontage: Warning: JumpToSectionName Attack2 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.03:058][141]LogAnimMontage: Warning: JumpToSectionName Attack2 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.03:058][141]LogAnimMontage: Warning: JumpToSectionName Attack2 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.03:058][141]LogAnimMontage: Warning: JumpToSectionName Attack2 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.03:058][141]LogAnimMontage: Warning: JumpToSectionName Attack2 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.03:358][159]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 双手剑姿势
+[2021.03.06-15.33.03:358][159]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 战斗状态
+[2021.03.06-15.33.03:358][159]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: WeaponSword01
+[2021.03.06-15.33.03:375][160]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 双手剑姿势
+[2021.03.06-15.33.03:375][160]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 战斗状态
+[2021.03.06-15.33.03:375][160]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: WeaponSword01
+[2021.03.06-15.33.04:126][205]LogTemp: Warning: SphereComponent_EndOverlap
+[2021.03.06-15.33.04:126][205]LogTemp: Warning: SphereComponent_EndOverlap
+[2021.03.06-15.33.04:177][208]LogTemp: Warning: SphereComponent_BeginOverlap
+[2021.03.06-15.33.04:177][208]LogTemp: Warning: SphereComponent_BeginOverlap
+[2021.03.06-15.33.04:177][208]LogTemp: Warning: SphereComponent_EndOverlap
+[2021.03.06-15.33.04:192][209]LogTemp: Warning: SphereComponent_EndOverlap
+[2021.03.06-15.33.04:193][209]LogTemp: Warning: SphereComponent_EndOverlap
+[2021.03.06-15.33.04:208][210]LogTemp: Warning: SphereComponent_EndOverlap
+[2021.03.06-15.33.04:242][212]LogTemp: Warning: SphereComponent_EndOverlap
+[2021.03.06-15.33.04:293][215]LogTemp: Warning: SphereComponent_EndOverlap
+[2021.03.06-15.33.04:358][219]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 双手剑姿势
+[2021.03.06-15.33.04:358][219]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 战斗状态
+[2021.03.06-15.33.04:358][219]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: WeaponSword01
+[2021.03.06-15.33.04:375][220]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 双手剑姿势
+[2021.03.06-15.33.04:375][220]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 战斗状态
+[2021.03.06-15.33.04:375][220]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: WeaponSword01
+[2021.03.06-15.33.04:694][239]LogTemp: Warning: Attack
+[2021.03.06-15.33.04:694][239]LogTemp: Warning: PlayAnimMontage
+[2021.03.06-15.33.04:694][239]LogAnimMontage: Warning: JumpToSectionName Attack8 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.04:694][239]LogAnimMontage: Warning: JumpToSectionName Attack8 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.04:694][239]LogAnimMontage: Warning: JumpToSectionName Attack8 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.04:694][239]LogAnimMontage: Warning: JumpToSectionName Attack8 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.04:694][239]LogAnimMontage: Warning: JumpToSectionName Attack8 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.04:694][239]LogAnimMontage: Warning: JumpToSectionName Attack8 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.04:694][239]LogAnimMontage: Warning: JumpToSectionName Attack8 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.04:694][239]LogAnimMontage: Warning: JumpToSectionName Attack8 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.04:709][240]LogTemp: Warning: Attack
+[2021.03.06-15.33.04:709][240]LogTemp: Warning: PlayAnimMontage
+[2021.03.06-15.33.04:709][240]LogAnimMontage: Warning: JumpToSectionName Attack8 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.04:709][240]LogAnimMontage: Warning: JumpToSectionName Attack8 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.04:709][240]LogAnimMontage: Warning: JumpToSectionName Attack8 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.04:709][240]LogAnimMontage: Warning: JumpToSectionName Attack8 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.04:709][240]LogAnimMontage: Warning: JumpToSectionName Attack8 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.04:709][240]LogAnimMontage: Warning: JumpToSectionName Attack8 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.04:709][240]LogAnimMontage: Warning: JumpToSectionName Attack8 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.04:709][240]LogAnimMontage: Warning: JumpToSectionName Attack8 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.04:943][254]LogTemp: Warning: Attack
+[2021.03.06-15.33.04:958][255]LogTemp: Warning: Attack
+[2021.03.06-15.33.05:358][279]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 双手剑姿势
+[2021.03.06-15.33.05:358][279]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 战斗状态
+[2021.03.06-15.33.05:358][279]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: WeaponSword01
+[2021.03.06-15.33.05:376][280]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 双手剑姿势
+[2021.03.06-15.33.05:376][280]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 战斗状态
+[2021.03.06-15.33.05:376][280]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: WeaponSword01
+[2021.03.06-15.33.06:226][331]LogTemp: Warning: Attack
+[2021.03.06-15.33.06:226][331]LogTemp: Warning: PlayAnimMontage
+[2021.03.06-15.33.06:227][331]LogAnimMontage: Warning: JumpToSectionName Attack4 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.06:227][331]LogAnimMontage: Warning: JumpToSectionName Attack4 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.06:227][331]LogAnimMontage: Warning: JumpToSectionName Attack4 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.06:227][331]LogAnimMontage: Warning: JumpToSectionName Attack4 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.06:227][331]LogAnimMontage: Warning: JumpToSectionName Attack4 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.06:227][331]LogAnimMontage: Warning: JumpToSectionName Attack4 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.06:227][331]LogAnimMontage: Warning: JumpToSectionName Attack4 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.06:227][331]LogAnimMontage: Warning: JumpToSectionName Attack4 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.06:241][332]LogTemp: Warning: Attack
+[2021.03.06-15.33.06:241][332]LogTemp: Warning: PlayAnimMontage
+[2021.03.06-15.33.06:241][332]LogAnimMontage: Warning: JumpToSectionName Attack4 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.06:241][332]LogAnimMontage: Warning: JumpToSectionName Attack4 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.06:241][332]LogAnimMontage: Warning: JumpToSectionName Attack4 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.06:241][332]LogAnimMontage: Warning: JumpToSectionName Attack4 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.06:241][332]LogAnimMontage: Warning: JumpToSectionName Attack4 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.06:241][332]LogAnimMontage: Warning: JumpToSectionName Attack4 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.06:241][332]LogAnimMontage: Warning: JumpToSectionName Attack4 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.06:241][332]LogAnimMontage: Warning: JumpToSectionName Attack4 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.06:358][339]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 双手剑姿势
+[2021.03.06-15.33.06:358][339]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 战斗状态
+[2021.03.06-15.33.06:358][339]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: WeaponSword01
+[2021.03.06-15.33.06:376][340]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 双手剑姿势
+[2021.03.06-15.33.06:376][340]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 战斗状态
+[2021.03.06-15.33.06:376][340]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: WeaponSword01
+[2021.03.06-15.33.07:359][399]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 双手剑姿势
+[2021.03.06-15.33.07:359][399]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 战斗状态
+[2021.03.06-15.33.07:359][399]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: WeaponSword01
+[2021.03.06-15.33.07:376][400]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 双手剑姿势
+[2021.03.06-15.33.07:376][400]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 战斗状态
+[2021.03.06-15.33.07:376][400]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: WeaponSword01
+[2021.03.06-15.33.07:776][424]LogTemp: Warning: Attack
+[2021.03.06-15.33.07:776][424]LogTemp: Warning: PlayAnimMontage
+[2021.03.06-15.33.07:776][424]LogAnimMontage: Warning: JumpToSectionName Attack1 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.07:776][424]LogAnimMontage: Warning: JumpToSectionName Attack1 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.07:776][424]LogAnimMontage: Warning: JumpToSectionName Attack1 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.07:776][424]LogAnimMontage: Warning: JumpToSectionName Attack1 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.07:776][424]LogAnimMontage: Warning: JumpToSectionName Attack1 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.07:776][424]LogAnimMontage: Warning: JumpToSectionName Attack1 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.07:776][424]LogAnimMontage: Warning: JumpToSectionName Attack1 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.07:776][424]LogAnimMontage: Warning: JumpToSectionName Attack1 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.07:791][425]LogTemp: Warning: Attack
+[2021.03.06-15.33.07:792][425]LogTemp: Warning: PlayAnimMontage
+[2021.03.06-15.33.07:792][425]LogAnimMontage: Warning: JumpToSectionName Attack1 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.07:792][425]LogAnimMontage: Warning: JumpToSectionName Attack1 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.07:792][425]LogAnimMontage: Warning: JumpToSectionName Attack1 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.07:792][425]LogAnimMontage: Warning: JumpToSectionName Attack1 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.07:792][425]LogAnimMontage: Warning: JumpToSectionName Attack1 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.07:792][425]LogAnimMontage: Warning: JumpToSectionName Attack1 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.07:792][425]LogAnimMontage: Warning: JumpToSectionName Attack1 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.07:792][425]LogAnimMontage: Warning: JumpToSectionName Attack1 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.08:359][459]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 双手剑姿势
+[2021.03.06-15.33.08:359][459]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 战斗状态
+[2021.03.06-15.33.08:359][459]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: WeaponSword01
+[2021.03.06-15.33.08:376][460]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 双手剑姿势
+[2021.03.06-15.33.08:376][460]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 战斗状态
+[2021.03.06-15.33.08:376][460]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: WeaponSword01
+[2021.03.06-15.33.09:358][519]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 双手剑姿势
+[2021.03.06-15.33.09:359][519]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 战斗状态
+[2021.03.06-15.33.09:359][519]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: WeaponSword01
+[2021.03.06-15.33.09:376][520]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 双手剑姿势
+[2021.03.06-15.33.09:376][520]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 战斗状态
+[2021.03.06-15.33.09:376][520]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: WeaponSword01
+[2021.03.06-15.33.10:358][579]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 双手剑姿势
+[2021.03.06-15.33.10:358][579]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 战斗状态
+[2021.03.06-15.33.10:358][579]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: WeaponSword01
+[2021.03.06-15.33.10:375][580]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 双手剑姿势
+[2021.03.06-15.33.10:375][580]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 战斗状态
+[2021.03.06-15.33.10:375][580]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: WeaponSword01
+[2021.03.06-15.33.11:075][622]LogTemp: Warning: SphereComponent_BeginOverlap
+[2021.03.06-15.33.11:109][624]LogTemp: Warning: SphereComponent_BeginOverlap
+[2021.03.06-15.33.11:226][631]LogTemp: Warning: SphereComponent_BeginOverlap
+[2021.03.06-15.33.11:226][631]LogTemp: Warning: SphereComponent_BeginOverlap
+[2021.03.06-15.33.11:242][632]LogTemp: Warning: SphereComponent_BeginOverlap
+[2021.03.06-15.33.11:242][632]LogTemp: Warning: SphereComponent_BeginOverlap
+[2021.03.06-15.33.11:259][633]LogTemp: Warning: SphereComponent_EndOverlap
+[2021.03.06-15.33.11:292][635]LogTemp: Warning: SphereComponent_BeginOverlap
+[2021.03.06-15.33.11:309][636]LogTemp: Warning: SphereComponent_EndOverlap
+[2021.03.06-15.33.11:310][636]LogTemp: Warning: SphereComponent_BeginOverlap
+[2021.03.06-15.33.11:359][639]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 双手剑姿势
+[2021.03.06-15.33.11:359][639]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 战斗状态
+[2021.03.06-15.33.11:359][639]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: WeaponSword01
+[2021.03.06-15.33.11:376][640]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 双手剑姿势
+[2021.03.06-15.33.11:376][640]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 战斗状态
+[2021.03.06-15.33.11:376][640]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: WeaponSword01
+[2021.03.06-15.33.11:409][642]LogTemp: Warning: SphereComponent_EndOverlap
+[2021.03.06-15.33.11:426][643]LogTemp: Warning: SphereComponent_BeginOverlap
+[2021.03.06-15.33.11:426][643]LogTemp: Warning: SphereComponent_EndOverlap
+[2021.03.06-15.33.11:475][646]LogTemp: Warning: SphereComponent_EndOverlap
+[2021.03.06-15.33.11:493][647]LogTemp: Warning: SphereComponent_BeginOverlap
+[2021.03.06-15.33.11:509][648]LogTemp: Warning: SphereComponent_EndOverlap
+[2021.03.06-15.33.11:509][648]LogTemp: Warning: SphereComponent_BeginOverlap
+[2021.03.06-15.33.11:543][650]LogTemp: Warning: SphereComponent_EndOverlap
+[2021.03.06-15.33.12:093][683]LogTemp: Warning: Attack
+[2021.03.06-15.33.12:093][683]LogTemp: Warning: PlayAnimMontage
+[2021.03.06-15.33.12:093][683]LogAnimMontage: Warning: JumpToSectionName Attack2 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.12:093][683]LogAnimMontage: Warning: JumpToSectionName Attack2 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.12:093][683]LogAnimMontage: Warning: JumpToSectionName Attack2 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.12:093][683]LogAnimMontage: Warning: JumpToSectionName Attack2 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.12:093][683]LogAnimMontage: Warning: JumpToSectionName Attack2 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.12:093][683]LogAnimMontage: Warning: JumpToSectionName Attack2 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.12:093][683]LogAnimMontage: Warning: JumpToSectionName Attack2 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.12:093][683]LogAnimMontage: Warning: JumpToSectionName Attack2 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.12:108][684]LogTemp: Warning: Attack
+[2021.03.06-15.33.12:108][684]LogTemp: Warning: PlayAnimMontage
+[2021.03.06-15.33.12:108][684]LogAnimMontage: Warning: JumpToSectionName Attack2 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.12:108][684]LogAnimMontage: Warning: JumpToSectionName Attack2 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.12:108][684]LogAnimMontage: Warning: JumpToSectionName Attack2 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.12:108][684]LogAnimMontage: Warning: JumpToSectionName Attack2 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.12:108][684]LogAnimMontage: Warning: JumpToSectionName Attack2 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.12:108][684]LogAnimMontage: Warning: JumpToSectionName Attack2 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.12:108][684]LogAnimMontage: Warning: JumpToSectionName Attack2 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.12:108][684]LogAnimMontage: Warning: JumpToSectionName Attack2 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.12:359][699]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 双手剑姿势
+[2021.03.06-15.33.12:359][699]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 战斗状态
+[2021.03.06-15.33.12:359][699]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: WeaponSword01
+[2021.03.06-15.33.12:376][700]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 双手剑姿势
+[2021.03.06-15.33.12:376][700]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 战斗状态
+[2021.03.06-15.33.12:376][700]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: WeaponSword01
+[2021.03.06-15.33.13:292][755]LogTemp: Warning: SphereComponent_EndOverlap
+[2021.03.06-15.33.13:292][755]LogTemp: Warning: SphereComponent_EndOverlap
+[2021.03.06-15.33.13:308][756]LogTemp: Warning: SphereComponent_EndOverlap
+[2021.03.06-15.33.13:308][756]LogTemp: Warning: SphereComponent_EndOverlap
+[2021.03.06-15.33.13:358][759]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 双手剑姿势
+[2021.03.06-15.33.13:359][759]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 战斗状态
+[2021.03.06-15.33.13:359][759]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: WeaponSword01
+[2021.03.06-15.33.13:376][760]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 双手剑姿势
+[2021.03.06-15.33.13:376][760]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 战斗状态
+[2021.03.06-15.33.13:376][760]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: WeaponSword01
+[2021.03.06-15.33.14:358][819]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 双手剑姿势
+[2021.03.06-15.33.14:358][819]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 战斗状态
+[2021.03.06-15.33.14:358][819]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: WeaponSword01
+[2021.03.06-15.33.14:376][820]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 双手剑姿势
+[2021.03.06-15.33.14:376][820]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 战斗状态
+[2021.03.06-15.33.14:376][820]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: WeaponSword01
+[2021.03.06-15.33.14:975][856]LogTemp: Warning: SphereComponent_BeginOverlap
+[2021.03.06-15.33.14:992][857]LogTemp: Warning: SphereComponent_BeginOverlap
+[2021.03.06-15.33.14:992][857]LogTemp: Warning: SphereComponent_BeginOverlap
+[2021.03.06-15.33.14:992][857]LogTemp: Warning: SphereComponent_BeginOverlap
+[2021.03.06-15.33.15:359][879]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 双手剑姿势
+[2021.03.06-15.33.15:359][879]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 战斗状态
+[2021.03.06-15.33.15:359][879]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: WeaponSword01
+[2021.03.06-15.33.15:375][880]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 双手剑姿势
+[2021.03.06-15.33.15:375][880]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 战斗状态
+[2021.03.06-15.33.15:375][880]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: WeaponSword01
+[2021.03.06-15.33.15:960][915]LogTemp: Warning: Attack
+[2021.03.06-15.33.15:960][915]LogTemp: Warning: PlayAnimMontage
+[2021.03.06-15.33.15:960][915]LogAnimMontage: Warning: JumpToSectionName Attack3 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.15:960][915]LogAnimMontage: Warning: JumpToSectionName Attack3 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.15:960][915]LogAnimMontage: Warning: JumpToSectionName Attack3 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.15:960][915]LogAnimMontage: Warning: JumpToSectionName Attack3 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.15:960][915]LogAnimMontage: Warning: JumpToSectionName Attack3 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.15:960][915]LogAnimMontage: Warning: JumpToSectionName Attack3 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.15:960][915]LogAnimMontage: Warning: JumpToSectionName Attack3 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.15:960][915]LogAnimMontage: Warning: JumpToSectionName Attack3 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.15:975][916]LogTemp: Warning: Attack
+[2021.03.06-15.33.15:975][916]LogTemp: Warning: PlayAnimMontage
+[2021.03.06-15.33.15:975][916]LogAnimMontage: Warning: JumpToSectionName Attack3 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.15:975][916]LogAnimMontage: Warning: JumpToSectionName Attack3 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.15:975][916]LogAnimMontage: Warning: JumpToSectionName Attack3 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.15:975][916]LogAnimMontage: Warning: JumpToSectionName Attack3 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.15:975][916]LogAnimMontage: Warning: JumpToSectionName Attack3 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.15:975][916]LogAnimMontage: Warning: JumpToSectionName Attack3 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.15:975][916]LogAnimMontage: Warning: JumpToSectionName Attack3 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.15:975][916]LogAnimMontage: Warning: JumpToSectionName Attack3 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.33.16:358][939]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 双手剑姿势
+[2021.03.06-15.33.16:359][939]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 战斗状态
+[2021.03.06-15.33.16:359][939]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: WeaponSword01
+[2021.03.06-15.33.16:375][940]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 双手剑姿势
+[2021.03.06-15.33.16:375][940]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 战斗状态
+[2021.03.06-15.33.16:375][940]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: WeaponSword01
+[2021.03.06-15.33.17:359][999]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 双手剑姿势
+[2021.03.06-15.33.17:359][999]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 战斗状态
+[2021.03.06-15.33.17:359][999]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: WeaponSword01
+[2021.03.06-15.33.17:376][  0]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 双手剑姿势
+[2021.03.06-15.33.17:376][  0]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 战斗状态
+[2021.03.06-15.33.17:376][  0]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: WeaponSword01
+[2021.03.06-15.33.18:143][ 46]LogTemp: Warning: Attack
+[2021.03.06-15.33.18:158][ 47]LogTemp: Warning: Attack
+[2021.03.06-15.33.18:359][ 59]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 双手剑姿势
+[2021.03.06-15.33.18:359][ 59]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 战斗状态
+[2021.03.06-15.33.18:359][ 59]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: WeaponSword01
+[2021.03.06-15.33.18:376][ 60]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 双手剑姿势
+[2021.03.06-15.33.18:376][ 60]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 战斗状态
+[2021.03.06-15.33.18:376][ 60]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: WeaponSword01
+[2021.03.06-15.33.18:850][ 87]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2021.03.06-15.33.18:850][ 87]LogWorld: BeginTearingDown for /Game/Demo/Maps/UEDPIE_1_TestMap
+[2021.03.06-15.33.18:851][ 87]LogSlate: Window 'Main预览[NetMode: Client 1]  (64-bit/Windows) ' being destroyed
+[2021.03.06-15.33.18:854][ 87]LogWorld: UWorld::CleanupWorld for TestMap, bSessionEnded=true, bCleanupResources=true
+[2021.03.06-15.33.18:854][ 87]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.03.06-15.33.18:863][ 87]LogNet: World NetDriver shutdown IpNetDriver_1 [GameNetDriver]
+[2021.03.06-15.33.18:863][ 87]LogNet: DestroyNamedNetDriver IpNetDriver_1 [GameNetDriver]
+[2021.03.06-15.33.18:863][ 87]LogNet: UNetConnection::Close: [UNetConnection] RemoteAddr: 127.0.0.1:17777, Name: IpConnection_0, Driver: GameNetDriver IpNetDriver_1, IsServer: NO, PC: PlayerController_1, Owner: PlayerController_1, UniqueId: NULL:PIANG-22CD7022428DDF534620EE9CA93CFF55, Channels: 10, Time: 2021.03.06-15.33.18
+[2021.03.06-15.33.18:863][ 87]LogNet: UChannel::Close: Sending CloseBunch. ChIndex == 0. Name: [UChannel] ChIndex: 0, Closing: 0 [UNetConnection] RemoteAddr: 127.0.0.1:17777, Name: IpConnection_0, Driver: GameNetDriver IpNetDriver_1, IsServer: NO, PC: PlayerController_1, Owner: PlayerController_1, UniqueId: NULL:PIANG-22CD7022428DDF534620EE9CA93CFF55
+[2021.03.06-15.33.18:863][ 87]LogExit: GameNetDriver IpNetDriver_1 shut down
+[2021.03.06-15.33.18:864][ 87]LogWorld: BeginTearingDown for /Game/Demo/Maps/UEDPIE_0_TestMap
+[2021.03.06-15.33.18:864][ 87]LogWorld: UWorld::CleanupWorld for TestMap, bSessionEnded=true, bCleanupResources=true
+[2021.03.06-15.33.18:865][ 87]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.03.06-15.33.18:865][ 87]LogNet: World NetDriver shutdown IpNetDriver_0 [GameNetDriver]
+[2021.03.06-15.33.18:865][ 87]LogNet: DestroyNamedNetDriver IpNetDriver_0 [GameNetDriver]
+[2021.03.06-15.33.18:865][ 87]LogNet: UNetConnection::Cleanup: Closing open connection. [UNetConnection] RemoteAddr: 127.0.0.1:59247, Name: IpConnection_1, Driver: GameNetDriver IpNetDriver_0, IsServer: YES, PC: PlayerController_0, Owner: PlayerController_0, UniqueId: NULL:PIANG-22CD7022428DDF534620EE9CA93CFF55
+[2021.03.06-15.33.18:865][ 87]LogNet: UNetConnection::Close: [UNetConnection] RemoteAddr: 127.0.0.1:59247, Name: IpConnection_1, Driver: GameNetDriver IpNetDriver_0, IsServer: YES, PC: PlayerController_0, Owner: PlayerController_0, UniqueId: NULL:PIANG-22CD7022428DDF534620EE9CA93CFF55, Channels: 10, Time: 2021.03.06-15.33.18
+[2021.03.06-15.33.18:865][ 87]LogNet: UChannel::Close: Sending CloseBunch. ChIndex == 0. Name: [UChannel] ChIndex: 0, Closing: 0 [UNetConnection] RemoteAddr: 127.0.0.1:59247, Name: IpConnection_1, Driver: GameNetDriver IpNetDriver_0, IsServer: YES, PC: PlayerController_0, Owner: PlayerController_0, UniqueId: NULL:PIANG-22CD7022428DDF534620EE9CA93CFF55
+[2021.03.06-15.33.18:865][ 87]LogExit: GameNetDriver IpNetDriver_0 shut down
+[2021.03.06-15.33.18:866][ 87]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2021.03.06-15.33.18:867][ 87]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.03.06-15.33.18:872][ 87]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2021.03.06-15.33.18:872][ 87]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2021.03.06-15.33.18:873][ 87]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2021.03.06-15.33.18:888][ 87]LogUObjectHash: Compacting FUObjectHashTables data took   0.54ms
+[2021.03.06-15.33.18:930][ 90]LogPlayLevel: Display: Destroying online subsystem :Context_4
+[2021.03.06-15.33.18:930][ 90]LogPlayLevel: Display: Destroying online subsystem :Context_3
+[2021.03.06-15.33.26:782][502]LogActor: Warning: SetReplicates called on non-initialized actor WeaponSword01_C_0. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.03.06-15.33.27:686][554]LogSlate: Took 0.000191 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
+[2021.03.06-15.33.27:717][554]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Demo/Data/Weapon/Sword/WeaponSword01.WeaponSword01
+[2021.03.06-15.33.27:776][554]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'BlueprintGraph' in 0.0004 seconds. Added 126 classes and 0 folders.
+[2021.03.06-15.33.28:382][554]LogActor: Warning: SetReplicates called on non-initialized actor WeaponSword01_C_0. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.03.06-15.33.30:240][662]LogSlate: Window 'WeaponSword01' being destroyed
+[2021.03.06-15.33.30:248][662]LogWorld: UWorld::CleanupWorld for World_3, bSessionEnded=true, bCleanupResources=true
+[2021.03.06-15.33.30:248][662]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.03.06-15.33.30:314][662]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Demo/Data/Weapon/Sword/WeaponSword01.WeaponSword01
+[2021.03.06-15.33.30:638][662]LogActor: Warning: SetReplicates called on non-initialized actor WeaponSword01_C_0. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.03.06-15.33.30:648][662]LogSlate: Took 0.000132 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-BoldCondensed.ttf' (158K)
+[2021.03.06-15.33.37:690][ 82]LogAssetEditorSubsystem: Opening Asset editor for AnimMontage /Game/Demo/Animation/AnimMontage/TowHandSword.TowHandSword
+[2021.03.06-15.33.37:699][ 82]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'SkeletonEditor' in 0.0002 seconds. Added 1 classes and 2 folders.
+[2021.03.06-15.33.37:825][ 82]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_5:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
+[2021.03.06-15.33.37:826][ 82]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'PinnedCommandList' in 0.0002 seconds. Added 1 classes and 0 folders.
+[2021.03.06-15.33.38:256][ 82]LogSlate: Last resort fallback font was requested. Font: '../../../Engine/Content/Slate/Fonts/DroidSansFallback.ttf', Character: ' (U+f061)'
+[2021.03.06-15.33.38:259][ 82]LogSlate: Took 0.001568 seconds to synchronously load lazily loaded font '../../../Engine/Content/SlateDebug/Fonts/LastResort.ttf' (5269K)
+[2021.03.06-15.33.56:900][187]LogContentBrowser: Verbose: The majority of assets in the view are of type: AnimSequence
+[2021.03.06-15.34.52:131][430]LogAnimationCompression: Building Anim DDC data for AnimSequence /Game/ModularRPGHeroesPolyart/Animations/TwoHandSwordStance/Combo02_SingleTwohandSword_RMAnim.Combo02_SingleTwohandSword_RMAnim
+[2021.03.06-15.34.57:083][720]LogAnimationCompression: Building Anim DDC data for AnimSequence /Game/ModularRPGHeroesPolyart/Animations/TwoHandSwordStance/Combo03_SingleTwohandSword_RMAnim.Combo03_SingleTwohandSword_RMAnim
+[2021.03.06-15.35.00:310][909]LogAnimationCompression: Building Anim DDC data for AnimSequence /Game/ModularRPGHeroesPolyart/Animations/TwoHandSwordStance/Combo04_SingleTwohandSword_RMAnim.Combo04_SingleTwohandSword_RMAnim
+[2021.03.06-15.35.02:669][ 46]LogAnimationCompression: Building Anim DDC data for AnimSequence /Game/ModularRPGHeroesPolyart/Animations/TwoHandSwordStance/Combo05_SingleTwohandSword_RMAnim.Combo05_SingleTwohandSword_RMAnim
+[2021.03.06-15.36.23:787][898]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Demo/Animation/AnimMontage/TowHandSword" FILE="../../../../../../Code/UE4/RPGGame/Main/Content/Demo/Animation/AnimMontage/TowHandSword.uasset" SILENT=true
+[2021.03.06-15.36.23:794][898]LogSavePackage: Moving '../../../../../../Code/UE4/RPGGame/Main/Saved/TowHandSword6CEDCE0D45D3043A4BA4AFB1E860947B.tmp' to '../../../../../../Code/UE4/RPGGame/Main/Content/Demo/Animation/AnimMontage/TowHandSword.uasset'
+[2021.03.06-15.36.23:808][898]AssetCheck: New page: 资产保存：TowHandSword
+[2021.03.06-15.36.23:808][898]LogContentValidation: Display: 正在验证AnimMontage /Game/Demo/Animation/AnimMontage/TowHandSword.TowHandSword
+[2021.03.06-15.36.27:005][ 86]LogSlate: Window 'TowHandSword' being destroyed
+[2021.03.06-15.36.27:009][ 86]LogSlate: Window 'TowHandSword' being destroyed
+[2021.03.06-15.36.27:013][ 86]LogWorld: UWorld::CleanupWorld for World_4, bSessionEnded=true, bCleanupResources=true
+[2021.03.06-15.36.27:014][ 86]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.03.06-15.36.27:047][ 86]LogWorld: UWorld::CleanupWorld for World_5, bSessionEnded=true, bCleanupResources=true
+[2021.03.06-15.36.27:047][ 86]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.03.06-15.36.27:081][ 86]LogWorld: UWorld::CleanupWorld for World_6, bSessionEnded=true, bCleanupResources=true
+[2021.03.06-15.36.27:081][ 86]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.03.06-15.36.31:125][322]LogAssetEditorSubsystem: Opening Asset editor for BlendSpace /Game/Demo/Animation/Base.Base
+[2021.03.06-15.36.31:130][322]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_10:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
+[2021.03.06-15.36.31:395][322]LogContentBrowser: Verbose: The majority of assets in the view are of type: AnimSequence
+[2021.03.06-15.36.33:425][440]LogAssetEditorSubsystem: Opening Asset editor for Skeleton /Game/ModularRPGHeroesPolyart/Meshes/UE4_Mannequin_Skeleton.UE4_Mannequin_Skeleton
+[2021.03.06-15.36.33:429][440]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_13:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
+[2021.03.06-15.36.33:627][441]LogRenderer: Reallocating scene render targets to support 964x708 Format 10 NumSamples 1 (Frame:1).
+[2021.03.06-15.37.06:341][379]LogSavePackage: Moving '../../../../../../Code/UE4/RPGGame/Main/Saved/UE4_Mannequin_Skeleton34AF0F4442674A2FAD2D4294A98B50D8.tmp' to '../../../../../../Code/UE4/RPGGame/Main/Content/ModularRPGHeroesPolyart/Meshes/UE4_Mannequin_Skeleton.uasset'
+[2021.03.06-15.37.06:355][379]AssetCheck: New page: 资产保存：UE4_Mannequin_Skeleton
+[2021.03.06-15.37.06:355][379]LogContentValidation: Display: 正在验证Skeleton /Game/ModularRPGHeroesPolyart/Meshes/UE4_Mannequin_Skeleton.UE4_Mannequin_Skeleton
+[2021.03.06-15.37.17:380][ 40]LogSavePackage: Moving '../../../../../../Code/UE4/RPGGame/Main/Saved/UE4_Mannequin_Skeleton1CC09D60409FEB9885A8A2898DAFBDBF.tmp' to '../../../../../../Code/UE4/RPGGame/Main/Content/ModularRPGHeroesPolyart/Meshes/UE4_Mannequin_Skeleton.uasset'
+[2021.03.06-15.37.17:389][ 40]AssetCheck: New page: 资产保存：UE4_Mannequin_Skeleton
+[2021.03.06-15.37.17:389][ 40]LogContentValidation: Display: 正在验证Skeleton /Game/ModularRPGHeroesPolyart/Meshes/UE4_Mannequin_Skeleton.UE4_Mannequin_Skeleton
+[2021.03.06-15.37.17:668][ 57]LogSlate: Window 'UE4_Mannequin_Skeleton' being destroyed
+[2021.03.06-15.37.17:671][ 57]LogSlate: Window 'UE4_Mannequin_Skeleton' being destroyed
+[2021.03.06-15.37.17:671][ 57]LogWorld: UWorld::CleanupWorld for World_10, bSessionEnded=true, bCleanupResources=true
+[2021.03.06-15.37.17:671][ 57]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.03.06-15.37.17:709][ 57]LogWorld: UWorld::CleanupWorld for World_11, bSessionEnded=true, bCleanupResources=true
+[2021.03.06-15.37.17:709][ 57]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.03.06-15.37.17:719][ 57]LogWorld: UWorld::CleanupWorld for World_13, bSessionEnded=true, bCleanupResources=true
+[2021.03.06-15.37.17:719][ 57]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.03.06-15.37.21:395][275]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Demo/Data/Weapon/Sword/WeaponSword01.WeaponSword01
+[2021.03.06-15.37.21:715][275]LogActor: Warning: SetReplicates called on non-initialized actor WeaponSword01_C_0. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.03.06-15.37.38:535][282]LogHttp: Warning: 0000021984CC0100: HTTP request timed out after 180.00 seconds URL=https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7BE6537D59-47C1-4EDC-0F23-E599AA9D4D03%7D&AppID=UEEditor.Rocket.Release&AppVersion=4.26.0-14830424%2B%2B%2BUE4%2BRelease-4.26&UserID=573de7ba4f1e708983653980f4c583e7%7C96642711d5094af8bca76358debf4281%7C95cf207a-b929-4541-b71f-c57fc5f4bcc7&AppEnvironment=datacollector-binary&UploadType=eteventstream
+[2021.03.06-15.37.38:535][282]LogHttp: Warning: 0000021984CC0100: request failed, libcurl error: 0 (No error)
+[2021.03.06-15.37.38:535][282]LogHttp: Warning: 0000021984CC0100: libcurl info message cache 0 (  Trying 54.88.238.242...)
+[2021.03.06-15.37.38:535][282]LogHttp: Warning: 0000021984CC0100: libcurl info message cache 1 (TCP_NODELAY set)
+[2021.03.06-15.37.38:535][282]LogHttp: Warning: 0000021984CC0100: libcurl info message cache 2 (Connected to datarouter.ol.epicgames.com (54.88.238.242) port 443 (#0))
+[2021.03.06-15.37.38:535][282]LogHttp: Warning: 0000021984CC0100: libcurl info message cache 3 (ALPN, offering http/1.1)
+[2021.03.06-15.37.38:535][282]LogHttp: Warning: 0000021984CC0100: libcurl info message cache 4 (Cipher selection: ALL:!EXPORT:!EXPORT40:!EXPORT56:!aNULL:!LOW:!RC4:@STRENGTH)
+[2021.03.06-15.37.38:535][282]LogHttp: Warning: 0000021984CC0100: libcurl info message cache 5 (TLSv1.3 (OUT), TLS handshake, Client hello (1):)
+[2021.03.06-15.37.38:535][282]LogHttp: Warning: 0000021984CC0100: libcurl info message cache 6 (TLSv1.3 (IN), TLS handshake, Server hello (2):)
+[2021.03.06-15.37.38:535][282]LogHttp: Warning: 0000021984CC0100: libcurl info message cache 7 (TLSv1.2 (IN), TLS handshake, Certificate (11):)
+[2021.03.06-15.37.38:535][282]LogHttp: Warning: 0000021984CC0100: libcurl info message cache 8 (TLSv1.2 (IN), TLS handshake, Server key exchange (12):)
+[2021.03.06-15.37.38:535][282]LogHttp: Warning: 0000021984CC0100: libcurl info message cache 9 (TLSv1.2 (IN), TLS handshake, Server finished (14):)
+[2021.03.06-15.37.38:535][282]LogHttp: Warning: 0000021984CC0100: libcurl info message cache 10 (TLSv1.2 (OUT), TLS handshake, Client key exchange (16):)
+[2021.03.06-15.37.38:535][282]LogHttp: Warning: 0000021984CC0100: libcurl info message cache 11 (TLSv1.2 (OUT), TLS change cipher, Client hello (1):)
+[2021.03.06-15.37.38:535][282]LogHttp: Warning: 0000021984CC0100: libcurl info message cache 12 (TLSv1.2 (OUT), TLS handshake, Finished (20):)
+[2021.03.06-15.37.38:535][282]LogHttp: Warning: 0000021984CC0100: libcurl info message cache 13 (TLSv1.2 (IN), TLS handshake, Finished (20):)
+[2021.03.06-15.37.38:535][282]LogHttp: Warning: 0000021984CC0100: libcurl info message cache 14 (SSL connection using TLSv1.2 / ECDHE-RSA-AES128-GCM-SHA256)
+[2021.03.06-15.37.38:535][282]LogHttp: Warning: 0000021984CC0100: libcurl info message cache 15 (ALPN, server accepted to use http/1.1)
+[2021.03.06-15.37.38:535][282]LogHttp: Warning: 0000021984CC0100: libcurl info message cache 16 (Server certificate:)
+[2021.03.06-15.37.38:535][282]LogHttp: Warning: 0000021984CC0100: libcurl info message cache 17 ( subject: CN=*.ol.epicgames.com)
+[2021.03.06-15.37.38:535][282]LogHttp: Warning: 0000021984CC0100: libcurl info message cache 18 ( start date: Feb  5 00:00:00 2021 GMT)
+[2021.03.06-15.37.38:535][282]LogHttp: Warning: 0000021984CC0100: libcurl info message cache 19 ( expire date: Mar  5 23:59:59 2022 GMT)
+[2021.03.06-15.37.38:535][282]LogHttp: Warning: 0000021984CC0100: libcurl info message cache 20 ( subjectAltName: host "datarouter.ol.epicgames.com" matched cert's "*.ol.epicgames.com")
+[2021.03.06-15.37.38:535][282]LogHttp: Warning: 0000021984CC0100: libcurl info message cache 21 ( issuer: C=US; O=Amazon; OU=Server CA 1B; CN=Amazon)
+[2021.03.06-15.37.38:535][282]LogHttp: Warning: 0000021984CC0100: libcurl info message cache 22 ( SSL certificate verify ok.)
+[2021.03.06-15.37.38:535][282]LogHttp: Warning: 0000021984CC0100: libcurl info message cache 23 (We are completely uploaded and fine)
+[2021.03.06-15.37.38:536][282]LogHttp: Warning: 0000021984CC0100: libcurl info message cache 24 (Closing connection 0)
+[2021.03.06-15.37.38:536][282]LogHttp: Warning: 0000021984CC0100: libcurl info message cache 25 (TLSv1.2 (OUT), TLS alert, Client hello (1):)
+[2021.03.06-15.37.38:536][282]LogHttp: Warning: Retry exhausted on https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7BE6537D59-47C1-4EDC-0F23-E599AA9D4D03%7D&AppID=UEEditor.Rocket.Release&AppVersion=4.26.0-14830424%2B%2B%2BUE4%2BRelease-4.26&UserID=573de7ba4f1e708983653980f4c583e7%7C96642711d5094af8bca76358debf4281%7C95cf207a-b929-4541-b71f-c57fc5f4bcc7&AppEnvironment=datacollector-binary&UploadType=eteventstream
+[2021.03.06-15.37.41:230][443]LogSlate: Window 'WeaponSword01' being destroyed
+[2021.03.06-15.37.41:235][443]LogSlate: Window 'WeaponSword01' being destroyed
+[2021.03.06-15.37.41:237][443]LogWorld: UWorld::CleanupWorld for World_15, bSessionEnded=true, bCleanupResources=true
+[2021.03.06-15.37.41:238][443]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.03.06-15.37.42:157][497]LogTemp: Repeating last play command: 新建编辑器窗口（编辑器中运行）
+[2021.03.06-15.37.42:162][497]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2021.03.06-15.37.42:162][497]PIE: New page: PIE会话：TestMap（Mar 7, 2021, 7:37:42 AM）
+[2021.03.06-15.37.42:163][497]LogPlayLevel: Creating play world package: /Game/Demo/Maps/UEDPIE_0_TestMap
+[2021.03.06-15.37.42:163][497]LogActor: Warning: SetReplicates called on non-initialized actor BodyCloth02_2. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.03.06-15.37.42:163][497]LogActor: Warning: SetReplicates called on non-initialized actor WeaponSword01_2. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.03.06-15.37.42:168][497]LogPlayLevel: PIE: StaticDuplicateObject took: (0.004893s)
+[2021.03.06-15.37.42:169][497]LogAIModule: Creating AISystem for world TestMap
+[2021.03.06-15.37.42:169][497]LogPlayLevel: PIE: World Init took: (0.001353s)
+[2021.03.06-15.37.42:169][497]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Demo/Maps/TestMap.TestMap to /Game/Demo/Maps/UEDPIE_0_TestMap.TestMap (0.006485s)
+[2021.03.06-15.37.42:230][497]LogUObjectHash: Compacting FUObjectHashTables data took   3.19ms
+[2021.03.06-15.37.42:232][497]LogLoad: Game class is 'BP_GameModeBase_C'
+[2021.03.06-15.37.42:233][497]LogWorld: Bringing World /Game/Demo/Maps/UEDPIE_0_TestMap.TestMap up for play (max tick rate 60) at 2021.03.06-23.37.42
+[2021.03.06-15.37.42:234][497]LogWorld: Bringing up level for play took: 0.000630
+[2021.03.06-15.37.42:234][497]LogNet: ReplicationDriverClass is null! Not using ReplicationDriver.
+[2021.03.06-15.37.42:234][497]LogNetCore: DDoS detection status: detection enabled: 0 analytics enabled: 0
+[2021.03.06-15.37.42:234][497]LogNet: PktLagMin set to 0
+[2021.03.06-15.37.42:234][497]LogNet: PktLagMax set to 0
+[2021.03.06-15.37.42:234][497]LogNet: PktLoss set to 0
+[2021.03.06-15.37.42:234][497]LogNet: PktIncomingLagMin set to 0
+[2021.03.06-15.37.42:234][497]LogNet: PktIncomingLagMax set to 0
+[2021.03.06-15.37.42:234][497]LogNet: PktIncomingLoss set to 0
+[2021.03.06-15.37.42:234][497]LogInit: WinSock: Socket queue. Rx: 131072 (config 131072) Tx: 131072 (config 131072)
+[2021.03.06-15.37.42:234][497]LogNet: Created socket for bind address: 0.0.0.0 on port 17777
+[2021.03.06-15.37.42:234][497]PacketHandlerLog: Loaded PacketHandler component: Engine.EngineHandlerComponentFactory (StatelessConnectHandlerComponent)
+[2021.03.06-15.37.42:234][497]LogNet: GameNetDriver IpNetDriver_2 IpNetDriver listening on port 17777
+[2021.03.06-15.37.42:235][497]PIE: 登陆的服务器
+[2021.03.06-15.37.42:235][497]PIE: PIE总开始时间：0.073秒。
+[2021.03.06-15.37.42:236][497]LogAudio: Display: Creating Audio Device:                 Id: 3, Scope: Unique, Realtime: True
+[2021.03.06-15.37.42:236][497]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2021.03.06-15.37.42:236][497]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2021.03.06-15.37.42:236][497]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2021.03.06-15.37.42:236][497]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2021.03.06-15.37.42:236][497]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2021.03.06-15.37.42:236][497]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2021.03.06-15.37.42:236][497]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2021.03.06-15.37.42:236][497]LogAudio: Display: AudioDevice MaxSources: 32
+[2021.03.06-15.37.42:236][497]LogAudio: Display: Using built-in audio occlusion.
+[2021.03.06-15.37.42:236][497]LogAudioMixer: Display: Initializing audio mixer.
+[2021.03.06-15.37.42:241][497]LogAudioMixer: Display: 0: FrontLeft
+[2021.03.06-15.37.42:241][497]LogAudioMixer: Display: 1: FrontRight
+[2021.03.06-15.37.42:254][497]LogAudioMixer: Display: Using Audio Device 耳机 (Realtek(R) Audio)
+[2021.03.06-15.37.42:254][497]LogAudioMixer: Display: Initializing Sound Submixes...
+[2021.03.06-15.37.42:254][497]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2021.03.06-15.37.42:254][497]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2021.03.06-15.37.42:255][497]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2021.03.06-15.37.42:255][497]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called
+[2021.03.06-15.37.42:255][497]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048
+[2021.03.06-15.37.42:267][497]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal()
+[2021.03.06-15.37.42:267][497]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time
+[2021.03.06-15.37.42:267][497]LogInit: FAudioDevice initialized.
+[2021.03.06-15.37.42:267][497]LogAudio: Display: Audio Device (ID: 3) registered with world 'Untitled'.
+[2021.03.06-15.37.42:283][497]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2021.03.06-15.37.42:283][497]LogNet: Browse: 127.0.0.1:17777/Game/Demo/Maps/TestMap
+[2021.03.06-15.37.42:283][497]LogInit: WinSock: Socket queue. Rx: 32768 (config 32768) Tx: 32768 (config 32768)
+[2021.03.06-15.37.42:283][497]LogNet: Created socket for bind address: 0.0.0.0 on port 0
+[2021.03.06-15.37.42:283][497]PacketHandlerLog: Loaded PacketHandler component: Engine.EngineHandlerComponentFactory (StatelessConnectHandlerComponent)
+[2021.03.06-15.37.42:284][497]LogNet: Game client on port 17777, rate 100000
+[2021.03.06-15.37.42:285][497]PIE: 已登陆客户端
+[2021.03.06-15.37.42:286][497]PIE: PIE总开始时间：0.124秒。
+[2021.03.06-15.37.42:287][497]LogOnline: OSS: Creating online subsystem instance for: :Context_19
+[2021.03.06-15.37.43:301][557]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:52317
+[2021.03.06-15.37.43:301][557]LogHandshake: SendConnectChallenge. Timestamp: 1.160169, Cookie: 038082076217028093106008004034113185134212096231226165243033
+[2021.03.06-15.37.43:302][557]LogHandshake: SendChallengeResponse. Timestamp: 1.160169, Cookie: 038082076217028093106008004034113185134212096231226165243033
+[2021.03.06-15.37.43:318][558]LogNet: NotifyAcceptingConnection accepted from: 127.0.0.1:52317
+[2021.03.06-15.37.43:318][558]LogHandshake: SendChallengeAck. InCookie: 038082076217028093106008004034113185134212096231226165243033
+[2021.03.06-15.37.43:318][558]LogNet: Server accepting post-challenge connection from: 127.0.0.1:52317
+[2021.03.06-15.37.43:318][558]PacketHandlerLog: Loaded PacketHandler component: Engine.EngineHandlerComponentFactory (StatelessConnectHandlerComponent)
+[2021.03.06-15.37.43:318][558]LogNet: NotifyAcceptedConnection: Name: TestMap, TimeStamp: 03/06/21 23:37:43, [UNetConnection] RemoteAddr: 127.0.0.1:52317, Name: IpConnection_3, Driver: GameNetDriver IpNetDriver_2, IsServer: YES, PC: NULL, Owner: NULL, UniqueId: INVALID
+[2021.03.06-15.37.43:319][558]LogNet: AddClientConnection: Added client connection: [UNetConnection] RemoteAddr: 127.0.0.1:52317, Name: IpConnection_3, Driver: GameNetDriver IpNetDriver_2, IsServer: YES, PC: NULL, Owner: NULL, UniqueId: INVALID
+[2021.03.06-15.37.43:319][558]LogNet: UPendingNetGame::SendInitialJoin: Sending hello. [UNetConnection] RemoteAddr: 127.0.0.1:17777, Name: IpConnection_2, Driver: PendingNetDriver IpNetDriver_3, IsServer: NO, PC: NULL, Owner: NULL, UniqueId: INVALID
+[2021.03.06-15.37.43:335][559]LogNet: NotifyAcceptingChannel Control 0 server World /Game/Demo/Maps/UEDPIE_0_TestMap.TestMap: Accepted
+[2021.03.06-15.37.43:335][559]LogNet: Remote platform little endian=1
+[2021.03.06-15.37.43:335][559]LogNet: This platform little endian=1
+[2021.03.06-15.37.43:335][559]LogOnline: OSS: Creating online subsystem instance for: :Context_20
+[2021.03.06-15.37.43:351][560]LogNet: Login request: ?Name=PIANG-71290B6E4C26823A9029BAA2DD304D11 userId: NULL:PIANG-71290B6E4C26823A9029BAA2DD304D11 platform: NULL
+[2021.03.06-15.37.43:352][560]LogNet: Welcomed by server (Level: /Game/Demo/Maps/UEDPIE_0_TestMap, Game: /Game/Demo/GamePlay/GameMode/BP_GameModeBase.BP_GameModeBase_C)
+[2021.03.06-15.37.43:352][560]LogLoad: LoadMap: 127.0.0.1:17777/Game/Demo/Maps/UEDPIE_0_TestMap?game=/Game/Demo/GamePlay/GameMode/BP_GameModeBase.BP_GameModeBase_C
+[2021.03.06-15.37.43:352][560]LogWorld: BeginTearingDown for /Temp/Untitled_2
+[2021.03.06-15.37.43:352][560]LogWorld: UWorld::CleanupWorld for Untitled, bSessionEnded=true, bCleanupResources=true
+[2021.03.06-15.37.43:352][560]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.03.06-15.37.43:372][560]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2021.03.06-15.37.43:387][560]LogUObjectHash: Compacting FUObjectHashTables data took   2.12ms
+[2021.03.06-15.37.43:388][560]LogActor: Warning: SetReplicates called on non-initialized actor BodyCloth02_2. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.03.06-15.37.43:388][560]LogActor: Warning: SetReplicates called on non-initialized actor WeaponSword01_2. Directly setting bReplicates is the correct procedure for pre-init actors.
+[2021.03.06-15.37.43:393][560]LogAudio: Display: Audio Device (ID: 3) registered with world 'TestMap'.
+[2021.03.06-15.37.43:393][560]LogAIModule: Creating AISystem for world TestMap
+[2021.03.06-15.37.43:395][560]LogWorld: Bringing World /Game/Demo/Maps/UEDPIE_1_TestMap.TestMap up for play (max tick rate 60) at 2021.03.06-23.37.43
+[2021.03.06-15.37.43:395][560]LogWorld: Bringing up level for play took: 0.000433
+[2021.03.06-15.37.43:395][560]LogLoad: Took 0.042821 seconds to LoadMap(/Game/Demo/Maps/UEDPIE_0_TestMap)
+[2021.03.06-15.37.43:395][560]LogNavigation: Warning: NavData RegistrationFailed_DataPendingKill.
+[2021.03.06-15.37.43:410][561]LogNet: Client netspeed is 100000
+[2021.03.06-15.37.43:410][561]LogNet: Join request: /Game/Demo/Maps/TestMap?Name=PIANG-71290B6E4C26823A9029BAA2DD304D11?SplitscreenCount=1
+[2021.03.06-15.37.43:410][561]LogOnlineSession: Warning: OSS: No game present to join for session (GameSession)
+[2021.03.06-15.37.43:413][561]LogNet: Join succeeded: PIANG-71290B6E4C2682
+[2021.03.06-15.37.43:427][562]LogOnlineSession: Warning: OSS: No game present to join for session (GameSession)
+[2021.03.06-15.37.44:357][618]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 无武器姿势
+[2021.03.06-15.37.44:357][618]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 正常状态
+[2021.03.06-15.37.44:357][618]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 
+[2021.03.06-15.37.44:407][621]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 无武器姿势
+[2021.03.06-15.37.44:408][621]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 正常状态
+[2021.03.06-15.37.44:408][621]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 
+[2021.03.06-15.37.45:357][678]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 无武器姿势
+[2021.03.06-15.37.45:357][678]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 正常状态
+[2021.03.06-15.37.45:357][678]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 
+[2021.03.06-15.37.45:408][681]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 无武器姿势
+[2021.03.06-15.37.45:408][681]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 正常状态
+[2021.03.06-15.37.45:408][681]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 
+[2021.03.06-15.37.46:357][738]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 无武器姿势
+[2021.03.06-15.37.46:357][738]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 正常状态
+[2021.03.06-15.37.46:357][738]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 
+[2021.03.06-15.37.46:407][741]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 无武器姿势
+[2021.03.06-15.37.46:407][741]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 正常状态
+[2021.03.06-15.37.46:407][741]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 
+[2021.03.06-15.37.47:357][798]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 无武器姿势
+[2021.03.06-15.37.47:357][798]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 正常状态
+[2021.03.06-15.37.47:357][798]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 
+[2021.03.06-15.37.47:408][801]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 无武器姿势
+[2021.03.06-15.37.47:408][801]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 正常状态
+[2021.03.06-15.37.47:408][801]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 
+[2021.03.06-15.37.47:741][821]LogTemp: Warning: SphereComponent_BeginOverlap
+[2021.03.06-15.37.47:741][821]LogBlueprintUserMessages: [WBP_OverlapActor_C_0] Client 1: 0
+[2021.03.06-15.37.47:741][821]LogTemp: Warning: SphereComponent_BeginOverlap
+[2021.03.06-15.37.47:757][822]LogTemp: Warning: SphereComponent_BeginOverlap
+[2021.03.06-15.37.47:757][822]LogTemp: Warning: SphereComponent_BeginOverlap
+[2021.03.06-15.37.48:191][848]LogTemp: Warning: AWeapon::Equipment
+[2021.03.06-15.37.48:191][848]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor WeaponSword01_2. Function EquipmentServer will not be processed.
+[2021.03.06-15.37.48:191][848]LogNet: Warning: UNetDriver::ProcessRemoteFunction: No owning connection for actor WeaponSword01_2. Function SetItemStateServer will not be processed.
+[2021.03.06-15.37.48:357][858]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 双手剑姿势
+[2021.03.06-15.37.48:357][858]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 战斗状态
+[2021.03.06-15.37.48:357][858]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: WeaponSword01
+[2021.03.06-15.37.48:407][861]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 双手剑姿势
+[2021.03.06-15.37.48:407][861]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 战斗状态
+[2021.03.06-15.37.48:407][861]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: WeaponSword01
+[2021.03.06-15.37.49:107][903]LogTemp: Warning: SphereComponent_EndOverlap
+[2021.03.06-15.37.49:108][903]LogTemp: Warning: SphereComponent_EndOverlap
+[2021.03.06-15.37.49:225][910]LogTemp: Warning: SphereComponent_EndOverlap
+[2021.03.06-15.37.49:356][918]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 双手剑姿势
+[2021.03.06-15.37.49:356][918]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 战斗状态
+[2021.03.06-15.37.49:356][918]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: WeaponSword01
+[2021.03.06-15.37.49:407][921]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 双手剑姿势
+[2021.03.06-15.37.49:407][921]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 战斗状态
+[2021.03.06-15.37.49:407][921]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: WeaponSword01
+[2021.03.06-15.37.50:256][972]LogTemp: Warning: SphereComponent_EndOverlap
+[2021.03.06-15.37.50:273][973]LogTemp: Warning: SphereComponent_EndOverlap
+[2021.03.06-15.37.50:273][973]LogTemp: Warning: SphereComponent_EndOverlap
+[2021.03.06-15.37.50:357][978]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 双手剑姿势
+[2021.03.06-15.37.50:357][978]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 战斗状态
+[2021.03.06-15.37.50:357][978]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: WeaponSword01
+[2021.03.06-15.37.50:408][981]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 双手剑姿势
+[2021.03.06-15.37.50:408][981]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 战斗状态
+[2021.03.06-15.37.50:408][981]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: WeaponSword01
+[2021.03.06-15.37.50:825][  6]LogTemp: Warning: Attack
+[2021.03.06-15.37.50:825][  6]LogTemp: Warning: PlayAnimMontage
+[2021.03.06-15.37.50:825][  6]LogAnimMontage: Warning: JumpToSectionName Attack1 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.37.50:825][  6]LogAnimMontage: Warning: JumpToSectionName Attack1 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.37.50:825][  6]LogAnimMontage: Warning: JumpToSectionName Attack1 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.37.50:825][  6]LogAnimMontage: Warning: JumpToSectionName Attack1 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.37.50:825][  6]LogAnimMontage: Warning: JumpToSectionName Attack1 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.37.50:825][  6]LogAnimMontage: Warning: JumpToSectionName Attack1 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.37.50:825][  6]LogAnimMontage: Warning: JumpToSectionName Attack1 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.37.50:825][  6]LogAnimMontage: Warning: JumpToSectionName Attack1 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.37.50:840][  7]LogTemp: Warning: Attack
+[2021.03.06-15.37.50:840][  7]LogTemp: Warning: PlayAnimMontage
+[2021.03.06-15.37.50:840][  7]LogAnimMontage: Warning: JumpToSectionName Attack1 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.37.50:840][  7]LogAnimMontage: Warning: JumpToSectionName Attack1 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.37.50:840][  7]LogAnimMontage: Warning: JumpToSectionName Attack1 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.37.50:840][  7]LogAnimMontage: Warning: JumpToSectionName Attack1 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.37.50:840][  7]LogAnimMontage: Warning: JumpToSectionName Attack1 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.37.50:840][  7]LogAnimMontage: Warning: JumpToSectionName Attack1 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.37.50:840][  7]LogAnimMontage: Warning: JumpToSectionName Attack1 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.37.50:840][  7]LogAnimMontage: Warning: JumpToSectionName Attack1 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.37.51:357][ 38]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 双手剑姿势
+[2021.03.06-15.37.51:357][ 38]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 战斗状态
+[2021.03.06-15.37.51:357][ 38]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: WeaponSword01
+[2021.03.06-15.37.51:408][ 41]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 双手剑姿势
+[2021.03.06-15.37.51:408][ 41]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 战斗状态
+[2021.03.06-15.37.51:408][ 41]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: WeaponSword01
+[2021.03.06-15.37.52:357][ 98]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 双手剑姿势
+[2021.03.06-15.37.52:357][ 98]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 战斗状态
+[2021.03.06-15.37.52:357][ 98]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: WeaponSword01
+[2021.03.06-15.37.52:408][101]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 双手剑姿势
+[2021.03.06-15.37.52:408][101]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 战斗状态
+[2021.03.06-15.37.52:408][101]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: WeaponSword01
+[2021.03.06-15.37.52:442][103]LogTemp: Warning: Attack
+[2021.03.06-15.37.52:442][103]LogTemp: Warning: PlayAnimMontage
+[2021.03.06-15.37.52:442][103]LogAnimMontage: Warning: JumpToSectionName Attack2 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.37.52:442][103]LogAnimMontage: Warning: JumpToSectionName Attack2 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.37.52:442][103]LogAnimMontage: Warning: JumpToSectionName Attack2 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.37.52:442][103]LogAnimMontage: Warning: JumpToSectionName Attack2 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.37.52:442][103]LogAnimMontage: Warning: JumpToSectionName Attack2 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.37.52:442][103]LogAnimMontage: Warning: JumpToSectionName Attack2 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.37.52:442][103]LogAnimMontage: Warning: JumpToSectionName Attack2 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.37.52:442][103]LogAnimMontage: Warning: JumpToSectionName Attack2 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.37.52:457][104]LogTemp: Warning: Attack
+[2021.03.06-15.37.52:457][104]LogTemp: Warning: PlayAnimMontage
+[2021.03.06-15.37.52:457][104]LogAnimMontage: Warning: JumpToSectionName Attack2 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.37.52:457][104]LogAnimMontage: Warning: JumpToSectionName Attack2 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.37.52:457][104]LogAnimMontage: Warning: JumpToSectionName Attack2 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.37.52:457][104]LogAnimMontage: Warning: JumpToSectionName Attack2 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.37.52:457][104]LogAnimMontage: Warning: JumpToSectionName Attack2 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.37.52:457][104]LogAnimMontage: Warning: JumpToSectionName Attack2 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.37.52:457][104]LogAnimMontage: Warning: JumpToSectionName Attack2 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.37.52:457][104]LogAnimMontage: Warning: JumpToSectionName Attack2 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.37.53:357][158]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 双手剑姿势
+[2021.03.06-15.37.53:357][158]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 战斗状态
+[2021.03.06-15.37.53:357][158]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: WeaponSword01
+[2021.03.06-15.37.53:408][161]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 双手剑姿势
+[2021.03.06-15.37.53:408][161]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 战斗状态
+[2021.03.06-15.37.53:408][161]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: WeaponSword01
+[2021.03.06-15.37.53:725][180]LogTemp: Warning: Attack
+[2021.03.06-15.37.53:725][180]LogTemp: Warning: PlayAnimMontage
+[2021.03.06-15.37.53:725][180]LogAnimMontage: Warning: JumpToSectionName Attack3 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.37.53:725][180]LogAnimMontage: Warning: JumpToSectionName Attack3 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.37.53:725][180]LogAnimMontage: Warning: JumpToSectionName Attack3 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.37.53:725][180]LogAnimMontage: Warning: JumpToSectionName Attack3 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.37.53:725][180]LogAnimMontage: Warning: JumpToSectionName Attack3 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.37.53:725][180]LogAnimMontage: Warning: JumpToSectionName Attack3 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.37.53:725][180]LogAnimMontage: Warning: JumpToSectionName Attack3 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.37.53:725][180]LogAnimMontage: Warning: JumpToSectionName Attack3 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.37.53:740][181]LogTemp: Warning: Attack
+[2021.03.06-15.37.53:740][181]LogTemp: Warning: PlayAnimMontage
+[2021.03.06-15.37.53:740][181]LogAnimMontage: Warning: JumpToSectionName Attack3 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.37.53:740][181]LogAnimMontage: Warning: JumpToSectionName Attack3 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.37.53:740][181]LogAnimMontage: Warning: JumpToSectionName Attack3 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.37.53:740][181]LogAnimMontage: Warning: JumpToSectionName Attack3 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.37.53:740][181]LogAnimMontage: Warning: JumpToSectionName Attack3 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.37.53:740][181]LogAnimMontage: Warning: JumpToSectionName Attack3 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.37.53:740][181]LogAnimMontage: Warning: JumpToSectionName Attack3 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.37.53:740][181]LogAnimMontage: Warning: JumpToSectionName Attack3 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.37.54:357][218]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 双手剑姿势
+[2021.03.06-15.37.54:357][218]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 战斗状态
+[2021.03.06-15.37.54:357][218]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: WeaponSword01
+[2021.03.06-15.37.54:407][221]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 双手剑姿势
+[2021.03.06-15.37.54:407][221]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 战斗状态
+[2021.03.06-15.37.54:407][221]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: WeaponSword01
+[2021.03.06-15.37.55:357][278]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 双手剑姿势
+[2021.03.06-15.37.55:357][278]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 战斗状态
+[2021.03.06-15.37.55:357][278]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: WeaponSword01
+[2021.03.06-15.37.55:408][281]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 双手剑姿势
+[2021.03.06-15.37.55:408][281]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 战斗状态
+[2021.03.06-15.37.55:408][281]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: WeaponSword01
+[2021.03.06-15.37.56:357][338]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 双手剑姿势
+[2021.03.06-15.37.56:357][338]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 战斗状态
+[2021.03.06-15.37.56:357][338]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: WeaponSword01
+[2021.03.06-15.37.56:407][341]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 双手剑姿势
+[2021.03.06-15.37.56:407][341]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 战斗状态
+[2021.03.06-15.37.56:407][341]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: WeaponSword01
+[2021.03.06-15.37.57:357][398]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 双手剑姿势
+[2021.03.06-15.37.57:357][398]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 战斗状态
+[2021.03.06-15.37.57:357][398]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: WeaponSword01
+[2021.03.06-15.37.57:408][401]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 双手剑姿势
+[2021.03.06-15.37.57:408][401]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 战斗状态
+[2021.03.06-15.37.57:408][401]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: WeaponSword01
+[2021.03.06-15.37.57:792][424]LogTemp: Warning: Attack
+[2021.03.06-15.37.57:807][425]LogTemp: Warning: Attack
+[2021.03.06-15.37.58:358][458]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 双手剑姿势
+[2021.03.06-15.37.58:358][458]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 战斗状态
+[2021.03.06-15.37.58:358][458]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: WeaponSword01
+[2021.03.06-15.37.58:407][461]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 双手剑姿势
+[2021.03.06-15.37.58:407][461]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 战斗状态
+[2021.03.06-15.37.58:407][461]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: WeaponSword01
+[2021.03.06-15.37.58:592][472]LogTemp: Warning: Attack
+[2021.03.06-15.37.58:592][472]LogTemp: Warning: PlayAnimMontage
+[2021.03.06-15.37.58:592][472]LogAnimMontage: Warning: JumpToSectionName Attack4 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.37.58:592][472]LogAnimMontage: Warning: JumpToSectionName Attack4 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.37.58:592][472]LogAnimMontage: Warning: JumpToSectionName Attack4 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.37.58:592][472]LogAnimMontage: Warning: JumpToSectionName Attack4 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.37.58:592][472]LogAnimMontage: Warning: JumpToSectionName Attack4 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.37.58:592][472]LogAnimMontage: Warning: JumpToSectionName Attack4 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.37.58:592][472]LogAnimMontage: Warning: JumpToSectionName Attack4 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.37.58:592][472]LogAnimMontage: Warning: JumpToSectionName Attack4 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.37.58:607][473]LogTemp: Warning: Attack
+[2021.03.06-15.37.58:607][473]LogTemp: Warning: PlayAnimMontage
+[2021.03.06-15.37.58:607][473]LogAnimMontage: Warning: JumpToSectionName Attack4 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.37.58:607][473]LogAnimMontage: Warning: JumpToSectionName Attack4 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.37.58:607][473]LogAnimMontage: Warning: JumpToSectionName Attack4 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.37.58:607][473]LogAnimMontage: Warning: JumpToSectionName Attack4 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.37.58:607][473]LogAnimMontage: Warning: JumpToSectionName Attack4 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.37.58:607][473]LogAnimMontage: Warning: JumpToSectionName Attack4 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.37.58:607][473]LogAnimMontage: Warning: JumpToSectionName Attack4 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.37.58:607][473]LogAnimMontage: Warning: JumpToSectionName Attack4 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.37.59:357][518]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 双手剑姿势
+[2021.03.06-15.37.59:357][518]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 战斗状态
+[2021.03.06-15.37.59:357][518]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: WeaponSword01
+[2021.03.06-15.37.59:408][521]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 双手剑姿势
+[2021.03.06-15.37.59:408][521]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 战斗状态
+[2021.03.06-15.37.59:408][521]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: WeaponSword01
+[2021.03.06-15.38.00:342][577]LogTemp: Warning: Attack
+[2021.03.06-15.38.00:342][577]LogTemp: Warning: PlayAnimMontage
+[2021.03.06-15.38.00:342][577]LogAnimMontage: Warning: JumpToSectionName Attack1 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.38.00:342][577]LogAnimMontage: Warning: JumpToSectionName Attack1 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.38.00:342][577]LogAnimMontage: Warning: JumpToSectionName Attack1 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.38.00:342][577]LogAnimMontage: Warning: JumpToSectionName Attack1 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.38.00:342][577]LogAnimMontage: Warning: JumpToSectionName Attack1 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.38.00:342][577]LogAnimMontage: Warning: JumpToSectionName Attack1 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.38.00:342][577]LogAnimMontage: Warning: JumpToSectionName Attack1 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.38.00:342][577]LogAnimMontage: Warning: JumpToSectionName Attack1 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.38.00:357][578]LogTemp: Warning: Attack
+[2021.03.06-15.38.00:357][578]LogTemp: Warning: PlayAnimMontage
+[2021.03.06-15.38.00:357][578]LogAnimMontage: Warning: JumpToSectionName Attack1 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.38.00:357][578]LogAnimMontage: Warning: JumpToSectionName Attack1 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.38.00:357][578]LogAnimMontage: Warning: JumpToSectionName Attack1 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.38.00:357][578]LogAnimMontage: Warning: JumpToSectionName Attack1 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.38.00:357][578]LogAnimMontage: Warning: JumpToSectionName Attack1 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.38.00:357][578]LogAnimMontage: Warning: JumpToSectionName Attack1 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.38.00:357][578]LogAnimMontage: Warning: JumpToSectionName Attack1 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.38.00:357][578]LogAnimMontage: Warning: JumpToSectionName Attack1 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.38.00:358][578]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 双手剑姿势
+[2021.03.06-15.38.00:358][578]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 战斗状态
+[2021.03.06-15.38.00:358][578]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: WeaponSword01
+[2021.03.06-15.38.00:408][581]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 双手剑姿势
+[2021.03.06-15.38.00:408][581]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 战斗状态
+[2021.03.06-15.38.00:408][581]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: WeaponSword01
+[2021.03.06-15.38.01:357][638]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 双手剑姿势
+[2021.03.06-15.38.01:357][638]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 战斗状态
+[2021.03.06-15.38.01:357][638]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: WeaponSword01
+[2021.03.06-15.38.01:407][641]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 双手剑姿势
+[2021.03.06-15.38.01:408][641]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 战斗状态
+[2021.03.06-15.38.01:408][641]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: WeaponSword01
+[2021.03.06-15.38.02:357][698]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 双手剑姿势
+[2021.03.06-15.38.02:357][698]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 战斗状态
+[2021.03.06-15.38.02:357][698]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: WeaponSword01
+[2021.03.06-15.38.02:407][701]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 双手剑姿势
+[2021.03.06-15.38.02:407][701]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 战斗状态
+[2021.03.06-15.38.02:407][701]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: WeaponSword01
+[2021.03.06-15.38.03:025][738]LogTemp: Warning: Attack
+[2021.03.06-15.38.03:025][738]LogTemp: Warning: PlayAnimMontage
+[2021.03.06-15.38.03:025][738]LogAnimMontage: Warning: JumpToSectionName Attack2 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.38.03:025][738]LogAnimMontage: Warning: JumpToSectionName Attack2 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.38.03:025][738]LogAnimMontage: Warning: JumpToSectionName Attack2 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.38.03:025][738]LogAnimMontage: Warning: JumpToSectionName Attack2 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.38.03:025][738]LogAnimMontage: Warning: JumpToSectionName Attack2 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.38.03:025][738]LogAnimMontage: Warning: JumpToSectionName Attack2 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.38.03:025][738]LogAnimMontage: Warning: JumpToSectionName Attack2 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.38.03:025][738]LogAnimMontage: Warning: JumpToSectionName Attack2 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.38.03:040][739]LogTemp: Warning: Attack
+[2021.03.06-15.38.03:040][739]LogTemp: Warning: PlayAnimMontage
+[2021.03.06-15.38.03:040][739]LogAnimMontage: Warning: JumpToSectionName Attack2 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.38.03:040][739]LogAnimMontage: Warning: JumpToSectionName Attack2 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.38.03:040][739]LogAnimMontage: Warning: JumpToSectionName Attack2 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.38.03:041][739]LogAnimMontage: Warning: JumpToSectionName Attack2 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.38.03:041][739]LogAnimMontage: Warning: JumpToSectionName Attack2 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.38.03:041][739]LogAnimMontage: Warning: JumpToSectionName Attack2 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.38.03:041][739]LogAnimMontage: Warning: JumpToSectionName Attack2 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.38.03:041][739]LogAnimMontage: Warning: JumpToSectionName Attack2 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.38.03:357][758]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 双手剑姿势
+[2021.03.06-15.38.03:357][758]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 战斗状态
+[2021.03.06-15.38.03:357][758]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: WeaponSword01
+[2021.03.06-15.38.03:408][761]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 双手剑姿势
+[2021.03.06-15.38.03:408][761]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 战斗状态
+[2021.03.06-15.38.03:408][761]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: WeaponSword01
+[2021.03.06-15.38.04:357][818]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 双手剑姿势
+[2021.03.06-15.38.04:357][818]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 战斗状态
+[2021.03.06-15.38.04:357][818]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: WeaponSword01
+[2021.03.06-15.38.04:407][821]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 双手剑姿势
+[2021.03.06-15.38.04:407][821]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 战斗状态
+[2021.03.06-15.38.04:407][821]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: WeaponSword01
+[2021.03.06-15.38.04:708][839]LogTemp: Warning: Attack
+[2021.03.06-15.38.04:708][839]LogTemp: Warning: PlayAnimMontage
+[2021.03.06-15.38.04:708][839]LogAnimMontage: Warning: JumpToSectionName Attack3 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.38.04:708][839]LogAnimMontage: Warning: JumpToSectionName Attack3 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.38.04:708][839]LogAnimMontage: Warning: JumpToSectionName Attack3 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.38.04:708][839]LogAnimMontage: Warning: JumpToSectionName Attack3 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.38.04:708][839]LogAnimMontage: Warning: JumpToSectionName Attack3 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.38.04:708][839]LogAnimMontage: Warning: JumpToSectionName Attack3 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.38.04:708][839]LogAnimMontage: Warning: JumpToSectionName Attack3 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.38.04:708][839]LogAnimMontage: Warning: JumpToSectionName Attack3 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.38.04:723][840]LogTemp: Warning: Attack
+[2021.03.06-15.38.04:723][840]LogTemp: Warning: PlayAnimMontage
+[2021.03.06-15.38.04:723][840]LogAnimMontage: Warning: JumpToSectionName Attack3 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.38.04:723][840]LogAnimMontage: Warning: JumpToSectionName Attack3 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.38.04:723][840]LogAnimMontage: Warning: JumpToSectionName Attack3 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.38.04:723][840]LogAnimMontage: Warning: JumpToSectionName Attack3 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.38.04:723][840]LogAnimMontage: Warning: JumpToSectionName Attack3 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.38.04:723][840]LogAnimMontage: Warning: JumpToSectionName Attack3 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.38.04:723][840]LogAnimMontage: Warning: JumpToSectionName Attack3 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.38.04:723][840]LogAnimMontage: Warning: JumpToSectionName Attack3 bEndOfSection: 0 failed for Montage PlayerAnimMontage
+[2021.03.06-15.38.05:357][878]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 双手剑姿势
+[2021.03.06-15.38.05:357][878]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: 战斗状态
+[2021.03.06-15.38.05:357][878]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Server: WeaponSword01
+[2021.03.06-15.38.05:408][881]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 双手剑姿势
+[2021.03.06-15.38.05:408][881]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: 战斗状态
+[2021.03.06-15.38.05:408][881]LogBlueprintUserMessages: [BP_ThePlayer_C_0] Client 1: WeaponSword01
+[2021.03.06-15.38.05:820][903]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2021.03.06-15.38.05:820][903]LogWorld: BeginTearingDown for /Game/Demo/Maps/UEDPIE_1_TestMap
+[2021.03.06-15.38.05:821][903]LogSlate: Window 'Main预览[NetMode: Client 1]  (64-bit/Windows) ' being destroyed
+[2021.03.06-15.38.05:824][903]LogWorld: UWorld::CleanupWorld for TestMap, bSessionEnded=true, bCleanupResources=true
+[2021.03.06-15.38.05:825][903]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.03.06-15.38.05:828][903]LogNet: World NetDriver shutdown IpNetDriver_3 [GameNetDriver]
+[2021.03.06-15.38.05:828][903]LogNet: DestroyNamedNetDriver IpNetDriver_3 [GameNetDriver]
+[2021.03.06-15.38.05:828][903]LogNet: UNetConnection::Close: [UNetConnection] RemoteAddr: 127.0.0.1:17777, Name: IpConnection_2, Driver: GameNetDriver IpNetDriver_3, IsServer: NO, PC: PlayerController_1, Owner: PlayerController_1, UniqueId: NULL:PIANG-71290B6E4C26823A9029BAA2DD304D11, Channels: 10, Time: 2021.03.06-15.38.05
+[2021.03.06-15.38.05:828][903]LogNet: UChannel::Close: Sending CloseBunch. ChIndex == 0. Name: [UChannel] ChIndex: 0, Closing: 0 [UNetConnection] RemoteAddr: 127.0.0.1:17777, Name: IpConnection_2, Driver: GameNetDriver IpNetDriver_3, IsServer: NO, PC: PlayerController_1, Owner: PlayerController_1, UniqueId: NULL:PIANG-71290B6E4C26823A9029BAA2DD304D11
+[2021.03.06-15.38.05:828][903]LogExit: GameNetDriver IpNetDriver_3 shut down
+[2021.03.06-15.38.05:829][903]LogWorld: BeginTearingDown for /Game/Demo/Maps/UEDPIE_0_TestMap
+[2021.03.06-15.38.05:829][903]LogWorld: UWorld::CleanupWorld for TestMap, bSessionEnded=true, bCleanupResources=true
+[2021.03.06-15.38.05:830][903]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.03.06-15.38.05:830][903]LogNet: World NetDriver shutdown IpNetDriver_2 [GameNetDriver]
+[2021.03.06-15.38.05:830][903]LogNet: DestroyNamedNetDriver IpNetDriver_2 [GameNetDriver]
+[2021.03.06-15.38.05:830][903]LogNet: UNetConnection::Cleanup: Closing open connection. [UNetConnection] RemoteAddr: 127.0.0.1:52317, Name: IpConnection_3, Driver: GameNetDriver IpNetDriver_2, IsServer: YES, PC: PlayerController_0, Owner: PlayerController_0, UniqueId: NULL:PIANG-71290B6E4C26823A9029BAA2DD304D11
+[2021.03.06-15.38.05:830][903]LogNet: UNetConnection::Close: [UNetConnection] RemoteAddr: 127.0.0.1:52317, Name: IpConnection_3, Driver: GameNetDriver IpNetDriver_2, IsServer: YES, PC: PlayerController_0, Owner: PlayerController_0, UniqueId: NULL:PIANG-71290B6E4C26823A9029BAA2DD304D11, Channels: 10, Time: 2021.03.06-15.38.05
+[2021.03.06-15.38.05:830][903]LogNet: UChannel::Close: Sending CloseBunch. ChIndex == 0. Name: [UChannel] ChIndex: 0, Closing: 0 [UNetConnection] RemoteAddr: 127.0.0.1:52317, Name: IpConnection_3, Driver: GameNetDriver IpNetDriver_2, IsServer: YES, PC: PlayerController_0, Owner: PlayerController_0, UniqueId: NULL:PIANG-71290B6E4C26823A9029BAA2DD304D11
+[2021.03.06-15.38.05:830][903]LogExit: GameNetDriver IpNetDriver_2 shut down
+[2021.03.06-15.38.05:831][903]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2021.03.06-15.38.05:834][903]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.03.06-15.38.05:848][903]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2021.03.06-15.38.05:849][903]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2021.03.06-15.38.05:866][903]LogUObjectHash: Compacting FUObjectHashTables data took   1.46ms
+[2021.03.06-15.38.05:878][904]LogPlayLevel: Display: Destroying online subsystem :Context_20
+[2021.03.06-15.38.05:878][904]LogPlayLevel: Display: Destroying online subsystem :Context_19
+[2021.03.06-15.38.24:638][ 34]LogSlate: Took 0.000094 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/DroidSansMono.ttf' (77K)

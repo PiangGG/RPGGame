@@ -3,14 +3,14 @@
 #pragma once
 
 #include "CoreMinimal.h"
-
-#include "GameFramework/Actor.h"
+#include "Item.h"
 #include "Main/Core/RPGEnum.h"
 #include "Body.generated.h"
-class SphereComponent;
 
+class SphereComponent;
+class USkeletalMeshComponent;
 UCLASS()
-class MAIN_API ABody : public AActor
+class MAIN_API ABody : public AItem
 {
 	GENERATED_BODY()
 	
@@ -23,33 +23,10 @@ protected:
 	virtual void BeginPlay() override;
 
 public:
-
-	//物品状态变量
-	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,ReplicatedUsing=OnRep_SetItemState,Category="ItemSetting")
-	EItemState CurrentItemState=EItemState::InWorld;
-	//获得物品状态变量函数
-	UFUNCTION(BlueprintCallable)
-    virtual EItemState GetItemState();
-	//设置物品状态变量函数
-	UFUNCTION(BlueprintCallable)
-    virtual void SetItemState(EItemState NewItemState);
-	UFUNCTION(Server,WithValidation,Reliable)
-    virtual void SetItemStateServer(EItemState NewItemState);
-	UFUNCTION()
-    virtual void OnRep_SetItemState(EItemState NewItemState);
-	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Category="ItemSetting")
-	class USphereComponent *SphereComponent;
-	
 	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Replicated,Category="ItemSetting")
-	class USkeletalMeshComponent *ThisSkeletalMesh;
+	USkeletalMeshComponent *ThisSkeletalMesh;
 
-	UPROPERTY()
-	bool bOverlap=false;
-	
-	UFUNCTION(BlueprintCallable)
-    virtual void SphereComponent_BeginOverlap(class UPrimitiveComponent* Component,class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
-	UFUNCTION(BlueprintCallable)
-    virtual void SphereComponent_EndOverlap(UPrimitiveComponent* Component,AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
+	virtual void SetItemState(EItemState NewItemState)override;
 	
 	UFUNCTION(BlueprintCallable)
 	void Wear(APawn *Pawn);
@@ -59,13 +36,9 @@ public:
 	bool WearServer_Validate(APawn* Pawn);
 
 	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Replicated,Category="ItemSetting")
-	EItemType ItemType=EItemType::Body;
-	
-	EItemType GetItemType();
-
-	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Replicated,Category="ItemSetting")
 	EPawnBodyType PawnBodyType=EPawnBodyType::ECloth;
-	
+	UFUNCTION(BlueprintCallable)
 	EPawnBodyType GetPawnBodyType();
-	
+	UFUNCTION(BlueprintCallable)
+	void SetPawnBodyType(EPawnBodyType NewPawnBodyType);
 };
