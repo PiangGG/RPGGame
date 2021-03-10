@@ -110,23 +110,64 @@ void AThePlayer::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifeti
 
 void AThePlayer::MoveForward(float amount)
 {
+	if (amount!=0.0f)
+	{
+		bWantMove=true;
+	}else
+	{
+		bWantMove=false;
+	}
 	AThePC *PC = Cast<AThePC>(GetWorld()->GetFirstPlayerController());
 
-	if (PC && PC->bPauseMenuDisplayed) return;
-	//add movement input in the direction the camera is facing
-	if (Controller && amount) {
-		AddMovementInput(SpringArm->GetForwardVector(), amount);
+	switch (GetPlayerStance())
+	{
+	case EPlayerStance::ETwoHandSwordStance:
+		{
+			if (Controller && amount) {
+				AddMovementInput(SpringArm->GetForwardVector(), amount);
+			}
+			break;
+		}
+	default:
+		{
+			//add input in the camera's right direction
+			if (Controller && amount) {
+				AddMovementInput(SpringArm->GetForwardVector(), amount);
+			}
+			break;
+		}
 	}
 }
 
 void AThePlayer::MoveRight(float amount)
 {
+	if (amount!=0.0f)
+	{
+		bWantMove=true;
+	}else
+	{
+		bWantMove=false;
+	}
 	AThePC *PC = Cast<AThePC>(GetWorld()->GetFirstPlayerController());
 
 	if (PC && PC->bPauseMenuDisplayed) return;
-	//add input in the camera's right direction
-	if (Controller && amount) {
-		AddMovementInput(SpringArm->GetRightVector(), amount);
+	switch (GetPlayerStance())
+	{
+		case EPlayerStance::ETwoHandSwordStance:
+			{
+				if (Controller && amount) {
+					AddMovementInput(SpringArm->GetRightVector(), amount);
+				}
+				break;
+			}
+	default:
+			{
+				//add input in the camera's right direction
+				if (Controller && amount) {
+					AddMovementInput(SpringArm->GetRightVector(), amount);
+				}
+				break;
+			}
 	}
 }
 
@@ -160,6 +201,46 @@ void AThePlayer::ChangeCameraHeight(float amount)
 		SpringArm->SetWorldRotation(FQuat::MakeFromEuler(rot));
 	}
 }
+
+void AThePlayer::EquipmentNetMulticast_Implementation(AActor* theActor)
+{
+	AWeapon* Weapon=Cast<AWeapon>(theActor);
+	if (!CurrentWeapon&&Weapon)
+	{
+		CurrentWeapon=Weapon;
+		PlayAnimtionMontage(PickupAnimMontage,"Wear");
+		switch (Weapon->GetWeaponType())
+		{
+			case EWeaponType::ESword:
+				{
+					SetPlayerStance(EPlayerStance::ETwoHandSwordStance);
+					SetPlayerState(EPlayerState::EBattleing);
+					if (HeadGearsMesh)
+					{
+						Weapon->StaticMesh->AttachToComponent(GetMesh(),FAttachmentTransformRules::KeepRelativeTransform,AttachLocation);
+					}
+					break;
+				}
+			case EWeaponType::EBow:
+				{
+					SetPlayerStance(EPlayerStance::EBowStance);
+					SetPlayerState(EPlayerState::EBattleing);
+					if (HeadGearsMesh)
+					{
+						Weapon->StaticMesh->AttachToComponent(GetMesh(),FAttachmentTransformRules::KeepRelativeTransform,AttachLocation);
+					}
+					break;
+				}
+		default: break;
+		}
+	}
+}
+
+bool AThePlayer::EquipmentNetMulticast_Validate(AActor* theActor)
+{
+	return true;
+}
+
 void AThePlayer::BindActionAttack()
 {
 	if (CurrentWeapon)
@@ -169,104 +250,131 @@ void AThePlayer::BindActionAttack()
 }
 void AThePlayer::Attack_1(AWeapon *Weapon)
 {
-	if (GetLocalRole()<ROLE_Authority)
-	{
-		AttackServer_1(Weapon);
-	}
-	/*
-	 * 
-	 */
-	UE_LOG(LogTemp,Warning,TEXT("Attack"));
-	if (!Weapon)return;
-	if (bAttack==false)
-	{
-		bAttack=true;
-	}
-	if (GetVelocity().Size()<50.f)
-	{
-		switch (Weapon->AttackNumber%5)
-		{
-		case 0:
-			{
-				GetWorld()->GetTimerManager().SetTimer(TimerHandle_Attack,this,&AThePlayer::AttackCallBack_1,Weapon->AttackTimerCD,false,-1.0f);
-				PlayAnimtionMontage(Weapon->AttackAnimMontage,"Attack1");
-				break;
-			}
-		case 1:
-			{
-				GetWorld()->GetTimerManager().SetTimer(TimerHandle_Attack,this,&AThePlayer::AttackCallBack_1,Weapon->AttackTimerCD,false,-1.0f);
-				PlayAnimtionMontage(Weapon->AttackAnimMontage,"Attack2");
-				break;
-			}
-		case 2:
-			{
-				GetWorld()->GetTimerManager().SetTimer(TimerHandle_Attack,this,&AThePlayer::AttackCallBack_1,Weapon->AttackTimerCD,false,-1.0f);
-				PlayAnimtionMontage(Weapon->AttackAnimMontage,"Attack3");
-				break;
-			}
-		case 4:
-			{
-				GetWorld()->GetTimerManager().SetTimer(TimerHandle_Attack,this,&AThePlayer::AttackCallBack_1,Weapon->AttackTimerCD,false,-1.0f);
-				PlayAnimtionMontage(Weapon->AttackAnimMontage,"Attack4");
-				break;
-			}
-		case 5:
-			{
-				GetWorld()->GetTimerManager().SetTimer(TimerHandle_Attack,this,&AThePlayer::AttackCallBack_1,Weapon->AttackTimerCD,false,-1.0f);
-				PlayAnimtionMontage(Weapon->AttackAnimMontage,"Attack5");
-				break;
-			}
-		default: break;
-		}
-	}else
-	{
-		switch (Weapon->AttackNumber%5)
-		{
-		case 0:
-			{
-				GetWorld()->GetTimerManager().SetTimer(TimerHandle_Attack,this,&AThePlayer::AttackCallBack_1,Weapon->AttackTimerCD,false,-1.0f);
-				PlayAnimtionMontage(Weapon->AttackAnimMontage,"Attack6");
-				break;
-			}
-		case 1:
-			{
-				GetWorld()->GetTimerManager().SetTimer(TimerHandle_Attack,this,&AThePlayer::AttackCallBack_1,Weapon->AttackTimerCD,false,-1.0f);
-				PlayAnimtionMontage(Weapon->AttackAnimMontage,"Attack7");
-				break;
-			}
-		case 2:
-			{
-				GetWorld()->GetTimerManager().SetTimer(TimerHandle_Attack,this,&AThePlayer::AttackCallBack_1,Weapon->AttackTimerCD,false,-1.0f);
-				PlayAnimtionMontage(Weapon->AttackAnimMontage,"Attack8");
-				break;
-			}
-		case 4:
-			{
-				GetWorld()->GetTimerManager().SetTimer(TimerHandle_Attack,this,&AThePlayer::AttackCallBack_1,Weapon->AttackTimerCD,false,-1.0f);
-				PlayAnimtionMontage(Weapon->AttackAnimMontage,"Attack9");
-				break;
-			}
-		case 5:
-			{
-				GetWorld()->GetTimerManager().SetTimer(TimerHandle_Attack,this,&AThePlayer::AttackCallBack_1,Weapon->AttackTimerCD,false,-1.0f);
-				PlayAnimtionMontage(Weapon->AttackAnimMontage,"Attack10");
-				break;
-			}
-		default: break;
-		}
-	}
-	
-	Weapon->AttackNumber++;
+	AttackServer_1(Weapon);
 }
 
 void AThePlayer::AttackServer_1_Implementation(AWeapon *Weapon)
 {
-	Attack_1(Weapon);
+	AttackNetMulticast_1(Weapon);
 }
 
 bool AThePlayer::AttackServer_1_Validate(AWeapon *Weapon)
 {
 	return  true;
+}
+
+void AThePlayer::AttackNetMulticast_1_Implementation(AWeapon* Weapon)
+{
+	if (!Weapon)return;
+	switch (Weapon->GetWeaponType())
+	{
+		case EWeaponType::ESword:
+			{
+				if (bAttack==false)
+				{
+					bAttack=true;
+				}
+				if (GetCharacterMovement()->IsFalling()&&bWantMove)
+				{
+					GetWorld()->GetTimerManager().SetTimer(TimerHandle_Attack,this,&AThePlayer::AttackCallBack_1,Weapon->AttackTimerCD,false,-1.0f);
+					PlayAnimtionMontage(Weapon->AttackAnimMontage,"Attack10");
+					return;
+				}else if (GetCharacterMovement()->IsFalling()&&!bWantMove)
+				{
+					GetWorld()->GetTimerManager().SetTimer(TimerHandle_Attack,this,&AThePlayer::AttackCallBack_1,Weapon->AttackTimerCD,false,-1.0f);
+					PlayAnimtionMontage(Weapon->AttackAnimMontage,"Attack10");
+					return;
+				}
+				if (!bWantMove)
+				{
+					switch (Weapon->AttackNumber%5)
+					{
+					case 0:
+						{
+							GetWorld()->GetTimerManager().SetTimer(TimerHandle_Attack,this,&AThePlayer::AttackCallBack_1,Weapon->AttackTimerCD,false,-1.0f);
+							PlayAnimtionMontage(Weapon->AttackAnimMontage,"Attack1");
+							break;
+						}
+					case 1:
+						{
+							GetWorld()->GetTimerManager().SetTimer(TimerHandle_Attack,this,&AThePlayer::AttackCallBack_1,Weapon->AttackTimerCD,false,-1.0f);
+							PlayAnimtionMontage(Weapon->AttackAnimMontage,"Attack2");
+							break;
+						}
+					case 2:
+						{
+							GetWorld()->GetTimerManager().SetTimer(TimerHandle_Attack,this,&AThePlayer::AttackCallBack_1,Weapon->AttackTimerCD,false,-1.0f);
+							PlayAnimtionMontage(Weapon->AttackAnimMontage,"Attack3");
+							break;
+						}
+					case 3:
+						{
+							GetWorld()->GetTimerManager().SetTimer(TimerHandle_Attack,this,&AThePlayer::AttackCallBack_1,Weapon->AttackTimerCD,false,-1.0f);
+							PlayAnimtionMontage(Weapon->AttackAnimMontage,"Attack4");
+							break;
+						}
+					case 4:
+						{
+							GetWorld()->GetTimerManager().SetTimer(TimerHandle_Attack,this,&AThePlayer::AttackCallBack_1,Weapon->AttackTimerCD,false,-1.0f);
+							PlayAnimtionMontage(Weapon->AttackAnimMontage,"Attack5");
+							break;
+						}
+					default: break;
+					}
+				}else
+				{
+					switch (Weapon->AttackNumber%5)
+					{
+						case 0:
+							{
+								GetWorld()->GetTimerManager().SetTimer(TimerHandle_Attack,this,&AThePlayer::AttackCallBack_1,Weapon->AttackTimerCD,false,-1.0f);
+								PlayAnimtionMontage(Weapon->AttackAnimMontage,"Attack6");
+								break;
+							}
+						case 1:
+							{
+								GetWorld()->GetTimerManager().SetTimer(TimerHandle_Attack,this,&AThePlayer::AttackCallBack_1,Weapon->AttackTimerCD,false,-1.0f);
+								PlayAnimtionMontage(Weapon->AttackAnimMontage,"Attack7");
+								break;
+							}
+						case 2:
+							{
+								GetWorld()->GetTimerManager().SetTimer(TimerHandle_Attack,this,&AThePlayer::AttackCallBack_1,Weapon->AttackTimerCD,false,-1.0f);
+								PlayAnimtionMontage(Weapon->AttackAnimMontage,"Attack8");
+								break;
+							}
+						case 3:
+							{
+								GetWorld()->GetTimerManager().SetTimer(TimerHandle_Attack,this,&AThePlayer::AttackCallBack_1,Weapon->AttackTimerCD,false,-1.0f);
+								PlayAnimtionMontage(Weapon->AttackAnimMontage,"Attack9");
+								break;
+							}
+						case 4:
+							{
+								GetWorld()->GetTimerManager().SetTimer(TimerHandle_Attack,this,&AThePlayer::AttackCallBack_1,Weapon->AttackTimerCD,false,-1.0f);
+								PlayAnimtionMontage(Weapon->AttackAnimMontage,"Attack10");
+								break;
+							}
+						default: break;
+						}
+					}
+					
+					Weapon->AttackNumber++;
+								break;
+			}
+		case EWeaponType::EBow:
+			{
+				PlayAnimtionMontage(Weapon->AttackAnimMontage,"Attack1");
+				break;
+			}
+		default: break;
+	}
+	
+}
+
+bool AThePlayer::AttackNetMulticast_1_Validate(AWeapon* Weapon)
+{
+	return true;
 }
 
 void AThePlayer::AttackCallBack_1()
@@ -448,6 +556,20 @@ void AThePlayer::PlayAnimtionMontage(UAnimMontage* AnimMontage, FName name)
 void AThePlayer::SetPlayerStance(EPlayerStance NewPlayerStance)
 {
 	CurrentPlayerStance=NewPlayerStance;
+	switch (GetPlayerStance())
+	{
+		case EPlayerStance::ETwoHandSwordStance:
+			{
+				AttachLocation="LeftWeaponShield";
+				break;
+			}
+	case EPlayerStance::EBowStance:
+			{
+				AttachLocation="LeftWeaponShield";
+				break;
+			}
+	default: break;
+	}
 }
 
 EPlayerStance AThePlayer::GetPlayerStance()
@@ -463,6 +585,24 @@ void AThePlayer::OnRep_PlayerStanceChange()
 void AThePlayer::SetPlayerState(EPlayerState NewPlayerState)
 {
 	CurrentPlayerState=NewPlayerState;
+	switch (CurrentPlayerState)
+	{
+		case EPlayerState::ENormal:
+			{
+				/*SpringArm->TargetArmLength=700.0f;
+				GetCharacterMovement()->bOrientRotationToMovement = true;
+				SpringArm->bUsePawnControlRotation = false;*/
+				break;
+			}
+		case EPlayerState::EBattleing:
+			{
+				/*SpringArm->TargetArmLength=400.0f;
+				GetCharacterMovement()->bOrientRotationToMovement = false;
+				SpringArm->bUsePawnControlRotation = true;*/
+				break;
+			}
+	default: break;
+	}
 }
 
 EPlayerState AThePlayer::GetPlayerState()
@@ -638,30 +778,7 @@ void AThePlayer::NotCanPickup(UInputComponent* PlayerInputComponent)
 
 void AThePlayer::Equipment(AActor* theActor)
 {
-	if (GetLocalRole()<ROLE_Authority)
-	{
-		EquipmentServer(theActor);
-	}
-	AWeapon* Weapon=Cast<AWeapon>(theActor);
-	if (!CurrentWeapon&&Weapon)
-	{
-		CurrentWeapon=Weapon;
-		PlayAnimtionMontage(PickupAnimMontage,"Wear");
-		switch (Weapon->GetWeaponType())
-		{
-			case EWeaponType::ESword:
-				{
-					SetPlayerStance(EPlayerStance::ETwoHandSwordStance);
-					SetPlayerState(EPlayerState::EBattleing);
-					if (HeadGearsMesh)
-					{
-						Weapon->StaticMesh->AttachToComponent(GetMesh(),FAttachmentTransformRules::KeepRelativeTransform,Weapon->AttachLocation);
-					}
-					break;
-				}
-		default: break;
-		}
-	}
+	EquipmentServer(theActor);
 }
 
 void AThePlayer::Pickup(AActor* theActor)
@@ -684,7 +801,7 @@ bool AThePlayer::PickupServer_Validate(AActor* theActor)
 
 void AThePlayer::EquipmentServer_Implementation(AActor* theActor)
 {
-	Equipment(theActor);
+	EquipmentNetMulticast(theActor);
 }
 
 bool AThePlayer::EquipmentServer_Validate(AActor* theActor)

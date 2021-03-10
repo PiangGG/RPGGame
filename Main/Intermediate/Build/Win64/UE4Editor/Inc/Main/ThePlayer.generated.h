@@ -22,8 +22,12 @@ enum class EPlayerStance : uint8;
 #define Main_Source_Main_GamePlay_ThePlayer_h_16_RPC_WRAPPERS \
 	virtual bool PickupServer_Validate(AActor* ); \
 	virtual void PickupServer_Implementation(AActor* theActor); \
+	virtual bool AttackNetMulticast_1_Validate(AWeapon* ); \
+	virtual void AttackNetMulticast_1_Implementation(AWeapon* Weapon); \
 	virtual bool AttackServer_1_Validate(AWeapon* ); \
 	virtual void AttackServer_1_Implementation(AWeapon* Weapon); \
+	virtual bool EquipmentNetMulticast_Validate(AActor* ); \
+	virtual void EquipmentNetMulticast_Implementation(AActor* theActor); \
 	virtual bool EquipmentServer_Validate(AActor* ); \
 	virtual void EquipmentServer_Implementation(AActor* theActor); \
 	virtual bool WearNetMulticast_Validate(AActor* ); \
@@ -35,8 +39,10 @@ enum class EPlayerStance : uint8;
  \
 	DECLARE_FUNCTION(execPickupServer); \
 	DECLARE_FUNCTION(execPickup); \
+	DECLARE_FUNCTION(execAttackNetMulticast_1); \
 	DECLARE_FUNCTION(execAttackServer_1); \
 	DECLARE_FUNCTION(execAttack_1); \
+	DECLARE_FUNCTION(execEquipmentNetMulticast); \
 	DECLARE_FUNCTION(execEquipmentServer); \
 	DECLARE_FUNCTION(execEquipment); \
 	DECLARE_FUNCTION(execCanPickup); \
@@ -57,8 +63,12 @@ enum class EPlayerStance : uint8;
 #define Main_Source_Main_GamePlay_ThePlayer_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
 	virtual bool PickupServer_Validate(AActor* ); \
 	virtual void PickupServer_Implementation(AActor* theActor); \
+	virtual bool AttackNetMulticast_1_Validate(AWeapon* ); \
+	virtual void AttackNetMulticast_1_Implementation(AWeapon* Weapon); \
 	virtual bool AttackServer_1_Validate(AWeapon* ); \
 	virtual void AttackServer_1_Implementation(AWeapon* Weapon); \
+	virtual bool EquipmentNetMulticast_Validate(AActor* ); \
+	virtual void EquipmentNetMulticast_Implementation(AActor* theActor); \
 	virtual bool EquipmentServer_Validate(AActor* ); \
 	virtual void EquipmentServer_Implementation(AActor* theActor); \
 	virtual bool WearNetMulticast_Validate(AActor* ); \
@@ -70,8 +80,10 @@ enum class EPlayerStance : uint8;
  \
 	DECLARE_FUNCTION(execPickupServer); \
 	DECLARE_FUNCTION(execPickup); \
+	DECLARE_FUNCTION(execAttackNetMulticast_1); \
 	DECLARE_FUNCTION(execAttackServer_1); \
 	DECLARE_FUNCTION(execAttack_1); \
+	DECLARE_FUNCTION(execEquipmentNetMulticast); \
 	DECLARE_FUNCTION(execEquipmentServer); \
 	DECLARE_FUNCTION(execEquipment); \
 	DECLARE_FUNCTION(execCanPickup); \
@@ -90,9 +102,17 @@ enum class EPlayerStance : uint8;
 
 
 #define Main_Source_Main_GamePlay_ThePlayer_h_16_EVENT_PARMS \
+	struct ThePlayer_eventAttackNetMulticast_1_Parms \
+	{ \
+		AWeapon* Weapon; \
+	}; \
 	struct ThePlayer_eventAttackServer_1_Parms \
 	{ \
 		AWeapon* Weapon; \
+	}; \
+	struct ThePlayer_eventEquipmentNetMulticast_Parms \
+	{ \
+		AActor* theActor; \
 	}; \
 	struct ThePlayer_eventEquipmentServer_Parms \
 	{ \

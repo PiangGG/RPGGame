@@ -54,6 +54,19 @@ void EmptyLinkFunctionForGeneratedCodeThePlayer() {}
 		P_THIS->Pickup(Z_Param_theActor);
 		P_NATIVE_END;
 	}
+	DEFINE_FUNCTION(AThePlayer::execAttackNetMulticast_1)
+	{
+		P_GET_OBJECT(AWeapon,Z_Param_Weapon);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		if (!P_THIS->AttackNetMulticast_1_Validate(Z_Param_Weapon))
+		{
+			RPC_ValidateFailed(TEXT("AttackNetMulticast_1_Validate"));
+			return;
+		}
+		P_THIS->AttackNetMulticast_1_Implementation(Z_Param_Weapon);
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(AThePlayer::execAttackServer_1)
 	{
 		P_GET_OBJECT(AWeapon,Z_Param_Weapon);
@@ -73,6 +86,19 @@ void EmptyLinkFunctionForGeneratedCodeThePlayer() {}
 		P_FINISH;
 		P_NATIVE_BEGIN;
 		P_THIS->Attack_1(Z_Param_Weapon);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AThePlayer::execEquipmentNetMulticast)
+	{
+		P_GET_OBJECT(AActor,Z_Param_theActor);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		if (!P_THIS->EquipmentNetMulticast_Validate(Z_Param_theActor))
+		{
+			RPC_ValidateFailed(TEXT("EquipmentNetMulticast_Validate"));
+			return;
+		}
+		P_THIS->EquipmentNetMulticast_Implementation(Z_Param_theActor);
 		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(AThePlayer::execEquipmentServer)
@@ -208,12 +234,26 @@ void EmptyLinkFunctionForGeneratedCodeThePlayer() {}
 		P_THIS->Run();
 		P_NATIVE_END;
 	}
+	static FName NAME_AThePlayer_AttackNetMulticast_1 = FName(TEXT("AttackNetMulticast_1"));
+	void AThePlayer::AttackNetMulticast_1(AWeapon* Weapon)
+	{
+		ThePlayer_eventAttackNetMulticast_1_Parms Parms;
+		Parms.Weapon=Weapon;
+		ProcessEvent(FindFunctionChecked(NAME_AThePlayer_AttackNetMulticast_1),&Parms);
+	}
 	static FName NAME_AThePlayer_AttackServer_1 = FName(TEXT("AttackServer_1"));
 	void AThePlayer::AttackServer_1(AWeapon* Weapon)
 	{
 		ThePlayer_eventAttackServer_1_Parms Parms;
 		Parms.Weapon=Weapon;
 		ProcessEvent(FindFunctionChecked(NAME_AThePlayer_AttackServer_1),&Parms);
+	}
+	static FName NAME_AThePlayer_EquipmentNetMulticast = FName(TEXT("EquipmentNetMulticast"));
+	void AThePlayer::EquipmentNetMulticast(AActor* theActor)
+	{
+		ThePlayer_eventEquipmentNetMulticast_Parms Parms;
+		Parms.theActor=theActor;
+		ProcessEvent(FindFunctionChecked(NAME_AThePlayer_EquipmentNetMulticast),&Parms);
 	}
 	static FName NAME_AThePlayer_EquipmentServer = FName(TEXT("EquipmentServer"));
 	void AThePlayer::EquipmentServer(AActor* theActor)
@@ -258,9 +298,11 @@ void EmptyLinkFunctionForGeneratedCodeThePlayer() {}
 		UClass* Class = AThePlayer::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
 			{ "Attack_1", &AThePlayer::execAttack_1 },
+			{ "AttackNetMulticast_1", &AThePlayer::execAttackNetMulticast_1 },
 			{ "AttackServer_1", &AThePlayer::execAttackServer_1 },
 			{ "CanPickup", &AThePlayer::execCanPickup },
 			{ "Equipment", &AThePlayer::execEquipment },
+			{ "EquipmentNetMulticast", &AThePlayer::execEquipmentNetMulticast },
 			{ "EquipmentServer", &AThePlayer::execEquipmentServer },
 			{ "GetPlayerStance", &AThePlayer::execGetPlayerStance },
 			{ "GetPlayerState", &AThePlayer::execGetPlayerState },
@@ -308,6 +350,34 @@ void EmptyLinkFunctionForGeneratedCodeThePlayer() {}
 		if (!ReturnFunction)
 		{
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AThePlayer_Attack_1_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_AThePlayer_AttackNetMulticast_1_Statics
+	{
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Weapon;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_AThePlayer_AttackNetMulticast_1_Statics::NewProp_Weapon = { "Weapon", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ThePlayer_eventAttackNetMulticast_1_Parms, Weapon), Z_Construct_UClass_AWeapon_NoRegister, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AThePlayer_AttackNetMulticast_1_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AThePlayer_AttackNetMulticast_1_Statics::NewProp_Weapon,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AThePlayer_AttackNetMulticast_1_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "GamePlay/ThePlayer.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AThePlayer_AttackNetMulticast_1_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AThePlayer, nullptr, "AttackNetMulticast_1", nullptr, nullptr, sizeof(ThePlayer_eventAttackNetMulticast_1_Parms), Z_Construct_UFunction_AThePlayer_AttackNetMulticast_1_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AThePlayer_AttackNetMulticast_1_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x80024CC0, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AThePlayer_AttackNetMulticast_1_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AThePlayer_AttackNetMulticast_1_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AThePlayer_AttackNetMulticast_1()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AThePlayer_AttackNetMulticast_1_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -408,6 +478,34 @@ void EmptyLinkFunctionForGeneratedCodeThePlayer() {}
 		if (!ReturnFunction)
 		{
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AThePlayer_Equipment_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_AThePlayer_EquipmentNetMulticast_Statics
+	{
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_theActor;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_AThePlayer_EquipmentNetMulticast_Statics::NewProp_theActor = { "theActor", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ThePlayer_eventEquipmentNetMulticast_Parms, theActor), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AThePlayer_EquipmentNetMulticast_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AThePlayer_EquipmentNetMulticast_Statics::NewProp_theActor,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AThePlayer_EquipmentNetMulticast_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "GamePlay/ThePlayer.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AThePlayer_EquipmentNetMulticast_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AThePlayer, nullptr, "EquipmentNetMulticast", nullptr, nullptr, sizeof(ThePlayer_eventEquipmentNetMulticast_Parms), Z_Construct_UFunction_AThePlayer_EquipmentNetMulticast_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AThePlayer_EquipmentNetMulticast_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x80024CC0, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AThePlayer_EquipmentNetMulticast_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AThePlayer_EquipmentNetMulticast_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AThePlayer_EquipmentNetMulticast()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AThePlayer_EquipmentNetMulticast_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -952,6 +1050,10 @@ void EmptyLinkFunctionForGeneratedCodeThePlayer() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CurrentPlayerStance_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_CurrentPlayerStance;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_AttachLocation_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FNamePropertyParams NewProp_AttachLocation;
 		static const UE4CodeGen_Private::FBytePropertyParams NewProp_CurrentPlayerState_Underlying;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CurrentPlayerState_MetaData[];
@@ -990,9 +1092,11 @@ void EmptyLinkFunctionForGeneratedCodeThePlayer() {}
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_AThePlayer_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_AThePlayer_Attack_1, "Attack_1" }, // 1458307409
+		{ &Z_Construct_UFunction_AThePlayer_AttackNetMulticast_1, "AttackNetMulticast_1" }, // 2727527878
 		{ &Z_Construct_UFunction_AThePlayer_AttackServer_1, "AttackServer_1" }, // 4240329295
 		{ &Z_Construct_UFunction_AThePlayer_CanPickup, "CanPickup" }, // 1953890808
 		{ &Z_Construct_UFunction_AThePlayer_Equipment, "Equipment" }, // 1747149985
+		{ &Z_Construct_UFunction_AThePlayer_EquipmentNetMulticast, "EquipmentNetMulticast" }, // 96537546
 		{ &Z_Construct_UFunction_AThePlayer_EquipmentServer, "EquipmentServer" }, // 2464249537
 		{ &Z_Construct_UFunction_AThePlayer_GetPlayerStance, "GetPlayerStance" }, // 1498823216
 		{ &Z_Construct_UFunction_AThePlayer_GetPlayerState, "GetPlayerState" }, // 3282883008
@@ -1183,6 +1287,13 @@ void EmptyLinkFunctionForGeneratedCodeThePlayer() {}
 	};
 #endif
 	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UClass_AThePlayer_Statics::NewProp_CurrentPlayerStance = { "CurrentPlayerStance", nullptr, (EPropertyFlags)0x0010000000010025, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AThePlayer, CurrentPlayerStance), Z_Construct_UEnum_Main_EPlayerStance, METADATA_PARAMS(Z_Construct_UClass_AThePlayer_Statics::NewProp_CurrentPlayerStance_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AThePlayer_Statics::NewProp_CurrentPlayerStance_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AThePlayer_Statics::NewProp_AttachLocation_MetaData[] = {
+		{ "Category", "Attack" },
+		{ "ModuleRelativePath", "GamePlay/ThePlayer.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FNamePropertyParams Z_Construct_UClass_AThePlayer_Statics::NewProp_AttachLocation = { "AttachLocation", nullptr, (EPropertyFlags)0x0010000000010005, UE4CodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AThePlayer, AttachLocation), METADATA_PARAMS(Z_Construct_UClass_AThePlayer_Statics::NewProp_AttachLocation_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AThePlayer_Statics::NewProp_AttachLocation_MetaData)) };
 	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UClass_AThePlayer_Statics::NewProp_CurrentPlayerState_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AThePlayer_Statics::NewProp_CurrentPlayerState_MetaData[] = {
@@ -1266,6 +1377,7 @@ void EmptyLinkFunctionForGeneratedCodeThePlayer() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AThePlayer_Statics::NewProp_PickupAnimMontage,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AThePlayer_Statics::NewProp_CurrentPlayerStance_Underlying,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AThePlayer_Statics::NewProp_CurrentPlayerStance,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AThePlayer_Statics::NewProp_AttachLocation,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AThePlayer_Statics::NewProp_CurrentPlayerState_Underlying,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AThePlayer_Statics::NewProp_CurrentPlayerState,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AThePlayer_Statics::NewProp_bCanPickup,
@@ -1302,7 +1414,7 @@ void EmptyLinkFunctionForGeneratedCodeThePlayer() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AThePlayer, 4135350523);
+	IMPLEMENT_CLASS(AThePlayer, 187213350);
 	template<> MAIN_API UClass* StaticClass<AThePlayer>()
 	{
 		return AThePlayer::StaticClass();

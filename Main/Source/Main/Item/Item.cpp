@@ -33,18 +33,18 @@ void AItem::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	if (GetLocalRole()==ROLE_Authority)
+	/*if (GetLocalRole()==ROLE_Authority)
 	{
 		/*
 		 * 在场景中自动旋转
 		 */
-		if (GetItemState()==EItemState::InWorld)
+		/*if (GetItemState()==EItemState::InWorld)
 		{
 			float RotationSpeedVar=FMath::Fmod(RotationSpeed*DeltaTime,360);
 			FRotator Rotator=FRotator(RotationSpeedVar,0.0f,0.0f);
 			this->SetActorRotation(Rotator);
 		}
-	}
+	}*/
 }
 
 void AItem::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const

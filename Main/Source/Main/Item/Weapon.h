@@ -53,7 +53,4 @@ public:
 	void Attack();
 	UFUNCTION(Server,WithValidation,Reliable)
     void AttackServer();
-
-	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Category="Attack")
-	FName AttachLocation="RightWeaponShield";
 };

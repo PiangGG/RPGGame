@@ -47,7 +47,7 @@ public:
 	/* MOVEMENT/CAMERA INPUT FUNCTIONS|控制移动的函数 */
 
 	void MoveForward(float amount);
-
+	bool bWantMove=false;
 	void MoveRight(float amount);
 
 	void RotateCamera(float amount);
@@ -128,7 +128,9 @@ public:
     EPlayerStance GetPlayerStance();
 	UFUNCTION()
     void OnRep_PlayerStanceChange();
-	
+
+	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,Category="Attack")
+	FName AttachLocation="RightWeaponShield";
 	/*
 	* 设置角色状态相关
 	*/
@@ -166,6 +168,8 @@ public:
     void Equipment(AActor* theActor);
 	UFUNCTION(Server,WithValidation,Reliable)
     void EquipmentServer(AActor* theActor);
+	UFUNCTION(NetMulticast,WithValidation,Reliable)
+    void EquipmentNetMulticast(AActor* theActor);
 
 	/*
 	 * 攻击
@@ -180,6 +184,8 @@ public:
     void Attack_1(AWeapon *Weapon);
 	UFUNCTION(Server,Reliable,WithValidation)
     void AttackServer_1(AWeapon *Weapon);
+	UFUNCTION(NetMulticast,Reliable,WithValidation)
+	void AttackNetMulticast_1(AWeapon *Weapon);
 	void AttackCallBack_1();
 	
 	UFUNCTION(BlueprintCallable)
